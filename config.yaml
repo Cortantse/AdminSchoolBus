@@ -1,0 +1,18 @@
+# config.yaml
+database_connection:
+  host: "127.0.0.1"
+  port: 3306
+  user: "root"
+  password: "123456"
+  name: "schoolBus"
+
+server:
+  port: ":8888"
+
+
+database_name:
+  admin_db: "schoolBus"
+  passenger_db: "??????" # *******请填你们的db名
+  driver_db: "?????" # 同上
+
+
