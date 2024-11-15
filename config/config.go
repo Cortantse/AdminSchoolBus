@@ -20,14 +20,21 @@ type DatabaseNames struct {
 	DriverDB    string `yaml:"driver_db"`
 }
 
-type server struct {
+type Server struct {
 	Port string `yaml:"port"`
+}
+
+type Jwt struct {
+	ExpirationHoursPass   int `yaml:"expiration_hours_passenger"`
+	ExpirationHoursAdmin  int `yaml:"expiration_hours_admin"`
+	ExpirationHoursDriver int `yaml:"expiration_hours_driver"`
 }
 
 type Config struct {
 	Database DatabaseConfig `yaml:"database_connection"`
-	Server   server         `yaml:"server"`
+	Server   Server         `yaml:"server"`
 	DBNames  DatabaseNames  `yaml:"database_names"`
+	Jwt      Jwt            `yaml:"jwt"`
 }
 
 // AppConfig 静态全局变量载入

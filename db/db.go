@@ -19,11 +19,11 @@ var db3 *sqlx.DB
 //
 // Parameters:
 //   - *sqlx.DB: 数据库连接实例
-//   - chooseDB int: 1,2,3          注意1是admin的db连接，2是user的，3是driver
+//   - chooseDB 枚举iota类型，在identity.go中
 //
 // Returns:
 //   - error: 错误信息
-func InitDB(chooseDB int) error {
+func InitDB(chooseDB config.Role) error {
 	// 从 config 包中获取数据库配置信息
 	dbConfig := config.AppConfig.Database
 
@@ -31,17 +31,17 @@ func InitDB(chooseDB int) error {
 	var dbName string
 	var db **sqlx.DB
 
-	if chooseDB == 1 {
+	if chooseDB == config.RoleAdmin {
 		dbName = config.AppConfig.DBNames.AdminDB
 		db = &db1
-	} else if chooseDB == 2 {
+	} else if chooseDB == config.RolePassenger {
 		dbName = config.AppConfig.DBNames.AdminDB
 		db = &db2
-	} else if chooseDB == 3 {
+	} else if chooseDB == config.RoleDriver {
 		dbName = config.AppConfig.DBNames.AdminDB
 		db = &db3
 	} else {
-		return fmt.Errorf("chooseDB must be 1,2,3")
+		return fmt.Errorf("chooseDB is a iota enum data structure in identity.go\n and you provide a wrong value, please check it")
 	}
 
 	// 构造数据库连接字符串（DSN）
