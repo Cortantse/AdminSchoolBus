@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"log"
+	"login/auth"
 	"login/config"
 	"login/db"
 	"net/http"
@@ -98,7 +99,7 @@ func loginHandler(w http.ResponseWriter, r *http.Request) {
 // Returns:
 // - error 如果连接失败，则返回错误信息
 func initDatasetCon() error {
-	err := db.InitDB(1)
+	err := db.InitDB(config.RoleAdmin)
 	if err != nil {
 		fmt.Println("admin数据库连接失败，错误信息为：", err)
 		return fmt.Errorf("admin数据库连接失败，错误信息为：%v", err)
@@ -106,14 +107,14 @@ func initDatasetCon() error {
 	fmt.Println("admin数据库连接成功")
 
 	// ** 由于还没有你们的数据库，暂时先注释下面了，你们用的时候记得开开 **
-	//err = db.InitDB(2)
+	//err = db.InitDB(config.RolePassenger)
 	//if err != nil {
 	//	fmt.Println("passenger数据库连接失败，错误信息为：", err)
 	//	return fmt.Errorf("passenger数据库连接失败，错误信息为：%v", err)
 	//}
 	//fmt.Println("passenger数据库连接成功")
 	//
-	//err = db.InitDB(3)
+	//err = db.InitDB(config.RoleDriver)
 	//if err != nil {
 	//	fmt.Println("driver数据库连接失败，错误信息为：", err)
 	//	return fmt.Errorf("driver数据库连接失败，错误信息为：%v", err)
@@ -159,6 +160,14 @@ func main() {
 	}
 
 	// 启动令牌服务 ======
+	err = auth.InitTokenService()
+	if err != nil {
+		return
+	}
+
+	auth.Test()
+
+	return
 
 	// 设置路由 =======
 	http.HandleFunc("/api/login", loginHandler)
