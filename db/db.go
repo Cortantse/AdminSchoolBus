@@ -2,144 +2,72 @@ package db
 
 import (
 	"fmt"
-	_ "github.com/go-sql-driver/mysql" // 引入MySQL驱动
-	"github.com/jmoiron/sqlx"
-	_ "log"
-	"login/config" // 引入config包
+	"login/exception"
 	"reflect"
+	"regexp"
 	"strings"
 )
 
-// 数据库实例       高度相关***注意1是admin的db连接，2是user的，3是driver
-var db1 *sqlx.DB
-var db2 *sqlx.DB
-var db3 *sqlx.DB
-
-// InitDB 连接指定的数据库
-//
-// Parameters:
-//   - *sqlx.DB: 数据库连接实例
-//   - chooseDB 枚举iota类型，在identity.go中
-//
-// Returns:
-//   - error: 错误信息
-func InitDB(chooseDB config.Role) error {
-	// 从 config 包中获取数据库配置信息
-	dbConfig := config.AppConfig.Database
-
-	// 选择正确的
-	var dbName string
-	var db **sqlx.DB
-
-	if chooseDB == config.RoleAdmin {
-		dbName = config.AppConfig.DBNames.AdminDB
-		db = &db1
-	} else if chooseDB == config.RolePassenger {
-		dbName = config.AppConfig.DBNames.AdminDB
-		db = &db2
-	} else if chooseDB == config.RoleDriver {
-		dbName = config.AppConfig.DBNames.AdminDB
-		db = &db3
-	} else {
-		return fmt.Errorf("chooseDB is a iota enum data structure in identity.go\n and you provide a wrong value, please check it")
-	}
-
-	// 构造数据库连接字符串（DSN）
-	dsn := fmt.Sprintf("%s:%s@tcp(%s:%d)/%s",
-		dbConfig.User,
-		dbConfig.Password,
-		dbConfig.Host,
-		dbConfig.Port,
-		dbName,
-	)
-
-	// 连接数据库
-	var err error
-	*db, err = sqlx.Connect("mysql", dsn)
-	if err != nil {
-		return fmt.Errorf("failed to connect to database: %v", err)
-	}
-
-	return nil
-}
-
-// Insert 通用插入函数，支持单条记录和批量插入。
-// 根据传入的结构体或结构体切片，生成相应的 SQL 插入语句，插入数据到指定的数据库表。
-//
-// 参数:
-//   - db *sqlx.DB: 数据库连接对象。
-//   - tableName string: 目标数据库表名。
-//   - records interface{}: 传入的记录，支持结构体或者结构体切片。
-//
-// 返回:
-//   - int64: 插入的最后一条记录的 ID（单条插入时）
-//   - error: 执行插入操作时可能出现的错误。
-func Insert(db *sqlx.DB, tableName string, records interface{}) (int64, error) {
-	rv := reflect.ValueOf(records)
-
-	// 判断传入的 records 是单条数据还是切片（批量插入）
-	var insertQuery string
-	var values []interface{}
-
-	switch rv.Kind() {
-	case reflect.Slice:
-		// 批量插入
-		if rv.Len() == 0 {
-			return 0, fmt.Errorf("no records to insert")
-		}
-		// 假设所有记录有相同的字段，我们取第一条记录的字段名
-		recordType := rv.Index(0).Type()
-		fields := getStructFields(recordType)
-		insertQuery = fmt.Sprintf("INSERT INTO %s (%s) VALUES ", tableName, strings.Join(fields, ", "))
-
-		// 批量插入的值
-		for i := 0; i < rv.Len(); i++ {
-			record := rv.Index(i)
-			valuePlaceholders, recordValues := buildInsertPlaceholdersAndValues(record)
-			insertQuery += fmt.Sprintf("(%s),", valuePlaceholders)
-			values = append(values, recordValues...)
-		}
-		// 移除最后一个多余的逗号
-		insertQuery = insertQuery[:len(insertQuery)-1]
-
-	case reflect.Struct:
-		// 单条插入
-		fields := getStructFields(rv.Type())
-		insertQuery = fmt.Sprintf("INSERT INTO %s (%s) VALUES ", tableName, strings.Join(fields, ", "))
-		valuePlaceholders, recordValues := buildInsertPlaceholdersAndValues(rv)
-		insertQuery += fmt.Sprintf("(%s)", valuePlaceholders)
-		values = append(values, recordValues...)
-
-	default:
-		return 0, fmt.Errorf("records must be a struct or slice of structs")
-	}
-
-	// 执行插入操作
-	result, err := db.Exec(insertQuery, values...)
-	if err != nil {
-		return 0, fmt.Errorf("error executing insert: %v", err)
-	}
-
-	// 获取插入数据的 ID（仅限单条插入）
-	lastInsertID, _ := result.LastInsertId()
-	return lastInsertID, nil
-}
-
-// getStructFields 获取结构体的字段名。
-// 该函数通过反射获取结构体类型的所有字段名称，并返回字段名称的字符串切片。
+// getStructFields 获取结构体的字段名，支持通过 db 标签来映射数据库列名。
+// 如果字段名没有 db 标签，自动转换为蛇形命名法，并检测其是否符合蛇形命名规则。
 //
 // 参数:
 //   - t reflect.Type: 要获取字段名的结构体类型。
 //
 // 返回:
-//   - []string: 结构体字段的名称列表。
-func getStructFields(t reflect.Type) []string {
+//   - []string: 结构体字段对应的数据库列名列表。
+//   - error: 如果字段名不符合蛇形命名法，则返回错误。
+func getStructFields(t reflect.Type) ([]string, error) {
 	var fields []string
+
 	for i := 0; i < t.NumField(); i++ {
 		field := t.Field(i)
-		fields = append(fields, field.Name)
+
+		// 跳过匿名字段
+		if field.Anonymous {
+			continue
+		}
+
+		// 获取 db 标签的值
+		dbTag := field.Tag.Get("db")
+		if dbTag == "" {
+			// 如果没有 db 标签，则使用结构体字段名，并将驼峰命名法转换为蛇形命名法
+			dbTag = toSnakeCase(field.Name)
+
+			// 检查转换后的蛇形命名是否符合规则
+			if !isSnakeCase(dbTag) {
+				exception.PrintError(getStructFields, fmt.Errorf("field name '%s' is not in snake_case format", field.Name))
+				return nil, fmt.Errorf("field name '%s' is not in snake_case format", field.Name)
+			}
+		}
+
+		// 跳过被标记为 "-" 的字段
+		if dbTag == "-" {
+			continue
+		}
+
+		fields = append(fields, dbTag)
 	}
-	return fields
+
+	if len(fields) == 0 {
+		exception.PrintError(getStructFields, fmt.Errorf("no valid fields found in struct %s", t.Name()))
+		return nil, fmt.Errorf("no valid fields found in struct %s", t.Name())
+	}
+
+	return fields, nil
+}
+
+// toSnakeCase 将驼峰命名法的字符串转换为蛇形命名法。
+// 例如，"FirstName" -> "first_name"
+func toSnakeCase(str string) string {
+	var result []rune
+	for i, c := range str {
+		if i > 0 && 'A' <= c && c <= 'Z' {
+			result = append(result, '_')
+		}
+		result = append(result, rune(strings.ToLower(string(c))[0]))
+	}
+	return string(result)
 }
 
 // buildInsertPlaceholdersAndValues 构建 SQL 插入语句的占位符和对应的值。
@@ -160,4 +88,245 @@ func buildInsertPlaceholdersAndValues(v reflect.Value) (string, []interface{}) {
 		values = append(values, field.Interface())
 	}
 	return strings.Join(placeholders, ","), values
+}
+
+// isSnakeCase 检查给定的字符串是否符合蛇形命名法。
+// 蛇形命名法要求字符串全部小写，单词之间使用下划线分隔，且不能以下划线开头或结尾。
+func isSnakeCase(str string) bool {
+	// 使用正则表达式检查是否是小写字母和下划线的组合
+	match, _ := regexp.MatchString(`^[a-z]+(_[a-z]+)*$`, str)
+	return match
+}
+
+// buildQueryConditions 构建查询条件的字段和值列表。
+// 如果传入的是结构体，会自动解析其字段及对应的值。
+// 如果传入的是切片，会遍历切片中的每个条件并构建对应的字段和值列表。
+func buildQueryConditions(conditions interface{}) ([]string, []interface{}, error) {
+	var conditionFields []string
+	var conditionValues []interface{}
+
+	// 获取条件的类型
+	rv := reflect.ValueOf(conditions)
+	switch rv.Kind() {
+	case reflect.Struct:
+		// 结构体形式的条件
+		fields, values, err := getStructFieldsAndValues(rv)
+		if err != nil {
+			exception.PrintError(buildQueryConditions, err)
+			return nil, nil, err
+		}
+		conditionFields = fields
+		conditionValues = values
+
+	case reflect.Slice:
+		// 切片形式的条件
+		for i := 0; i < rv.Len(); i++ {
+			// 获取切片中的每个条件项
+			cond := rv.Index(i)
+			fields, values, err := getStructFieldsAndValues(cond)
+			if err != nil {
+				exception.PrintError(buildQueryConditions, err)
+				return nil, nil, err
+			}
+			conditionFields = append(conditionFields, fields...)
+			conditionValues = append(conditionValues, values...)
+		}
+
+	default:
+		exception.PrintError(buildQueryConditions, fmt.Errorf("conditions must be a struct or slice of structs"))
+		return nil, nil, fmt.Errorf("conditions must be a struct or slice of structs")
+	}
+
+	return conditionFields, conditionValues, nil
+}
+
+// getStructFieldsAndValues 获取结构体的字段和对应的值。
+// 该函数会根据结构体字段名和对应的值构建查询条件，并检查 db 标签。
+//
+// 参数:
+//   - v reflect.Value: 结构体值。
+//
+// 返回:
+//   - []string: 结构体字段对应的数据库列名列表。
+//   - []interface{}: 结构体字段的实际值列表。
+//   - error: 如果字段名不符合要求，则返回错误。
+func getStructFieldsAndValues(v reflect.Value) ([]string, []interface{}, error) {
+	var fields []string
+	var values []interface{}
+
+	// 获取结构体类型
+	t := v.Type()
+
+	for i := 0; i < v.NumField(); i++ {
+		field := v.Field(i)
+		fieldType := t.Field(i)
+
+		// 跳过匿名字段
+		if fieldType.Anonymous {
+			continue
+		}
+
+		// 获取 db 标签
+		dbTag := fieldType.Tag.Get("db")
+		if dbTag == "" {
+			// 如果没有 db 标签，则使用结构体字段名，并将驼峰命名法转换为蛇形命名法
+			dbTag = toSnakeCase(fieldType.Name)
+
+			// 检查转换后的蛇形命名是否符合规则
+			if !isSnakeCase(dbTag) {
+				exception.PrintError(getStructFieldsAndValues, fmt.Errorf("field name '%s' is not in snake_case format", fieldType.Name))
+				return nil, nil, fmt.Errorf("field name '%s' is not in snake_case format", fieldType.Name)
+			}
+		}
+
+		// 如果值为空且字段标签为 "-"，跳过该字段
+		if dbTag == "-" {
+			continue
+		}
+
+		// 构建字段和值
+		fields = append(fields, dbTag)
+		values = append(values, field.Interface())
+	}
+
+	if len(fields) == 0 {
+		exception.PrintError(getStructFieldsAndValues, fmt.Errorf("no valid fields found in struct %s", t.Name()))
+		return nil, nil, fmt.Errorf("no valid fields found in struct %s", t.Name())
+	}
+
+	return fields, values, nil
+}
+
+// containsUnsafeSQL 检查 SELECT 查询是否包含潜在的危险 SQL 内容。
+// 该函数仅检查 SELECT 查询中可能会被恶意构造的部分，避免执行删除、更新、插入等危险操作。
+// 例如，检查是否存在 "DROP TABLE"、"DELETE FROM" 这种潜在的危险操作。
+//
+// Parameters:
+//   - sqlQuery string: SQL 查询语句。
+//
+// Returns:
+//   - bool: 如果 SQL 查询包含潜在的危险操作，返回 true，否则返回 false。
+func containsUnsafeSQL(sqlQuery string) bool {
+	// 只检查 SELECT 查询中的潜在危险 SQL 关键字
+	unsafePatterns := []string{
+		"DROP TABLE",    // 删除表
+		"DELETE FROM",   // 删除数据
+		"UPDATE",        // 更新数据
+		"INSERT INTO",   // 插入数据
+		"ALTER TABLE",   // 修改表结构
+		"TRUNCATE",      // 清空表数据
+		"DROP DATABASE", // 删除数据库
+		";",             // SQL 语句分隔符，可能导致 SQL 注入链
+		"/*",            // SQL 注释
+		"*/",            // SQL 注释
+		"--",            // SQL 行注释
+	}
+
+	// 转换为大写，避免大小写问题
+	sqlQueryUpper := strings.ToUpper(sqlQuery)
+
+	// 检查 SQL 查询是否包含任何不安全的模式
+	for _, pattern := range unsafePatterns {
+		if strings.Contains(sqlQueryUpper, pattern) {
+			fmt.Println("SQL 查询包含不安全的内容：", sqlQuery)
+			fmt.Println("此行为被containsUnsafeSQL函数过滤，如需关闭，请前往此函数修改")
+			return true
+		}
+	}
+
+	// 如果没有发现任何不安全的模式，返回 false
+	return false
+}
+
+// getStructFieldsWithNonEmptyValues 获取非空值对应的字段名。
+func getStructFieldsWithNonEmptyValues(v reflect.Value) ([]string, error) {
+	var fields []string
+
+	if v.Kind() == reflect.Ptr {
+		v = v.Elem()
+	}
+
+	typeOfStruct := v.Type()
+	for i := 0; i < typeOfStruct.NumField(); i++ {
+		field := typeOfStruct.Field(i)
+		fieldValue := v.Field(i)
+
+		// 跳过匿名字段
+		if field.Anonymous {
+			continue
+		}
+
+		// 获取 db 标签的值
+		dbTag := field.Tag.Get("db")
+		if dbTag == "" {
+			// 如果没有 db 标签，则使用结构体字段名，并将驼峰命名法转换为蛇形命名法
+			dbTag = toSnakeCase(field.Name)
+
+			// 检查转换后的蛇形命名是否符合规则
+			if !isSnakeCase(dbTag) {
+				exception.PrintError(getStructFieldsWithNonEmptyValues, fmt.Errorf("field name '%s' is not in snake_case format", field.Name))
+				return nil, fmt.Errorf("field name '%s' is not in snake_case format", field.Name)
+			}
+		}
+
+		// 跳过被标记为 "-" 的字段
+		if dbTag == "-" {
+			continue
+		}
+
+		// 跳过零值字段
+		if isEmptyValue(fieldValue) {
+			continue
+		}
+
+		fields = append(fields, dbTag)
+	}
+
+	if len(fields) == 0 {
+		exception.PrintError(getStructFieldsWithNonEmptyValues, fmt.Errorf("no valid fields with non-empty values found in struct %s", typeOfStruct.Name()))
+		return nil, fmt.Errorf("no valid fields with non-empty values found in struct %s", typeOfStruct.Name())
+	}
+
+	return fields, nil
+}
+
+// buildInsertPlaceholdersAndValuesSkippingEmpty 构建 SQL 插入语句的占位符和非空字段值。
+func buildInsertPlaceholdersAndValuesSkippingEmpty(v reflect.Value) (string, []interface{}) {
+	var placeholders []string
+	var values []interface{}
+
+	if v.Kind() == reflect.Ptr {
+		v = v.Elem()
+	}
+
+	for i := 0; i < v.NumField(); i++ {
+		fieldValue := v.Field(i)
+		if isEmptyValue(fieldValue) {
+			continue
+		}
+		placeholders = append(placeholders, "?")
+		values = append(values, fieldValue.Interface())
+	}
+
+	return strings.Join(placeholders, ","), values
+}
+
+// isEmptyValue 检查字段值是否为空值。
+func isEmptyValue(v reflect.Value) bool {
+	switch v.Kind() {
+	case reflect.String:
+		return v.Len() == 0
+	case reflect.Bool:
+		return false // 布尔值永远不会被视为 "空值"
+	case reflect.Int, reflect.Int8, reflect.Int16, reflect.Int32, reflect.Int64:
+		return false // 整型即使为 0 也不是 "空值"
+	case reflect.Uint, reflect.Uint8, reflect.Uint16, reflect.Uint32, reflect.Uint64:
+		return false // 无符号整型即使为 0 也不是 "空值"
+	case reflect.Float32, reflect.Float64:
+		return false // 浮点数即使为 0 也不是 "空值"
+	case reflect.Interface, reflect.Ptr, reflect.Slice, reflect.Map:
+		return v.IsNil() // 引用类型为 nil 才算空值
+	default:
+		return false
+	}
 }

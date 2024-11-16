@@ -3,6 +3,7 @@ package config
 import (
 	"fmt"
 	"gopkg.in/yaml.v3"
+	"login/exception"
 	"os"
 )
 
@@ -50,12 +51,14 @@ var AppConfig Config
 func LoadConfig(filename string) error {
 	file, err := os.Open(filename)
 	if err != nil {
+		exception.PrintError(LoadConfig, err)
 		return fmt.Errorf("error opening config file: %v", err)
 	}
 	// 关闭文件
 	defer func(file *os.File) {
 		err := file.Close()
 		if err != nil {
+			exception.PrintError(LoadConfig, err)
 			fmt.Println("error closing config file: ", err)
 		}
 	}(file)
@@ -63,6 +66,7 @@ func LoadConfig(filename string) error {
 	decoder := yaml.NewDecoder(file)
 	err = decoder.Decode(&AppConfig)
 	if err != nil {
+		exception.PrintError(LoadConfig, err)
 		return fmt.Errorf("error decoding config file: %v", err)
 	}
 
