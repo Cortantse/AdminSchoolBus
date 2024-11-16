@@ -10,8 +10,8 @@ server:
   port: ":8888"
 
 
-database_name:
-  admin_db: "schoolBus"
+database_names:
+  admin_db: "schoolbus"
   passenger_db: "??????" # *******请填你们的db名
   driver_db: "?????" # 同上
 

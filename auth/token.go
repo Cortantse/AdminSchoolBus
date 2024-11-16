@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"github.com/cristalhq/jwt"
 	"login/config"
+	"login/exception"
 	"time"
 )
 
@@ -16,6 +17,7 @@ var priKey *ecdsa.PrivateKey
 func InitTokenService() error {
 	err := loadKeys()
 	if err != nil {
+		exception.PrintError(InitTokenService, err)
 		return err
 	}
 	return nil
@@ -29,10 +31,11 @@ func InitTokenService() error {
 // Returns:
 //   - string 生成的token的string形式，还未变为raw
 //   - error 如果有错误
-func generateToken(role config.Role, user_id string) (string, error) {
+func generateToken(role config.Role, user_id string) (Token, error) {
 	signer, err := jwt.NewES256(pubKey, priKey)
 	if err != nil {
-		return "", err
+		exception.PrintError(generateToken, err)
+		return Token{}, err
 	}
 	builder := jwt.NewTokenBuilder(signer)
 
@@ -53,7 +56,7 @@ func generateToken(role config.Role, user_id string) (string, error) {
 		roleLiteral = "driver"
 		break
 	default:
-		return "", fmt.Errorf("role choosen is not valid in generateToken")
+		return Token{}, fmt.Errorf("role choosen is not valid in generateToken")
 	}
 
 	// claim仅包含发放对象和截止日期
@@ -65,7 +68,13 @@ func generateToken(role config.Role, user_id string) (string, error) {
 	token, _ := builder.Build(claims)
 
 	// 注意需要返回raw作为string！！！！！！！！！
-	return string(token.Raw()), nil
+	tem := Token{
+		TokenHash:    string(token.Raw()),
+		TokenRevoked: false,
+		TokenExpiry:  claims.ExpiresAt.Time().String(),
+		UserID:       user_id,
+	}
+	return tem, nil
 }
 
 // 解析和验证 JWT，返回对应错误，验证是否过期，并返回请求者身份
@@ -74,12 +83,14 @@ func verifyToken(tokenString string) (config.Role, string, error) {
 	// 创建 signer
 	signer, err := jwt.NewES256(pubKey, priKey)
 	if err != nil {
+		exception.PrintError(verifyToken, err)
 		return config.Unknown, "", fmt.Errorf("error creating signer: %v", err)
 	}
 
 	// 解析并验证 JWT 字符串
 	token, err := jwt.ParseAndVerifyString(tokenString, signer)
 	if err != nil {
+		exception.PrintError(verifyToken, err)
 		return config.Unknown, "", jwt.ErrInvalidSignature
 	}
 
@@ -89,6 +100,7 @@ func verifyToken(tokenString string) (config.Role, string, error) {
 	// 解码 rawClaims 为标准声明（StandardClaims）
 	claims := &jwt.StandardClaims{}
 	if err := json.Unmarshal(rawClaims, claims); err != nil {
+		exception.PrintError(verifyToken, err)
 		return config.Unknown, "", jwt.Error("error decoding claims")
 	}
 
@@ -118,11 +130,4 @@ func verifyToken(tokenString string) (config.Role, string, error) {
 
 	// 返回解析到的角色
 	return role, subject, nil
-}
-
-func Test() {
-	token, err1 := generateToken(config.RoleDriver, "123")
-
-	role, id, err2 := verifyToken(token)
-	fmt.Println(role, id, err1, err2)
 }

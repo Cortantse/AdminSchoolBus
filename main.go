@@ -7,6 +7,7 @@ import (
 	"login/auth"
 	"login/config"
 	"login/db"
+	"login/exception"
 	"net/http"
 )
 
@@ -145,27 +146,42 @@ func initServer() error {
 	return nil
 }
 
+// 1、优化所有报错**函数的位置**
+// 2、报错时打印出错误信息
+
 // 端口、密码等静态全局变量请去config.yaml修改
 func main() {
 	// 初始化全局参数 ======
 	err := config.LoadConfig("config.yaml")
 	if err != nil {
-		return
+		print(err.Error())
 	}
 
 	// 设置数据库连接 =====
 	err = initDatasetCon()
 	if err != nil {
-		return
+		print(err.Error())
 	}
 
 	// 启动令牌服务 ======
 	err = auth.InitTokenService()
 	if err != nil {
-		return
+		print(err.Error())
 	}
 
-	auth.Test()
+	// 获取一个令牌
+	token, err := auth.GiveAToken(config.RoleDriver, "2", "")
+	if err != nil {
+		print(err.Error())
+	}
+
+	// 验证令牌，并获得令牌所有者的信息
+	userID, role, err := auth.VerifyAToken(token)
+	if err != nil {
+		exception.PrintWarning(auth.VerifyAToken, err)
+	}
+
+	fmt.Printf("UserID is %s, role is %s\n", userID, role)
 
 	return
 
