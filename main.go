@@ -66,7 +66,6 @@ type ApiResponse struct {
 //
 // @throws error 当请求方法不为POST或请求解码失败时，会返回相应的HTTP错误响应。
 func loginHandler(w http.ResponseWriter, r *http.Request) {
-	log.Println("11")
 	// 允许跨域请求
 	w.Header().Set("Access-Control-Allow-Origin", "*")
 	w.Header().Set("Access-Control-Allow-Methods", "POST, OPTIONS")
@@ -162,12 +161,29 @@ func initDatasetCon() error {
 	return nil
 }
 
+// CORS 中间件
+func enableCORS(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Access-Control-Allow-Origin", "*")                   // 允许所有来源
+		w.Header().Set("Access-Control-Allow-Methods", "GET, POST, OPTIONS") // 允许的请求方法
+		w.Header().Set("Access-Control-Allow-Headers", "Content-Type")       // 允许的请求头
+
+		// 如果是预检请求（OPTIONS），则直接返回
+		if r.Method == "OPTIONS" {
+			w.WriteHeader(http.StatusOK)
+			return
+		}
+
+		next.ServeHTTP(w, r)
+	})
+}
+
 // 启动服务器外部链接
-func initServer() error {
+func initServer(cors http.Handler) error {
 	port := config.AppConfig.Server.Port
 
 	fmt.Println("Service is running on port", port)
-	err := http.ListenAndServe(port, nil)
+	err := http.ListenAndServe(port, cors)
 	if err != nil {
 		fmt.Println("Service is not running properly, with error: ", err)
 		return fmt.Errorf("service is not running properly, with error: %v", err)
@@ -245,8 +261,11 @@ func main() {
 		json.NewEncoder(w).Encode(driver)
 	})
 
+	// 使用 CORS 中间件
+	corsHandler := enableCORS(mux)
+
 	// 启动连接服务 ======
-	err = initServer()
+	err = initServer(corsHandler)
 	if err != nil {
 		return
 	}
