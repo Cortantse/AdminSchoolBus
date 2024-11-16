@@ -1,7 +1,7 @@
 package exception
 
 import (
-	"fmt"
+	"log"
 	"reflect"
 	"runtime"
 )
@@ -16,9 +16,9 @@ func PrintError(fn interface{}, err error) {
 	// 获取函数名
 	pc := runtime.FuncForPC(reflect.ValueOf(fn).Pointer())
 	if pc != nil {
-		fmt.Printf("%s%sError occurs in %s: %s%s\n", bold, red, pc.Name(), err.Error(), reset)
+		log.Printf("%s%sError occurs in %s: %s%s\n", bold, red, pc.Name(), err.Error(), reset)
 	} else {
-		fmt.Printf("%s%sError occurs in unknown function: %s%s\n", bold, red, err.Error(), reset)
+		log.Printf("%s%sError occurs in unknown function: %s%s\n", bold, red, err.Error(), reset)
 	}
 }
 
@@ -32,8 +32,8 @@ func PrintWarning(fn interface{}, err error) {
 	// 获取函数名
 	pc := runtime.FuncForPC(reflect.ValueOf(fn).Pointer())
 	if pc != nil {
-		fmt.Printf("%s%sWarning in %s: %s%s\n", bold, yellow, pc.Name(), err.Error(), reset)
+		log.Printf("%s%sWarning in %s: %s%s\n", bold, yellow, pc.Name(), err.Error(), reset)
 	} else {
-		fmt.Printf("%s%sWarning in unknown function: %s%s\n", bold, yellow, err.Error(), reset)
+		log.Printf("%s%sWarning in unknown function: %s%s\n", bold, yellow, err.Error(), reset)
 	}
 }

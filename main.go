@@ -71,13 +71,27 @@ func loginHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// 简单验证账号密码，这里做硬编码，没有数据库还
-	if loginReq.Username == "admin" && loginReq.Password == "admin" {
+	// 验证账号密码，这里还是用明文传输的，后续加密啊$$$$$￥￥￥
+	// 创建数组存储查询结果
+	var results []auth.UserPass
+	// 创建变量数组方便传递变量
+	var params = []interface{}{
+		loginReq.Username, loginReq.Password,
+	}
+	// 查询结果
+	err = db.Select(config.RoleAdmin, "usersPass", &results, true,
+		[]string{}, []string{"user_id = ? AND user_password_hash = ?"}, params, "", 1, 0, "", "")
+	if err != nil {
+		exception.PrintError(loginHandler, err)
+		return
+	}
+
+	if len(results) != 0 {
 		// 返回成功
 		response := ApiResponse{
 			Code:    http.StatusOK,
 			Message: "Login success",
-			Data:    "pass",
+			Data:    "pass", //这里传令牌，最好要加密啊$$$$$￥￥￥
 		}
 		json.NewEncoder(w).Encode(response)
 	} else {
@@ -92,13 +106,6 @@ func loginHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 // 创造数据库连接实例
-//
-// Parameters:
-//
-//	null
-//
-// Returns:
-// - error 如果连接失败，则返回错误信息
 func initDatasetCon() error {
 	err := db.InitDB(config.RoleAdmin)
 	if err != nil {
@@ -146,8 +153,20 @@ func initServer() error {
 	return nil
 }
 
-// 1、优化所有报错**函数的位置**
-// 2、报错时打印出错误信息
+func test(err error) {
+	// 获取一个令牌
+	token, err := auth.GiveAToken(config.RoleDriver, "2", "")
+	if err != nil {
+		print(err.Error())
+	}
+	// 验证令牌，并获得令牌所有者的信息
+	userID, role, err := auth.VerifyAToken(token)
+	if err != nil {
+		exception.PrintWarning(auth.VerifyAToken, err)
+	}
+
+	fmt.Printf("UserID is %s, role is %s\n", userID, role)
+}
 
 // 端口、密码等静态全局变量请去config.yaml修改
 func main() {
@@ -169,21 +188,10 @@ func main() {
 		print(err.Error())
 	}
 
-	// 获取一个令牌
-	token, err := auth.GiveAToken(config.RoleDriver, "2", "")
+	test(err)
 	if err != nil {
-		print(err.Error())
+		exception.PrintError(test, err)
 	}
-
-	// 验证令牌，并获得令牌所有者的信息
-	userID, role, err := auth.VerifyAToken(token)
-	if err != nil {
-		exception.PrintWarning(auth.VerifyAToken, err)
-	}
-
-	fmt.Printf("UserID is %s, role is %s\n", userID, role)
-
-	return
 
 	// 设置路由 =======
 	http.HandleFunc("/api/login", loginHandler)
