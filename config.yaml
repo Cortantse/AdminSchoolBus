@@ -21,3 +21,4 @@ jwt:
   expiration_hours_admin: 9999
   expiration_hours_driver: 24
 
+
