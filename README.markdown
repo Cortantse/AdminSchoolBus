@@ -109,18 +109,18 @@
 
 ## 模块文件修改权限说明
 
-| 模块               | 可修改文件                                        | 说明                                            |
+| 模块               | 文件                                        | 说明                                            |
 |--------------------|--------------------------------------------------|-------------------------------------------------|
-| **API 模块**        | `api.go`                                         | 可增量添加/修改 API 函数                        |
-| **Auth 模块**       | 无                                               | **禁止修改**，仅调用公有函数                    |
+| **[API 模块](https://github.com/Cortantse/AdminSchoolBus/blob/main/api/README.markdown)**   | `api.go`                                         | 可增量添加/修改 API 函数                        |
+| **[Auth 模块](https://github.com/Cortantse/AdminSchoolBus/blob/main/auth/README.markdown)**  | 无                                               | **禁止修改**，仅调用公有函数                    |
 |                    | `auth/token.go`，`auth/token_api.go`，`auth/load_es256_keys.go` | **禁止修改**                                    |
-| **Config 模块**     | `config/config.yaml`，`config/identities.go`     | 可增量添加与修改（`identities.go` 仅可增量添加）|
+| **[Config 模块](https://github.com/Cortantse/AdminSchoolBus/blob/main/config/README.markdown)**| `config/config.yaml`，`config/identities.go`     | 可增量添加与修改（`identities.go` 仅可增量添加）|
 |                    | `config/config.go`                               | **禁止修改**                                    |
-| **DB 模块**         | 无                                               | **禁止修改**，仅可调用相关接口                  |
+| **[DB 模块](https://github.com/Cortantse/AdminSchoolBus/blob/main/db/README.markdown)**      | 无                                               | **禁止修改**，仅可调用相关接口                  |
 |                    | `db/db.go`，`db/db_api.go`                       | **禁止修改**                                    |
-| **DriverShift 模块**| 无                                               | 无修改权限                                      |
-| **Exception 模块**  | `exception/exception.go`，`exception/exception_functions.go` | 可增量添加与修改自定义错误类型与错误处理函数   |
-| **GPS 模块**        | 无                                               | 无修改权限                                      |
+| **[DriverShift 模块](https://github.com/Cortantse/AdminSchoolBus/blob/main/driverShift/README.markdown)** | 无                                               | 无修改权限                                      |
+| **[Exception 模块](https://github.com/Cortantse/AdminSchoolBus/blob/main/exception/README.markdown)**  | `exception/exception.go`，`exception/exception_functions.go` | 可增量添加与修改自定义错误类型与错误处理函数   |
+| **[GPS 模块](https://github.com/Cortantse/AdminSchoolBus/blob/main/gps/README.markdown)**     | 无                                               | 无修改权限                                      |
 
 ---
 
