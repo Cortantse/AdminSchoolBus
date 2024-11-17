@@ -7,37 +7,6 @@ import (
 	"os"
 )
 
-// DatabaseConfig 定义从config.yaml中要提取的结构体
-type DatabaseConfig struct {
-	Host     string `yaml:"host"`
-	Port     int    `yaml:"port"`
-	User     string `yaml:"user"`
-	Password string `yaml:"password"`
-}
-
-type DatabaseNames struct {
-	AdminDB     string `yaml:"admin_db"`
-	PassengerDB string `yaml:"passenger_db"`
-	DriverDB    string `yaml:"driver_db"`
-}
-
-type Server struct {
-	Port string `yaml:"port"`
-}
-
-type Jwt struct {
-	ExpirationHoursPass   int `yaml:"expiration_hours_passenger"`
-	ExpirationHoursAdmin  int `yaml:"expiration_hours_admin"`
-	ExpirationHoursDriver int `yaml:"expiration_hours_driver"`
-}
-
-type Config struct {
-	Database DatabaseConfig `yaml:"database_connection"`
-	Server   Server         `yaml:"server"`
-	DBNames  DatabaseNames  `yaml:"database_names"`
-	Jwt      Jwt            `yaml:"jwt"`
-}
-
 // AppConfig 静态全局变量载入
 var AppConfig Config
 
