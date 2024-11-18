@@ -7,6 +7,9 @@
 ### 快速上手
 
 `db` 模块是一个封装了常见数据库操作的工具包，旨在简化与数据库交互的代码编写。它提供了一系列高效、专业且实用的功能，满足不同层次的数据库操作需求。以下是模块功能的简要指引：
+你可以找到和数据库操作的例子在exmaple模块中
+- 1. [简单的例子](https://github.com/Cortantse/AdminSchoolBus/blob/main/example/example_simple.go)
+- 2. [复杂的例子](https://github.com/Cortantse/AdminSchoolBus/blob/main/example/example_complicated.go)
 
 #### 你想完成什么操作？
 
@@ -61,7 +64,7 @@
 
 #### 2. `ExecuteSQL`
 
-**功能**：执行通用 SQL 语句（支持 SELECT, INSERT, UPDATE, DELETE）。
+**功能**：执行通用 SQL 语句（支持至少四大语句 SELECT, INSERT, UPDATE, DELETE），并提供安全保护和审计。
 
 **参数**：
 - `role`：数据库角色。
