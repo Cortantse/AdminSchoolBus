@@ -22,7 +22,7 @@
 
 ---
 
-### 1. **[Auth 模块](https://github.com/Cortantse/AdminSchoolBus/blob/main/auth/README.markdown)**  
+### 1. **[Auth 模块](https://github.c`om/Cortantse/AdminSchoolBus/blob/main/auth/README.markdown)**  
 负责用户认证与授权。包含用户登录、Token 生成与验证等功能。
 
 - **贡献者**：  

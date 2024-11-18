@@ -9,6 +9,12 @@ import (
 	"login/exception"
 )
 
+// **本文件用于演示db_api中较为复杂的两个自定义的sql函数**
+
+// **这里的两个函数不用写sql语句，但是相对使用的**上手难度大**，并且由于是自己造的轮子，可能有较多潜在问题**
+
+// 如果您对不写sql语句完成sql命令不感兴趣，请访问example_simple使用那里的api，手动编写sql语句
+
 // 一、数据的插入
 
 type TokenTest struct {
@@ -41,14 +47,7 @@ func TestInsert() {
 }
 
 // 二、数据的查询
-// ** 这里我们提供两个函数：
-// 由于查询比较复杂，一个函数可能很难涵盖所有需求
-// 1、Select函数是安全的查询函数，使用相对复杂，无法实现所有查询
-// 2、SelectPrimitive也是安全的查询函数，使用简单，但需要用户自己构建查询语句，并处理语法错误问题
-// 两者都只支持一个sql语句，如果你需要多个sql语句，请多次调用
-// **在SelectPrimitive中，如果你的语句被过滤，请去db.go文件中的 containsUnsafeSQL 函数中**删除**过滤关键字
-
-// 1、Select函数 使用
+// SelectEasy 函数是安全的查询函数，**上手难度大**，无法实现所有查询，但你不需要写sql语句，只需要写查询条件即可
 
 // **普通查询
 func SelectTest1() {
@@ -60,7 +59,7 @@ func SelectTest1() {
 	var tokens []auth.Token
 	// 查询后数据会被填入原本的数组里面
 
-	err := db.Select(
+	err := db.SelectEasy(
 		config.RoleAdmin, // 数据库角色
 		"tokens",         // 表名
 		&tokens,          // 存放查询结果的结构体数组**指针**
@@ -94,7 +93,7 @@ func SelectTest2() {
 
 	var tokens []auth.Token
 
-	err := db.Select(
+	err := db.SelectEasy(
 		config.RoleAdmin,   // 数据库角色
 		"tokens",           // 表名
 		&tokens,            // 存放查询结果的结构体数组指针
@@ -134,7 +133,7 @@ func SelectTest6() {
 
 	var tokens []auth.Token
 
-	err := db.Select(
+	err := db.SelectEasy(
 		config.RoleAdmin, // 数据库角色
 		"tokens",         // 表名
 		&tokens,          // 存放查询结果的结构体数组指针
@@ -173,7 +172,7 @@ func SelectTest7() {
 
 	var tokens []auth.Token
 
-	err := db.Select(
+	err := db.SelectEasy(
 		config.RoleAdmin, // 数据库角色
 		"tokens",         // 表名
 		&tokens,          // 存放查询结果的结构体数组指针
@@ -212,7 +211,7 @@ func SelectTest9() {
 
 	var tokens []auth.Token
 
-	err := db.Select(
+	err := db.SelectEasy(
 		config.RoleAdmin, // 数据库角色
 		"tokens",         // 表名
 		&tokens,          // 存放查询结果的结构体数组指针
@@ -250,7 +249,7 @@ func SelectTest10() {
 
 	var tokens []auth.Token
 
-	err := db.Select(
+	err := db.SelectEasy(
 		config.RoleAdmin, // 数据库角色
 		"tokens",         // 表名
 		&tokens,          // 存放查询结果的结构体数组指针
@@ -288,7 +287,7 @@ func SelectTest8() {
 	params := []interface{}{"1"}
 
 	// 检测role和user_id是否匹配，正式检查
-	err := db.Select(config.RoleAdmin, "usersPass p, usersInfo i", &tems,
+	err := db.SelectEasy(config.RoleAdmin, "usersPass p, usersInfo i", &tems,
 		false, []string{"p.user_id", "user_registry_date"}, []string{"p.user_id = i.user_id", "p.user_id = ?"},
 		params, "", 9999, 0, "", "")
 
@@ -299,51 +298,5 @@ func SelectTest8() {
 
 	for _, tem := range tems {
 		fmt.Printf("User ID: %s, Registry Date: %s\n", tem.UserID, tem.UserRegisDate)
-	}
-}
-
-// 2、SelectPrimitive函数 使用
-
-func SelectTest11() {
-	// 构建 SQL 查询，查询所有 Token
-	sqlQuery := "SELECT token_id, token_hash, token_revoked, token_expiry FROM tokens"
-	params := []interface{}{} // 无条件的查询
-
-	// 存放查询结果的结构体数组
-	var tokens []auth.Token
-
-	// 执行查询并将结果存入 tokens 数组
-	err := db.SelectPrimitive(config.RoleAdmin, sqlQuery, params, &tokens)
-	if err != nil {
-		exception.PrintError(SelectTest11, err)
-		log.Fatal("Error during select:", err)
-	}
-
-	fmt.Println("Query Result (All Tokens):")
-	for _, token := range tokens {
-		fmt.Printf("Token ID: %s, Hash: %s, Expiry: %s, Revoked: %v\n",
-			token.TokenID, token.TokenHash, token.TokenExpiry, token.TokenRevoked)
-	}
-}
-
-func SelectTest13() {
-	// 构建 SQL 查询，查询 TokenID 在多个值中的 Token
-	sqlQuery := "SELECT token_id, token_hash, token_revoked, token_expiry FROM tokens WHERE token_id = (?) AND token_expiry < (?)"
-	params := []interface{}{"12345", "2023-01-01 00:00:00"} // 条件：token_id 在这几个值中
-
-	// 存放查询结果的结构体数组
-	var tokens []auth.Token
-
-	// 执行查询并将结果存入 tokens 数组
-	err := db.SelectPrimitive(config.RoleAdmin, sqlQuery, params, &tokens)
-	if err != nil {
-		exception.PrintError(SelectTest13, err)
-		log.Fatal("Error during select:", err)
-	}
-
-	fmt.Println("Query Result (IN Query):")
-	for _, token := range tokens {
-		fmt.Printf("Token ID: %s, Hash: %s, Expiry: %s, Revoked: %v\n",
-			token.TokenID, token.TokenHash, token.TokenExpiry, token.TokenRevoked)
 	}
 }

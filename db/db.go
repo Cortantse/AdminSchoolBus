@@ -2,11 +2,26 @@ package db
 
 import (
 	"fmt"
+	"github.com/jmoiron/sqlx"
+	"login/config"
 	"login/exception"
 	"reflect"
 	"regexp"
 	"strings"
 )
+
+// DBError 自定义数据库错误类型，用于封装 SQL 执行中的错误。
+type DBError struct {
+	FuncName    string        // 函数名
+	Err         error         // 错误信息
+	SQL         string        // SQL 语句
+	QueryParams []interface{} // 查询参数
+}
+
+// Error 实现了 error 接口，返回自定义错误的字符串表示
+func (e *DBError) Error() string {
+	return fmt.Sprintf("[%s] 出现错误: %v\nSQL: %s\n参数: %v", e.FuncName, e.Err, e.SQL, e.QueryParams)
+}
 
 // getStructFields 获取结构体的字段名，支持通过 db 标签来映射数据库列名。
 // 如果字段名没有 db 标签，自动转换为蛇形命名法，并检测其是否符合蛇形命名规则。
@@ -329,4 +344,33 @@ func isEmptyValue(v reflect.Value) bool {
 	default:
 		return false
 	}
+}
+
+// 获取对应的数据库连接
+func getConn(role config.Role, db **sqlx.DB) error {
+	switch role {
+	case config.RoleAdmin:
+		*db = db1
+	case config.RolePassenger:
+		*db = db2
+	case config.RoleDriver:
+		*db = db3
+	default:
+		exception.PrintError(ExecuteSQL, fmt.Errorf("role is a iota enum data structure in identity.go\n and you provide a wrong value, please check it"))
+		return fmt.Errorf("role is a iota enum data structure in identity.go\n and you provide a wrong value, please check it")
+	}
+	return nil
+}
+
+// 检查参数
+func checkArgs(statement string, args []interface{}) error {
+	count := strings.Count(statement, "?")
+	if count != len(args) {
+		exception.PrintError(checkArgs, fmt.Errorf("参数数量不匹配，SQL 语句中有 %d 个占位符，但传入了 %d 个参数", count, len(args)))
+		return fmt.Errorf("参数数量不匹配，SQL 语句中有 %d 个占位符，但传入了 %d 个参数", count, len(args))
+	}
+	if count == 0 {
+		exception.PrintWarning(checkArgs, fmt.Errorf("SQL 语句中没有占位符，请检查："+statement))
+	}
+	return nil
 }
