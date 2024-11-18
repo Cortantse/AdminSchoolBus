@@ -69,7 +69,7 @@
 ---
 
 ### 4. **[DriverShift 模块](https://github.com/Cortantse/AdminSchoolBus/blob/main/driverShift/README.markdown)**  
-无
+负责驾驶员上下班信息操作，如存储、确认信息真实性等。暂无与管理员和乘客交互的操作。
 
 - **贡献者**：  
   - **shiganwen**  
@@ -96,7 +96,7 @@
 ---
 
 ### 6. **[GPS 模块](https://github.com/Cortantse/AdminSchoolBus/blob/main/gps/README.markdown)**  
-无
+负责处理GPS信息，现支持接收GPS定位以及提供驾驶员信息的接口。暂不成熟。
 
 - **贡献者**：  
   - **shiganwen**  
@@ -118,9 +118,9 @@
 |                    | `config/config.go`                               | **禁止修改**                                    |
 | **[DB 模块](https://github.com/Cortantse/AdminSchoolBus/blob/main/db/README.markdown)**      | 无                                               | **禁止修改**，仅可调用相关接口                  |
 |                    | `db/db.go`，`db/db_api.go`                       | **禁止修改**                                    |
-| **[DriverShift 模块](https://github.com/Cortantse/AdminSchoolBus/blob/main/driverShift/README.markdown)** | 无                                               | 无修改权限                                      |
+| **[DriverShift 模块](https://github.com/Cortantse/AdminSchoolBus/blob/main/driverShift/README.markdown)** | `gps.go`                                                | 无修改权限                                      |
 | **[Exception 模块](https://github.com/Cortantse/AdminSchoolBus/blob/main/exception/README.markdown)**  | `exception/exception.go`，`exception/exception_functions.go` | 可增量添加与修改自定义错误类型与错误处理函数   |
-| **[GPS 模块](https://github.com/Cortantse/AdminSchoolBus/blob/main/gps/README.markdown)**     | 无                                               | 无修改权限                                      |
+| **[GPS 模块](https://github.com/Cortantse/AdminSchoolBus/blob/main/gps/README.markdown)**     | `gps.go`                                               | 无修改权限                                      |
 
 ---
 
