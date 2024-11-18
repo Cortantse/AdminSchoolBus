@@ -61,7 +61,7 @@ func GiveAToken(role config.Role, userId string, clientInfo string) (string, err
 	params := []interface{}{userId}
 
 	// 查询数据库中是否有对应的user_id的账户
-	err := db.Select(config.RoleAdmin, "usersPass", &tems, true,
+	err := db.SelectEasy(config.RoleAdmin, "usersPass", &tems, true,
 		[]string{}, []string{"user_id = (?)"}, params, "user_id", 1, 0, "", "")
 	if err != nil {
 		exception.PrintError(GiveAToken, err)
@@ -100,7 +100,7 @@ func GiveAToken(role config.Role, userId string, clientInfo string) (string, err
 	// 获取数据库系统生成的tokenID
 	var tokens []Token
 	// 搜索相同token_hash和user_id的token，来获取刚插入的token
-	err = db.Select(config.RoleAdmin, "tokens", &tokens, false,
+	err = db.SelectEasy(config.RoleAdmin, "tokens", &tokens, false,
 		[]string{"token_id"}, []string{"token_hash = ? AND user_id = ?"}, []interface{}{token.TokenHash, userId}, "token_id", 1, 0, "", "")
 	if err != nil {
 		exception.PrintError(GiveAToken, err)
@@ -153,7 +153,7 @@ func VerifyAToken(token string) (string, config.Role, error) {
 	//-1、是否存在
 	// 获取数据库中对应token的信息
 	var tokens []Token
-	err := db.Select(config.RoleAdmin, "tokens", &tokens, false,
+	err := db.SelectEasy(config.RoleAdmin, "tokens", &tokens, false,
 		[]string{"token_id"}, []string{"token_hash = ?"}, []interface{}{token}, "token_id", 2, 0, "", "")
 	// 没有找到该token
 	if len(tokens) == 0 {

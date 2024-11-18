@@ -73,6 +73,191 @@ func InitDB(chooseDB config.Role) error {
 	return nil
 }
 
+// ExecuteSQL 执行通用的 SQL 语句，支持 SELECT、INSERT、UPDATE、DELETE 等。
+// 参数：
+//
+//	role: 数据库角色
+//	sqlStatement: 带占位符的 SQL 语句
+//	args: SQL 语句中占位符的对应参数
+//
+// 返回值：
+//
+//	result: 执行结果，若是查询，则为 sql.Rows 或 sql.Result
+//	err: 错误信息，若发生错误则返回
+//
+// 示例：插入一条新用户数据
+// result, err := ExecuteSQL(role, "INSERT INTO users (name, age) VALUES (?, ?)", "Alice", 30)
+func ExecuteSQL(role config.Role, sqlStatement string, args ...interface{}) (interface{}, error) {
+	// 0. 获取对应的数据库连接
+	var db *sqlx.DB
+	err := getConn(role, &db)
+	if err != nil {
+		exception.PrintError(ExecuteSQL, err)
+		return nil, err
+	}
+
+	// 0.5. 确保参数匹配
+	err = checkArgs(sqlStatement, args)
+	if err != nil {
+		exception.PrintError(ExecuteSQL, err)
+		return nil, err
+	}
+
+	// 1. 确保 SQL 语句非空
+	if strings.TrimSpace(sqlStatement) == "" {
+		exception.PrintError(ExecuteSQL, fmt.Errorf("SQL 语句不能为空"))
+		return nil, fmt.Errorf("SQL 语句不能为空")
+	}
+
+	// 2. 判断 SQL 类型并执行对应操作
+	// 判断 SELECT 操作
+	if strings.HasPrefix(strings.ToUpper(sqlStatement), "SELECT") {
+		rows, err := db.Query(sqlStatement, args...)
+		if err != nil {
+			exception.PrintError(ExecuteSQL, err)
+			return nil, &DBError{"ExecuteSQL", err, sqlStatement, args}
+		}
+		return rows, nil
+	}
+
+	// 判断 INSERT 操作
+	if strings.HasPrefix(strings.ToUpper(sqlStatement), "INSERT") {
+		result, err := db.Exec(sqlStatement, args...)
+		if err != nil {
+			exception.PrintError(ExecuteSQL, err)
+			return nil, &DBError{"ExecuteSQL", err, sqlStatement, args}
+		}
+		return result, nil
+	}
+
+	// 判断 UPDATE 操作
+	if strings.HasPrefix(strings.ToUpper(sqlStatement), "UPDATE") {
+		result, err := db.Exec(sqlStatement, args...)
+		if err != nil {
+			exception.PrintError(ExecuteSQL, err)
+			return nil, &DBError{"ExecuteSQL", err, sqlStatement, args}
+		}
+		return result, nil
+	}
+
+	// 判断 DELETE 操作
+	if strings.HasPrefix(strings.ToUpper(sqlStatement), "DELETE") {
+		result, err := db.Exec(sqlStatement, args...)
+		if err != nil {
+			exception.PrintError(ExecuteSQL, err)
+			return nil, &DBError{"ExecuteSQL", err, sqlStatement, args}
+		}
+		return result, nil
+	}
+
+	// 其它操作
+	result, err := db.Exec(sqlStatement, args...)
+	exception.PrintWarning(ExecuteSQL, fmt.Errorf("执行了一条不被识别的sql语句："+sqlStatement))
+	if err != nil {
+		exception.PrintError(ExecuteSQL, err)
+		return nil, &DBError{"ExecuteSQL", err, sqlStatement, args}
+	}
+
+	return result, err
+}
+
+// UnSafeExecuteSQL 执行传入的 SQL 语句，支持常见的操作如 SELECT、INSERT、UPDATE、DELETE，
+// 以及较少使用的操作如 CREATE、ALTER、DROP、TRUNCATE 等。
+//
+// 此函数直接执行传入的 SQL 字符串，不进行 SQL 注入防护，因此应确保 SQL 字符串来源安全，
+// 避免恶意输入引发 SQL 注入攻击。
+//
+// 参数：
+//
+//	db: 数据库连接对象，使用该连接对象来执行 SQL 语句。
+//	sqlStatement: 待执行的 SQL 语句字符串，可以是任何合法的 SQL 语句。
+//
+// 返回值：
+//
+//	result: 执行结果。对于 SELECT 查询，返回 *sql.Rows；对于其他操作，返回 sql.Result。
+//	err: 执行过程中可能产生的错误。如果 SQL 语句为空或执行失败，返回相应的错误信息。
+//
+// 示例 1：创建一个新表
+// sqlCreate := `
+//
+//	CREATE TABLE IF NOT EXISTS products (
+//	    id INT PRIMARY KEY AUTO_INCREMENT,
+//	    name VARCHAR(100),
+//	    price DECIMAL(10, 2)
+//	)
+//
+// `
+// result, err := UnSafeExecuteSQL(role, sqlCreate)
+//
+//	if err != nil {
+//	    fmt.Println("创建表失败:", err)
+//	} else {
+//
+//	    fmt.Println("表创建成功:", result)
+//	}
+//
+// 示例 2：向表中添加一个新列
+// sqlAlter := "ALTER TABLE products ADD COLUMN stock INT DEFAULT 0"
+// result, err = UnSafeExecuteSQL(role, sqlAlter)
+//
+//	if err != nil {
+//	    fmt.Println("修改表结构失败:", err)
+//	} else {
+//
+//	    fmt.Println("表结构修改成功:", result)
+//	}
+//
+// 示例 3：删除表
+// sqlDrop := "DROP TABLE IF EXISTS products"
+// result, err = UnSafeExecuteSQL(role, sqlDrop)
+//
+//	if err != nil {
+//	    fmt.Println("删除表失败:", err)
+//	} else {
+//
+//	    fmt.Println("表删除成功:", result)
+//	}
+//
+// 示例 4：清空表数据
+// sqlTruncate := "TRUNCATE TABLE products"
+// result, err = UnSafeExecuteSQL(role, sqlTruncate)
+//
+//	if err != nil {
+//	    fmt.Println("清空表数据失败:", err)
+//	} else {
+//
+//	    fmt.Println("表数据已清空:", result)
+//	}
+func UnSafeExecuteSQL(role config.Role, sqlStatement string) (interface{}, error) {
+	var db *sqlx.DB
+	err := getConn(role, &db)
+	if err != nil {
+		exception.PrintError(UnSafeExecuteSQL, err)
+		return nil, err
+	}
+
+	// 确保 SQL 语句不为空
+	if len(sqlStatement) == 0 {
+		return nil, fmt.Errorf("SQL 语句不能为空")
+	}
+
+	// 如果是查询（SELECT）语句
+	if len(sqlStatement) > 6 && sqlStatement[:6] == "SELECT" {
+		rows, err := db.Query(sqlStatement)
+		if err != nil {
+			return nil, fmt.Errorf("查询执行失败: %v", err)
+		}
+		return rows, nil
+	}
+
+	// 其他操作，如 INSERT、UPDATE、DELETE、CREATE、ALTER 等
+	result, err := db.Exec(sqlStatement)
+	if err != nil {
+		return nil, fmt.Errorf("执行失败: %v", err)
+	}
+	return result, nil
+}
+
 // Insert 通用插入函数，支持单条记录和批量插入。
 // 根据传入的结构体或结构体切片，生成相应的 SQL 插入语句，插入数据到指定的数据库表。
 // 使用警告：所有records目前必须是**相同**的结构，而非不同的结构，如果需要不同的结构插入，请分次插入！！！***
@@ -93,19 +278,10 @@ func Insert(role config.Role, tableName string, records interface{}) (int64, err
 	rv := reflect.ValueOf(records)
 	// 获取对应db连接
 	var db *sqlx.DB
-	switch role {
-	case config.RoleAdmin:
-		db = db1
-		break
-	case config.RolePassenger:
-		db = db2
-		break
-	case config.RoleDriver:
-		db = db3
-		break
-	default:
-		exception.PrintError(Insert, fmt.Errorf("role is a iota enum data structure in identity.go\n and you provide a wrong value, please check it"))
-		return 0, fmt.Errorf("role is a iota enum data structure in identity.go\n and you provide a wrong value, please check it")
+	err := getConn(role, &db)
+	if err != nil {
+		exception.PrintError(Insert, err)
+		return 0, err
 	}
 
 	// 判断传入的 records 是单条数据还是切片（批量插入）
@@ -167,7 +343,7 @@ func Insert(role config.Role, tableName string, records interface{}) (int64, err
 	return lastInsertID, nil
 }
 
-// Select 构造 SQL 查询语句并执行查询。
+// SelectEasy 构造 SQL 查询语句并执行查询。
 // 支持动态查询条件、排序、分页、字段筛选、分组和聚合等功能。
 // Parameters:
 //   - role config.Role: 需要使用的数据库角色。
@@ -187,7 +363,7 @@ func Insert(role config.Role, tableName string, records interface{}) (int64, err
 //   - error: 执行查询时可能出现的错误。
 //
 // 查询结果被放回到dest数组里
-func Select(
+func SelectEasy(
 	role config.Role,
 	tableName string,
 	dest interface{}, // 用户传入的结构体类型的指针
@@ -203,22 +379,16 @@ func Select(
 ) error {
 	// 获取对应的数据库连接
 	var db *sqlx.DB
-	switch role {
-	case config.RoleAdmin:
-		db = db1
-	case config.RolePassenger:
-		db = db2
-	case config.RoleDriver:
-		db = db3
-	default:
-		exception.PrintError(Select, fmt.Errorf("role is a iota enum data structure in identity.go\n and you provide a wrong value, please check it"))
-		return fmt.Errorf("role is a iota enum data structure in identity.go\n and you provide a wrong value, please check it")
+	err := getConn(role, &db)
+	if err != nil {
+		exception.PrintError(SelectEasy, err)
+		return err
 	}
 
 	// 确保传入的 dest 是结构体的指针
 	destValue := reflect.ValueOf(dest)
 	if destValue.Kind() != reflect.Ptr || destValue.Elem().Kind() != reflect.Slice {
-		exception.PrintError(Select, fmt.Errorf("dest must be a pointer to a slice"))
+		exception.PrintError(SelectEasy, fmt.Errorf("dest must be a pointer to a slice"))
 		return fmt.Errorf("dest must be a pointer to a slice")
 	}
 
@@ -266,7 +436,7 @@ func Select(
 	// 执行查询
 	rows, err := db.Queryx(query, params...)
 	if err != nil {
-		exception.PrintError(Select, err)
+		exception.PrintError(SelectEasy, err)
 		return fmt.Errorf("query error: %v", err)
 	}
 	defer rows.Close()
@@ -274,7 +444,7 @@ func Select(
 	// 确保 dest 是一个指向切片的指针
 	vDest := reflect.ValueOf(dest)
 	if vDest.Kind() != reflect.Ptr || vDest.Elem().Kind() != reflect.Slice {
-		exception.PrintError(Select, fmt.Errorf("dest must be a pointer to a slice"))
+		exception.PrintError(SelectEasy, fmt.Errorf("dest must be a pointer to a slice"))
 		return fmt.Errorf("dest must be a pointer to a slice")
 	}
 
@@ -288,7 +458,7 @@ func Select(
 
 		// 将查询结果扫描到切片元素中
 		if err := rows.StructScan(elementPtr); err != nil {
-			exception.PrintError(Select, err)
+			exception.PrintError(SelectEasy, err)
 			return fmt.Errorf("error scanning row: %v", err)
 		}
 
@@ -299,35 +469,18 @@ func Select(
 	return nil
 }
 
-// SelectPrimitive 执行原始 SQL 查询语句并返回查询结果，防止 SQL 注入。
-// 该函数允许用户传入**一个** SQL 查询语句，并绑定参数，确保使用占位符来避免 SQL 注入。
-//
-// Parameters:
-//   - role config.Role: 需要使用的数据库角色。
-//   - sqlQuery string: 原始 SQL 查询语句，必须使用占位符（?）来绑定参数。
-//   - params []interface{}: 查询参数，按照 SQL 查询中的占位符顺序提供。
-//   - dest interface{}: 传入目标结构体的指针（例如 *[]Token）。
-//
-// Returns:
-//   - error: 执行查询时可能出现的错误。
-func SelectPrimitive(role config.Role, sqlQuery string, params []interface{}, dest interface{}) error {
+func Select(role config.Role, sqlQuery string, params []interface{}, dest interface{}) error {
 	// 获取对应的数据库连接
 	var db *sqlx.DB
-	switch role {
-	case config.RoleAdmin:
-		db = db1
-	case config.RolePassenger:
-		db = db2
-	case config.RoleDriver:
-		db = db3
-	default:
-		exception.PrintError(SelectPrimitive, fmt.Errorf("role is a iota enum data structure in identity.go\n and you provide a wrong value, please check it"))
-		return fmt.Errorf("role is a iota enum data structure in identity.go, and you provide a wrong value, please check it")
+	err := getConn(role, &db)
+	if err != nil {
+		exception.PrintError(Select, err)
+		return err
 	}
 
 	// 检查 SQL 语句中是否包含不安全的部分
 	if containsUnsafeSQL(sqlQuery) {
-		exception.PrintError(SelectPrimitive, fmt.Errorf("SQL query contains potentially unsafe content: %s", sqlQuery))
+		exception.PrintError(Select, fmt.Errorf("SQL query contains potentially unsafe content: %s", sqlQuery))
 		return fmt.Errorf("SQL query contains potentially unsafe content: %s", sqlQuery)
 	}
 
@@ -349,14 +502,14 @@ func SelectPrimitive(role config.Role, sqlQuery string, params []interface{}, de
 	// 执行 SQL 查询
 	rows, err := db.Queryx(sqlQuery, params...)
 	if err != nil {
-		exception.PrintError(SelectPrimitive, err)
+		exception.PrintError(Select, err)
 		return fmt.Errorf("error executing SQL query: %v", err)
 	}
 	defer rows.Close()
 
 	// 确保传入的目标结构体是指针类型
 	if reflect.TypeOf(dest).Kind() != reflect.Ptr {
-		exception.PrintError(SelectPrimitive, fmt.Errorf("destination parameter must be a pointer"))
+		exception.PrintError(Select, fmt.Errorf("destination parameter must be a pointer"))
 		return fmt.Errorf("destination parameter must be a pointer")
 	}
 
@@ -365,7 +518,7 @@ func SelectPrimitive(role config.Role, sqlQuery string, params []interface{}, de
 
 	// 确保目标类型是一个切片类型
 	if sliceType.Kind() != reflect.Slice {
-		exception.PrintError(SelectPrimitive, fmt.Errorf("destination parameter must be a pointer to a slice"))
+		exception.PrintError(Select, fmt.Errorf("destination parameter must be a pointer to a slice"))
 		return fmt.Errorf("destination parameter must be a pointer to a slice")
 	}
 
@@ -379,7 +532,7 @@ func SelectPrimitive(role config.Role, sqlQuery string, params []interface{}, de
 
 		// 使用 rows.StructScan 扫描每一行数据到结构体
 		if err := rows.StructScan(elem); err != nil {
-			exception.PrintError(SelectPrimitive, err)
+			exception.PrintError(Select, err)
 			return fmt.Errorf("error scanning row: %v", err)
 		}
 
@@ -388,7 +541,7 @@ func SelectPrimitive(role config.Role, sqlQuery string, params []interface{}, de
 	}
 
 	if err := rows.Err(); err != nil {
-		exception.PrintError(SelectPrimitive, err)
+		exception.PrintError(Select, err)
 		return fmt.Errorf("error iterating rows: %v", err)
 	}
 

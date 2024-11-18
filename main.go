@@ -108,7 +108,7 @@ func loginHandler(w http.ResponseWriter, r *http.Request) {
 		loginReq.Username, loginReq.Password,
 	}
 	// 查询结果
-	err = db.Select(config.RoleAdmin, "usersPass", &results, true,
+	err = db.SelectEasy(config.RoleAdmin, "usersPass", &results, true,
 		[]string{}, []string{"user_id = ? AND user_password_hash = ?"}, params, "", 1, 0, "", "")
 	if err != nil {
 		exception.PrintError(loginHandler, err)
@@ -206,10 +206,10 @@ func testForToken(err error) {
 	fmt.Printf("UserID is %s, role is %s\n", userID, role)
 }
 
-// func test () {
-// 	// 示例：添加一个驾驶员对象
-// 	gpsModule.CreateDriver("driver1", 34.0522, -118.2437)
-// }
+func test() {
+	// 示例：添加一个驾驶员对象
+	//gpsModule.CreateDriver("driver1", 34.0522, -118.2437)
+}
 
 func main() {
 	// 初始化全局参数 ======
@@ -270,14 +270,4 @@ func main() {
 		return
 	}
 
-	// // 使用 CORS 中间件
-	// corsHandler := enableCORS(mux)
-
-	// // 启动服务器
-	// const port = ":8080"
-	// fmt.Println("Service is running on port", port)
-	// err := http.ListenAndServe(port, corsHandler)
-	// if err != nil {
-	// 	fmt.Println("Service is not running properly, with error: ", err)
-	// }
 }
