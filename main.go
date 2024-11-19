@@ -114,26 +114,18 @@ func loginHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// ***加入密码错误的判断***
-	if len(results) == 0 {
-		return
-	}
-
-	// 获取客户端信息
-	clientInfo := GetClientInfo(r)
-	userType := results[0].Role
-	role := determineRole(userType)
-	userID := results[0].UserID
-	log.Printf("userid is: %s\n", userID)           //可以删掉********
-	log.Printf("Client User-Agent: %s", clientInfo) //可以删掉********
-
 	if len(results) != 0 {
+		// 获取客户端信息
+		clientInfo := GetClientInfo(r)
+		userType := results[0].Role
+		role := determineRole(userType)
+		userID := results[0].UserID
 		GenerateAndSendToken(w, role, userID, clientInfo)
 	} else {
 		// 返回失败
 		response := ApiResponse{
 			Code:    http.StatusUnauthorized,
-			Message: "Login failed",
+			Message: "账户或密码错误",
 			Data:    "",
 		}
 		w.WriteHeader(http.StatusUnauthorized)
