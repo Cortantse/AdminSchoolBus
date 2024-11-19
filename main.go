@@ -73,11 +73,13 @@ func loginHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Access-Control-Allow-Credentials", "true")
 	// 如果是 OPTIONS 请求，直接返回成功，处理预检请求。因为会默认发预检请求，所以要保证不会当成错误请求处理
 	if r.Method == http.MethodOptions {
+		exception.PrintError(loginHandler, fmt.Errorf("Options err"))
 		w.WriteHeader(http.StatusOK)
 		return
 	}
 	// 确保请求是post请求
 	if r.Method != http.MethodPost {
+		exception.PrintError(loginHandler, fmt.Errorf("post err"))
 		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
 		return
 	}
@@ -174,6 +176,92 @@ func determineRole(userType int) config.Role {
 	}
 }
 
+// logoutHandler 处理用户的登出请求
+func logoutHandler(w http.ResponseWriter, r *http.Request) {
+	// 允许跨域请求
+	w.Header().Set("Access-Control-Allow-Origin", "*")
+	w.Header().Set("Access-Control-Allow-Methods", "POST, OPTIONS")
+	w.Header().Set("Access-Control-Allow-Headers", "Content-Type, Authorization")
+	w.Header().Set("Access-Control-Allow-Credentials", "true")
+
+	// 如果是 OPTIONS 请求，直接返回成功，处理预检请求
+	if r.Method == http.MethodOptions {
+		exception.PrintError(loginHandler, fmt.Errorf("Options err"))
+		w.WriteHeader(http.StatusOK)
+		return
+	}
+	// 确保请求是post请求
+	if r.Method != http.MethodPost {
+		exception.PrintError(loginHandler, fmt.Errorf("post err"))
+		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
+		return
+	}
+
+	// 从请求头获取令牌
+	token := r.Header.Get("Authorization")
+	if token == "" {
+		exception.PrintError(loginHandler, fmt.Errorf("GetToekn err"))
+		http.Error(w, "Token is missing", http.StatusBadRequest)
+		return
+	}
+
+	// 验证令牌
+	userID, _, err := auth.VerifyAToken(token)
+	if err != nil {
+		exception.PrintError(loginHandler, fmt.Errorf("VerifyAToken err"))
+		exception.PrintError(logoutHandler, err)
+		return
+	}
+
+	// 更新token_revoked
+	_, err = db.ExecuteSQL(config.RoleAdmin, "UPDATE tokens SET token_revoked = 1 WHERE user_id = ? and token_hash = ?", userID, token)
+	if err != nil {
+		exception.PrintError(loginHandler, fmt.Errorf("VerifyAToken err"))
+		exception.PrintError(logoutHandler, err)
+		return
+	}
+
+	// 更新数据库中的 token_revoked 字段
+
+	// 返回登出成功的响应
+	response := ApiResponse{
+		Code:    http.StatusOK,
+		Message: "Logout success",
+	}
+	json.NewEncoder(w).Encode(response)
+}
+
+func validateTokenHandler(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Access-Control-Allow-Origin", "*")
+	w.Header().Set("Access-Control-Allow-Methods", "POST, OPTIONS")
+	w.Header().Set("Access-Control-Allow-Headers", "Content-Type, Authorization")
+	w.Header().Set("Access-Control-Allow-Credentials", "true")
+
+	if r.Method != http.MethodPost {
+		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
+		return
+	}
+
+	token := r.Header.Get("Authorization")
+	if token == "" {
+		http.Error(w, "Token is missing", http.StatusBadRequest)
+		return
+	}
+
+	userID, role, err := auth.VerifyAToken(token)
+	if err != nil {
+		http.Error(w, "Invalid token", http.StatusUnauthorized)
+		return
+	}
+
+	// 返回验证成功响应
+	json.NewEncoder(w).Encode(ApiResponse{
+		Code:    http.StatusOK,
+		Message: "Token is valid",
+		Data:    fmt.Sprintf("UserID: %s, Role: %s", userID, role),
+	})
+}
+
 // 创造数据库连接实例
 func initDatasetCon() error {
 	err := db.InitDB(config.RoleAdmin)
@@ -204,9 +292,9 @@ func initDatasetCon() error {
 // CORS 中间件
 func enableCORS(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		w.Header().Set("Access-Control-Allow-Origin", "*")                   // 允许所有来源
-		w.Header().Set("Access-Control-Allow-Methods", "GET, POST, OPTIONS") // 允许的请求方法
-		w.Header().Set("Access-Control-Allow-Headers", "Content-Type")       // 允许的请求头
+		w.Header().Set("Access-Control-Allow-Origin", "*")                            // 允许所有来源
+		w.Header().Set("Access-Control-Allow-Methods", "GET, POST, OPTIONS")          // 允许的请求方法
+		w.Header().Set("Access-Control-Allow-Headers", "Content-Type, Authorization") // 允许的请求头
 
 		// 如果是预检请求（OPTIONS），则直接返回
 		if r.Method == "OPTIONS" {
@@ -283,6 +371,9 @@ func main() {
 	mux.HandleFunc("/drivers", gpsModule.GetAllDriversHandler)          // 用于获取所有驾驶员位置信息的接口
 	mux.HandleFunc("/updateLocation", gpsModule.Handler)                // 用于接收并处理 GPS 信息的接口
 	mux.HandleFunc("/api/login", loginHandler)                          // 设置登录处理路由
+	mux.HandleFunc("/api/logout", logoutHandler)                        // 设置登出处理路由
+	mux.HandleFunc("/api/validateToken", validateTokenHandler)          // 设置登出处理路由
+
 	// 设置路由，接收 GPS 数据的端点
 	// mux.HandleFunc("/api/gps", handleGPSData) // 接收 GPS 数据
 	mux.HandleFunc("/createDriver", func(w http.ResponseWriter, r *http.Request) {
