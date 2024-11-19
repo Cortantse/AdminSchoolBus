@@ -69,9 +69,8 @@ func loginHandler(w http.ResponseWriter, r *http.Request) {
 	// 允许跨域请求
 	w.Header().Set("Access-Control-Allow-Origin", "*")
 	w.Header().Set("Access-Control-Allow-Methods", "POST, OPTIONS")
-	w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
+	w.Header().Set("Access-Control-Allow-Headers", "Content-Type, Authorization")
 	w.Header().Set("Access-Control-Allow-Credentials", "true")
-
 	// 如果是 OPTIONS 请求，直接返回成功，处理预检请求。因为会默认发预检请求，所以要保证不会当成错误请求处理
 	if r.Method == http.MethodOptions {
 		w.WriteHeader(http.StatusOK)
@@ -115,22 +114,71 @@ func loginHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	// ***加入密码错误的判断***
+	if len(results) == 0 {
+		return
+	}
+
+	// 获取客户端信息
+	clientInfo := GetClientInfo(r)
+	userType := results[0].Role
+	role := determineRole(userType)
+	userID := results[0].UserID
+	log.Printf("userid is: %s\n", userID)           //可以删掉********
+	log.Printf("Client User-Agent: %s", clientInfo) //可以删掉********
+
 	if len(results) != 0 {
-		// 返回成功
-		response := ApiResponse{
-			Code:    http.StatusOK,
-			Message: "Login success",
-			Data:    "pass", //这里传令牌，最好要加密啊$$$$$￥￥￥
-		}
-		json.NewEncoder(w).Encode(response)
+		GenerateAndSendToken(w, role, userID, clientInfo)
 	} else {
 		// 返回失败
 		response := ApiResponse{
 			Code:    http.StatusUnauthorized,
 			Message: "Login failed",
+			Data:    "",
 		}
 		w.WriteHeader(http.StatusUnauthorized)
 		json.NewEncoder(w).Encode(response)
+	}
+}
+
+// GenerateAndSendToken  公有函数，用于生成令牌并将其发送给客户端
+func GenerateAndSendToken(w http.ResponseWriter, role config.Role, userId string, clientInfo string) {
+	token, err := auth.GiveAToken(role, userId, clientInfo)
+	if err != nil {
+		exception.PrintError(GenerateAndSendToken, err)
+		w.WriteHeader(http.StatusInternalServerError)
+		json.NewEncoder(w).Encode(ApiResponse{
+			Code:    http.StatusInternalServerError,
+			Message: "Token generation failed",
+		})
+		return
+	}
+
+	response := ApiResponse{
+		Code:    http.StatusOK,
+		Message: "Login success",
+		Data:    token,
+	}
+	json.NewEncoder(w).Encode(response)
+}
+
+// GetClientInfo 获取请求中的 User-Agent 信息
+func GetClientInfo(r *http.Request) string {
+	userAgent := r.Header.Get("User-Agent")
+	return userAgent
+}
+
+// determineRole 根据 userType 返回对应的角色
+func determineRole(userType int) config.Role {
+	switch userType {
+	case 0:
+		return config.RoleAdmin
+	case 1:
+		return config.RolePassenger
+	case 2:
+		return config.RoleDriver
+	default:
+		return config.RolePassenger // 默认返回普通乘客角色
 	}
 }
 
