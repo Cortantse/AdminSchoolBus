@@ -45,16 +45,17 @@ func loginHandler(w http.ResponseWriter, r *http.Request) {
 	// 允许跨域请求
 	w.Header().Set("Access-Control-Allow-Origin", "*")
 	w.Header().Set("Access-Control-Allow-Methods", "POST, OPTIONS")
-	w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
+	w.Header().Set("Access-Control-Allow-Headers", "Content-Type, Authorization")
 	w.Header().Set("Access-Control-Allow-Credentials", "true")
-
 	// 如果是 OPTIONS 请求，直接返回成功，处理预检请求。因为会默认发预检请求，所以要保证不会当成错误请求处理
 	if r.Method == http.MethodOptions {
+		exception.PrintError(loginHandler, fmt.Errorf("Options err"))
 		w.WriteHeader(http.StatusOK)
 		return
 	}
 	// 确保请求是post请求
 	if r.Method != http.MethodPost {
+		exception.PrintError(loginHandler, fmt.Errorf("post err"))
 		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
 		return
 	}
@@ -92,22 +93,149 @@ func loginHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	if len(results) != 0 {
-		// 返回成功
-		response := ApiResponse{
-			Code:    http.StatusOK,
-			Message: "Login success",
-			Data:    "pass", //这里传令牌，最好要加密啊$$$$$￥￥￥
-		}
-		json.NewEncoder(w).Encode(response)
+		// 获取客户端信息
+		clientInfo := GetClientInfo(r)
+		userType := results[0].Role
+		role := determineRole(userType)
+		userID := results[0].UserID
+		GenerateAndSendToken(w, role, userID, clientInfo)
 	} else {
 		// 返回失败
 		response := ApiResponse{
 			Code:    http.StatusUnauthorized,
-			Message: "Login failed",
+			Message: "账户或密码错误",
+			Data:    "",
 		}
 		w.WriteHeader(http.StatusUnauthorized)
 		json.NewEncoder(w).Encode(response)
 	}
+}
+
+// GenerateAndSendToken  公有函数，用于生成令牌并将其发送给客户端
+func GenerateAndSendToken(w http.ResponseWriter, role config.Role, userId string, clientInfo string) {
+	token, err := auth.GiveAToken(role, userId, clientInfo)
+	if err != nil {
+		exception.PrintError(GenerateAndSendToken, err)
+		w.WriteHeader(http.StatusInternalServerError)
+		json.NewEncoder(w).Encode(ApiResponse{
+			Code:    http.StatusInternalServerError,
+			Message: "Token generation failed",
+		})
+		return
+	}
+
+	response := ApiResponse{
+		Code:    http.StatusOK,
+		Message: "Login success",
+		Data:    token,
+	}
+	json.NewEncoder(w).Encode(response)
+}
+
+// GetClientInfo 获取请求中的 User-Agent 信息
+func GetClientInfo(r *http.Request) string {
+	userAgent := r.Header.Get("User-Agent")
+	return userAgent
+}
+
+// determineRole 根据 userType 返回对应的角色
+func determineRole(userType int) config.Role {
+	switch userType {
+	case 0:
+		return config.RoleAdmin
+	case 1:
+		return config.RolePassenger
+	case 2:
+		return config.RoleDriver
+	default:
+		return config.RolePassenger // 默认返回普通乘客角色
+	}
+}
+
+// logoutHandler 处理用户的登出请求
+func logoutHandler(w http.ResponseWriter, r *http.Request) {
+	// 允许跨域请求
+	w.Header().Set("Access-Control-Allow-Origin", "*")
+	w.Header().Set("Access-Control-Allow-Methods", "POST, OPTIONS")
+	w.Header().Set("Access-Control-Allow-Headers", "Content-Type, Authorization")
+	w.Header().Set("Access-Control-Allow-Credentials", "true")
+
+	// 如果是 OPTIONS 请求，直接返回成功，处理预检请求
+	if r.Method == http.MethodOptions {
+		exception.PrintError(loginHandler, fmt.Errorf("Options err"))
+		w.WriteHeader(http.StatusOK)
+		return
+	}
+	// 确保请求是post请求
+	if r.Method != http.MethodPost {
+		exception.PrintError(loginHandler, fmt.Errorf("post err"))
+		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
+		return
+	}
+
+	// 从请求头获取令牌
+	token := r.Header.Get("Authorization")
+	if token == "" {
+		exception.PrintError(loginHandler, fmt.Errorf("GetToekn err"))
+		http.Error(w, "Token is missing", http.StatusBadRequest)
+		return
+	}
+
+	// 验证令牌
+	userID, _, err := auth.VerifyAToken(token)
+	if err != nil {
+		exception.PrintError(loginHandler, fmt.Errorf("VerifyAToken err"))
+		exception.PrintError(logoutHandler, err)
+		return
+	}
+
+	// 更新token_revoked
+	_, err = db.ExecuteSQL(config.RoleAdmin, "UPDATE tokens SET token_revoked = 1 WHERE user_id = ? and token_hash = ?", userID, token)
+	if err != nil {
+		exception.PrintError(loginHandler, fmt.Errorf("VerifyAToken err"))
+		exception.PrintError(logoutHandler, err)
+		return
+	}
+
+	// 更新数据库中的 token_revoked 字段
+
+	// 返回登出成功的响应
+	response := ApiResponse{
+		Code:    http.StatusOK,
+		Message: "Logout success",
+	}
+	json.NewEncoder(w).Encode(response)
+}
+
+func validateTokenHandler(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Access-Control-Allow-Origin", "*")
+	w.Header().Set("Access-Control-Allow-Methods", "POST, OPTIONS")
+	w.Header().Set("Access-Control-Allow-Headers", "Content-Type, Authorization")
+	w.Header().Set("Access-Control-Allow-Credentials", "true")
+
+	if r.Method != http.MethodPost {
+		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
+		return
+	}
+
+	token := r.Header.Get("Authorization")
+	if token == "" {
+		http.Error(w, "Token is missing", http.StatusBadRequest)
+		return
+	}
+
+	userID, role, err := auth.VerifyAToken(token)
+	if err != nil {
+		http.Error(w, "Invalid token", http.StatusUnauthorized)
+		return
+	}
+
+	// 返回验证成功响应
+	json.NewEncoder(w).Encode(ApiResponse{
+		Code:    http.StatusOK,
+		Message: "Token is valid",
+		Data:    fmt.Sprintf("UserID: %s, Role: %s", userID, role),
+	})
 }
 
 // 创造数据库连接实例
@@ -140,9 +268,9 @@ func initDatasetCon() error {
 // CORS 中间件
 func enableCORS(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		w.Header().Set("Access-Control-Allow-Origin", "*")                   // 允许所有来源
-		w.Header().Set("Access-Control-Allow-Methods", "GET, POST, OPTIONS") // 允许的请求方法
-		w.Header().Set("Access-Control-Allow-Headers", "Content-Type")       // 允许的请求头
+		w.Header().Set("Access-Control-Allow-Origin", "*")                            // 允许所有来源
+		w.Header().Set("Access-Control-Allow-Methods", "GET, POST, OPTIONS")          // 允许的请求方法
+		w.Header().Set("Access-Control-Allow-Headers", "Content-Type, Authorization") // 允许的请求头
 
 		// 如果是预检请求（OPTIONS），则直接返回
 		if r.Method == "OPTIONS" {
@@ -211,10 +339,6 @@ func main() {
 
 	// 创建 ServeMux 路由
 	mux := http.NewServeMux()
-	// 注册 GPSAPI 提供的 HTTP 接口到路由器中。
-	gps_api.RegisterRoutes(mux)
-
-	mux.HandleFunc("/api/login", loginHandler) // 设置登录处理路由
 
 	// 使用 CORS 中间件
 	corsHandler := enableCORS(mux)
