@@ -79,7 +79,7 @@
   - 无
 
 - **禁止修改文件**：  
-  - 无
+  - `driverShift/driverShift.go`（禁止修改）
 
 ---
 
@@ -104,7 +104,10 @@
 
 - **可修改文件**：  
   - 无
-
+ 
+- **禁止修改文件**：  
+  - `gps/gps.go`（禁止修改）
+  - `gps/gps_api.go`（禁止修改）
 ---
 
 ## 模块文件修改权限说明
@@ -118,9 +121,9 @@
 |                    | `config/config.go`                               | **禁止修改**                                    |
 | **[DB 模块](https://github.com/Cortantse/AdminSchoolBus/blob/main/db/README.markdown)**      | 无                                               | **禁止修改**，仅可调用相关接口                  |
 |                    | `db/db.go`，`db/db_api.go`                       | **禁止修改**                                    |
-| **[DriverShift 模块](https://github.com/Cortantse/AdminSchoolBus/blob/main/driverShift/README.markdown)** | `gps.go`                                                | 无修改权限                                      |
+| **[DriverShift 模块](https://github.com/Cortantse/AdminSchoolBus/blob/main/driverShift/README.markdown)** | `driverShift/driverShift.go`                                                | 无修改权限                                      |
 | **[Exception 模块](https://github.com/Cortantse/AdminSchoolBus/blob/main/exception/README.markdown)**  | `exception/exception.go`，`exception/exception_functions.go` | 可增量添加与修改自定义错误类型与错误处理函数   |
-| **[GPS 模块](https://github.com/Cortantse/AdminSchoolBus/blob/main/gps/README.markdown)**     | `gps.go`，`db/db_api.go`，`gps_api.go`                                               | 无修改权限                                      |
+| **[GPS 模块](https://github.com/Cortantse/AdminSchoolBus/blob/main/gps/README.markdown)**     | `gps.go`，`gps_api.go`                                               | 无修改权限                                      |
 
 ---
 
