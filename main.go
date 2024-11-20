@@ -3,9 +3,9 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"log"
-	"login/driverShift" // 引入 driverShift 包
-	"login/gps"         // 引入 gps 包
+	"log" // 引入 driverShift 包
+
+	"login/gps" // 引入 gps 包
 	"net/http"
 
 	// "log"
@@ -28,30 +28,6 @@ type ApiResponse struct {
 	Message string `json:"message"`
 	Data    string `json:"data,omitempty"`
 }
-
-// // GPSData 结构体，用于接收前端的 GPS 数据
-// type GPSData struct {
-// 	Latitude  float64 `json:"latitude"`
-// 	Longitude float64 `json:"longitude"`
-// 	Timestamp string  `json:"timestamp"` // 或 time.Time, 取决于数据格式
-// }
-
-// CORS 中间件
-// func enableCORS(next http.Handler) http.Handler {
-// 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-// 		w.Header().Set("Access-Control-Allow-Origin", "*")                   // 允许所有来源
-// 		w.Header().Set("Access-Control-Allow-Methods", "GET, POST, OPTIONS") // 允许的请求方法
-// 		w.Header().Set("Access-Control-Allow-Headers", "Content-Type")       // 允许的请求头
-
-// 		// 如果是预检请求（OPTIONS），则直接返回
-// 		if r.Method == "OPTIONS" {
-// 			w.WriteHeader(http.StatusOK)
-// 			return
-// 		}
-
-// 		next.ServeHTTP(w, r)
-// 	})
-// }
 
 // loginHandler 处理用户的登录请求。
 //
@@ -224,42 +200,21 @@ func main() {
 		print(err.Error())
 	}
 
-	// 初始化 GPS 模块 =====
-	gpsModule := gps.NewGPSModule()
-
 	// 启动令牌服务 ======
 	err = auth.InitTokenService()
 	if err != nil {
 		print(err.Error())
 	}
 
+	// 创建一个 GPSAPI 实例，用于将 GPSModule 的核心逻辑对外提供为 HTTP 接口
+	gps_api := gps.InitGPSAPI()
+
 	// 创建 ServeMux 路由
 	mux := http.NewServeMux()
+	// 注册 GPSAPI 提供的 HTTP 接口到路由器中。
+	gps_api.RegisterRoutes(mux)
 
-	// 设置路由，处理工作流相关的请求
-	mux.HandleFunc("/driverShift/provideInfo", driverShift.ProvideInfo) // 提供选择信息
-	mux.HandleFunc("/driverShift/start", driverShift.HandleShiftStart)  // 处理上班信息
-	mux.HandleFunc("/driverShift/end", driverShift.HandleShiftEnd)      // 处理下班信息
-	mux.HandleFunc("/drivers", gpsModule.GetAllDriversHandler)          // 用于获取所有驾驶员位置信息的接口
-	mux.HandleFunc("/updateLocation", gpsModule.Handler)                // 用于接收并处理 GPS 信息的接口
-	mux.HandleFunc("/api/login", loginHandler)                          // 设置登录处理路由
-	// 设置路由，接收 GPS 数据的端点
-	// mux.HandleFunc("/api/gps", handleGPSData) // 接收 GPS 数据
-	mux.HandleFunc("/createDriver", func(w http.ResponseWriter, r *http.Request) {
-		id := r.URL.Query().Get("id")
-		if id == "" {
-			http.Error(w, "missing driver id", http.StatusBadRequest)
-			return
-		}
-		latitude := 34.0522
-		longitude := -118.2437
-		driver, err := gpsModule.CreateDriver(id, latitude, longitude)
-		if err != nil {
-			http.Error(w, err.Error(), http.StatusBadRequest)
-			return
-		}
-		json.NewEncoder(w).Encode(driver)
-	})
+	mux.HandleFunc("/api/login", loginHandler) // 设置登录处理路由
 
 	// 使用 CORS 中间件
 	corsHandler := enableCORS(mux)
