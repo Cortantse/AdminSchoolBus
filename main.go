@@ -340,6 +340,9 @@ func main() {
 	// 创建 ServeMux 路由
 	mux := http.NewServeMux()
 
+	// 注册 GPSAPI 提供的 HTTP 接口到路由器中。
+	gps_api.RegisterRoutes(mux)
+
 	// 使用 CORS 中间件
 	corsHandler := enableCORS(mux)
 
