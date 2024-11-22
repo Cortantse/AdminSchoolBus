@@ -339,6 +339,7 @@ func main() {
 
 	// 创建 ServeMux 路由
 	mux := http.NewServeMux()
+	mux.HandleFunc("/api/login", loginHandler)
 
 	// 注册 GPSAPI 提供的 HTTP 接口到路由器中。
 	gps_api.RegisterRoutes(mux)
