@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"log" // 引入 driverShift 包
 
+	"login/driverShift"
 	"login/gps" // 引入 gps 包
 	"net/http"
 
@@ -41,7 +42,9 @@ type ApiResponse struct {
 // @returns void 该函数无返回值，所有响应直接写入http.ResponseWriter。
 //
 // @throws error 当请求方法不为POST或请求解码失败时，会返回相应的HTTP错误响应。
+
 func loginHandler(w http.ResponseWriter, r *http.Request) {
+
 	// 允许跨域请求
 	w.Header().Set("Access-Control-Allow-Origin", "*")
 	w.Header().Set("Access-Control-Allow-Methods", "POST, OPTIONS")
@@ -67,6 +70,7 @@ func loginHandler(w http.ResponseWriter, r *http.Request) {
 	err := json.NewDecoder(r.Body).Decode(&loginReq)
 	// 释放资源
 	defer r.Body.Close()
+
 	if err != nil {
 		log.Printf("请求解码失败: %v", err)
 		w.WriteHeader(http.StatusBadRequest)
@@ -341,6 +345,12 @@ func main() {
 	mux := http.NewServeMux()
 	mux.HandleFunc("/api/login", loginHandler)
 
+	//用于处理驾驶员上下班
+	mux.HandleFunc("/start", func(w http.ResponseWriter, r *http.Request) {
+		gpsModule := &gps.GPSModule{} 
+		driverShift.HandleShiftStart(w, r, gpsModule)
+	})
+	
 	// 注册 GPSAPI 提供的 HTTP 接口到路由器中。
 	gps_api.RegisterRoutes(mux)
 
