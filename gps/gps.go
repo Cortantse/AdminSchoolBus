@@ -1,13 +1,14 @@
 package gps
 
 import (
-	// "bytes"
-	// "encoding/json"
+	"bytes"
+	"encoding/json"
 	"errors"
 	"fmt"
 	"net/http"
 	"sync"
-	"time"
+
+	// "time"
 
 	"github.com/gorilla/websocket"
 )
@@ -34,9 +35,9 @@ type GPSModule struct {
 	driversMutex    sync.Mutex                      // 用于保护驾驶员数据
 	passengersMutex sync.Mutex                      // 用于保护乘客数据
 	clients         map[*websocket.Conn]*sync.Mutex // 存储客户端连接及其对应的写锁
-	clientToDriver  map[*websocket.Conn]string      // 将客户端连接映射到驾驶员 ID
-	broadcast       chan []*Driver                  // 广播通道
-	upgrader        websocket.Upgrader              // WebSocket 升级器
+	// clientToDriver  map[*websocket.Conn]string      // 将客户端连接映射到驾驶员 ID
+	broadcast chan []*Driver     // 广播通道
+	upgrader  websocket.Upgrader // WebSocket 升级器
 }
 
 // NewGPSModule 创建一个 GPSModule 实例
@@ -91,12 +92,12 @@ func (g *GPSModule) DeleteDriver(id string) error {
 	}
 	// 找到对应的 WebSocket 连接
 	var client *websocket.Conn
-	for conn, driverID := range g.clientToDriver {
-		if driverID == id {
-			client = conn
-			break
-		}
-	}
+	// for conn, driverID := range g.clientToDriver {
+	// 	if driverID == id {
+	// 		client = conn
+	// 		break
+	// 	}
+	// }
 
 	// 如果找到对应的连接，进行清理
 	if client != nil {
@@ -188,28 +189,28 @@ func (g *GPSModule) GetAllDrivers() []*Driver {
 }
 
 // handleHeartbeat 定期发送心跳消息检测客户端连接是否存活
-func (g *GPSModule) handleHeartbeat() {
-	ticker := time.NewTicker(30 * time.Second)
-	defer ticker.Stop()
+// func (g *GPSModule) handleHeartbeat() {
+// 	ticker := time.NewTicker(30 * time.Second)
+// 	defer ticker.Stop()
 
-	for range ticker.C {
-		g.driversMutex.Lock()
-		for client, lock := range g.clients {
-			lock.Lock()
-			err := client.WriteMessage(websocket.PingMessage, []byte("ping"))
-			lock.Unlock()
-			if err != nil {
-				fmt.Printf("Heartbeat failed for client: %v, removing client\n", err)
-				go g.cleanupClient(client)
-			}
-		}
-		g.driversMutex.Unlock()
-	}
-}
+// 	for range ticker.C {
+// 		g.driversMutex.Lock()
+// 		for client, lock := range g.clients {
+// 			lock.Lock()
+// 			err := client.WriteMessage(websocket.PingMessage, []byte("ping"))
+// 			lock.Unlock()
+// 			if err != nil {
+// 				fmt.Printf("Heartbeat failed for client: %v, removing client\n", err)
+// 				go g.cleanupClient(client)
+// 			}
+// 		}
+// 		g.driversMutex.Unlock()
+// 	}
+// }
 
 // HandleWebSocket 处理 WebSocket 连接
 // 为每个客户端启动监听和广播协程
-func (g *GPSModule) HandleWebSocket(w http.ResponseWriter, r *http.Request, driverID string) {
+func (g *GPSModule) HandleWebSocket(w http.ResponseWriter, r *http.Request) {
 	conn, err := g.upgrader.Upgrade(w, r, nil)
 	if err != nil {
 		fmt.Printf("WebSocket upgrade failed: %v\n", err)
@@ -218,13 +219,14 @@ func (g *GPSModule) HandleWebSocket(w http.ResponseWriter, r *http.Request, driv
 
 	// 初始化客户端的写锁并绑定驾驶员 ID
 	g.clients[conn] = &sync.Mutex{}
-	g.clientToDriver[conn] = driverID
+	// g.clientToDriver[conn] = driverID
 
-	fmt.Printf("New WebSocket client connected for Driver ID: %s\n", driverID)
-
+	// fmt.Printf("New WebSocket client connected for Driver ID: %s\n", driverID)
+	fmt.Printf("New WebSocket client connected for Driver ID: 1\n")
 	// 启动监听消息和广播的协程
 	go g.listenClientMessages(conn)
-	go g.handleHeartbeat()
+	go g.broadcastDriverUpdates()
+	// go g.handleHeartbeat()
 }
 
 // listenClientMessages 监听 WebSocket 客户端发送的消息
@@ -248,63 +250,62 @@ func (g *GPSModule) listenClientMessages(conn *websocket.Conn) {
 			break
 		}
 
-		_ = g.UpdateDriverLocation(requestData.ID, requestData.Latitude, requestData.Longitude)
-		g.broadcast <- g.GetAllDrivers()
+		err = g.UpdateDriverLocation(requestData.ID, requestData.Latitude, requestData.Longitude)
+		if err != nil {
+			fmt.Printf("Failed to update driver location: %v\n", err)
+		} else {
+			fmt.Printf("Driver updated: %+v\n", requestData)
+			g.broadcast <- g.GetAllDrivers()
+		}
 	}
 }
 
 func (g *GPSModule) cleanupClient(client *websocket.Conn) {
 	// 获取对应的驾驶员 ID
-	driverID := g.clientToDriver[client]
+	// driverID := g.clientToDriver[client]
 
-	// 移除客户端
-	delete(g.clients, client)
-	delete(g.clientToDriver, client)
+	// // 移除客户端
+	// delete(g.clients, client)
+	// delete(g.clientToDriver, client)
 
-	// 删除驾驶员
-	if driverID != "" {
-		if err := g.DeleteDriver(driverID); err != nil {
-			fmt.Printf("Failed to delete driver %s: %v\n", driverID, err)
-		}
-	}
+	// // 删除驾驶员
+	// if driverID != "" {
+	// 	if err := g.DeleteDriver(driverID); err != nil {
+	// 		fmt.Printf("Failed to delete driver %s: %v\n", driverID, err)
+	// 	}
+	// }
 
 	// 关闭连接
 	client.Close()
 }
 
 // broadcastDriverUpdates 广播驾驶员位置信息给所有 WebSocket 客户端
-// func (g *GPSModule) broadcastDriverUpdates() {
-// 	for drivers := range g.broadcast {
-// 		for client, lock := range g.clients {
-// 			buf := jsonBufferPool.Get().(*bytes.Buffer)
-// 			buf.Reset()
+func (g *GPSModule) broadcastDriverUpdates() {
+	for drivers := range g.broadcast {
+		for client, lock := range g.clients {
+			// 为每个连接加锁
+			lock.Lock()
+			buf := jsonBufferPool.Get().(*bytes.Buffer)
+			buf.Reset()
 
-// 			err := json.NewEncoder(buf).Encode(drivers)
-// 			if err != nil {
-// 				fmt.Printf("Encoding error: %v\n", err)
-// 				client.Close()
-// 				delete(g.clients, client)
-// 				continue
-// 			}
+			err := json.NewEncoder(buf).Encode(drivers)
+			if err != nil {
+				client.Close()
+				delete(g.clients, client)
+			} else {
+				_ = client.WriteMessage(websocket.TextMessage, buf.Bytes())
+			}
 
-// 			lock.Lock() // 加锁保护写操作
-// 			err = client.WriteMessage(websocket.TextMessage, buf.Bytes())
-// 			lock.Unlock() // 解锁
+			jsonBufferPool.Put(buf)
+			// 写操作完成后解锁
+			lock.Unlock()
+		}
+	}
+}
 
-// 			if err != nil {
-// 				fmt.Printf("Write error: %v\n", err)
-// 				client.Close()
-// 				delete(g.clients, client)
-// 			}
-
-// 			jsonBufferPool.Put(buf)
-// 		}
-// 	}
-// }
-
-// // 使用 sync.Pool 复用 JSON 编码缓冲区
-// var jsonBufferPool = sync.Pool{
-// 	New: func() interface{} {
-// 		return &bytes.Buffer{}
-// 	},
-// }
+// 使用 sync.Pool 复用 JSON 编码缓冲区
+var jsonBufferPool = sync.Pool{
+	New: func() interface{} {
+		return &bytes.Buffer{}
+	},
+}
