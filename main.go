@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"log" // 引入 driverShift 包
+	"login/api"
 
 	"login/driverShift"
 	"login/gps" // 引入 gps 包
@@ -314,9 +315,11 @@ func testForToken(err error) {
 	fmt.Printf("UserID is %s, role is %s\n", userID, role)
 }
 
-func test() {
-	// 示例：添加一个驾驶员对象
-	//gpsModule.CreateDriver("driver1", 34.0522, -118.2437)
+// RegisterAdmin 注册管理员服务
+func RegisterAdmin(mux *http.ServeMux) {
+	// 注册 HTTP API 路由
+	mux.HandleFunc("/admin_home/dashboard", api.GiveDashBoardInfo)
+	mux.HandleFunc("/heartbeat", api.AnswerHeartBeat)
 }
 
 func main() {
@@ -357,6 +360,9 @@ func main() {
 
 	// 注册 GPSAPI 提供的 HTTP 接口到路由器中。
 	gps_api.RegisterRoutes(mux)
+
+	// 注册后端服务器服务
+	RegisterAdmin(mux)
 
 	// 使用 CORS 中间件
 	corsHandler := enableCORS(mux)
