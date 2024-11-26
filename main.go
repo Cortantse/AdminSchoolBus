@@ -343,14 +343,18 @@ func main() {
 
 	// 创建 ServeMux 路由
 	mux := http.NewServeMux()
+
+	// 验证url
 	mux.HandleFunc("/api/login", loginHandler)
+	mux.HandleFunc("/api/logout", logoutHandler)               // 设置登出处理路由
+	mux.HandleFunc("/api/validateToken", validateTokenHandler) // 设置登出处理路由
 
 	//用于处理驾驶员上下班
 	mux.HandleFunc("/start", func(w http.ResponseWriter, r *http.Request) {
-		gpsModule := &gps.GPSModule{} 
+		gpsModule := &gps.GPSModule{}
 		driverShift.HandleShiftStart(w, r, gpsModule)
 	})
-	
+
 	// 注册 GPSAPI 提供的 HTTP 接口到路由器中。
 	gps_api.RegisterRoutes(mux)
 
