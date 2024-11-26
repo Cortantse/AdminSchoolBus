@@ -76,7 +76,7 @@ func InitDB(chooseDB config.Role) error {
 // ExecuteSQL 执行通用的 SQL 语句，支持 SELECT、INSERT、UPDATE、DELETE 等。
 // 参数：
 //
-//	role: 数据库角色
+//	role: 选择数据库
 //	sqlStatement: 带占位符的 SQL 语句
 //	args: SQL 语句中占位符的对应参数
 //
@@ -95,6 +95,8 @@ func ExecuteSQL(role config.Role, sqlStatement string, args ...interface{}) (int
 		exception.PrintError(ExecuteSQL, err)
 		return nil, err
 	}
+
+	// 若果相应数据库连接为空，退出
 
 	// 0.5. 确保参数匹配
 	err = checkArgs(sqlStatement, args)
