@@ -255,8 +255,8 @@ func (g *GPSModule) listenClientMessages(conn *websocket.Conn) {
 			fmt.Printf("Failed to update driver location: %v\n", err)
 		} else {
 			fmt.Printf("Driver updated: %+v\n", requestData)
-			g.broadcast <- g.GetAllDrivers()
 		}
+		g.broadcast <- g.GetAllDrivers()
 	}
 }
 

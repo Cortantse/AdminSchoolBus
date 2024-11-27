@@ -35,15 +35,6 @@ func (api *GPSAPI) RegisterRoutes(mux *http.ServeMux) {
 
 // HandleWebSocket 对外暴露 WebSocket 功能
 func (api *GPSAPI) HandleWebSocket(w http.ResponseWriter, r *http.Request) {
-	// 获取驾驶员 ID（可以从请求参数或头部中获取）
-	// driverID := r.URL.Query().Get("driver_id")
-	// if driverID == "" {
-	// 	http.Error(w, "Driver ID is required", http.StatusBadRequest)
-	// 	return
-	// }
-
-	// 调用 GPSModule 的 HandleWebSocket 方法，绑定驾驶员 ID
-	// api.module.HandleWebSocket(w, r, driverID)
 	api.module.HandleWebSocket(w, r)
 }
 
