@@ -2,6 +2,7 @@ package gps
 
 import (
 	"encoding/json"
+	"fmt"
 	"net/http"
 )
 
@@ -35,7 +36,7 @@ func (api *GPSAPI) RegisterRoutes(mux *http.ServeMux) {
 
 // HandleWebSocket 对外暴露 WebSocket 功能
 func (api *GPSAPI) HandleWebSocket(w http.ResponseWriter, r *http.Request) {
-	api.module.HandleWebSocket(w, r) // 调用 GPSModule 中的 WebSocket 处理逻辑
+	api.module.HandleWebSocket(w, r)
 }
 
 // HandleCreateDriver 处理创建驾驶员的请求
@@ -55,7 +56,7 @@ func (api *GPSAPI) HandleCreateDriver(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	driver, err := api.module.CreateDriver(requestData.ID)
+	driver, err := api.CreateDriver(requestData.ID)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
@@ -63,6 +64,19 @@ func (api *GPSAPI) HandleCreateDriver(w http.ResponseWriter, r *http.Request) {
 
 	w.Header().Set("Content-Type", "application/json")
 	json.NewEncoder(w).Encode(driver)
+}
+
+// CreateDriver 供内部模块调用来创建驾驶员
+func (api *GPSAPI) CreateDriver(ID string) (*Driver, error) {
+	if ID == "" {
+		return nil, fmt.Errorf("driver ID cannot be empty")
+	}
+	// 调用 GPSModule 中的方法来创建驾驶员
+	driver, err := api.module.CreateDriver(ID)
+	if err != nil {
+		return nil, fmt.Errorf("failed to create driver: %v", err)
+	}
+	return driver, nil
 }
 
 // HandleDeleteDriver 处理删除驾驶员的请求
@@ -82,7 +96,7 @@ func (api *GPSAPI) HandleDeleteDriver(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	err = api.module.DeleteDriver(requestData.ID)
+	err = api.DeleteDriver(requestData.ID)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusNotFound)
 		return
@@ -90,6 +104,20 @@ func (api *GPSAPI) HandleDeleteDriver(w http.ResponseWriter, r *http.Request) {
 
 	w.WriteHeader(http.StatusOK)
 	w.Write([]byte("Driver deleted successfully"))
+}
+
+// DeleteDriver 供内部模块调用来删除驾驶员
+func (api *GPSAPI) DeleteDriver(ID string) error {
+	if ID == "" {
+		return fmt.Errorf("driver ID cannot be empty")
+	}
+
+	// 调用 GPSModule 中的方法来删除驾驶员
+	err := api.module.DeleteDriver(ID)
+	if err != nil {
+		return fmt.Errorf("failed to delete driver: %v", err)
+	}
+	return nil
 }
 
 // HandleCreatePassenger 处理创建乘客的请求
@@ -109,7 +137,7 @@ func (api *GPSAPI) HandleCreatePassenger(w http.ResponseWriter, r *http.Request)
 		return
 	}
 
-	passenger, err := api.module.CreatePassenger(requestData.ID)
+	passenger, err := api.CreatePassenger(requestData.ID)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
@@ -117,6 +145,20 @@ func (api *GPSAPI) HandleCreatePassenger(w http.ResponseWriter, r *http.Request)
 
 	w.Header().Set("Content-Type", "application/json")
 	json.NewEncoder(w).Encode(passenger)
+}
+
+// CreatePassenger 内部调用的创建乘客方法
+func (api *GPSAPI) CreatePassenger(ID string) (*Passenger, error) {
+	if ID == "" {
+		return nil, fmt.Errorf("passenger ID cannot be empty")
+	}
+
+	// 调用 GPSModule 中的方法来创建乘客
+	passenger, err := api.module.CreatePassenger(ID)
+	if err != nil {
+		return nil, fmt.Errorf("failed to create passenger: %v", err)
+	}
+	return passenger, nil
 }
 
 // HandleDeletePassenger 处理删除乘客的请求
@@ -136,7 +178,7 @@ func (api *GPSAPI) HandleDeletePassenger(w http.ResponseWriter, r *http.Request)
 		return
 	}
 
-	err = api.module.DeletePassenger(requestData.ID)
+	err = api.DeletePassenger(requestData.ID)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusNotFound)
 		return
@@ -144,4 +186,18 @@ func (api *GPSAPI) HandleDeletePassenger(w http.ResponseWriter, r *http.Request)
 
 	w.WriteHeader(http.StatusOK)
 	w.Write([]byte("Passenger deleted successfully"))
+}
+
+// DeletePassenger 内部调用的删除乘客方法
+func (api *GPSAPI) DeletePassenger(ID string) error {
+	if ID == "" {
+		return fmt.Errorf("passenger ID cannot be empty")
+	}
+
+	// 调用 GPSModule 中的方法来删除乘客
+	err := api.module.DeletePassenger(ID)
+	if err != nil {
+		return fmt.Errorf("failed to delete passenger: %v", err)
+	}
+	return nil
 }

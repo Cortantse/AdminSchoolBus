@@ -260,12 +260,12 @@ func initDatasetCon() error {
 	//}
 	//fmt.Println("passenger数据库连接成功")
 	//
-	//err = db.InitDB(config.RoleDriver)
-	//if err != nil {
-	//	fmt.Println("driver数据库连接失败，错误信息为：", err)
-	//	return fmt.Errorf("driver数据库连接失败，错误信息为：%v", err)
-	//}
-	//fmt.Println("driver数据库连接成功")
+	err = db.InitDB(config.RoleDriver)
+	if err != nil {
+		fmt.Println("driver数据库连接失败，错误信息为：", err)
+		return fmt.Errorf("driver数据库连接失败，错误信息为：%v", err)
+	}
+	fmt.Println("driver数据库连接成功")
 
 	return nil
 }
@@ -354,8 +354,7 @@ func main() {
 
 	//用于处理驾驶员上下班
 	mux.HandleFunc("/start", func(w http.ResponseWriter, r *http.Request) {
-		gpsModule := &gps.GPSModule{}
-		driverShift.HandleShiftStart(w, r, gpsModule)
+		driverShift.HandleShiftStart(w, r, gps_api)
 	})
 
 	// 注册 GPSAPI 提供的 HTTP 接口到路由器中。
