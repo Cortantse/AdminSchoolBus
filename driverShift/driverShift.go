@@ -24,6 +24,15 @@ type WorkShift struct {
 	RouteRecord   []RouteRecord `json:"record_route"` // 路徑記錄，包含時間和GPS坐標
 }
 
+type DriverInfo struct {
+	Driver_id        string `json:"driver_id"`        // 驾驶员编号
+	Driver_avatar    string `json:"driver_avatar"`    //驾驶员头像url
+	Driver_name      string `json:"driver_name"`      //驾驶员名称
+	Driver_sex       string `json:"driver_sex"`       //驾驶员性别
+	Driver_tel       string `json:"driver_tel"`       //驾驶员电话
+	Driver_isworking string `json:"driver_isworking"` //驾驶员状态
+}
+
 // 路径记录结构体
 type RouteRecord struct {
 	Time string `json:"time"`  // 时间戳
@@ -33,8 +42,38 @@ type RouteRecord struct {
 
 // var module := gps.NewGPSModule()
 
+// 用于更新车辆运行状态
 func updateVehicleStatus(carID string, newStatus string) error {
-	_, err := db.ExecuteSQL(config.RoleDriver, "UPDATE car_isusing SET car_isusing = ? WHERE car_id = ?", newStatus, carID)
+
+	status := 0
+	if newStatus == "正常运营" {
+		status = 1
+	}
+	if newStatus == "试通行" {
+		status = 2
+	}
+	_, err := db.ExecuteSQL(config.RoleDriver, "UPDATE car_table SET car_isusing = ? WHERE car_id = ?", status, carID)
+	if err != nil {
+		return fmt.Errorf("更新车辆状态失败: %w", err)
+	}
+	return nil
+}
+
+func modifyDriverInfo(tempDriverInfo DriverInfo) error {
+	d_id := tempDriverInfo.Driver_id
+	d_sex := 0
+	d_status := 0
+	if tempDriverInfo.Driver_sex == "男" {
+		d_sex = 1
+	}
+	if tempDriverInfo.Driver_isworking == "1" {
+		d_status = 1
+	} else if tempDriverInfo.Driver_isworking == "2" {
+		d_status = 2
+	}
+
+	_, err := db.ExecuteSQL(config.RoleDriver, "UPDATE driver_table SET driver_name = ?, driver_sex = ?, driver_tel = ?, driver_isworking = ? WHERE driver_id = ?", tempDriverInfo.Driver_name, d_sex, tempDriverInfo.Driver_tel, d_status, d_id)
+
 	if err != nil {
 		return fmt.Errorf("更新车辆状态失败: %w", err)
 	}
@@ -60,7 +99,7 @@ func respondWithSuccess(w http.ResponseWriter, message string) {
 }
 
 // 处理上班：验证信息并创建 GPS 驾驶员对象
-func HandleShiftStart(w http.ResponseWriter, r *http.Request, gpsModule *gps.GPSModule) {
+func HandleShiftStart(w http.ResponseWriter, r *http.Request, gps_api *gps.GPSAPI) {
 	log.Printf("接收到信息")
 	setCORSHeaders(w, "POST, OPTIONS")
 
@@ -105,8 +144,8 @@ func HandleShiftStart(w http.ResponseWriter, r *http.Request, gpsModule *gps.GPS
 	}
 
 	// 创建驾驶员对象
-
-	_, err = gpsModule.CreateDriver(shift.DriverID) // 初始纬度和经度为 0
+	log.Printf("driverid = %s\n", shift.DriverID)
+	_, err = gps_api.CreateDriver(shift.DriverID) // 初始纬度和经度为 0
 	if err != nil {
 		respondWithError(w, http.StatusInternalServerError, "创建驾驶员失败")
 		return
@@ -142,10 +181,10 @@ func HandleShiftEnd(w http.ResponseWriter, r *http.Request, gpsModule *gps.GPSMo
 	}
 
 	// 更新车辆状态
-	// if err := updateVehicleStatus(shift.VehicleNo, "Not In Use"); err != nil {
-	// 	respondWithError(w, http.StatusInternalServerError, "车辆状态更新失败")
-	// 	return
-	// }
+	if err := updateVehicleStatus(shift.VehicleNo, shift.VehicleStatus); err != nil {
+		respondWithError(w, http.StatusInternalServerError, "车辆状态更新失败")
+		return
+	}
 
 	// 删除驾驶员对象
 	err = gpsModule.DeleteDriver(shift.DriverID)
@@ -162,3 +201,44 @@ func HandleShiftEnd(w http.ResponseWriter, r *http.Request, gpsModule *gps.GPSMo
 // 	fmt.Printf("车辆 %s 状态已更新为 %s\n", vehicleNo, status)
 // 	return nil
 // }
+
+func HandleShiftInfo(w http.ResponseWriter, r *http.Request) {
+	setCORSHeaders(w, "POST, OPTIONS")
+
+	if r.Method == http.MethodOptions {
+		w.WriteHeader(http.StatusOK)
+		return
+	}
+
+	if r.Method != http.MethodPost {
+		respondWithError(w, http.StatusMethodNotAllowed, "仅支持 POST 请求")
+		return
+	}
+
+	bodyBytes, err := io.ReadAll(r.Body) // 读取原始请求体
+	if err != nil {
+		log.Printf("无法读取请求体: %v", err)
+		respondWithError(w, http.StatusBadRequest, "无法读取请求体")
+		return
+	}
+	log.Printf("接收到的原始数据: %s", string(bodyBytes))
+
+	// 重置 Body 并解码为结构体
+	r.Body = io.NopCloser(bytes.NewBuffer(bodyBytes))
+	var shift DriverInfo
+	err = json.NewDecoder(r.Body).Decode(&shift)
+	if err != nil {
+		log.Printf("JSON 解码失败: %v", err)
+		respondWithError(w, http.StatusBadRequest, "请求数据解析失败")
+		return
+	}
+	log.Printf("接收到的解码后数据: %+v", shift)
+
+	// 更新车辆状态
+	if err := modifyDriverInfo(shift); err != nil {
+		respondWithError(w, http.StatusInternalServerError, "司机状态更新失败")
+		return
+	}
+
+	respondWithSuccess(w, "司机信息修改成功")
+}
