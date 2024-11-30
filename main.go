@@ -356,6 +356,7 @@ func main() {
 	mux.HandleFunc("/start", func(w http.ResponseWriter, r *http.Request) {
 		driverShift.HandleShiftStart(w, r, gps_api)
 	})
+	mux.HandleFunc("/modifyDriverInfo", driverShift.HandleShiftInfo)
 
 	// 注册 GPSAPI 提供的 HTTP 接口到路由器中。
 	gps_api.RegisterRoutes(mux)
