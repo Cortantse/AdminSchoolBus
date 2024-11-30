@@ -24,7 +24,7 @@ type TokenDetail struct {
 }
 
 type UserPass struct {
-	UserID       string `db:"user_id"`
+	UserID       int    `db:"user_id"`
 	UserPassword string `db:"user_password_hash"`
 	Role         int    `db:"user_type"`
 	UserStatus   string `db:"user_status"`

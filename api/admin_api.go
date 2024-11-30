@@ -30,7 +30,7 @@ func GiveDashBoardInfo(w http.ResponseWriter, r *http.Request) {
 	// 获取当前所有数字
 	resultUser, _ := db.ExecuteSQL(config.RoleAdmin, "SELECT COUNT(*) FROM userspass WHERE user_type = ?", 1)
 	resultDrivers, _ := db.ExecuteSQL(config.RoleAdmin, "SELECT COUNT(*) FROM userspass WHERE user_type = ?", 2)
-	resultAdmins, _ := db.ExecuteSQL(config.RoleAdmin, "SELECT COUNT(*) FROM userspass WHERE user_type = ?", 3)
+	resultAdmins, _ := db.ExecuteSQL(config.RoleAdmin, "SELECT COUNT(*) FROM userspass WHERE user_type = ?", 0)
 	// 断言类型
 	result1, _ := resultUser.(*sql.Rows)
 	result2, _ := resultDrivers.(*sql.Rows)
