@@ -24,6 +24,19 @@ func (r Role) String() string {
 	}
 }
 
+func (r Role) Int() int {
+	switch r {
+	case RoleAdmin:
+		return 0
+	case RolePassenger:
+		return 1
+	case RoleDriver:
+		return 2
+	default:
+		return 3
+	}
+}
+
 // DatabaseConfig 定义从config.yaml中要提取的结构体
 type DatabaseConfig struct {
 	Host     string `yaml:"host"`

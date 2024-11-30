@@ -1,10 +1,12 @@
 package main
 
 import (
+	"database/sql"
 	"encoding/json"
 	"fmt"
 	"log" // 引入 driverShift 包
 	"login/api"
+	"os"
 
 	"login/driverShift"
 	"login/gps" // 引入 gps 包
@@ -81,39 +83,58 @@ func loginHandler(w http.ResponseWriter, r *http.Request) {
 		})
 		return
 	}
-
-	// 验证账号密码，这里还是用明文传输的，后续加密啊$$$$$￥￥￥
-	// 创建数组存储查询结果
-	var results []auth.UserPass
-	// 创建变量数组方便传递变量
-	var params = []interface{}{
-		loginReq.Username, loginReq.Password,
-	}
-	// 查询结果
-	err = db.SelectEasy(config.RoleAdmin, "usersPass", &results, true,
-		[]string{}, []string{"user_id = ? AND user_password_hash = ?"}, params, "", 1, 0, "", "")
+	// 获取userID => 查询密码表中 对应userID 和 密码 是否有内容
+	// 1.获取userID
+	var userID int
+	result, err := db.ExecuteSQL(config.RoleAdmin, "SELECT user_id FROM usersaliases WHERE user_name = ?", loginReq.Username)
 	if err != nil {
 		exception.PrintError(loginHandler, err)
 		return
 	}
-
-	if len(results) != 0 {
-		// 获取客户端信息
-		clientInfo := GetClientInfo(r)
-		userType := results[0].Role
-		role := determineRole(userType)
-		userID := results[0].UserID
-		GenerateAndSendToken(w, role, userID, clientInfo)
+	rows := result.(*sql.Rows)
+	if rows.Next() {
+		rows.Scan(&userID)
 	} else {
-		// 返回失败
+		// 没有这个aliases，发送401
 		response := ApiResponse{
 			Code:    http.StatusUnauthorized,
-			Message: "账户或密码错误",
+			Message: "账户错误",
 			Data:    "",
 		}
 		w.WriteHeader(http.StatusUnauthorized)
 		json.NewEncoder(w).Encode(response)
+		return
 	}
+
+	// 2.联合查询
+	result, err = db.ExecuteSQL(config.RoleAdmin, "SELECT * FROM userspass WHERE user_id = ? AND user_password_hash = ?", userID, loginReq.Password)
+	if err != nil {
+		exception.PrintError(loginHandler, err)
+		return
+	}
+	rows = result.(*sql.Rows)
+	if rows.Next() {
+		// 登陆成功
+		var client auth.UserPass
+		rows.Scan(&client)
+		// 获取客户端信息
+		clientInfo := GetClientInfo(r)
+		role := determineRole(client.Role)
+		// 这个地方要把int换成string
+		userID := fmt.Sprintf("%d", userID)
+		GenerateAndSendToken(w, role, userID, clientInfo)
+	} else {
+		// 密码错误，发送401
+		response := ApiResponse{
+			Code:    http.StatusUnauthorized,
+			Message: "密码错误",
+			Data:    "",
+		}
+		w.WriteHeader(http.StatusUnauthorized)
+		json.NewEncoder(w).Encode(response)
+		return
+	}
+
 }
 
 // GenerateAndSendToken  公有函数，用于生成令牌并将其发送给客户端
@@ -134,6 +155,7 @@ func GenerateAndSendToken(w http.ResponseWriter, role config.Role, userId string
 		Message: "Login success",
 		Data:    token,
 	}
+	w.WriteHeader(http.StatusOK)
 	json.NewEncoder(w).Encode(response)
 }
 
@@ -320,11 +342,15 @@ func RegisterAdmin(mux *http.ServeMux) {
 	// 注册 HTTP API 路由
 	mux.HandleFunc("/admin_home/dashboard", api.GiveDashBoardInfo)
 	mux.HandleFunc("/heartbeat", api.AnswerHeartBeat)
+
+	// 验证码
+	mux.HandleFunc("/api/register", auth.HandleRegistry)
 }
 
 func main() {
 	// 初始化全局参数 ======
 	err := config.LoadConfig("config.yaml")
+	os.Setenv("GOOGLE_APPLICATION_CREDENTIALS", "C:\\Users\\27785\\GolandProjects\\login\\service-account-file.json")
 	if err != nil {
 		print(err.Error())
 	}
