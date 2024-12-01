@@ -7,7 +7,7 @@ database_connection:
   name: "schoolBus"
  
 server:
-  port: ":8888"
+  port: ":5793"
 
 
 database_names:
