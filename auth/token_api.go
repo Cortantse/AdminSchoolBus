@@ -61,7 +61,7 @@ func GiveAToken(role config.Role, userId string, clientInfo string) (string, err
 	params := []interface{}{userId}
 
 	// 查询数据库中是否有对应的user_id的账户
-	err := db.SelectEasy(config.RoleAdmin, "usersPass", &tems, true,
+	err := db.SelectEasy(config.RoleAdmin, "userspass", &tems, true,
 		[]string{}, []string{"user_id = (?)"}, params, "user_id", 1, 0, "", "")
 	if err != nil {
 		exception.PrintError(GiveAToken, err)
@@ -122,7 +122,7 @@ func GiveAToken(role config.Role, userId string, clientInfo string) (string, err
 		TokenCreatedAt: now,
 		ClientInfo:     clientInfo,
 	}
-	_, err = db.Insert(config.RoleAdmin, "tokensDetails", tokenDetail)
+	_, err = db.Insert(config.RoleAdmin, "tokensdetails", tokenDetail)
 	if err != nil {
 		exception.PrintError(GiveAToken, err)
 		return "", err
