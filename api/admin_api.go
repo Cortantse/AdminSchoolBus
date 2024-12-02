@@ -314,5 +314,6 @@ func ValidateTokenHandler(w http.ResponseWriter, r *http.Request) {
 		Code:    http.StatusOK,
 		Message: "Token is valid",
 		Data:    fmt.Sprintf("UserID: %s, Role: %s", userID, role),
+		Role:    role.Int(),
 	})
 }
