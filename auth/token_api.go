@@ -157,7 +157,7 @@ func VerifyAToken(token string) (string, config.Role, error) {
 		[]string{"token_id"}, []string{"token_hash = ?"}, []interface{}{token}, "token_id", 2, 0, "", "")
 	// 没有找到该token
 	if len(tokens) == 0 {
-		exception.PrintError(VerifyAToken, fmt.Errorf("token not found"))
+		// 内部日志，不要报错 // 后端请尽快实现日志！！！！！！！！！！！！
 		return "", config.Unknown, exception.TokenNotFound
 	} else if err != nil {
 		// select函数存在报错

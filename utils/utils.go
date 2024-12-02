@@ -2,8 +2,9 @@ package utils
 
 import (
 	"fmt"
-	"login/exception"
+	"log"
 	"strings"
+	"time"
 )
 
 // RegularizeTimeForMySQL 适合mysql的标准时间格式
@@ -14,7 +15,7 @@ func RegularizeTimeForMySQL(input string) (string, error) {
 	const outputFormat = "2006-01-02 15:04:05"
 
 	if len(input) < 19 {
-		exception.PrintError(RegularizeTimeForMySQL, fmt.Errorf("intput string is too short"))
+		log.Printf("intput string is too short")
 		return "", fmt.Errorf("error in RemoveTimezone: input string is too short")
 	}
 
@@ -36,4 +37,9 @@ func TrimExtraSpaces(input string) string {
 		input = strings.TrimSuffix(input, " ")
 	}
 	return input
+}
+
+// GetFormattedCurrentTime 获取当前时间，并格式化，方便日志工具使用
+func GetFormattedCurrentTime() string {
+	return time.Now().String() + ": "
 }

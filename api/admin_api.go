@@ -263,16 +263,16 @@ func LogoutHandler(w http.ResponseWriter, r *http.Request) {
 	// 验证令牌
 	userID, _, err := auth.VerifyAToken(token)
 	if err != nil {
-		exception.PrintError(LoginHandler, fmt.Errorf("VerifyAToken err"))
-		exception.PrintError(LogoutHandler, err)
+		exception.PrintWarning(LoginHandler, fmt.Errorf("VerifyAToken err"))
+		exception.PrintWarning(LogoutHandler, err)
 		return
 	}
 
 	// 更新token_revoked
 	_, err = db.ExecuteSQL(config.RoleAdmin, "UPDATE tokens SET token_revoked = 1 WHERE user_id = ? and token_hash = ?", userID, token)
 	if err != nil {
-		exception.PrintError(LoginHandler, fmt.Errorf("VerifyAToken err"))
-		exception.PrintError(LogoutHandler, err)
+		exception.PrintWarning(LoginHandler, fmt.Errorf("VerifyAToken err"))
+		exception.PrintWarning(LogoutHandler, err)
 		return
 	}
 
