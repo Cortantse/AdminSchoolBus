@@ -2,19 +2,16 @@ package main
 
 import (
 	"fmt"
-	"github.com/robfig/cron/v3"
 	"login/api"
-	"login/driverShift"
-	"login/gps" // 引入 gps 包
-	"net/http"
-	"os"
-	"time"
-
-	// "log"
 	"login/auth"
 	"login/config"
 	"login/db"
+	"login/driverShift"
 	"login/exception"
+	"login/gps" // 引入 gps 包
+	"login/log_service"
+	"net/http"
+	"os"
 )
 
 // 创造数据库连接实例
@@ -99,32 +96,6 @@ func RegisterAdmin(mux *http.ServeMux) {
 	mux.HandleFunc("/api/register", auth.HandleRegistry)
 }
 
-// 创建一个 Cron 实例，并启动 Cron 调度器，每小时整点执行函数
-func newCron() {
-	// 创建支持 6 个域的 Cron 实例
-	c := cron.New(cron.WithSeconds())
-
-	// 添加任务，每小时整点执行
-	_, err := c.AddFunc("0 0 0 * * *", printCurrentTime) // 6 个域
-	if err != nil {
-		fmt.Printf("添加任务时出错: %v\n", err)
-		return
-	}
-
-	// 启动 Cron 调度器
-	c.Start()
-
-	// 打印消息，表示服务已启动
-	fmt.Println("Cron 服务已启动，服务将在每小时自动运行")
-
-	// 阻止程序退出
-	select {}
-}
-
-func printCurrentTime() {
-	fmt.Println("当前时间:", time.Now())
-}
-
 func main() {
 	// 初始化全局参数 ======
 	err := config.LoadConfig("config.yaml")
@@ -132,6 +103,9 @@ func main() {
 	if err != nil {
 		print(err.Error())
 	}
+
+	// 启动日志服务 ======
+	log_service.InitLogService()
 
 	// 设置数据库连接 =====
 	err = initDatasetCon()
@@ -144,9 +118,6 @@ func main() {
 	if err != nil {
 		print(err.Error())
 	}
-
-	// 启动 Cron 服务 ======
-	go newCron() // 异步启动 Cron 服务
 
 	// 创建一个 GPSAPI 实例，用于将 GPSModule 的核心逻辑对外提供为 HTTP 接口
 	gps_api := gps.InitGPSAPI()
