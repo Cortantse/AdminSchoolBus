@@ -10,6 +10,7 @@ import (
 	"login/exception"
 	"login/gps" // 引入 gps 包
 	"login/log_service"
+	"login/websocket"
 	"net/http"
 	"os"
 )
@@ -119,8 +120,13 @@ func main() {
 		print(err.Error())
 	}
 
+	webSocketAPI := websocket.NewWebSocketAPI()
 	// 创建一个 GPSAPI 实例，用于将 GPSModule 的核心逻辑对外提供为 HTTP 接口
-	gps_api := gps.InitGPSAPI()
+	gps_api := gps.InitGPSAPI(webSocketAPI)
+	// 将 GPSModule 绑定到 WebSocketManager
+	webSocketAPI.SetUpdater(gps_api)
+	// webSocketAPI.manager.Updater = gps_api
+	webSocketAPI.Start()
 
 	// 创建 ServeMux 路由
 	mux := http.NewServeMux()
@@ -136,8 +142,10 @@ func main() {
 	})
 	mux.HandleFunc("/modifyDriverInfo", driverShift.HandleShiftInfo)
 
+	webSocketAPI.RegisterRoutes(mux)
 	// 注册 GPSAPI 提供的 HTTP 接口到路由器中。
 	gps_api.RegisterRoutes(mux)
+	gps_api.StartBroadcast()
 
 	// 注册后端服务器服务
 	RegisterAdmin(mux)
