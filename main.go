@@ -8,7 +8,7 @@ import (
 	"login/db"
 	"login/driverShift"
 	"login/exception"
-	"login/gps" // 引入 gps 包
+	"login/gps"
 	"login/log_service"
 	"login/websocket"
 	"net/http"
@@ -119,6 +119,8 @@ func main() {
 	if err != nil {
 		print(err.Error())
 	}
+
+	log_service.InitLoggers()
 
 	webSocketAPI := websocket.NewWebSocketAPI()
 	// 创建一个 GPSAPI 实例，用于将 GPSModule 的核心逻辑对外提供为 HTTP 接口

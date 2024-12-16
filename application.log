@@ -1,0 +1,29 @@
+WEBSOCKET: 2024/12/11 20:36:26 websocket.go:27: WebSocket Manager initialized.
+GPS: 2024/12/11 20:36:26 gps.go:41: GPS Module initialized
+GPS: 2024/12/11 20:36:26 gps.go:104: Starting driver location broadcast
+WEBSOCKET: 2024/12/11 20:36:26 websocket.go:121: WebSocket server started.
+GPS: 2024/12/11 20:36:28 gps.go:122: Called by: F:/下載/軟件實訓/AdminSchoolBus/gps/gps.go:110 login/gps.(*GPSModule).StartBroadcast.func1 - No drivers to broadcast
+GPS: 2024/12/11 20:36:30 gps.go:122: Called by: F:/下載/軟件實訓/AdminSchoolBus/gps/gps.go:110 login/gps.(*GPSModule).StartBroadcast.func1 - No drivers to broadcast
+GPS: 2024/12/11 20:36:32 gps.go:122: Called by: F:/下載/軟件實訓/AdminSchoolBus/gps/gps.go:110 login/gps.(*GPSModule).StartBroadcast.func1 - No drivers to broadcast
+GPS: 2024/12/11 20:36:34 gps.go:122: Called by: F:/下載/軟件實訓/AdminSchoolBus/gps/gps.go:110 login/gps.(*GPSModule).StartBroadcast.func1 - No drivers to broadcast
+GPS: 2024/12/11 20:36:36 gps.go:122: Called by: F:/下載/軟件實訓/AdminSchoolBus/gps/gps.go:110 login/gps.(*GPSModule).StartBroadcast.func1 - No drivers to broadcast
+GPS: 2024/12/11 20:36:38 gps.go:122: Called by: F:/下載/軟件實訓/AdminSchoolBus/gps/gps.go:110 login/gps.(*GPSModule).StartBroadcast.func1 - No drivers to broadcast
+GPS: 2024/12/11 20:36:40 gps.go:122: Called by: F:/下載/軟件實訓/AdminSchoolBus/gps/gps.go:110 login/gps.(*GPSModule).StartBroadcast.func1 - No drivers to broadcast
+GPS: 2024/12/11 20:36:42 gps.go:122: Called by: F:/下載/軟件實訓/AdminSchoolBus/gps/gps.go:110 login/gps.(*GPSModule).StartBroadcast.func1 - No drivers to broadcast
+GPS: 2024/12/11 20:36:44 gps.go:122: Called by: F:/下載/軟件實訓/AdminSchoolBus/gps/gps.go:110 login/gps.(*GPSModule).StartBroadcast.func1 - No drivers to broadcast
+GPS: 2024/12/11 20:36:46 gps.go:122: Called by: F:/下載/軟件實訓/AdminSchoolBus/gps/gps.go:110 login/gps.(*GPSModule).StartBroadcast.func1 - No drivers to broadcast
+GPS: 2024/12/11 20:36:48 gps.go:122: Called by: F:/下載/軟件實訓/AdminSchoolBus/gps/gps.go:110 login/gps.(*GPSModule).StartBroadcast.func1 - No drivers to broadcast
+GPS: 2024/12/11 20:36:50 gps.go:122: Called by: F:/下載/軟件實訓/AdminSchoolBus/gps/gps.go:110 login/gps.(*GPSModule).StartBroadcast.func1 - No drivers to broadcast
+GPS: 2024/12/11 20:36:52 gps.go:122: Called by: F:/下載/軟件實訓/AdminSchoolBus/gps/gps.go:110 login/gps.(*GPSModule).StartBroadcast.func1 - No drivers to broadcast
+GPS: 2024/12/11 20:36:54 gps.go:122: Called by: F:/下載/軟件實訓/AdminSchoolBus/gps/gps.go:110 login/gps.(*GPSModule).StartBroadcast.func1 - No drivers to broadcast
+GPS: 2024/12/11 20:36:56 gps.go:122: Called by: F:/下載/軟件實訓/AdminSchoolBus/gps/gps.go:110 login/gps.(*GPSModule).StartBroadcast.func1 - No drivers to broadcast
+GPS: 2024/12/11 20:36:58 gps.go:122: Called by: F:/下載/軟件實訓/AdminSchoolBus/gps/gps.go:110 login/gps.(*GPSModule).StartBroadcast.func1 - No drivers to broadcast
+GPS: 2024/12/11 20:37:00 gps.go:122: Called by: F:/下載/軟件實訓/AdminSchoolBus/gps/gps.go:110 login/gps.(*GPSModule).StartBroadcast.func1 - No drivers to broadcast
+GPS: 2024/12/11 20:37:02 gps.go:122: Called by: F:/下載/軟件實訓/AdminSchoolBus/gps/gps.go:110 login/gps.(*GPSModule).StartBroadcast.func1 - No drivers to broadcast
+GPS: 2024/12/11 20:37:04 gps.go:122: Called by: F:/下載/軟件實訓/AdminSchoolBus/gps/gps.go:110 login/gps.(*GPSModule).StartBroadcast.func1 - No drivers to broadcast
+GPS: 2024/12/11 20:37:04 gps.go:77: Called by: F:/下載/軟件實訓/AdminSchoolBus/gps/gps_api.go:47 login/gps.(*GPSAPI).HandleCreateDriver - Driver created successfully: ID 1
+WEBSOCKET: 2024/12/11 20:37:17 websocket.go:56: Called by: F:/下載/軟件實訓/AdminSchoolBus/websocket/websocket_api.go:50 login/websocket.(*WebSocketAPI).HandleConnection - Handling WebSocket connection: [::1]:10971, type: passenger
+WEBSOCKET: 2024/12/11 20:37:17 websocket.go:127: Called by: E:/Go/src/runtime/asm_amd64.s:1695 runtime.goexit - Client registered: [::1]:10971
+WEBSOCKET: 2024/12/11 20:37:17 websocket.go:56: Called by: F:/下載/軟件實訓/AdminSchoolBus/websocket/websocket_api.go:50 login/websocket.(*WebSocketAPI).HandleConnection - Handling WebSocket connection: [::1]:10972, type: passenger
+WEBSOCKET: 2024/12/11 20:37:17 websocket.go:127: Called by: E:/Go/src/runtime/asm_amd64.s:1695 runtime.goexit - Client registered: [::1]:10972
+WEBSOCKET: 2024/12/11 20:37:21 websocket.go:87: Called by: F:/下載/軟件實訓/AdminSchoolBus/websocket/websocket_api.go:50 login/websocket.(*WebSocketAPI).HandleConnection - Received driver GPS: {driver_gps 1 {22.349995 113.584013} 0 {0 0} {0 0}}

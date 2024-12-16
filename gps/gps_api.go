@@ -56,7 +56,7 @@ func (api *GPSAPI) HandleCreateDriver(w http.ResponseWriter, r *http.Request) {
 
 // HandleDeleteDriver 处理删除驾驶员的请求
 func (api *GPSAPI) HandleDeleteDriver(w http.ResponseWriter, r *http.Request) {
-	if r.Method != http.MethodDelete {
+	if r.Method != http.MethodPost {
 		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
 		return
 	}
