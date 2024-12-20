@@ -9,7 +9,10 @@ import (
 	"login/config"
 	"login/db"
 	"login/exception"
+	"login/log_service"
+	"login/utils"
 	"net/http"
+	"strconv"
 )
 
 // LoginRequest 用来解析前端传来的 JSON 数据
@@ -18,12 +21,113 @@ type LoginRequest struct {
 	Password string `json:"password"`
 }
 
+type changeDataRequest struct {
+	Dataset   string   `json:"dataset"`
+	TableName string   `json:"table_name"`
+	DataNames []string `json:"data_names"`
+	Params    []string `json:"params"`
+	Condition string   `json:"condition"`
+	Token     string   `json:"token"`
+}
+
 // LoginResponse 用来返回给前端的 JSON 数据
 type ApiResponse struct {
 	Code    int    `json:"code"`
 	Message string `json:"message"`
 	Data    string `json:"data,omitempty"`
 	Role    int    `json:"role"`
+}
+
+// @Summary 管理员修改信息
+// @Description 接收前端post的请求，修改数据库中的信息
+// @Tags admins
+// @Accept json
+// @Produce json
+// @Param user body User true "User data"
+// @Success 201 {object} User
+// @Failure 400 {object} ErrorResponse
+// @Router /unknownnow [post]
+func ChangeDataRequest(w http.ResponseWriter, r *http.Request) {
+	// 获取用户请求数据
+	var request changeDataRequest
+	err := json.NewDecoder(r.Body).Decode(&request)
+	if err != nil {
+		// 无法解析
+		w.WriteHeader(http.StatusBadRequest)
+		exception.PrintError(ChangeDataRequest, err)
+		return
+	}
+
+	// 验证权限
+	_, role, err := auth.VerifyAToken(request.Token)
+	if err != nil {
+		exception.PrintError(ChangeDataRequest, err)
+		// 无权限
+		w.WriteHeader(http.StatusUnauthorized)
+		return
+	}
+
+	// 判断权限
+	if role != config.RoleAdmin {
+		exception.PrintError(ChangeDataRequest, err)
+		// 无权限
+		w.WriteHeader(http.StatusUnauthorized)
+		return
+	}
+
+	// 选择数据库
+	var dataset config.Role
+	switch request.Dataset {
+	case "passenger":
+		dataset = config.RolePassenger
+	case "driver":
+		dataset = config.RoleDriver
+	case "admin":
+		dataset = config.RoleAdmin
+	default:
+		// 无效的数据集
+		w.WriteHeader(http.StatusBadRequest)
+		exception.PrintError(ChangeDataRequest, err)
+		return
+	}
+
+	// 构造sql语句
+
+	sqlStatement := "UPDATE " + request.TableName + " SET "
+
+	if len(request.DataNames) != len(request.Params) || 0 == len(request.DataNames) {
+		// 参数数量不正确
+		w.WriteHeader(http.StatusBadRequest)
+		exception.PrintError(ChangeDataRequest, err)
+		return
+	}
+
+	for i := 0; i < len(request.DataNames); i++ {
+		if i == 0 {
+			sqlStatement += fmt.Sprintf("%s = ?", request.DataNames[i])
+		} else {
+			sqlStatement += fmt.Sprintf(", %s = ?", request.DataNames[i])
+		}
+	}
+
+	sqlStatement += " WHERE " + request.Condition
+
+	interfaces := utils.ConvertStringsToInterface(request.Params)
+
+	// 执行sql语句
+	_, err = db.ExecuteSQL(
+		dataset,
+		sqlStatement,
+		interfaces...,
+	)
+	if err != nil {
+		// 执行sql语句失败
+		w.WriteHeader(http.StatusInternalServerError)
+		exception.PrintError(ChangeDataRequest, err)
+		return
+	}
+
+	w.WriteHeader(http.StatusOK)
 }
 
 // @Summary 发送dashboard需要的信息
@@ -41,6 +145,9 @@ func GiveDashBoardInfo(w http.ResponseWriter, r *http.Request) {
 		TotalUsers   int `json:"total_users"`
 		TotalDrivers int `json:"total_drivers"`
 		TotalAdmins  int `json:"total_admins"`
+		// 错误数据
+		SystemErrors   int `json:"system_errors"`
+		SystemWarnings int `json:"system_warnings"`
 	}
 	var totalUsers int
 	var totalDrivers int
@@ -60,10 +167,14 @@ func GiveDashBoardInfo(w http.ResponseWriter, r *http.Request) {
 		_ = result3.Scan(&totalAdmins)
 	}
 
+	aDayErrors, aDayWarnings := log_service.GetADayErrorsAndWarnings()
+
 	data := DashBoardStatus{
-		TotalUsers:   totalUsers,
-		TotalDrivers: totalDrivers,
-		TotalAdmins:  totalAdmins,
+		TotalUsers:     totalUsers,
+		TotalDrivers:   totalDrivers,
+		TotalAdmins:    totalAdmins,
+		SystemErrors:   aDayErrors,
+		SystemWarnings: aDayWarnings,
 	}
 
 	// 设置响应头
@@ -316,4 +427,314 @@ func ValidateTokenHandler(w http.ResponseWriter, r *http.Request) {
 		Data:    fmt.Sprintf("UserID: %s, Role: %s", userID, role),
 		Role:    role.Int(),
 	})
+}
+
+// @Summary 获得表格数据
+// @Description 根据具体内容获得数据
+// @Tags admins
+// @Accept json
+// @Produce json
+// @Param user body User true "User data"
+// @Success 201 {object} User
+// @Failure 400 {object} ErrorResponse
+// @Router /unknownnow [post]
+func GetTableData(w http.ResponseWriter, r *http.Request) {
+	// 定义用户结构
+	type User struct {
+		ID               string   `json:"id"`
+		Aliases          []string `json:"aliases"`
+		AccountType      string   `json:"accountType"`
+		AccountStatus    string   `json:"accountStatus"`
+		UnlockTime       string   `json:"unlockTime,omitempty"`
+		RegistrationTime string   `json:"registrationTime"`
+	}
+
+	//// 模拟数据
+	//var users = []User{
+	//	{"1001", []string{"alias1", "alias2"}, "admin", "active", "", "2024-01-01 08:00:00"},
+	//	{"1002", []string{"win"}, "user", "locked", "2024-12-20 12:00:00", "2023-05-15 14:20:00"},
+	//	{"1003", []string{"guest"}, "user", "active", "", "2024-06-10 10:30:00"},
+	//}
+
+	// 获取查询参数
+	keyword := r.URL.Query().Get("keyword")
+	accountType := r.URL.Query().Get("accountType")
+	accountStatus := r.URL.Query().Get("accountStatus")
+	pageStr := r.URL.Query().Get("page")
+	sizeStr := r.URL.Query().Get("size")
+
+	// 先获得aliases
+	sqlStatementBefore := "SELECT user_id, user_name FROM usersaliases WHERE user_id lIKE ?"
+	resultBefore, err := db.ExecuteSQL(config.RoleAdmin, sqlStatementBefore, "%"+keyword+"%")
+	if err != nil {
+		exception.PrintError(GetTableData, err)
+		w.WriteHeader(http.StatusInternalServerError)
+		return
+	}
+
+	// 创建map方便后续O(1)查找
+	myMap := make(map[string][]string)
+	rowsBefore := resultBefore.(*sql.Rows)
+	for rowsBefore.Next() {
+		var userID string
+		var userAlias string
+		err = rowsBefore.Scan(&userID, &userAlias)
+		if err != nil {
+			exception.PrintError(GetTableData, err)
+			w.WriteHeader(http.StatusInternalServerError)
+			return
+		}
+		myMap[userID] = append(myMap[userID], userAlias)
+	}
+
+	// 获取查询结果，其中如果有keyword那么模糊查询，不包含aliases, aliases单独处理
+	sqlStatement := "SELECT u.user_id, u.user_type, u.user_status, l.user_locked_time, i.user_registry_date FROM userspass u LEFT JOIN userslocked l ON u.user_id = l.user_id LEFT JOIN usersinfo i ON u.user_id = i.user_id WHERE u.user_id lIKE ?"
+	result, err := db.ExecuteSQL(config.RoleAdmin, sqlStatement, "%"+keyword+"%")
+	if err != nil {
+		exception.PrintError(GetTableData, err)
+		w.WriteHeader(http.StatusInternalServerError)
+		return
+	}
+
+	rows := result.(*sql.Rows)
+	var users []User
+
+	for rows.Next() {
+		var user User
+		var userLockedTime sql.NullString
+		err = rows.Scan(&user.ID, &user.AccountType, &user.AccountStatus, &userLockedTime, &user.RegistrationTime)
+		if err != nil {
+			exception.PrintError(GetTableData, err)
+			w.WriteHeader(http.StatusInternalServerError)
+			return
+		}
+		// 处理none
+		if userLockedTime.Valid {
+			user.UnlockTime = userLockedTime.String
+		} else {
+			user.UnlockTime = "-"
+		}
+
+		// 处理身份
+		switch user.AccountType {
+		case "0":
+			user.AccountType = "admin"
+		case "1":
+			user.AccountType = "user"
+		case "2":
+			user.AccountType = "driver"
+		}
+
+		// 加入aliases
+		user.Aliases = myMap[user.ID]
+		// 放入结果数组
+		users = append(users, user)
+	}
+
+	// 默认分页参数
+	page, _ := strconv.Atoi(pageStr)
+	if page < 1 {
+		page = 1
+	}
+	size, _ := strconv.Atoi(sizeStr)
+	if size < 1 {
+		size = 10
+	}
+
+	// 过滤用户数据
+	var filteredUsers []User
+	for _, user := range users {
+		if accountType != "" && user.AccountType != accountType {
+			continue
+		}
+		if accountStatus != "" && user.AccountStatus != accountStatus {
+			continue
+		}
+		filteredUsers = append(filteredUsers, user)
+	}
+
+	// 分页处理
+	start := (page - 1) * size
+	end := start + size
+	if start > len(filteredUsers) {
+		start = len(filteredUsers)
+	}
+	if end > len(filteredUsers) {
+		end = len(filteredUsers)
+	}
+	paginatedUsers := filteredUsers[start:end]
+
+	// 构造返回数据
+	response := map[string]interface{}{
+		"data":  paginatedUsers,
+		"total": len(filteredUsers),
+	}
+
+	// 设置响应头并返回 JSON 数据
+	w.Header().Set("Content-Type", "application/json")
+	json.NewEncoder(w).Encode(response)
+}
+
+type deleteDataRequest struct {
+	Dataset   string `json:"dataset"`
+	TableName string `json:"table_name"`
+	Condition string `json:"condition"`
+	Token     string `json:"token"`
+}
+
+// @Summary 管理员删除信息
+// @Description 接收前端post的请求，删除数据库的信息
+// @Tags admins
+// @Accept json
+// @Produce json
+// @Param user body User true "User data"
+// @Success 201 {object} User
+// @Failure 400 {object} ErrorResponse
+// @Router /unknownnow [post]
+func DeleteDataRequest(w http.ResponseWriter, r *http.Request) {
+	// 获取用户请求数据
+	var request deleteDataRequest
+	err := json.NewDecoder(r.Body).Decode(&request)
+	if err != nil {
+		// 无法解析
+		w.WriteHeader(http.StatusBadRequest)
+		exception.PrintError(ChangeDataRequest, err)
+		return
+	}
+
+	// 验证权限
+	_, role, err := auth.VerifyAToken(request.Token)
+	if err != nil {
+		exception.PrintError(ChangeDataRequest, err)
+		// 无权限
+		w.WriteHeader(http.StatusUnauthorized)
+		return
+	}
+
+	// 判断权限
+	if role != config.RoleAdmin {
+		exception.PrintError(ChangeDataRequest, err)
+		// 无权限
+		w.WriteHeader(http.StatusUnauthorized)
+		return
+	}
+
+	// 选择数据库
+	var dataset config.Role
+	switch request.Dataset {
+	case "passenger":
+		dataset = config.RolePassenger
+	case "driver":
+		dataset = config.RoleDriver
+	case "admin":
+		dataset = config.RoleAdmin
+	default:
+		// 无效的数据集
+		w.WriteHeader(http.StatusBadRequest)
+		exception.PrintError(ChangeDataRequest, err)
+		return
+	}
+
+	// 构造sql语句
+
+	sqlStatement := fmt.Sprintf("DELETE FROM %s WHERE %s", request.TableName, request.Condition)
+
+	// 执行sql语句
+	_, err = db.ExecuteSQL(
+		dataset,
+		sqlStatement,
+	)
+	if err != nil {
+		// 执行sql语句失败
+		w.WriteHeader(http.StatusInternalServerError)
+		exception.PrintError(ChangeDataRequest, err)
+		return
+	}
+
+	w.WriteHeader(http.StatusOK)
+}
+
+type insertDataRequest struct {
+	Dataset   string   `json:"dataset"`
+	TableName string   `json:"table_name"`
+	DataNames []string `json:"data_names"`
+	Params    []string `json:"params"`
+	Token     string   `json:"token"`
+}
+
+// @Summary 管理员添加信息
+// @Description 接收前端post的请求，添加数据库的信息
+// @Tags admins
+// @Accept json
+// @Produce json
+// @Param user body User true "User data"
+// @Success 201 {object} User
+// @Failure 400 {object} ErrorResponse
+// @Router /unknownnow [post]
+func InsertDataRequest(w http.ResponseWriter, r *http.Request) {
+	// 获取用户请求数据
+	var request insertDataRequest
+	err := json.NewDecoder(r.Body).Decode(&request)
+	if err != nil {
+		// 无法解析
+		w.WriteHeader(http.StatusBadRequest)
+		exception.PrintError(ChangeDataRequest, err)
+		return
+	}
+
+	// 验证权限
+	_, role, err := auth.VerifyAToken(request.Token)
+	if err != nil {
+		exception.PrintError(ChangeDataRequest, err)
+		// 无权限
+		w.WriteHeader(http.StatusUnauthorized)
+		return
+	}
+
+	// 判断权限
+	if role != config.RoleAdmin {
+		exception.PrintError(ChangeDataRequest, err)
+		// 无权限
+		w.WriteHeader(http.StatusUnauthorized)
+		return
+	}
+
+	// 选择数据库
+	var dataset config.Role
+	switch request.Dataset {
+	case "passenger":
+		dataset = config.RolePassenger
+	case "driver":
+		dataset = config.RoleDriver
+	case "admin":
+		dataset = config.RoleAdmin
+	default:
+		// 无效的数据集
+		w.WriteHeader(http.StatusBadRequest)
+		exception.PrintError(ChangeDataRequest, err)
+		return
+	}
+
+	// 构造sql语句
+	sqlStatement := db.ConstructInsertSQL(request.TableName, request.DataNames)
+
+	// 转换数据
+	interfaces := utils.ConvertStringsToInterface(request.Params)
+
+	// 执行sql语句
+
+	// 执行sql语句
+	_, err = db.ExecuteSQL(
+		dataset,
+		sqlStatement,
+		interfaces...,
+	)
+	if err != nil {
+		// 执行sql语句失败
+		w.WriteHeader(http.StatusInternalServerError)
+		exception.PrintError(ChangeDataRequest, err)
+		return
+	}
+
+	w.WriteHeader(http.StatusOK)
 }

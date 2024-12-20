@@ -10,6 +10,7 @@ import (
 	"login/exception"
 	"login/gps"
 	"login/log_service"
+	"login/user"
 	"login/websocket"
 	"net/http"
 	"os"
@@ -24,14 +25,14 @@ func initDatasetCon() error {
 	}
 	fmt.Println("admin数据库连接成功")
 
-	// ** 由于还没有你们的数据库，暂时先注释下面了，你们用的时候记得开开 **
-	//err = db.InitDB(config.RolePassenger)
-	//if err != nil {
-	//	fmt.Println("passenger数据库连接失败，错误信息为：", err)
-	//	return fmt.Errorf("passenger数据库连接失败，错误信息为：%v", err)
-	//}
-	//fmt.Println("passenger数据库连接成功")
-	//
+	// * 由于还没有你们的数据库，暂时先注释下面了，你们用的时候记得开开 **
+	err = db.InitDB(config.RolePassenger)
+	if err != nil {
+		fmt.Println("passenger数据库连接失败，错误信息为：", err)
+		return fmt.Errorf("passenger数据库连接失败，错误信息为：%v", err)
+	}
+	fmt.Println("passenger数据库连接成功")
+
 	err = db.InitDB(config.RoleDriver)
 	if err != nil {
 		fmt.Println("driver数据库连接失败，错误信息为：", err)
@@ -95,6 +96,15 @@ func RegisterAdmin(mux *http.ServeMux) {
 
 	// 验证码
 	mux.HandleFunc("/api/register", auth.HandleRegistry)
+
+	// 数据修改up
+	mux.HandleFunc("/admin/update", api.ChangeDataRequest)
+	mux.HandleFunc("/admin/delete", api.DeleteDataRequest)
+	mux.HandleFunc("/admin/insert", api.InsertDataRequest)
+
+	// Table api
+	mux.HandleFunc("/admin/table", api.GetTableData)
+
 }
 
 func main() {
@@ -147,6 +157,12 @@ func main() {
 	gps_api.RegisterRoutes(mux)
 	gps_api.StartBroadcast()
 	// - 驾驶员
+
+	//乘客信息处理
+	mux.HandleFunc("/submitUserOrder", user.HandleSubmitOrder)
+	mux.HandleFunc("/submitUserPayment", user.HandleSubmitPayment)
+	mux.HandleFunc("/changeOrder", user.HandleChangeOrder)
+	mux.HandleFunc("/changePayment", user.HandleChangePayment)
 
 	// 验证url
 	mux.HandleFunc("/api/login", api.LoginHandler)
