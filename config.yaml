@@ -12,8 +12,8 @@ server:
 
 database_names:
   admin_db: "schoolbus"
-  passenger_db: "??????" # *******请填你们的db名
-  driver_db: "driver_db" # 同上
+  passenger_db: "passenger_db"
+  driver_db: "driver_db"
 
 
 jwt:

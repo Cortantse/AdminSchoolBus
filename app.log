@@ -1,0 +1,18 @@
+2024/12/20 19:28:03 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/20 19:28:09 [1m[31mError occurs in login/db.ExecuteSQL: Error 1046 (3D000): No database selected[0m
+
+2024/12/20 19:28:10 [1m[31mError occurs in login/db.ExecuteSQL: Error 1046 (3D000): No database selected[0m
+
+2024/12/20 19:28:17 [1m[31mError occurs in login/db.ExecuteSQL: Error 1046 (3D000): No database selected[0m
+
+2024/12/20 19:28:25 [1m[31mError occurs in login/db.ExecuteSQL: Error 1046 (3D000): No database selected[0m
+
+2024/12/20 19:28:26 [1m[31mError occurs in login/db.ExecuteSQL: Error 1046 (3D000): No database selected[0m
+
+2024/12/20 19:28:26 [1m[31mError occurs in login/db.ExecuteSQL: Error 1046 (3D000): No database selected[0m
+
+2024/12/20 19:29:21 [1m[31mError occurs in login/db.ExecuteSQL: Error 1046 (3D000): No database selected[0m
+
+2024/12/20 19:29:44 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/20 19:35:22 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/20 19:50:47 2019-01-01 12:00:00 日志服务已启动==============

@@ -180,9 +180,13 @@ func main() {
 	// 注册后端服务器服务
 	RegisterAdmin(mux)
 
+	// 注册用户信息
+	user.RegisterUser(mux)
 	// 使用 CORS 中间件
 	corsHandler := enableCORS(mux)
-
+	// 提供静态文件服务，确保 /uploads/avatars/ 可以访问
+	fs := http.FileServer(http.Dir("./uploads"))
+	mux.Handle("/uploads/", http.StripPrefix("/uploads/", fs))
 	// 启动连接服务 ======
 	err = initServer(corsHandler)
 	if err != nil {
