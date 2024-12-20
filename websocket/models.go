@@ -8,6 +8,8 @@ type WebSocketMessage struct {
 	Count    int      `json:"count"`     // 付款人数（例如付款消息）
 	From     Location `json:"from"`      // 起点位置（例如车辆呼叫）
 	To       Location `json:"to"`        // 终点位置（例如车辆呼叫）
+	From_Str string   `json:"from_str"`  // 起点位置(名称)
+	To_Str   string   `json:"to_str"`    // 终点位置(名称)
 }
 
 // 地理位置结构体
