@@ -2,6 +2,7 @@ package user
 
 import (
 	"bytes"
+	"database/sql"
 	"encoding/json"
 	"fmt"
 	"io"
@@ -296,4 +297,71 @@ func HandleSubmitPayment(w http.ResponseWriter, r *http.Request) {
 	}
 
 	respondWithSuccess(w, "添加支付信息成功")
+}
+
+func GetjourneyRecord(w http.ResponseWriter, r *http.Request) {
+	//fmt.Print("getjourney被调用----------------------------")
+	// 从数据库中获取行程记录
+	type JourneyRecord struct {
+		Originsite      string `json:"originsite"`
+		Destinationsite string `json:"destinationsite"`
+		UpTime          string `json:"uptime"`
+		DownTime        string `json:"downtime"`
+		Status          string `json:"status"`
+	}
+	rows, err := db.ExecuteSQL(config.RolePassenger, "SELECT pickup_station_name,dropoff_station_name,pickup_time,dropoff_time,status FROM order_information WHERE student_account=? ", 1000000001)
+	if err != nil {
+		fmt.Print(err)
+	}
+	res, _ := rows.(*sql.Rows)
+	var results []JourneyRecord
+	for res.Next() {
+		var journey JourneyRecord
+		var downTime sql.NullString // 使用 sql.NullString 处理可能为空的时间字段
+		err := res.Scan(&journey.Originsite, &journey.Destinationsite, &journey.UpTime, &downTime, &journey.Status)
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
+		}
+		if downTime.Valid {
+			//journey.DownTime = new(string)
+			journey.DownTime = downTime.String
+		} else {
+			journey.DownTime = "---"
+		}
+		results = append(results, journey)
+	}
+
+	// 设置响应头
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(http.StatusOK)
+	// 将数据转化为JSON格式并写入响应体
+	json.NewEncoder(w).Encode(results)
+}
+
+func GetComment(w http.ResponseWriter, r *http.Request) {
+	type Comment struct {
+		Commentid      string `json:"commentid"`
+		Studentaccount string `json:"studentaccount"`
+		Commentcontent string `json:"commentcontent"`
+		Commenttime    string `json:"commenttime"`
+	}
+	rows, err := db.ExecuteSQL(config.RolePassenger, "SELECT * FROM Passenger_Comment WHERE comment_id > ?", 0)
+	if err != nil {
+		fmt.Print(err)
+	}
+	res, _ := rows.(*sql.Rows)
+	var results []Comment
+	for res.Next() {
+		var result Comment
+		err := res.Scan(&result.Commentid, &result.Studentaccount, &result.Commentcontent, &result.Commenttime)
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
+		}
+		results = append(results, result)
+	}
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(http.StatusOK)
+	json.NewEncoder(w).Encode(results)
 }
