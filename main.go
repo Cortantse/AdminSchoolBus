@@ -10,6 +10,7 @@ import (
 	"login/exception"
 	"login/gps"
 	"login/log_service"
+
 	"login/user"
 	"login/websocket"
 	"net/http"
@@ -151,6 +152,9 @@ func main() {
 		driverShift.HandleShiftStart(w, r, gps_api)
 	})
 	mux.HandleFunc("/modifyDriverInfo", driverShift.HandleShiftInfo)
+
+	mux.HandleFunc("/getDriverData", driverShift.GetDriverData)
+	mux.HandleFunc("/getComments", driverShift.GetComments)
 
 	webSocketAPI.RegisterRoutes(mux)
 	// 注册 GPSAPI 提供的 HTTP 接口到路由器中。

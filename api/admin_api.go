@@ -9,8 +9,10 @@ import (
 	"login/config"
 	"login/db"
 	"login/exception"
+
 	"login/log_service"
 	"login/utils"
+
 	"net/http"
 	"strconv"
 )
@@ -21,6 +23,7 @@ type LoginRequest struct {
 	Password string `json:"password"`
 }
 
+
 type changeDataRequest struct {
 	Dataset   string   `json:"dataset"`
 	TableName string   `json:"table_name"`
@@ -30,6 +33,7 @@ type changeDataRequest struct {
 	Token     string   `json:"token"`
 }
 
+
 // LoginResponse 用来返回给前端的 JSON 数据
 type ApiResponse struct {
 	Code    int    `json:"code"`
@@ -37,6 +41,7 @@ type ApiResponse struct {
 	Data    string `json:"data,omitempty"`
 	Role    int    `json:"role"`
 }
+
 
 // @Summary 管理员修改信息
 // @Description 接收前端post的请求，修改数据库中的信息
@@ -129,6 +134,7 @@ func ChangeDataRequest(w http.ResponseWriter, r *http.Request) {
 
 	w.WriteHeader(http.StatusOK)
 }
+
 
 // @Summary 发送dashboard需要的信息
 // @Description 接收前端fetch请求，返回dashboard需要信息
@@ -738,3 +744,4 @@ func InsertDataRequest(w http.ResponseWriter, r *http.Request) {
 
 	w.WriteHeader(http.StatusOK)
 }
+
