@@ -10,6 +10,9 @@ import (
 	"login/exception"
 	"login/gps" // 引入 gps 包
 	"login/log_service"
+
+	"login/user"
+
 	"net/http"
 	"os"
 )
@@ -23,14 +26,14 @@ func initDatasetCon() error {
 	}
 	fmt.Println("admin数据库连接成功")
 
-	// ** 由于还没有你们的数据库，暂时先注释下面了，你们用的时候记得开开 **
-	//err = db.InitDB(config.RolePassenger)
-	//if err != nil {
-	//	fmt.Println("passenger数据库连接失败，错误信息为：", err)
-	//	return fmt.Errorf("passenger数据库连接失败，错误信息为：%v", err)
-	//}
-	//fmt.Println("passenger数据库连接成功")
-	//
+	// * 由于还没有你们的数据库，暂时先注释下面了，你们用的时候记得开开 **
+	err = db.InitDB(config.RolePassenger)
+	if err != nil {
+		fmt.Println("passenger数据库连接失败，错误信息为：", err)
+		return fmt.Errorf("passenger数据库连接失败，错误信息为：%v", err)
+	}
+	fmt.Println("passenger数据库连接成功")
+
 	err = db.InitDB(config.RoleDriver)
 	if err != nil {
 		fmt.Println("driver数据库连接失败，错误信息为：", err)
@@ -94,6 +97,15 @@ func RegisterAdmin(mux *http.ServeMux) {
 
 	// 验证码
 	mux.HandleFunc("/api/register", auth.HandleRegistry)
+
+	// 数据修改up
+	mux.HandleFunc("/admin/update", api.ChangeDataRequest)
+	mux.HandleFunc("/admin/delete", api.DeleteDataRequest)
+	mux.HandleFunc("/admin/insert", api.InsertDataRequest)
+
+	// Table api
+	mux.HandleFunc("/admin/table", api.GetTableData)
+
 }
 
 func main() {
@@ -135,8 +147,16 @@ func main() {
 		driverShift.HandleShiftStart(w, r, gps_api)
 	})
 	mux.HandleFunc("/modifyDriverInfo", driverShift.HandleShiftInfo)
+
 	mux.HandleFunc("/getDriverData", driverShift.GetDriverData)
 	mux.HandleFunc("/getComments", driverShift.GetComments)
+
+
+	//乘客信息处理
+	mux.HandleFunc("/submitUserOrder", user.HandleSubmitOrder)
+	mux.HandleFunc("/submitUserPayment", user.HandleSubmitPayment)
+	mux.HandleFunc("/changeOrder", user.HandleChangeOrder)
+	mux.HandleFunc("/changePayment", user.HandleChangePayment)
 
 	// 注册 GPSAPI 提供的 HTTP 接口到路由器中。
 	gps_api.RegisterRoutes(mux)

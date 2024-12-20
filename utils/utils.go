@@ -43,3 +43,14 @@ func TrimExtraSpaces(input string) string {
 func GetFormattedCurrentTime() string {
 	return time.Now().String() + ": "
 }
+
+
+// ConvertStringsToInterface 将string[]换位db_api接收的[]interface{};
+func ConvertStringsToInterface(intput []string) []interface{} {
+	var interfaces []interface{}
+	for _, param := range intput {
+		interfaces = append(interfaces, param)
+	}
+	return interfaces
+}
+
