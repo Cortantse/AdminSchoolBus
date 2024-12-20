@@ -5,7 +5,9 @@ import (
 	"log"
 	"reflect"
 	"runtime"
+
 	"time"
+
 
 	"login/log_service"
 )
@@ -20,7 +22,10 @@ func PrintError(fn interface{}, err error) {
 	// 获取函数名
 	pc := runtime.FuncForPC(reflect.ValueOf(fn).Pointer())
 
+
+
 	addErrorOrWarning(true)
+
 
 	var str string
 	if pc != nil {

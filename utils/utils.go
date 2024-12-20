@@ -44,6 +44,7 @@ func GetFormattedCurrentTime() string {
 	return time.Now().String() + ": "
 }
 
+
 // ConvertStringsToInterface 将string[]换位db_api接收的[]interface{};
 func ConvertStringsToInterface(intput []string) []interface{} {
 	var interfaces []interface{}
@@ -52,3 +53,4 @@ func ConvertStringsToInterface(intput []string) []interface{} {
 	}
 	return interfaces
 }
+
