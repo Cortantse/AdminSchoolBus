@@ -95,6 +95,15 @@ func RegisterAdmin(mux *http.ServeMux) {
 
 	// 验证码
 	mux.HandleFunc("/api/register", auth.HandleRegistry)
+
+	// 数据修改up
+	mux.HandleFunc("/admin/update", api.ChangeDataRequest)
+	mux.HandleFunc("/admin/delete", api.DeleteDataRequest)
+	mux.HandleFunc("/admin/insert", api.InsertDataRequest)
+
+	// Table api
+	mux.HandleFunc("/admin/table", api.GetTableData)
+
 }
 
 func main() {

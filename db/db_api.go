@@ -555,3 +555,19 @@ func Select(role config.Role, sqlQuery string, params []interface{}, dest interf
 
 	return nil
 }
+
+// ConstructInsertSQL 构造插入语句
+// 警告：不负责插入value，而是构造占位符
+func ConstructInsertSQL(tableName string, dataNames []string) string {
+	// 占位符
+	placeHolders := make([]string, len(dataNames))
+	for i := 0; i < len(dataNames); i++ {
+		placeHolders[i] = "?"
+	}
+	stringWithPlaceHolders := fmt.Sprintf(" %s ", strings.Join(placeHolders, ", "))
+
+	sqlStatement := fmt.Sprintf("INSERT INTO %s (%s) VALUES (%s)", tableName, strings.Join(dataNames, ", "),
+		stringWithPlaceHolders)
+
+	return sqlStatement
+}
