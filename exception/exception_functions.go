@@ -5,6 +5,7 @@ import (
 	"log"
 	"reflect"
 	"runtime"
+	"time"
 
 	"login/log_service"
 )
@@ -18,6 +19,8 @@ func PrintError(fn interface{}, err error) {
 
 	// 获取函数名
 	pc := runtime.FuncForPC(reflect.ValueOf(fn).Pointer())
+
+	addErrorOrWarning(true)
 
 	var str string
 	if pc != nil {
@@ -35,6 +38,8 @@ func PrintWarning(fn interface{}, err error) {
 	bold := "\033[1m"    // 加粗
 	reset := "\033[0m"   // 重置样式
 
+	addErrorOrWarning(false)
+
 	// 获取函数名
 	pc := runtime.FuncForPC(reflect.ValueOf(fn).Pointer())
 
@@ -42,5 +47,21 @@ func PrintWarning(fn interface{}, err error) {
 		log.Printf("%s%sWarning in %s: %s%s\n", bold, yellow, pc.Name(), err.Error(), reset)
 	} else {
 		log.Printf("%s%sWarning in unknown function: %s%s\n", bold, yellow, err.Error(), reset)
+	}
+}
+
+func addErrorOrWarning(ifError bool) {
+	// 获取当前时间
+	currentTime := time.Now()
+
+	// 提取小时 0-23
+	currentHour := currentTime.Hour()
+
+	if ifError {
+		log_service.HourlyErrorsNum += 1
+		log_service.ADayErrors[currentHour] += 1
+	} else {
+		log_service.HourlyWarningNum += 1
+		log_service.ADayWarnings[currentHour] += 1
 	}
 }
