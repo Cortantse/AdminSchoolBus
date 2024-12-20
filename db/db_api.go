@@ -129,7 +129,13 @@ func ExecuteSQL(role config.Role, sqlStatement string, args ...interface{}) (int
 			exception.PrintError(ExecuteSQL, err)
 			return nil, &DBError{"ExecuteSQL", err, sqlStatement, args}
 		}
-		return result, nil
+		// 获取自增长主键值
+		lastInsertID, err := result.LastInsertId()
+		if err != nil {
+			exception.PrintError(ExecuteSQL, err)
+			return nil, &DBError{"ExecuteSQL", err, sqlStatement, args}
+		}
+		return lastInsertID, nil
 	}
 
 	// 判断 UPDATE 操作

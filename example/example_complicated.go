@@ -287,7 +287,7 @@ func SelectTest8() {
 	params := []interface{}{"1"}
 
 	// 检测role和user_id是否匹配，正式检查
-	err := db.SelectEasy(config.RoleAdmin, "usersPass p, usersInfo i", &tems,
+	err := db.SelectEasy(config.RoleAdmin, "userspass p, usersInfo i", &tems,
 		false, []string{"p.user_id", "user_registry_date"}, []string{"p.user_id = i.user_id", "p.user_id = ?"},
 		params, "", 9999, 0, "", "")
 

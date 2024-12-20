@@ -24,7 +24,7 @@ type TokenDetail struct {
 }
 
 type UserPass struct {
-	UserID       string `db:"user_id"`
+	UserID       int    `db:"user_id"`
 	UserPassword string `db:"user_password_hash"`
 	Role         int    `db:"user_type"`
 	UserStatus   string `db:"user_status"`
@@ -61,7 +61,7 @@ func GiveAToken(role config.Role, userId string, clientInfo string) (string, err
 	params := []interface{}{userId}
 
 	// 查询数据库中是否有对应的user_id的账户
-	err := db.SelectEasy(config.RoleAdmin, "usersPass", &tems, true,
+	err := db.SelectEasy(config.RoleAdmin, "userspass", &tems, true,
 		[]string{}, []string{"user_id = (?)"}, params, "user_id", 1, 0, "", "")
 	if err != nil {
 		exception.PrintError(GiveAToken, err)
@@ -122,7 +122,7 @@ func GiveAToken(role config.Role, userId string, clientInfo string) (string, err
 		TokenCreatedAt: now,
 		ClientInfo:     clientInfo,
 	}
-	_, err = db.Insert(config.RoleAdmin, "tokensDetails", tokenDetail)
+	_, err = db.Insert(config.RoleAdmin, "tokensdetails", tokenDetail)
 	if err != nil {
 		exception.PrintError(GiveAToken, err)
 		return "", err
@@ -157,7 +157,7 @@ func VerifyAToken(token string) (string, config.Role, error) {
 		[]string{"token_id"}, []string{"token_hash = ?"}, []interface{}{token}, "token_id", 2, 0, "", "")
 	// 没有找到该token
 	if len(tokens) == 0 {
-		exception.PrintError(VerifyAToken, fmt.Errorf("token not found"))
+		// 内部日志，不要报错 // 后端请尽快实现日志！！！！！！！！！！！！
 		return "", config.Unknown, exception.TokenNotFound
 	} else if err != nil {
 		// select函数存在报错
