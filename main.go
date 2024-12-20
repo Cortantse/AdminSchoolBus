@@ -8,11 +8,11 @@ import (
 	"login/db"
 	"login/driverShift"
 	"login/exception"
-	"login/gps" // 引入 gps 包
+	"login/gps"
 	"login/log_service"
 
 	"login/user"
-
+	"login/websocket"
 	"net/http"
 	"os"
 )
@@ -131,17 +131,22 @@ func main() {
 		print(err.Error())
 	}
 
-	// 创建一个 GPSAPI 实例，用于将 GPSModule 的核心逻辑对外提供为 HTTP 接口
-	gps_api := gps.InitGPSAPI()
-
 	// 创建 ServeMux 路由
 	mux := http.NewServeMux()
 
-	// 验证url
-	mux.HandleFunc("/api/login", api.LoginHandler)
-	mux.HandleFunc("/api/logout", api.LogoutHandler)               // 设置登出处理路由
-	mux.HandleFunc("/api/validateToken", api.ValidateTokenHandler) // 设置登出处理路由
+	//驾驶员 -
+	log_service.InitLoggers()
+	// 初始化成功后可以正常记录日志
+	log_service.WebSocketLogger.Println("WebSocket 服务已启动")
+	log_service.GPSLogger.Println("GPS 服务已启动")
 
+	webSocketAPI := websocket.NewWebSocketAPI()
+	// 创建一个 GPSAPI 实例，用于将 GPSModule 的核心逻辑对外提供为 HTTP 接口
+	gps_api := gps.InitGPSAPI(webSocketAPI)
+	// 将 GPSModule 绑定到 WebSocketManager
+	webSocketAPI.SetUpdater(gps_api)
+	// webSocketAPI.manager.Updater = gps_api
+	webSocketAPI.Start()
 	//用于处理驾驶员上下班
 	mux.HandleFunc("/start", func(w http.ResponseWriter, r *http.Request) {
 		driverShift.HandleShiftStart(w, r, gps_api)
@@ -151,6 +156,11 @@ func main() {
 	mux.HandleFunc("/getDriverData", driverShift.GetDriverData)
 	mux.HandleFunc("/getComments", driverShift.GetComments)
 
+	webSocketAPI.RegisterRoutes(mux)
+	// 注册 GPSAPI 提供的 HTTP 接口到路由器中。
+	gps_api.RegisterRoutes(mux)
+	gps_api.StartBroadcast()
+	// - 驾驶员
 
 	//乘客信息处理
 	mux.HandleFunc("/submitUserOrder", user.HandleSubmitOrder)
@@ -158,8 +168,10 @@ func main() {
 	mux.HandleFunc("/changeOrder", user.HandleChangeOrder)
 	mux.HandleFunc("/changePayment", user.HandleChangePayment)
 
-	// 注册 GPSAPI 提供的 HTTP 接口到路由器中。
-	gps_api.RegisterRoutes(mux)
+	// 验证url
+	mux.HandleFunc("/api/login", api.LoginHandler)
+	mux.HandleFunc("/api/logout", api.LogoutHandler)               // 设置登出处理路由
+	mux.HandleFunc("/api/validateToken", api.ValidateTokenHandler) // 设置登出处理路由
 
 	// 注册后端服务器服务
 	RegisterAdmin(mux)
