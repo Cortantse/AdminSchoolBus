@@ -17,3 +17,179 @@
 2024/12/20 19:35:22 2019-01-01 12:00:00 日志服务已启动==============
 2024/12/20 19:50:47 2019-01-01 12:00:00 日志服务已启动==============
 2024/12/20 20:01:45 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/20 20:33:00 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/20 20:37:35 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/20 22:24:26 =====准点报时======
+2024/12/20 22:24:26 2024-12-20 22:24:26.1762369 +0800 CST m=+6410.233371901:  服务器正在运行
+2024/12/20 22:24:26 2024-12-20 22:24:26.1762369 +0800 CST m=+6410.233371901:  [32m1h内发现0个致命错误[0m
+2024/12/20 23:52:31 =====准点报时======
+2024/12/20 23:52:31 2024-12-20 23:52:31.3548719 +0800 CST m=+11695.412007401:  服务器正在运行
+2024/12/20 23:52:31 2024-12-20 23:52:31.3548719 +0800 CST m=+11695.412007401:  [32m1h内发现0个致命错误[0m
+2024/12/21 00:00:00 =====准点报时======
+2024/12/21 00:00:00 2024-12-21 00:00:00.0140698 +0800 CST m=+12144.071205301:  服务器正在运行
+2024/12/21 00:00:00 2024-12-21 00:00:00.0140698 +0800 CST m=+12144.071205301:  [32m1h内发现0个致命错误[0m
+2024/12/21 00:24:02 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/21 00:27:51 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/21 00:28:51 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/21 00:33:46 [1m[31mError occurs in login/db.ExecuteSQL: Error 1292 (22007): Truncated incorrect DOUBLE value: 'rcrc'[0m
+
+2024/12/21 00:38:12 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/21 00:55:48 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/21 01:00:00 =====准点报时======
+2024/12/21 01:00:00 2024-12-21 01:00:00.0077111 +0800 CST m=+252.026258001:  服务器正在运行
+2024/12/21 01:00:00 2024-12-21 01:00:00.0077111 +0800 CST m=+252.026258001:  [32m1h内发现0个致命错误[0m
+2024/12/21 02:00:00 =====准点报时======
+2024/12/21 02:00:00 2024-12-21 02:00:00.0147323 +0800 CST m=+3852.033279101:  服务器正在运行
+2024/12/21 02:00:00 2024-12-21 02:00:00.0147323 +0800 CST m=+3852.033279101:  [32m1h内发现0个致命错误[0m
+2024/12/21 02:12:27 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/21 02:15:05 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/21 02:21:40 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/21 02:31:09 [1m[31mError occurs in login/db.checkArgs: 参数数量不匹配，SQL 语句中有 6 个占位符，但传入了 7 个参数[0m
+
+2024/12/21 02:31:09 [1m[31mError occurs in login/db.ExecuteSQL: 参数数量不匹配，SQL 语句中有 6 个占位符，但传入了 7 个参数[0m
+
+2024/12/21 02:31:57 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/21 02:32:07 [1m[31mError occurs in login/db.checkArgs: 参数数量不匹配，SQL 语句中有 6 个占位符，但传入了 7 个参数[0m
+
+2024/12/21 02:32:07 [1m[31mError occurs in login/db.ExecuteSQL: 参数数量不匹配，SQL 语句中有 6 个占位符，但传入了 7 个参数[0m
+
+2024/12/21 02:33:07 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/21 02:34:06 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/21 03:00:00 =====准点报时======
+2024/12/21 03:00:00 2024-12-21 03:00:00.0079238 +0800 CST m=+1553.612524601:  服务器正在运行
+2024/12/21 03:00:00 2024-12-21 03:00:00.0079238 +0800 CST m=+1553.612524601:  [32m1h内发现0个致命错误[0m
+2024/12/21 04:00:00 =====准点报时======
+2024/12/21 04:00:00 2024-12-21 04:00:00.0126501 +0800 CST m=+5153.617250901:  服务器正在运行
+2024/12/21 04:00:00 2024-12-21 04:00:00.0126501 +0800 CST m=+5153.617250901:  [32m1h内发现0个致命错误[0m
+2024/12/21 05:00:00 =====准点报时======
+2024/12/21 05:00:00 2024-12-21 05:00:00.0144162 +0800 CST m=+8753.619017001:  服务器正在运行
+2024/12/21 05:00:00 2024-12-21 05:00:00.0144162 +0800 CST m=+8753.619017001:  [32m1h内发现0个致命错误[0m
+2024/12/21 06:00:00 =====准点报时======
+2024/12/21 06:00:00 2024-12-21 06:00:00.0151972 +0800 CST m=+12353.619798001:  服务器正在运行
+2024/12/21 06:00:00 2024-12-21 06:00:00.0151972 +0800 CST m=+12353.619798001:  [32m1h内发现0个致命错误[0m
+2024/12/21 07:00:00 =====准点报时======
+2024/12/21 07:00:00 2024-12-21 07:00:00.0128766 +0800 CST m=+15953.617477401:  服务器正在运行
+2024/12/21 07:00:00 2024-12-21 07:00:00.0128766 +0800 CST m=+15953.617477401:  [32m1h内发现0个致命错误[0m
+2024/12/21 09:54:58 =====准点报时======
+2024/12/21 09:54:58 2024-12-21 09:54:58.7533212 +0800 CST m=+26452.357921901:  服务器正在运行
+2024/12/21 09:54:58 2024-12-21 09:54:58.7533212 +0800 CST m=+26452.357921901:  [32m1h内发现0个致命错误[0m
+2024/12/21 10:00:00 =====准点报时======
+2024/12/21 10:00:00 2024-12-21 10:00:00.0162571 +0800 CST m=+26753.620857801:  服务器正在运行
+2024/12/21 10:00:00 2024-12-21 10:00:00.0162571 +0800 CST m=+26753.620857801:  [32m1h内发现0个致命错误[0m
+2024/12/21 10:49:41 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/21 11:00:00 =====准点报时======
+2024/12/21 11:00:00 2024-12-21 11:00:00.0046596 +0800 CST m=+618.097224401:  服务器正在运行
+2024/12/21 11:00:00 2024-12-21 11:00:00.0046596 +0800 CST m=+618.097224401:  [32m1h内发现0个致命错误[0m
+2024/12/21 11:16:41 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/21 11:25:45 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/21 11:32:55 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/21 11:33:09 [1m[31mError occurs in login/user.GetUserOrdersHandler: sql: Scan error on column index 1, name "student_account": converting driver.Value type []uint8 ("rccc") to a int: invalid syntax[0m
+
+2024/12/21 11:33:13 [1m[31mError occurs in login/user.GetUserOrdersHandler: sql: Scan error on column index 1, name "student_account": converting driver.Value type []uint8 ("rccc") to a int: invalid syntax[0m
+
+2024/12/21 11:38:16 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/21 11:38:19 [1m[31mError occurs in login/db.ExecuteSQL: Error 1054 (42S22): Unknown column 'user_id' in 'where clause'[0m
+
+2024/12/21 11:38:19 [1m[31mError occurs in login/user.GetUserOrdersHandler: [ExecuteSQL] 出现错误: Error 1054 (42S22): Unknown column 'user_id' in 'where clause'
+SQL: SELECT payment_id, order_id, vehicle_id, payment_amount, payment_method, payment_time, payment_status FROM payment_record WHERE order_id IN (SELECT order_id FROM order_information WHERE user_id = ?)
+参数: [1][0m
+
+2024/12/21 11:40:48 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/21 11:42:22 [1m[31mError occurs in login/user.GetFeedbackHandler: json: cannot unmarshal string into Go struct field Feedback.student_number of type int[0m
+
+2024/12/21 11:54:37 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/21 11:54:41 [1m[31mError occurs in login/user.GetFeedbackHandler: json: cannot unmarshal string into Go struct field Feedback.student_number of type int[0m
+
+2024/12/21 11:54:43 [1m[31mError occurs in login/user.GetFeedbackHandler: json: cannot unmarshal string into Go struct field Feedback.student_number of type int[0m
+
+2024/12/21 11:55:33 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/21 11:57:43 [1m[31mError occurs in login/user.GetFeedbackHandler: json: cannot unmarshal string into Go struct field Feedback.student_number of type int[0m
+
+2024/12/21 11:58:49 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/21 11:59:12 [1m[31mError occurs in login/user.GetFeedbackHandler: json: cannot unmarshal string into Go struct field Feedback.student_number of type int[0m
+
+2024/12/21 11:59:33 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/21 11:59:36 [1m[31mError occurs in login/user.AddFeedbackHandler: json: cannot unmarshal string into Go struct field Feedback.student_number of type int[0m
+
+2024/12/21 12:00:00 =====准点报时======
+2024/12/21 12:00:00 2024-12-21 12:00:00.0076791 +0800 CST m=+26.071845501:  服务器正在运行
+2024/12/21 12:00:00 2024-12-21 12:00:00.0076791 +0800 CST m=+26.071845501:  [32m1h内发现1个致命错误[0m
+2024/12/21 12:02:33 [1m[31mError occurs in login/user.AddFeedbackHandler: json: cannot unmarshal string into Go struct field Feedback.student_number of type int[0m
+
+2024/12/21 12:02:50 [1m[31mError occurs in login/user.AddFeedbackHandler: json: cannot unmarshal string into Go struct field Feedback.student_number of type int[0m
+
+2024/12/21 12:03:04 [1m[31mError occurs in login/user.AddFeedbackHandler: json: cannot unmarshal string into Go struct field Feedback.student_number of type int[0m
+
+2024/12/21 12:03:39 [1m[31mError occurs in login/user.AddFeedbackHandler: json: cannot unmarshal string into Go struct field Feedback.student_number of type int[0m
+
+2024/12/21 12:03:41 [1m[31mError occurs in login/user.AddFeedbackHandler: json: cannot unmarshal string into Go struct field Feedback.student_number of type int[0m
+
+2024/12/21 12:03:54 [1m[31mError occurs in login/user.AddFeedbackHandler: json: cannot unmarshal string into Go struct field Feedback.student_number of type int[0m
+
+2024/12/21 12:03:58 [1m[31mError occurs in login/user.AddFeedbackHandler: json: cannot unmarshal string into Go struct field Feedback.student_number of type int[0m
+
+2024/12/21 12:03:59 [1m[31mError occurs in login/user.AddFeedbackHandler: json: cannot unmarshal string into Go struct field Feedback.student_number of type int[0m
+
+2024/12/21 12:04:06 [1m[31mError occurs in login/user.AddFeedbackHandler: json: cannot unmarshal string into Go struct field Feedback.student_number of type int[0m
+
+2024/12/21 12:10:21 [1m[31mError occurs in login/user.AddFeedbackHandler: json: cannot unmarshal string into Go struct field Feedback.student_number of type int[0m
+
+2024/12/21 12:19:15 [1m[31mError occurs in login/user.AddFeedbackHandler: json: cannot unmarshal string into Go struct field Feedback.student_number of type int[0m
+
+2024/12/21 12:19:16 [1m[31mError occurs in login/user.AddFeedbackHandler: json: cannot unmarshal string into Go struct field Feedback.student_number of type int[0m
+
+2024/12/21 12:22:29 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/21 13:00:00 =====准点报时======
+2024/12/21 13:00:00 2024-12-21 13:00:00.0032792 +0800 CST m=+2250.699184101:  服务器正在运行
+2024/12/21 13:00:00 2024-12-21 13:00:00.0032792 +0800 CST m=+2250.699184101:  [32m1h内发现0个致命错误[0m
+2024/12/21 14:00:00 =====准点报时======
+2024/12/21 14:00:00 2024-12-21 14:00:00.0031589 +0800 CST m=+5850.699063801:  服务器正在运行
+2024/12/21 14:00:00 2024-12-21 14:00:00.0031589 +0800 CST m=+5850.699063801:  [32m1h内发现0个致命错误[0m
+2024/12/21 15:00:00 =====准点报时======
+2024/12/21 15:00:00 2024-12-21 15:00:00.0084464 +0800 CST m=+9450.704351301:  服务器正在运行
+2024/12/21 15:00:00 2024-12-21 15:00:00.0084464 +0800 CST m=+9450.704351301:  [32m1h内发现0个致命错误[0m
+2024/12/21 15:17:29 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/21 15:52:48 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/21 15:53:31 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/21 15:58:30 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/21 16:00:00 =====准点报时======
+2024/12/21 16:00:00 2024-12-21 16:00:00.0089445 +0800 CST m=+89.332003101:  服务器正在运行
+2024/12/21 16:00:00 2024-12-21 16:00:00.0089445 +0800 CST m=+89.332003101:  [32m1h内发现0个致命错误[0m
+2024/12/21 16:02:53 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/21 16:02:56 [1m[31mError occurs in login/user.GetUserOrdersHandler: sql: Scan error on column index 4, name "pickup_station_name": converting driver.Value type []uint8 ("榕园广场") to a int: invalid syntax[0m
+
+2024/12/21 16:03:40 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/21 16:05:56 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/21 16:09:32 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/21 16:09:59 [1m[31mError occurs in login/db.ExecuteSQL: Error 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`passenger_db`.`feedback`, CONSTRAINT `fk_feedback_student_number` FOREIGN KEY (`student_number`) REFERENCES `student_information` (`student_number`) ON DELETE RESTRICT ON UPDATE RESTRICT)[0m
+
+2024/12/21 16:09:59 [1m[31mError occurs in login/user.AddFeedbackHandler: [ExecuteSQL] 出现错误: Error 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`passenger_db`.`feedback`, CONSTRAINT `fk_feedback_student_number` FOREIGN KEY (`student_number`) REFERENCES `student_information` (`student_number`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+SQL: INSERT INTO feedback (feedback_id, student_number, order_id, rating, feedback_content, feedback_time) VALUES (?, ?, ?, ?, ?, ?)
+参数: [862304 0 5 5 很好👍 2024-12-21 16:09][0m
+
+2024/12/21 16:10:26 [1m[31mError occurs in login/db.ExecuteSQL: Error 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`passenger_db`.`feedback`, CONSTRAINT `fk_feedback_student_number` FOREIGN KEY (`student_number`) REFERENCES `student_information` (`student_number`) ON DELETE RESTRICT ON UPDATE RESTRICT)[0m
+
+2024/12/21 16:10:26 [1m[31mError occurs in login/user.AddFeedbackHandler: [ExecuteSQL] 出现错误: Error 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`passenger_db`.`feedback`, CONSTRAINT `fk_feedback_student_number` FOREIGN KEY (`student_number`) REFERENCES `student_information` (`student_number`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+SQL: INSERT INTO feedback (feedback_id, student_number, order_id, rating, feedback_content, feedback_time) VALUES (?, ?, ?, ?, ?, ?)
+参数: [316028 0 5 5 很好 2024-12-21 16:10][0m
+
+2024/12/21 16:14:29 [1m[31mError occurs in login/db.ExecuteSQL: Error 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`passenger_db`.`feedback`, CONSTRAINT `fk_feedback_student_number` FOREIGN KEY (`student_number`) REFERENCES `student_information` (`student_number`) ON DELETE RESTRICT ON UPDATE RESTRICT)[0m
+
+2024/12/21 16:14:29 [1m[31mError occurs in login/user.AddFeedbackHandler: [ExecuteSQL] 出现错误: Error 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`passenger_db`.`feedback`, CONSTRAINT `fk_feedback_student_number` FOREIGN KEY (`student_number`) REFERENCES `student_information` (`student_number`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+SQL: INSERT INTO feedback (feedback_id, student_number, order_id, rating, feedback_content, feedback_time) VALUES (?, ?, ?, ?, ?, ?)
+参数: [622193 0 5 0  2024-12-21 16:14][0m
+
+2024/12/21 16:14:30 [1m[31mError occurs in login/db.ExecuteSQL: Error 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`passenger_db`.`feedback`, CONSTRAINT `fk_feedback_student_number` FOREIGN KEY (`student_number`) REFERENCES `student_information` (`student_number`) ON DELETE RESTRICT ON UPDATE RESTRICT)[0m
+
+2024/12/21 16:14:30 [1m[31mError occurs in login/user.AddFeedbackHandler: [ExecuteSQL] 出现错误: Error 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`passenger_db`.`feedback`, CONSTRAINT `fk_feedback_student_number` FOREIGN KEY (`student_number`) REFERENCES `student_information` (`student_number`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+SQL: INSERT INTO feedback (feedback_id, student_number, order_id, rating, feedback_content, feedback_time) VALUES (?, ?, ?, ?, ?, ?)
+参数: [502023 0 5 0  2024-12-21 16:14][0m
+
+2024/12/21 16:23:31 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/21 16:25:34 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/21 16:30:43 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/21 16:36:19 [1m[31mError occurs in login/user.AddFeedbackHandler: json: cannot unmarshal string into Go struct field Feedback.student_number of type int[0m
+
+2024/12/21 16:37:00 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/21 16:40:36 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/21 16:44:52 2019-01-01 12:00:00 日志服务已启动==============

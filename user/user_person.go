@@ -62,9 +62,8 @@ func GetUserNameHandler(w http.ResponseWriter, r *http.Request) {
 		exception.PrintWarning(GetUserNameHandler, err)
 		return
 	}
-
 	// 执行 SQL 查询
-	sqlQuery := "SELECT student_name FROM student_information WHERE student_account = ?"
+	sqlQuery := "SELECT student_name FROM student_information WHERE user_id = ?"
 	result, err := db.ExecuteSQL(config.RolePassenger, sqlQuery, userID)
 	if err != nil {
 		http.Error(w, "Internal server error", http.StatusInternalServerError)
@@ -102,7 +101,7 @@ func GetUserNameHandler(w http.ResponseWriter, r *http.Request) {
 
 // FullStudent 定义完整的学生信息，包括头像
 type FullStudent struct {
-	StudentAccount int64  `json:"student_account"` // 学生账号，11位数字
+	StudentAccount string `json:"student_account"` // 学生账号，11位数字
 	StudentNumber  int    `json:"student_number"`  // 学号
 	StudentName    string `json:"student_name"`    // 姓名
 	Grade          int    `json:"grade"`           // 年级
@@ -145,15 +144,16 @@ func GetUserInfoHandler(w http.ResponseWriter, r *http.Request) {
 	// 校验 userID 是否为数字
 	if _, err := strconv.Atoi(userID); err != nil {
 		http.Error(w, "Invalid userID format. Must be a number.", http.StatusBadRequest)
+		exception.PrintError(GetUserInfoHandler, err)
 		return
 	}
-
 	// 执行 SQL 查询
-	sqlQuery := "SELECT student_account, student_number, student_name, grade, major, phone, avatar FROM student_information WHERE student_account = ?"
+	sqlQuery := "SELECT student_account, student_number, student_name, grade, major, phone, avatar FROM student_information WHERE user_id = ?"
 
 	result, err := db.ExecuteSQL(config.RolePassenger, sqlQuery, userID)
 	if err != nil {
 		http.Error(w, "Internal server error", http.StatusInternalServerError)
+		exception.PrintError(GetUserInfoHandler, err)
 		return
 	}
 
@@ -187,12 +187,13 @@ func GetUserInfoHandler(w http.ResponseWriter, r *http.Request) {
 
 // UpdateUserRequest 定义接收的数据结构
 type UpdateUserRequest struct {
-	StudentAccount int64  `json:"student_account"`
+	StudentAccount string `json:"student_account"`
 	Name           string `json:"name"`
 	Grade          int    `json:"grade"`
 	Major          string `json:"major"`
 	Phone          string `json:"phone"`
 	Avatar         string `json:"avatar"` // 确保有 Avatar 字段
+	UserID         int    `json:"user_id"`
 }
 
 // UpdateUserInfoHandler 更新用户信息
@@ -210,17 +211,17 @@ func UpdateUserInfoHandler(w http.ResponseWriter, r *http.Request) {
 	var req UpdateUserRequest
 	if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
 		http.Error(w, "Invalid request payload", http.StatusBadRequest)
+		exception.PrintError(GetUserNameHandler, err)
 		return
 	}
 
 	// 执行 SQL 更新
-	sqlQuery := "UPDATE student_information SET student_name = ?, grade = ?, major = ?, phone = ?, avatar = ? WHERE student_account = ?"
-	_, err := db.ExecuteSQL(config.RolePassenger, sqlQuery, req.Name, req.Grade, req.Major, req.Phone, req.Avatar, req.StudentAccount)
+	sqlQuery := "UPDATE student_information SET student_name = ?, grade = ?, major = ?, phone = ?, avatar = ? WHERE user_id = ?"
+	_, err := db.ExecuteSQL(config.RolePassenger, sqlQuery, req.Name, req.Grade, req.Major, req.Phone, req.Avatar, req.UserID)
 	if err != nil {
 		http.Error(w, "Failed to update user information", http.StatusInternalServerError)
 		return
 	}
-
 	// 返回成功响应
 	w.WriteHeader(http.StatusOK)
 	json.NewEncoder(w).Encode(map[string]string{"message": "User information updated successfully"})
@@ -303,7 +304,7 @@ func UploadAvatarHandler(w http.ResponseWriter, r *http.Request) {
 	avatarURL := fmt.Sprintf("/uploads/avatars/%s", newFileName)
 
 	// 更新数据库中的 avatar 字段
-	sqlQuery := "UPDATE student_information SET avatar = ? WHERE student_account = ?"
+	sqlQuery := "UPDATE student_information SET avatar = ? WHERE user_id = ?"
 	_, err = db.ExecuteSQL(config.RolePassenger, sqlQuery, avatarURL, userID)
 	if err != nil {
 		http.Error(w, "Failed to update user information", http.StatusInternalServerError)
@@ -368,7 +369,7 @@ func GetUserCouponsHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// 根据 student_account 查 student_number
-	sqlGetStudentNumber := "SELECT student_number FROM student_information WHERE student_account = ?"
+	sqlGetStudentNumber := "SELECT student_number FROM student_information WHERE user_id = ?"
 	result, err := db.ExecuteSQL(config.RolePassenger, sqlGetStudentNumber, userID)
 	if err != nil {
 		http.Error(w, "Internal server error", http.StatusInternalServerError)
@@ -395,6 +396,9 @@ func GetUserCouponsHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	// 获取当前时间
+	currentDate := time.Now().Format("2006-01-02")
+
 	// 查询 ride_coupon
 	sqlRide := "SELECT ride_coupon_id, expiry_date, use_status FROM ride_coupon WHERE student_number = ?"
 	rideResult, err := db.ExecuteSQL(config.RolePassenger, sqlRide, studentNumber)
@@ -413,18 +417,26 @@ func GetUserCouponsHandler(w http.ResponseWriter, r *http.Request) {
 	var rideCoupons []RideCoupon
 	for rideRows.Next() {
 		var rc RideCoupon
+		var expiryDate string
 		var useStatusInt int
-		if err := rideRows.Scan(&rc.RideCouponID, &rc.ExpiryDate, &useStatusInt); err != nil {
+		if err := rideRows.Scan(&rc.RideCouponID, &expiryDate, &useStatusInt); err != nil {
 			http.Error(w, "Failed to scan ride coupons", http.StatusInternalServerError)
 			return
 		}
-		if useStatusInt == 0 {
-			rc.UseStatus = "未使用"
-		} else if useStatusInt == 1 {
+
+		// 检查是否过期
+		if expiryDate < currentDate {
 			rc.UseStatus = "已过期"
 		} else {
-			rc.UseStatus = "未知状态"
+			if useStatusInt == 0 {
+				rc.UseStatus = "未使用"
+			} else if useStatusInt == 1 {
+				rc.UseStatus = "已使用"
+			} else {
+				rc.UseStatus = "未知状态"
+			}
 		}
+		rc.ExpiryDate = expiryDate
 		rideCoupons = append(rideCoupons, rc)
 	}
 
@@ -446,19 +458,27 @@ func GetUserCouponsHandler(w http.ResponseWriter, r *http.Request) {
 	var discountCoupons []DiscountCoupon
 	for discountRows.Next() {
 		var dc DiscountCoupon
+		var expiryDate string
 		var useStatusInt int
-		if err := discountRows.Scan(&dc.CouponID, &dc.DiscountAmount, &dc.ExpiryDate, &useStatusInt); err != nil {
+		if err := discountRows.Scan(&dc.CouponID, &dc.DiscountAmount, &expiryDate, &useStatusInt); err != nil {
 			http.Error(w, "Failed to scan discount coupons", http.StatusInternalServerError)
 			exception.PrintError(GetUserCouponsHandler, err)
 			return
 		}
-		if useStatusInt == 0 {
-			dc.UseStatus = "未使用"
-		} else if useStatusInt == 1 {
+
+		// 检查是否过期
+		if expiryDate < currentDate {
 			dc.UseStatus = "已过期"
 		} else {
-			dc.UseStatus = "未知状态"
+			if useStatusInt == 0 {
+				dc.UseStatus = "未使用"
+			} else if useStatusInt == 1 {
+				dc.UseStatus = "已使用"
+			} else {
+				dc.UseStatus = "未知状态"
+			}
 		}
+		dc.ExpiryDate = expiryDate
 		discountCoupons = append(discountCoupons, dc)
 	}
 
@@ -476,7 +496,7 @@ func GetUserCouponsHandler(w http.ResponseWriter, r *http.Request) {
 
 type Feedback struct {
 	FeedbackID      int    `json:"feedback_id"`
-	StudentNumber   int    `json:"student_number"`
+	StudentNumber   string `json:"student_number"`
 	OrderID         int    `json:"order_id"`
 	Rating          int    `json:"rating"`
 	FeedbackContent string `json:"feedback_content"`
@@ -517,7 +537,7 @@ func GetFeedbackHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	// 根据 student_account 查 student_number
-	sqlGetStudentNumber := "SELECT student_number FROM student_information WHERE student_account = ?"
+	sqlGetStudentNumber := "SELECT student_number FROM student_information WHERE user_id = ?"
 	result, err := db.ExecuteSQL(config.RolePassenger, sqlGetStudentNumber, userID)
 	if err != nil {
 		http.Error(w, "Internal server error", http.StatusInternalServerError)
@@ -599,21 +619,48 @@ func AddFeedbackHandler(w http.ResponseWriter, r *http.Request) {
 	var feedback Feedback
 	if err := json.NewDecoder(r.Body).Decode(&feedback); err != nil {
 		http.Error(w, "Invalid request payload", http.StatusBadRequest)
-		exception.PrintError(GetFeedbackHandler, err)
+		exception.PrintError(AddFeedbackHandler, err)
 		return
 	}
 	feedbackID := rand.Intn(900000) + 100000 // 生成六位随机数
 
+	// 根据 student_account 查 student_number
+	sqlGetStudentNumber := "SELECT student_number FROM student_information WHERE student_account = ?"
+	result, err := db.ExecuteSQL(config.RolePassenger, sqlGetStudentNumber, feedback.StudentNumber)
+	if err != nil {
+		http.Error(w, "Internal server error", http.StatusInternalServerError)
+		exception.PrintError(GetFeedbackHandler, err)
+		return
+	}
+
+	rows, ok := result.(*sql.Rows)
+	if !ok {
+		http.Error(w, "Unexpected result type", http.StatusInternalServerError)
+		return
+	}
+	defer rows.Close()
+
+	var studentNumber int
+	if rows.Next() {
+		if err := rows.Scan(&studentNumber); err != nil {
+			http.Error(w, "Failed to retrieve user data", http.StatusInternalServerError)
+			return
+		}
+	} else {
+		http.Error(w, "User not found", http.StatusNotFound)
+		return
+	}
+
 	// 插入评价数据到数据库
 	insertQuery := "INSERT INTO feedback (feedback_id, student_number, order_id, rating, feedback_content, feedback_time) VALUES (?, ?, ?, ?, ?, ?)"
 
-	_, err := db.ExecuteSQL(config.RolePassenger, insertQuery,
-		feedbackID, feedback.StudentNumber, feedback.OrderID,
+	_, err = db.ExecuteSQL(config.RolePassenger, insertQuery,
+		feedbackID, studentNumber, feedback.OrderID,
 		feedback.Rating, feedback.FeedbackContent, feedback.FeedbackTime)
 
 	if err != nil {
 		http.Error(w, "Failed to add feedback", http.StatusInternalServerError)
-		exception.PrintError(GetFeedbackHandler, err)
+		exception.PrintError(AddFeedbackHandler, err)
 		return
 	}
 
@@ -621,7 +668,7 @@ func AddFeedbackHandler(w http.ResponseWriter, r *http.Request) {
 	_, err = db.ExecuteSQL(config.RolePassenger, updateQuery, feedback.OrderID)
 	if err != nil {
 		http.Error(w, "Failed to update order status", http.StatusInternalServerError)
-		exception.PrintError(GetFeedbackHandler, err)
+		exception.PrintError(AddFeedbackHandler, err)
 		return
 	}
 
@@ -632,16 +679,16 @@ func AddFeedbackHandler(w http.ResponseWriter, r *http.Request) {
 
 // 定义订单信息结构体
 type Order struct {
-	OrderID          int    `json:"order_id"`
-	StudentAccount   int    `json:"student_account"`
-	DriverID         int    `json:"driver_id"`
-	CarID            int    `json:"car_id"`
-	PickupStationID  int    `json:"pickup_station_id"`
-	DropoffStationID int    `json:"dropoff_station_id"`
-	PickupTime       string `json:"pickup_time"`
-	Status           string `json:"status"`
-	PaymentID        int    `json:"payment_id"`
-	IsRated          bool   `json:"is_rated"`
+	OrderID            int    `json:"order_id"`
+	StudentAccount     string `json:"student_account"`
+	DriverID           int    `json:"driver_id"`
+	CarID              int    `json:"car_id"`
+	PickupStationName  string `json:"pickup_station_name"`
+	DropoffStationName string `json:"dropoff_station_name"`
+	PickupTime         string `json:"pickup_time"`
+	Status             string `json:"status"`
+	PaymentID          int    `json:"payment_id"`
+	IsRated            bool   `json:"is_rated"`
 }
 
 // 定义支付信息结构体
@@ -697,9 +744,38 @@ func GetUserOrdersHandler(w http.ResponseWriter, r *http.Request) {
 		exception.PrintError(GetUserOrdersHandler, err)
 		return
 	}
+	// 根据 userID 查 student_account
+	sqlGetStudentNumber := "SELECT student_account FROM student_information WHERE user_id = ?"
+	result, err := db.ExecuteSQL(config.RolePassenger, sqlGetStudentNumber, userID)
+	if err != nil {
+		http.Error(w, "Internal server error", http.StatusInternalServerError)
+		exception.PrintError(GetFeedbackHandler, err)
+		return
+	}
+
+	rows, ok := result.(*sql.Rows)
+	if !ok {
+		http.Error(w, "Unexpected result type", http.StatusInternalServerError)
+		return
+	}
+	defer rows.Close()
+
+	var rawStudentAccount []byte
+	var studentAccount string
+	if rows.Next() {
+		if err := rows.Scan(&rawStudentAccount); err != nil {
+			http.Error(w, "Failed to retrieve user data", http.StatusInternalServerError)
+			return
+		}
+		studentAccount = string(rawStudentAccount)
+	} else {
+		http.Error(w, "User not found", http.StatusNotFound)
+		return
+	}
+
 	// 查询订单信息
-	orderQuery := "SELECT order_id, student_account, driver_id, car_id, pickup_station_id, dropoff_station_id, pickup_time, status, payment_id, is_rated FROM order_information WHERE student_account = ?"
-	orderResult, err := db.ExecuteSQL(config.RolePassenger, orderQuery, userID)
+	orderQuery := "SELECT order_id, student_account, driver_id, car_id, pickup_station_name, dropoff_station_name, pickup_time, status, payment_id, is_rated FROM order_information WHERE student_account = ?"
+	orderResult, err := db.ExecuteSQL(config.RolePassenger, orderQuery, studentAccount)
 	if err != nil {
 		http.Error(w, "Failed to fetch orders", http.StatusInternalServerError)
 		exception.PrintError(GetUserOrdersHandler, err)
@@ -717,7 +793,7 @@ func GetUserOrdersHandler(w http.ResponseWriter, r *http.Request) {
 		var order Order
 		var StatusInt int
 		if err := orderRows.Scan(&order.OrderID, &order.StudentAccount, &order.DriverID, &order.CarID,
-			&order.PickupStationID, &order.DropoffStationID, &order.PickupTime, &StatusInt, &order.PaymentID, &order.IsRated); err != nil {
+			&order.PickupStationName, &order.DropoffStationName, &order.PickupTime, &StatusInt, &order.PaymentID, &order.IsRated); err != nil {
 
 			http.Error(w, "Failed to fetch orders", http.StatusInternalServerError)
 			exception.PrintError(GetUserOrdersHandler, err)
@@ -735,7 +811,7 @@ func GetUserOrdersHandler(w http.ResponseWriter, r *http.Request) {
 
 	// 查询支付信息
 	paymentQuery := "SELECT payment_id, order_id, vehicle_id, payment_amount, payment_method, payment_time, payment_status FROM payment_record WHERE order_id IN (SELECT order_id FROM order_information WHERE student_account = ?)"
-	paymentResult, err := db.ExecuteSQL(config.RolePassenger, paymentQuery, userID)
+	paymentResult, err := db.ExecuteSQL(config.RolePassenger, paymentQuery, studentAccount)
 	if err != nil {
 		http.Error(w, "Failed to fetch discount coupons", http.StatusInternalServerError)
 		exception.PrintError(GetUserOrdersHandler, err)
