@@ -23,7 +23,6 @@ type LoginRequest struct {
 	Password string `json:"password"`
 }
 
-
 type changeDataRequest struct {
 	Dataset   string   `json:"dataset"`
 	TableName string   `json:"table_name"`
@@ -33,7 +32,6 @@ type changeDataRequest struct {
 	Token     string   `json:"token"`
 }
 
-
 // LoginResponse 用来返回给前端的 JSON 数据
 type ApiResponse struct {
 	Code    int    `json:"code"`
@@ -41,7 +39,6 @@ type ApiResponse struct {
 	Data    string `json:"data,omitempty"`
 	Role    int    `json:"role"`
 }
-
 
 // @Summary 管理员修改信息
 // @Description 接收前端post的请求，修改数据库中的信息
@@ -135,7 +132,6 @@ func ChangeDataRequest(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
 }
 
-
 // @Summary 发送dashboard需要的信息
 // @Description 接收前端fetch请求，返回dashboard需要信息
 // @Tags users
@@ -154,6 +150,16 @@ func GiveDashBoardInfo(w http.ResponseWriter, r *http.Request) {
 		// 错误数据
 		SystemErrors   int `json:"system_errors"`
 		SystemWarnings int `json:"system_warnings"`
+		// 用户满意度
+		UserSatisfaction       float64   `json:"user_satisfaction"`
+		UserSatisfactionSeries []float64 `json:"user_satisfaction_series"`
+		// 活跃用户数据
+		DailyActiveSeries  []int `json:"daily_active_series"`
+		WeeklyActiveSeries []int `json:"weekly_active_series"`
+		// 收入数据
+		RevenueSeries []int `json:"revenue_series"`
+		// 健康度数据
+		HealthIndexScore int `json:"health_index_score"`
 	}
 	var totalUsers int
 	var totalDrivers int
@@ -176,11 +182,17 @@ func GiveDashBoardInfo(w http.ResponseWriter, r *http.Request) {
 	aDayErrors, aDayWarnings := log_service.GetADayErrorsAndWarnings()
 
 	data := DashBoardStatus{
-		TotalUsers:     totalUsers,
-		TotalDrivers:   totalDrivers,
-		TotalAdmins:    totalAdmins,
-		SystemErrors:   aDayErrors,
-		SystemWarnings: aDayWarnings,
+		TotalUsers:             totalUsers,
+		TotalDrivers:           totalDrivers,
+		TotalAdmins:            totalAdmins,
+		SystemErrors:           aDayErrors,
+		SystemWarnings:         aDayWarnings,
+		UserSatisfaction:       100.0,
+		UserSatisfactionSeries: []float64{100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0},
+		DailyActiveSeries:      []int{100, 100, 100, 100, 100, 100, 100},
+		WeeklyActiveSeries:     []int{100, 100, 100, 100, 100, 100, 100},
+		RevenueSeries:          []int{100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0},
+		HealthIndexScore:       100,
 	}
 
 	// 设置响应头
@@ -744,4 +756,3 @@ func InsertDataRequest(w http.ResponseWriter, r *http.Request) {
 
 	w.WriteHeader(http.StatusOK)
 }
-

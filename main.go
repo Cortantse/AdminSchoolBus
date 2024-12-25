@@ -102,13 +102,20 @@ func RegisterAdmin(mux *http.ServeMux) {
 	mux.HandleFunc("/admin/update", api.ChangeDataRequest)
 	mux.HandleFunc("/admin/delete", api.DeleteDataRequest)
 	mux.HandleFunc("/admin/insert", api.InsertDataRequest)
+	mux.HandleFunc("/admin/variable/update", api.UpdateVariable)
+	mux.HandleFunc("/admin/variable/get", api.GetVariable)
+	mux.HandleFunc("/admin/feedback/get", api.GetFeedBack)
+	mux.HandleFunc("/admin/feedback/post", api.DealWithFeedback)
 
 	// Table api
 	mux.HandleFunc("/admin/table", api.GetTableData)
 
+	// test_function
+	mux.HandleFunc("/test/divide", api.ReceiveDivisionRequest)
 }
 
 func main() {
+
 	// 初始化全局参数 ======
 	err := config.LoadConfig("config.yaml")
 	os.Setenv("GOOGLE_APPLICATION_CREDENTIALS", "C:\\Users\\27785\\GolandProjects\\login\\service-account-file.json")
@@ -130,6 +137,8 @@ func main() {
 	if err != nil {
 		print(err.Error())
 	}
+
+	// 测试区域
 
 	// 创建 ServeMux 路由
 	mux := http.NewServeMux()
