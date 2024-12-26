@@ -96,8 +96,6 @@ func ExecuteSQL(role config.Role, sqlStatement string, args ...interface{}) (int
 		return nil, err
 	}
 
-	// 若果相应数据库连接为空，退出
-
 	// 0.5. 确保参数匹配
 	err = checkArgs(sqlStatement, args)
 	if err != nil {

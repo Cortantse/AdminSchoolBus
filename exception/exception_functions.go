@@ -8,7 +8,6 @@ import (
 
 	"time"
 
-
 	"login/log_service"
 )
 
@@ -22,10 +21,7 @@ func PrintError(fn interface{}, err error) {
 	// 获取函数名
 	pc := runtime.FuncForPC(reflect.ValueOf(fn).Pointer())
 
-
-
 	addErrorOrWarning(true)
-
 
 	var str string
 	if pc != nil {
@@ -53,6 +49,19 @@ func PrintWarning(fn interface{}, err error) {
 	} else {
 		log.Printf("%s%sWarning in unknown function: %s%s\n", bold, yellow, err.Error(), reset)
 	}
+}
+
+// JustPrint 直接打印内容，不计入错误或警告，但是会进入日志
+func JustPrint(content string) {
+	// 定义颜色 ANSI 转义序列
+	green := "\033[32m" // 绿色字体
+	bold := "\033[1m"   // 加粗
+	reset := "\033[0m"  // 重置样式
+
+	newContent := fmt.Sprintf("%s%s%s%s\n", bold, green, content, reset)
+
+	log_service.WriteToBoth([]string{newContent})
+
 }
 
 func addErrorOrWarning(ifError bool) {
