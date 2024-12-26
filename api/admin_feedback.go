@@ -98,6 +98,8 @@ func GetFeedBack(w http.ResponseWriter, r *http.Request) {
 		feedbacks[feedback.FeedbackId] = &feedback
 	}
 
+	defer rows.Close()
+
 	// 恢复警告
 	config.AllowWarning = true
 
