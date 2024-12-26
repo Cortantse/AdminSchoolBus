@@ -1,8 +1,8 @@
 package log_service
 
 import (
-
 	"fmt"
+	"time"
 
 	"github.com/robfig/cron/v3"
 	"log"
@@ -13,13 +13,11 @@ import (
 // 全局文件变量
 var file *os.File
 
-
 var HourlyErrorsNum int
 var HourlyWarningNum int
 
 var ADayErrors []int
 var ADayWarnings []int
-
 
 func InitLogService() {
 	// 打开日志文件
@@ -31,9 +29,7 @@ func InitLogService() {
 
 	log.Println("日志服务已启动")
 
-
 	HourlyErrorsNum = 0
-
 
 	// 设置日志输出到文件
 	log.SetOutput(file)
@@ -42,11 +38,9 @@ func InitLogService() {
 	// 恢复日志输出到标准输出（控制台）
 	log.SetOutput(os.Stdout)
 
-
 	// 初始化数组
 	ADayErrors = make([]int, 24)
 	ADayWarnings = make([]int, 24)
-
 
 	// 顺带启动Cron日志
 	go newCron()
@@ -81,8 +75,20 @@ func printCurrentTime() {
 
 	msg = append(msg, utils.GetFormattedCurrentTime()+" \033[32m1h内发现"+fmt.Sprintf("%d", HourlyErrorsNum)+"个致命错误\033[0m")
 	WriteToBoth(msg)
+
+	// 重置操作
+	HourlyErrorsNum = 0
 	HourlyErrorsNum = 0
 
+	// 将当前这个时刻的数组清空，因为才进入
+	// 获取当前时间
+	currentTime := time.Now()
+
+	// 提取小时 0-23
+	currentHour := currentTime.Hour()
+
+	ADayErrors[currentHour] = 0
+	ADayWarnings[currentHour] = 0
 }
 
 func WriteToBoth(msg []string) {
@@ -104,8 +110,6 @@ func EndWriteLog() {
 	log.SetOutput(os.Stdout)
 }
 
-
-
 func GetADayErrorsAndWarnings() (int, int) {
 	errors := 0
 	warnings := 0
@@ -117,4 +121,3 @@ func GetADayErrorsAndWarnings() (int, int) {
 	}
 	return errors, warnings
 }
-

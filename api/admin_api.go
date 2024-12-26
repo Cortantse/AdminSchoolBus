@@ -9,9 +9,9 @@ import (
 	"login/config"
 	"login/db"
 	"login/exception"
-
 	"login/log_service"
 	"login/utils"
+	"time"
 
 	"net/http"
 	"strconv"
@@ -23,7 +23,6 @@ type LoginRequest struct {
 	Password string `json:"password"`
 }
 
-
 type changeDataRequest struct {
 	Dataset   string   `json:"dataset"`
 	TableName string   `json:"table_name"`
@@ -33,7 +32,6 @@ type changeDataRequest struct {
 	Token     string   `json:"token"`
 }
 
-
 // LoginResponse 用来返回给前端的 JSON 数据
 type ApiResponse struct {
 	Code    int    `json:"code"`
@@ -41,7 +39,6 @@ type ApiResponse struct {
 	Data    string `json:"data,omitempty"`
 	Role    int    `json:"role"`
 }
-
 
 // @Summary 管理员修改信息
 // @Description 接收前端post的请求，修改数据库中的信息
@@ -135,6 +132,29 @@ func ChangeDataRequest(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
 }
 
+type DashBoardStatus struct {
+	TotalUsers   int `json:"total_users"`
+	TotalDrivers int `json:"total_drivers"`
+	TotalAdmins  int `json:"total_admins"`
+	// 错误数据
+	SystemErrors   int `json:"system_errors"`
+	SystemWarnings int `json:"system_warnings"`
+	// 用户满意度
+	UserSatisfaction       float64   `json:"user_satisfaction"`
+	UserSatisfactionSeries []float64 `json:"user_satisfaction_series"`
+	// 活跃用户数据
+	DailyActiveSeries  []int `json:"daily_active_series"`
+	WeeklyActiveSeries []int `json:"weekly_active_series"`
+	// 收入数据
+	RevenueSeries []float64 `json:"revenue_series"`
+	// 健康度数据
+	HealthIndexScore int `json:"health_index_score"`
+	// 时间
+	LastSevenDays       []string `json:"last_seven_days"`
+	LastTwentyFourHours []string `json:"last_twenty_four_hours"`
+	// 扣分原因
+	DeductionReasons []map[string]string `json:"deduction_reasons"`
+}
 
 // @Summary 发送dashboard需要的信息
 // @Description 接收前端fetch请求，返回dashboard需要信息
@@ -147,14 +167,6 @@ func ChangeDataRequest(w http.ResponseWriter, r *http.Request) {
 // @Router /users [post]
 func GiveDashBoardInfo(w http.ResponseWriter, r *http.Request) {
 
-	type DashBoardStatus struct {
-		TotalUsers   int `json:"total_users"`
-		TotalDrivers int `json:"total_drivers"`
-		TotalAdmins  int `json:"total_admins"`
-		// 错误数据
-		SystemErrors   int `json:"system_errors"`
-		SystemWarnings int `json:"system_warnings"`
-	}
 	var totalUsers int
 	var totalDrivers int
 	var totalAdmins int
@@ -175,13 +187,30 @@ func GiveDashBoardInfo(w http.ResponseWriter, r *http.Request) {
 
 	aDayErrors, aDayWarnings := log_service.GetADayErrorsAndWarnings()
 
+	userSatisfaction, userSatisfactionSeries := calUserSatisfaction()
+
+	dailyActiveUsers, weeklyActiveUsers := GetActiveUsers()
+
 	data := DashBoardStatus{
-		TotalUsers:     totalUsers,
-		TotalDrivers:   totalDrivers,
-		TotalAdmins:    totalAdmins,
-		SystemErrors:   aDayErrors,
-		SystemWarnings: aDayWarnings,
+		TotalUsers:             totalUsers,
+		TotalDrivers:           totalDrivers,
+		TotalAdmins:            totalAdmins,
+		SystemErrors:           aDayErrors,
+		SystemWarnings:         aDayWarnings,
+		UserSatisfaction:       userSatisfaction,
+		UserSatisfactionSeries: userSatisfactionSeries,
+		DailyActiveSeries:      dailyActiveUsers,
+		WeeklyActiveSeries:     weeklyActiveUsers,
+		RevenueSeries:          calRevenue(),
+		LastSevenDays:          utils.GenerateDateArray(),
+		LastTwentyFourHours:    utils.GenerateTimeArray(),
 	}
+
+	data.HealthIndexScore, data.DeductionReasons = calculateHealthIndexScore(data)
+
+	defer result1.Close()
+	defer result2.Close()
+	defer result3.Close()
 
 	// 设置响应头
 	w.Header().Set("Content-Type", "application/json")
@@ -189,6 +218,280 @@ func GiveDashBoardInfo(w http.ResponseWriter, r *http.Request) {
 
 	// 将数据转化为JSON格式并写入响应体
 	json.NewEncoder(w).Encode(data)
+}
+
+func calculateHealthIndexScore(data DashBoardStatus) (int, []map[string]string) {
+	// 每个error扣5分，每个warning扣1分，最高分别为60分和5分
+	var score int
+	var reasons []map[string]string
+
+	score = 100
+
+	if data.SystemErrors > 0 {
+
+		minusScore := 0
+		if data.SystemErrors >= 12 {
+			minusScore = 60
+		} else {
+			minusScore = data.SystemErrors * 5
+		}
+		score -= minusScore
+
+		reasons = append(reasons, map[string]string{"description": fmt.Sprintf("扣除%d分：系统错误", minusScore), "highlight": fmt.Sprintf("%d次", data.SystemErrors)})
+	}
+
+	if data.SystemWarnings > 0 {
+		minusScore := 0
+		if data.SystemWarnings >= 5 {
+			minusScore = 5
+		} else {
+			minusScore = data.SystemWarnings
+		}
+		score -= minusScore
+		reasons = append(reasons, map[string]string{"description": fmt.Sprintf("扣除%d分：系统警告", minusScore), "highlight": fmt.Sprintf("%d次", data.SystemWarnings)})
+	}
+
+	if data.UserSatisfaction < 60 {
+		score -= 25
+		reasons = append(reasons, map[string]string{"description": "扣除25分：用户满意度极低", "highlight": fmt.Sprintf("%.2f", data.UserSatisfaction)})
+	} else if data.UserSatisfaction < 80 {
+		score -= 15
+		reasons = append(reasons, map[string]string{"description": "扣除15分：用户满意度较低", "highlight": fmt.Sprintf("%.2f", data.UserSatisfaction)})
+	}
+
+	return score, reasons
+}
+
+func GetActiveUsers() ([]int, []int) {
+	config.AllowWarning = false
+
+	var dailyActiveUsers []int
+	var hourlyActiveUsers []int
+
+	sqlStatement := getWeeklyActiveUsersSQL()
+	result, err := db.ExecuteSQL(config.RoleAdmin, sqlStatement)
+	if err != nil {
+		exception.PrintError(GetActiveUsers, err)
+		panic("could not get active")
+	}
+	rows, _ := result.(*sql.Rows)
+	for rows.Next() {
+		var loginDate string
+		var uniqueUserCount int
+		err = rows.Scan(&loginDate, &uniqueUserCount)
+		if err != nil {
+			exception.PrintError(GetActiveUsers, err)
+			panic("could not get active")
+		}
+		dailyActiveUsers = append(dailyActiveUsers, uniqueUserCount)
+	}
+	defer rows.Close()
+
+	sqlStatement = getDailyActiveUsersSQL()
+	result, err = db.ExecuteSQL(config.RoleAdmin, sqlStatement)
+	if err != nil {
+		exception.PrintError(GetActiveUsers, err)
+		panic("could not get active")
+	}
+	rows, _ = result.(*sql.Rows)
+	for rows.Next() {
+		var loginHour string
+		var uniqueUserCount int
+		err = rows.Scan(&loginHour, &uniqueUserCount)
+		if err != nil {
+			exception.PrintError(GetActiveUsers, err)
+			panic("could not get active")
+		}
+		hourlyActiveUsers = append(hourlyActiveUsers, uniqueUserCount)
+	}
+	defer rows.Close()
+
+	config.AllowWarning = true
+
+	return dailyActiveUsers, hourlyActiveUsers
+}
+
+func getDailyActiveUsersSQL() string {
+	return `SELECT
+    calendar.hour AS login_hour,
+    IFNULL(COUNT(DISTINCT ls.user_id), 0) AS unique_user_count
+FROM
+    (
+        SELECT DATE_FORMAT(DATE_SUB(NOW(), INTERVAL n HOUR), '%Y-%m-%d %H:00:00') AS hour
+        FROM (
+            SELECT 0 AS n UNION ALL SELECT 1 UNION ALL SELECT 2 UNION ALL SELECT 3 UNION ALL SELECT 4 UNION ALL SELECT 5
+            UNION ALL SELECT 6 UNION ALL SELECT 7 UNION ALL SELECT 8 UNION ALL SELECT 9 UNION ALL SELECT 10 UNION ALL SELECT 11
+        ) numbers
+    ) calendar
+LEFT JOIN
+    loginsessions ls
+ON
+    DATE_FORMAT(ls.login_time, '%Y-%m-%d %H:00:00') = calendar.hour
+GROUP BY
+    calendar.hour
+ORDER BY
+    calendar.hour ASC`
+}
+
+func getWeeklyActiveUsersSQL() string {
+	return `SELECT
+    calendar.date AS login_date,
+    IFNULL(COUNT(DISTINCT ls.user_id), 0) AS unique_user_count
+FROM
+    (
+        SELECT CURDATE() AS date
+        UNION ALL SELECT DATE_SUB(CURDATE(), INTERVAL 1 DAY)
+        UNION ALL SELECT DATE_SUB(CURDATE(), INTERVAL 2 DAY)
+        UNION ALL SELECT DATE_SUB(CURDATE(), INTERVAL 3 DAY)
+        UNION ALL SELECT DATE_SUB(CURDATE(), INTERVAL 4 DAY)
+        UNION ALL SELECT DATE_SUB(CURDATE(), INTERVAL 5 DAY)
+        UNION ALL SELECT DATE_SUB(CURDATE(), INTERVAL 6 DAY)
+    ) calendar
+LEFT JOIN
+    loginsessions ls
+ON
+    DATE(ls.login_time) = calendar.date
+GROUP BY
+    calendar.date
+ORDER BY
+    calendar.date ASC;
+`
+}
+
+func calRevenue() []float64 {
+	config.AllowWarning = false
+
+	sqlStatement := GeneratePaymentSQL()
+	result, err := db.ExecuteSQL(config.RolePassenger, sqlStatement)
+	if err != nil {
+		exception.PrintError(calRevenue, err)
+		panic("could not give rate")
+	}
+	rows, _ := result.(*sql.Rows)
+
+	var revenueSeries []float64
+
+	for rows.Next() {
+		var paymentDate string
+		var totalPayment float64
+		err = rows.Scan(&paymentDate, &totalPayment)
+		if err != nil {
+			exception.PrintError(calRevenue, err)
+			panic("could not give rate")
+		}
+		revenueSeries = append(revenueSeries, totalPayment)
+
+	}
+
+	defer rows.Close()
+
+	config.AllowWarning = true
+
+	return revenueSeries
+}
+
+// 计算用户满意度
+func calUserSatisfaction() (float64, []float64) {
+	// 注意资源管理
+
+	config.AllowWarning = false
+
+	sqlStatement := "SELECT AVG(rating) from feedback"
+
+	result, err := db.ExecuteSQL(config.RolePassenger, sqlStatement)
+	if err != nil {
+		exception.PrintError(calUserSatisfaction, err)
+		panic("could not give rate")
+	}
+	rows, _ := result.(*sql.Rows)
+	var userSatisfaction float64
+	if rows.Next() {
+		err = rows.Scan(&userSatisfaction)
+		if err != nil {
+			exception.PrintError(calUserSatisfaction, err)
+			panic("could not give rate")
+		}
+	}
+	// 注意翻倍
+	userSatisfaction *= 20
+
+	defer rows.Close()
+
+	sqlStatement = returnSqlStaForUserSatis()
+
+	result, err = db.ExecuteSQL(config.RolePassenger, sqlStatement)
+	if err != nil {
+		exception.PrintError(calUserSatisfaction, err)
+		panic("could not give rate")
+	}
+	rows, _ = result.(*sql.Rows)
+
+	var userSatisfactionSeries []float64
+
+	if rows == nil {
+		panic("no rows returned from query")
+	}
+
+	for rows.Next() {
+		var avgRating float64
+		var time string
+		err = rows.Scan(&time, &avgRating)
+		if err != nil {
+			exception.PrintError(calUserSatisfaction, err)
+			panic("could not give rate")
+		}
+		userSatisfactionSeries = append(userSatisfactionSeries, avgRating*20)
+	}
+
+	defer rows.Close()
+
+	config.AllowWarning = true
+
+	// 保留两位小数
+	userSatisfaction = utils.Round(userSatisfaction, 2)
+	for i, v := range userSatisfactionSeries {
+		userSatisfactionSeries[i] = utils.Round(v, 2)
+	}
+
+	return userSatisfaction, userSatisfactionSeries
+}
+
+func GeneratePaymentSQL() string {
+	return `SELECT
+    calendar.date AS payment_date,
+    IFNULL(SUM(pr.payment_amount), 0) AS total_payment
+FROM
+    (
+        SELECT CURDATE() AS date
+        UNION ALL SELECT DATE_SUB(CURDATE(), INTERVAL 1 DAY)
+        UNION ALL SELECT DATE_SUB(CURDATE(), INTERVAL 2 DAY)
+        UNION ALL SELECT DATE_SUB(CURDATE(), INTERVAL 3 DAY)
+        UNION ALL SELECT DATE_SUB(CURDATE(), INTERVAL 4 DAY)
+        UNION ALL SELECT DATE_SUB(CURDATE(), INTERVAL 5 DAY)
+        UNION ALL SELECT DATE_SUB(CURDATE(), INTERVAL 6 DAY)
+    ) calendar
+LEFT JOIN
+    payment_record pr
+ON
+    DATE(pr.payment_time) = calendar.date AND pr.payment_status = '1'
+GROUP BY
+    calendar.date
+ORDER BY
+    calendar.date ASC
+`
+}
+
+func returnSqlStaForUserSatis() string {
+	return `SELECT
+    calendar.date AS feedback_date,
+    IFNULL(AVG(feedback.rating), 5) AS avg_rating
+FROM (
+    SELECT CURDATE() - INTERVAL n DAY AS date
+    FROM (SELECT 0 AS n UNION ALL SELECT 1 UNION ALL SELECT 2 UNION ALL SELECT 3 UNION ALL SELECT 4 UNION ALL SELECT 5 UNION ALL SELECT 6) numbers
+) calendar
+LEFT JOIN feedback ON DATE(feedback.feedback_time) = calendar.date
+GROUP BY calendar.date
+ORDER BY calendar.date`
 }
 
 // AnswerHeartBeat 接收心跳检测请求
@@ -426,6 +729,9 @@ func ValidateTokenHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	// 成功后作为active_user
+	InsertActiveUser(userID, token, r)
+
 	// 返回验证成功响应
 	json.NewEncoder(w).Encode(ApiResponse{
 		Code:    http.StatusOK,
@@ -433,6 +739,38 @@ func ValidateTokenHandler(w http.ResponseWriter, r *http.Request) {
 		Data:    fmt.Sprintf("UserID: %s, Role: %s", userID, role),
 		Role:    role.Int(),
 	})
+}
+
+func InsertActiveUser(userID string, token string, r *http.Request) {
+	// 获取发送请求方的 IP 地址
+	ip := utils.GetClientIP(r)
+
+	sqlStatement := db.ConstructInsertSQL("loginsessions", []string{"login_status", "login_time", "login_ip_address",
+		"user_id", "token_id"})
+
+	login_time, _ := utils.RegularizeTimeForMySQL(time.Now().String())
+
+	// get token id
+
+	tokenID, err := db.ExecuteSQL(config.RoleAdmin, "SELECT token_id FROM tokens WHERE token_hash = ?", token)
+	if err != nil {
+		exception.PrintError(InsertActiveUser, err)
+		return
+	}
+	rows := tokenID.(*sql.Rows)
+	var tokenIDInt int
+	if rows.Next() {
+		rows.Scan(&tokenIDInt)
+	}
+
+	defer rows.Close()
+
+	_, err = db.ExecuteSQL(config.RoleAdmin, sqlStatement, 1, login_time, ip, userID, tokenIDInt)
+	if err != nil {
+		exception.PrintError(InsertActiveUser, err)
+		return
+	}
+
 }
 
 // @Summary 获得表格数据
@@ -688,6 +1026,14 @@ func InsertDataRequest(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	// 对于有<time>参数的项，替换成实际时间
+	for i, v := range request.Params {
+		if v == "<time>" {
+			reqTime, _ := utils.RegularizeTimeForMySQL(time.Now().String())
+			request.Params[i] = reqTime
+		}
+	}
+
 	// 验证权限
 	_, role, err := auth.VerifyAToken(request.Token)
 	if err != nil {
@@ -744,4 +1090,3 @@ func InsertDataRequest(w http.ResponseWriter, r *http.Request) {
 
 	w.WriteHeader(http.StatusOK)
 }
-
