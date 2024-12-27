@@ -193,3 +193,55 @@ SQL: INSERT INTO feedback (feedback_id, student_number, order_id, rating, feedba
 2024/12/21 16:37:00 2019-01-01 12:00:00 日志服务已启动==============
 2024/12/21 16:40:36 2019-01-01 12:00:00 日志服务已启动==============
 2024/12/21 16:44:52 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/24 20:02:53 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/24 21:00:00 =====准点报时======
+2024/12/24 21:00:00 2024-12-24 21:00:00.014773 +0800 CST m=+3426.294787501:  服务器正在运行
+2024/12/24 21:00:00 2024-12-24 21:00:00.014773 +0800 CST m=+3426.294787501:  [32m1h内发现0个致命错误[0m
+2024/12/24 22:00:00 =====准点报时======
+2024/12/24 22:00:00 2024-12-24 22:00:00.0005799 +0800 CST m=+7026.280594401:  服务器正在运行
+2024/12/24 22:00:00 2024-12-24 22:00:00.0005799 +0800 CST m=+7026.280594401:  [32m1h内发现0个致命错误[0m
+2024/12/25 20:35:00 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/25 20:58:57 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/25 20:59:08 [1m[31mError occurs in login/db.Insert: error in Insert: executing insert: Error 1054 (42S22): Unknown column 'user_name' in 'field list'[0m
+
+2024/12/25 20:59:08 [1m[31mError occurs in login/auth.GiveAToken: error in Insert: executing insert: Error 1054 (42S22): Unknown column 'user_name' in 'field list'[0m
+
+2024/12/25 20:59:08 [1m[31mError occurs in login/api.GenerateAndSendToken: error in Insert: executing insert: Error 1054 (42S22): Unknown column 'user_name' in 'field list'[0m
+
+2024/12/25 20:59:15 [1m[31mError occurs in login/db.Insert: error in Insert: executing insert: Error 1054 (42S22): Unknown column 'user_name' in 'field list'[0m
+
+2024/12/25 20:59:15 [1m[31mError occurs in login/auth.GiveAToken: error in Insert: executing insert: Error 1054 (42S22): Unknown column 'user_name' in 'field list'[0m
+
+2024/12/25 20:59:15 [1m[31mError occurs in login/api.GenerateAndSendToken: error in Insert: executing insert: Error 1054 (42S22): Unknown column 'user_name' in 'field list'[0m
+
+2024/12/25 21:00:00 =====准点报时======
+2024/12/25 21:00:00 2024-12-25 21:00:00.0097696 +0800 CST m=+62.310287801:  服务器正在运行
+2024/12/25 21:00:00 2024-12-25 21:00:00.0097696 +0800 CST m=+62.310287801:  [32m1h内发现6个致命错误[0m
+2024/12/25 21:18:10 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/25 21:18:10 [1m[31mError occurs in login/db.ExecuteSQL: Error 1146 (42S02): Table 'passenger_db.usersaliases' doesn't exist[0m
+
+2024/12/25 21:18:10 [1m[31mError occurs in login/auth.generateToken: [ExecuteSQL] 出现错误: Error 1146 (42S02): Table 'passenger_db.usersaliases' doesn't exist
+SQL: SELECT user_name FROM usersaliases WHERE user_id = ?
+参数: [9][0m
+
+2024/12/25 21:18:10 [1m[31mError occurs in login/auth.GiveAToken: [ExecuteSQL] 出现错误: Error 1146 (42S02): Table 'passenger_db.usersaliases' doesn't exist
+SQL: SELECT user_name FROM usersaliases WHERE user_id = ?
+参数: [9][0m
+
+2024/12/25 21:18:10 [1m[31mError occurs in login/api.GenerateAndSendToken: [ExecuteSQL] 出现错误: Error 1146 (42S02): Table 'passenger_db.usersaliases' doesn't exist
+SQL: SELECT user_name FROM usersaliases WHERE user_id = ?
+参数: [9][0m
+
+2024/12/25 21:18:35 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/25 21:32:54 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/25 21:33:38 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/25 21:52:24 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/25 22:01:38 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/25 22:10:59 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/25 22:11:05 [1m[31mError occurs in login/db.Insert: error in Insert: executing insert: Error 1366 (HY000): Incorrect integer value: 'ws' for column 'user_id' at row 1[0m
+
+2024/12/25 22:11:05 [1m[31mError occurs in login/auth.GiveAToken: error in Insert: executing insert: Error 1366 (HY000): Incorrect integer value: 'ws' for column 'user_id' at row 1[0m
+
+2024/12/25 22:11:05 [1m[31mError occurs in login/api.GenerateAndSendToken: error in Insert: executing insert: Error 1366 (HY000): Incorrect integer value: 'ws' for column 'user_id' at row 1[0m
+
+2024/12/25 22:13:55 2019-01-01 12:00:00 日志服务已启动==============
