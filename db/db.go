@@ -369,7 +369,7 @@ func checkArgs(statement string, args []interface{}) error {
 		exception.PrintError(checkArgs, fmt.Errorf("参数数量不匹配，SQL 语句中有 %d 个占位符，但传入了 %d 个参数", count, len(args)))
 		return fmt.Errorf("参数数量不匹配，SQL 语句中有 %d 个占位符，但传入了 %d 个参数", count, len(args))
 	}
-	if count == 0 {
+	if count == 0 && config.AllowWarning {
 		exception.PrintWarning(checkArgs, fmt.Errorf("SQL 语句中没有占位符，请检查："+statement))
 	}
 	return nil

@@ -102,13 +102,23 @@ func RegisterAdmin(mux *http.ServeMux) {
 	mux.HandleFunc("/admin/update", api.ChangeDataRequest)
 	mux.HandleFunc("/admin/delete", api.DeleteDataRequest)
 	mux.HandleFunc("/admin/insert", api.InsertDataRequest)
+	mux.HandleFunc("/admin/variable/update", api.UpdateVariable)
+	mux.HandleFunc("/admin/variable/get", api.GetVariable)
+	mux.HandleFunc("/admin/feedback/get", api.GetFeedBack)
+	mux.HandleFunc("/admin/feedback/post", api.DealWithFeedback)
 
 	// Table api
 	mux.HandleFunc("/admin/table", api.GetTableData)
+	mux.HandleFunc("/admin/drivertable", api.GetDriversTableData)
+	mux.HandleFunc("/admin/car_table", api.GetCarsTableData)
+	mux.HandleFunc("/admin/work_table", api.GetWorkTableData)
 
+	// test_function
+	mux.HandleFunc("/test/divide", api.ReceiveDivisionRequest)
 }
 
 func main() {
+
 	// 初始化全局参数 ======
 	err := config.LoadConfig("config.yaml")
 	os.Setenv("GOOGLE_APPLICATION_CREDENTIALS", "C:\\Users\\27785\\GolandProjects\\login\\service-account-file.json")
@@ -130,6 +140,8 @@ func main() {
 	if err != nil {
 		print(err.Error())
 	}
+
+	// 测试区域
 
 	// 创建 ServeMux 路由
 	mux := http.NewServeMux()
@@ -171,11 +183,10 @@ func main() {
 	mux.HandleFunc("/getCurrentOrder", user.HandleGetCurrentOrder)
 	mux.HandleFunc("/getCurrentPayment", user.HandleGetCurrentPayment)
 	mux.HandleFunc("/getWorkShift", user.HandleGetWorkShift)
-	// 用于用户端行程记录拉取
-	mux.HandleFunc("/getjourneyrecord", user.GetjourneyRecord)
-	// 用于用户端评论内容拉取
-	mux.HandleFunc("/getcomments", user.GetComment)
-
+	mux.HandleFunc("/getjourneyrecord", user.GetjourneyRecord) // 用于用户端行程记录拉取
+	mux.HandleFunc("/getcomments", user.GetComment)            // 用于用户端评论内容拉取
+	mux.HandleFunc("/submitUserComment", user.WriteComment)    //用户评论提交
+	mux.HandleFunc("/getnotices", user.GetNotice)              //获取公告内容
 	// 验证url
 	mux.HandleFunc("/api/login", api.LoginHandler)
 	mux.HandleFunc("/api/logout", api.LogoutHandler)               // 设置登出处理路由

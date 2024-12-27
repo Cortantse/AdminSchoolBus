@@ -10,6 +10,8 @@ import (
 // AppConfig 静态全局变量载入
 var AppConfig Config
 
+var AllowWarning = true
+
 // LoadConfig 载入yaml文件中的参数.
 //
 // Parameters:

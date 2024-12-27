@@ -187,3 +187,13 @@ func VerifyAToken(token string) (string, config.Role, error) {
 
 	return userId, role, nil
 }
+
+// ReturnUserIDFromToken 从token中获取用户id，可能会报错
+func ReturnUserIDFromToken(token string) (string, error) {
+	_, userId, err := verifyToken(token)
+	if err != nil {
+		exception.PrintWarning(ReturnUserIDFromToken, err)
+		return "", err
+	}
+	return userId, nil
+}
