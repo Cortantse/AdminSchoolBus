@@ -42,7 +42,7 @@ type WorkShift struct {
 	ShiftStart  string `json:"work_stime"`   // 上班時間
 	ShiftEnd    string `json:"work_etime"`   // 下班時間
 	CurrentTime string `json:"current_time"` // 上班時間
-
+}
 type Comment struct {
 	Studentname    string `json:"studentname"`
 	Commentcontent string `json:"commentcontent"`
@@ -77,7 +77,7 @@ func updateOrderStatus(order_id int, payment_id int, new_status string) error {
 	}
 	return nil
 }
-  
+
 func submitComment(tempComentInfo Comment) error {
 	_, err := db.ExecuteSQL(config.RolePassenger, "INSERT INTO passenger_comment (student_name, comment_content, comment_time, avatar) VALUES (?,?,?,?)", tempComentInfo.Studentname, tempComentInfo.Commentcontent, tempComentInfo.Commenttime, tempComentInfo.Avatar)
 	if err != nil {
@@ -85,7 +85,7 @@ func submitComment(tempComentInfo Comment) error {
 	}
 	return nil
 }
-  
+
 func updateLeaveTime(order_id int, leave_time string) error {
 	_, err := db.ExecuteSQL(config.RolePassenger, "UPDATE Order_Information SET dropoff_time = ? WHERE order_id = ?", leave_time, order_id)
 	if err != nil {
