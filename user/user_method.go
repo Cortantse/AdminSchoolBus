@@ -2,6 +2,7 @@ package user
 
 import (
 	"bytes"
+	"database/sql"
 	"encoding/json"
 	"fmt"
 	"io"
@@ -33,6 +34,12 @@ type PaymentInfo struct {
 	PaymentTime   string  `json:"payment_time"`
 	PaymentStatus string  `json:"payment_status"`
 }
+type Comment struct {
+	Studentname    string `json:"studentname"`
+	Commentcontent string `json:"commentcontent"`
+	Commenttime    string `json:"commenttime"`
+	Avatar         string `json:"avatar"`
+}
 
 func setCORSHeaders(w http.ResponseWriter, methods string) {
 	w.Header().Set("Access-Control-Allow-Origin", "*")
@@ -51,6 +58,13 @@ func submitPayment(tempPaymentInfo PaymentInfo) error {
 	_, err := db.ExecuteSQL(config.RolePassenger, "INSERT into Payment_Record(order_id,vehicle_id,payment_amount,payment_method,payment_time,payment_status) values (?,?,?,?,?,?)", tempPaymentInfo.OrderID, tempPaymentInfo.VehicleID, tempPaymentInfo.PaymentAmount, tempPaymentInfo.PaymentMethod, tempPaymentInfo.PaymentTime, tempPaymentInfo.PaymentStatus)
 	if err != nil {
 		return fmt.Errorf("添加支付信息失败: %w", err)
+	}
+	return nil
+}
+func submitComment(tempComentInfo Comment) error {
+	_, err := db.ExecuteSQL(config.RolePassenger, "INSERT INTO passenger_comment (student_name, comment_content, comment_time, avatar) VALUES (?,?,?,?)", tempComentInfo.Studentname, tempComentInfo.Commentcontent, tempComentInfo.Commenttime, tempComentInfo.Avatar)
+	if err != nil {
+		return fmt.Errorf("添加评论失败: %w", err)
 	}
 	return nil
 }
@@ -296,4 +310,136 @@ func HandleSubmitPayment(w http.ResponseWriter, r *http.Request) {
 	}
 
 	respondWithSuccess(w, "添加支付信息成功")
+}
+
+func GetjourneyRecord(w http.ResponseWriter, r *http.Request) {
+	//fmt.Print("getjourney被调用----------------------------")
+	// 从数据库中获取行程记录
+	type JourneyRecord struct {
+		Originsite      string `json:"originsite"`
+		Destinationsite string `json:"destinationsite"`
+		UpTime          string `json:"uptime"`
+		DownTime        string `json:"downtime"`
+		Status          string `json:"status"`
+	}
+	rows, err := db.ExecuteSQL(config.RolePassenger, "SELECT pickup_station_name,dropoff_station_name,pickup_time,dropoff_time,status FROM order_information WHERE order_id>? ", 0)
+	if err != nil {
+		fmt.Print(err)
+	}
+	res, _ := rows.(*sql.Rows)
+	var results []JourneyRecord
+	for res.Next() {
+		var journey JourneyRecord
+		var downTime sql.NullString // 使用 sql.NullString 处理可能为空的时间字段
+		err := res.Scan(&journey.Originsite, &journey.Destinationsite, &journey.UpTime, &downTime, &journey.Status)
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
+		}
+		if downTime.Valid {
+			//journey.DownTime = new(string)
+			journey.DownTime = downTime.String
+		} else {
+			journey.DownTime = "---"
+		}
+		if journey.Status == "0" {
+			journey.Status = "进行中"
+		} else {
+			journey.Status = "结束"
+		}
+		results = append(results, journey)
+	}
+
+	// 设置响应头
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(http.StatusOK)
+	// 将数据转化为JSON格式并写入响应体
+	json.NewEncoder(w).Encode(results)
+}
+
+func GetComment(w http.ResponseWriter, r *http.Request) {
+	type Comment struct {
+		Commentid      string `json:"commentid"`
+		Studentname    string `json:"studentname"`
+		Commentcontent string `json:"commentcontent"`
+		Commenttime    string `json:"commenttime"`
+		Avatar         string `json:"avatar"`
+	}
+	rows, err := db.ExecuteSQL(config.RolePassenger, "SELECT * FROM Passenger_Comment WHERE comment_id > ?", 0)
+	if err != nil {
+		fmt.Print(err)
+	}
+	res, _ := rows.(*sql.Rows)
+	var results []Comment
+	for res.Next() {
+		var result Comment
+		err := res.Scan(&result.Commentid, &result.Studentname, &result.Commentcontent, &result.Commenttime, &result.Avatar)
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
+		}
+		results = append(results, result)
+	}
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(http.StatusOK)
+	json.NewEncoder(w).Encode(results)
+}
+
+func WriteComment(w http.ResponseWriter, r *http.Request) {
+	setCORSHeaders(w, "POST, OPTIONS")
+	if r.Method == http.MethodOptions {
+		w.WriteHeader(http.StatusOK)
+		return
+	}
+	if r.Method != http.MethodPost {
+		respondWithError(w, http.StatusMethodNotAllowed, "仅支持 POST 请求")
+		return
+	}
+	bodyBytes, err := io.ReadAll(r.Body) // 读取原始请求体
+	if err != nil {
+		log.Printf("无法读取请求体: %v", err)
+		respondWithError(w, http.StatusBadRequest, "无法读取请求体")
+		return
+	}
+	// 重置 Body 并解码为结构体
+	r.Body = io.NopCloser(bytes.NewBuffer(bodyBytes))
+	var shift Comment
+	err = json.NewDecoder(r.Body).Decode(&shift)
+	if err != nil {
+		log.Printf("JSON 解码失败: %v", err)
+		respondWithError(w, http.StatusBadRequest, "请求数据解析失败")
+		return
+	}
+	if err := submitComment(shift); err != nil {
+		respondWithError(w, http.StatusInternalServerError, "添加订单信息失败")
+		return
+	}
+	respondWithSuccess(w, "添加评论成功")
+}
+
+func GetNotice(w http.ResponseWriter, r *http.Request) {
+	type Notice struct {
+		Noticeid    string `json:"noticeid"`
+		Title       string `json:"title"`
+		Content     string `json:"content"`
+		Publishdate string `json:"publishdate"`
+	}
+	rows, err := db.ExecuteSQL(config.RolePassenger, "SELECT * FROM passenger_notice where notice_id > ?", 0)
+	if err != nil {
+		fmt.Print(err)
+	}
+	res, _ := rows.(*sql.Rows)
+	var results []Notice
+	for res.Next() {
+		var result Notice
+		err := res.Scan(&result.Noticeid, &result.Title, &result.Content, &result.Publishdate)
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
+		}
+		results = append(results, result)
+	}
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(http.StatusOK)
+	json.NewEncoder(w).Encode(results)
 }
