@@ -179,6 +179,10 @@ func main() {
 	mux.HandleFunc("/submitUserPayment", user.HandleSubmitPayment)
 	mux.HandleFunc("/changeOrder", user.HandleChangeOrder)
 	mux.HandleFunc("/changePayment", user.HandleChangePayment)
+	mux.HandleFunc("/changeLeaveTime", user.HandleChangeLeaveTime)
+	mux.HandleFunc("/getCurrentOrder", user.HandleGetCurrentOrder)
+	mux.HandleFunc("/getCurrentPayment", user.HandleGetCurrentPayment)
+	mux.HandleFunc("/getWorkShift", user.HandleGetWorkShift)
 	mux.HandleFunc("/getjourneyrecord", user.GetjourneyRecord) // 用于用户端行程记录拉取
 	mux.HandleFunc("/getcomments", user.GetComment)            // 用于用户端评论内容拉取
 	mux.HandleFunc("/submitUserComment", user.WriteComment)    //用户评论提交
