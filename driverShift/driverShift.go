@@ -113,7 +113,7 @@ func respondWithSuccess(w http.ResponseWriter, data interface{}) {
 
 // 处理上班：验证信息并创建 GPS 驾驶员对象
 func HandleShiftStart(w http.ResponseWriter, r *http.Request, gps_api *gps.GPSAPI) {
-	log.Printf("接收到信息")
+	log.Printf("接收到上班信息")
 	setCORSHeaders(w, "POST, OPTIONS")
 
 	if r.Method == http.MethodOptions {
@@ -168,7 +168,7 @@ func HandleShiftStart(w http.ResponseWriter, r *http.Request, gps_api *gps.GPSAP
 }
 
 // 处理下班：验证信息并删除 GPS 驾驶员对象
-func HandleShiftEnd(w http.ResponseWriter, r *http.Request, gpsModule *gps.GPSModule) {
+func HandleShiftEnd(w http.ResponseWriter, r *http.Request, gps_api *gps.GPSAPI) {
 	setCORSHeaders(w, "POST, OPTIONS")
 
 	if r.Method == http.MethodOptions {
@@ -200,11 +200,11 @@ func HandleShiftEnd(w http.ResponseWriter, r *http.Request, gpsModule *gps.GPSMo
 	}
 
 	// 删除驾驶员对象
-	err = gpsModule.DeleteDriver(shift.DriverID)
-	if err != nil {
-		respondWithError(w, http.StatusInternalServerError, "删除驾驶员失败")
-		return
-	}
+	// _, err = gps_api.DeleteDriver(shift.DriverID)
+	// if err != nil {
+	// 	respondWithError(w, http.StatusInternalServerError, "删除驾驶员失败")
+	// 	return
+	// }
 
 	respondWithSuccess(w, "下班信息处理成功")
 }
