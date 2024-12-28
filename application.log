@@ -2160,3 +2160,36 @@ WEBSOCKET: 2024/12/25 22:29:45 websocket.go:80: 未知消息类型：
 WEBSOCKET: 2024/12/25 22:55:13 websocket.go:59: 连接关闭，错误：websocket: close 1001 (going away)
 WEBSOCKET: 2024/12/25 22:55:13 websocket.go:112: 客户端已注销
 WEBSOCKET: 2024/12/25 22:55:13 websocket.go:48: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/27 15:24:53 main.go:152: WebSocket 服务已启动
+GPS: 2024/12/27 15:24:53 main.go:153: GPS 服务已启动
+WEBSOCKET: 2024/12/27 15:24:53 websocket.go:152: WebSocket 服务器已启动
+GPS: 2024/12/27 15:24:53 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/27 15:33:16 main.go:152: WebSocket 服务已启动
+GPS: 2024/12/27 15:33:16 main.go:153: GPS 服务已启动
+WEBSOCKET: 2024/12/27 15:33:16 websocket.go:152: WebSocket 服务器已启动
+GPS: 2024/12/27 15:33:16 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/27 15:45:20 main.go:152: WebSocket 服务已启动
+GPS: 2024/12/27 15:45:20 main.go:153: GPS 服务已启动
+WEBSOCKET: 2024/12/27 15:45:20 websocket.go:152: WebSocket 服务器已启动
+GPS: 2024/12/27 15:45:20 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/27 15:46:42 websocket.go:158: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/27 15:46:42 websocket.go:55: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/27 15:46:45 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/27 15:46:45 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/27 15:46:45 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/27 15:46:46 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/27 15:46:47 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/27 15:46:48 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/27 15:46:49 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/27 16:44:53 websocket.go:70: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2024/12/27 16:44:53 websocket.go:163: 客户端已注销
+WEBSOCKET: 2024/12/27 16:44:53 websocket.go:59: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/27 16:47:33 websocket.go:158: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/27 16:47:33 websocket.go:55: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/27 16:50:23 websocket.go:70: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2024/12/27 16:50:23 websocket.go:163: 客户端已注销
+WEBSOCKET: 2024/12/27 16:50:23 websocket.go:59: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/28 13:06:44 main.go:152: WebSocket 服务已启动
+GPS: 2024/12/28 13:06:44 main.go:153: GPS 服务已启动
+WEBSOCKET: 2024/12/28 13:06:44 websocket.go:152: WebSocket 服务器已启动
+GPS: 2024/12/28 13:06:44 gps.go:97: 开始广播驾驶员位置信息
