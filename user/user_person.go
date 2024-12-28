@@ -8,7 +8,6 @@ import (
 	"login/config"
 	"login/db"
 	"login/exception"
-	"math/rand"
 	"net/http"
 	"os"
 	"path/filepath"
@@ -622,7 +621,7 @@ func AddFeedbackHandler(w http.ResponseWriter, r *http.Request) {
 		exception.PrintError(AddFeedbackHandler, err)
 		return
 	}
-	feedbackID := rand.Intn(900000) + 100000 // 生成六位随机数
+	//feedbackID := rand.Intn(900000) + 100000 // 生成六位随机数
 
 	// 根据 student_account 查 student_number
 	sqlGetStudentNumber := "SELECT student_number FROM student_information WHERE student_account = ?"
@@ -652,10 +651,10 @@ func AddFeedbackHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// 插入评价数据到数据库
-	insertQuery := "INSERT INTO feedback (feedback_id, student_number, order_id, rating, feedback_content, feedback_time) VALUES (?, ?, ?, ?, ?, ?)"
+	insertQuery := "INSERT INTO feedback (student_number, order_id, rating, feedback_content, feedback_time) VALUES (?, ?, ?, ?, ?)"
 
 	_, err = db.ExecuteSQL(config.RolePassenger, insertQuery,
-		feedbackID, studentNumber, feedback.OrderID,
+		studentNumber, feedback.OrderID,
 		feedback.Rating, feedback.FeedbackContent, feedback.FeedbackTime)
 
 	if err != nil {
