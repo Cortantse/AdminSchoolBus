@@ -11,6 +11,7 @@ import (
 	"login/db"
 	"login/gps" // 引入 gps 模块
 	"net/http"
+	"time"
 )
 
 // 工作班次信息结构体
@@ -35,9 +36,9 @@ type DriverInfo struct {
 }
 
 type Comments struct {
-	id      string `json:"passenger_id"`     //评论人ID
-	avatar  string `json:"passenger_avatar"` //评论人头像url
-	content string `json:"comments"`         //评论内容
+	id      string `json:"comment_id"`      //评论ID
+	avatar  string `json:"avatar"`          //评论人头像url
+	content string `json:"comment_content"` //评论内容
 }
 
 // 路径记录结构体
@@ -59,9 +60,43 @@ func updateVehicleStatus(carID string, newStatus string) error {
 	if newStatus == "试通行" {
 		status = 2
 	}
+	if newStatus == "休息" {
+		status = 3
+	}
 	_, err := db.ExecuteSQL(config.RoleDriver, "UPDATE car_table SET car_isusing = ? WHERE car_id = ?", status, carID)
 	if err != nil {
 		return fmt.Errorf("更新车辆状态失败: %w", err)
+	}
+	return nil
+}
+
+func updateDriverStatus(driverID string) error {
+
+	status := 1
+
+	_, err := db.ExecuteSQL(config.RoleDriver, "UPDATE driver_table SET driver_isworking = ? WHERE driver_id = ?", status, driverID)
+	if err != nil {
+		return fmt.Errorf("更新司机上班状态失败: %w", err)
+	}
+	return nil
+}
+
+func createWorkTable(driverID string, carID string, routeID int) error {
+	timeNow := time.Now().Format("2006-01-02 15:04:05")
+	sql := "INSERT INTO work_table (work_stime,driver_id,route_id,car_id) VALUES (?,?,?,?)"
+	_, err := db.ExecuteSQL(config.RoleDriver, sql, timeNow, driverID, routeID, carID)
+	if err != nil {
+		return fmt.Errorf("创建工作表失败: %w", err)
+	}
+	return nil
+}
+
+func modifyWorkTable(driverID string, carID string) error {
+	timeNow := time.Now().Format("2006-01-02 15:04:05")
+	sql := "UPDATE work_table SET work_etime = ? WHERE driver_id = ? AND car_id = ? AND work_etime = NULL "
+	_, err := db.ExecuteSQL(config.RoleDriver, sql, timeNow, driverID, carID)
+	if err != nil {
+		return fmt.Errorf("更新工作表失败: %w", err)
 	}
 	return nil
 }
@@ -113,7 +148,7 @@ func respondWithSuccess(w http.ResponseWriter, data interface{}) {
 
 // 处理上班：验证信息并创建 GPS 驾驶员对象
 func HandleShiftStart(w http.ResponseWriter, r *http.Request, gps_api *gps.GPSAPI) {
-	log.Printf("接收到上班信息")
+	log.Printf("接收到信息")
 	setCORSHeaders(w, "POST, OPTIONS")
 
 	if r.Method == http.MethodOptions {
@@ -155,6 +190,15 @@ func HandleShiftStart(w http.ResponseWriter, r *http.Request, gps_api *gps.GPSAP
 		respondWithError(w, http.StatusInternalServerError, "车辆状态更新失败")
 		return
 	}
+	if err := updateDriverStatus(shift.DriverID); err != nil {
+		respondWithError(w, http.StatusInternalServerError, "司机上班状态更新失败")
+		return
+	}
+
+	if err := createWorkTable(shift.DriverID, shift.VehicleNo, shift.RouteID); err != nil {
+		respondWithError(w, http.StatusInternalServerError, "创建工作表失败")
+		return
+	}
 
 	// 创建驾驶员对象
 	log.Printf("driverid = %s\n", shift.DriverID)
@@ -168,7 +212,7 @@ func HandleShiftStart(w http.ResponseWriter, r *http.Request, gps_api *gps.GPSAP
 }
 
 // 处理下班：验证信息并删除 GPS 驾驶员对象
-func HandleShiftEnd(w http.ResponseWriter, r *http.Request, gps_api *gps.GPSAPI) {
+func HandleShiftEnd(w http.ResponseWriter, r *http.Request, gpsModule *gps.GPSModule) {
 	setCORSHeaders(w, "POST, OPTIONS")
 
 	if r.Method == http.MethodOptions {
@@ -195,16 +239,26 @@ func HandleShiftEnd(w http.ResponseWriter, r *http.Request, gps_api *gps.GPSAPI)
 
 	// 更新车辆状态
 	if err := updateVehicleStatus(shift.VehicleNo, shift.VehicleStatus); err != nil {
-		respondWithError(w, http.StatusInternalServerError, "车辆状态更新失败")
+		respondWithError(w, http.StatusInternalServerError, "车辆下班状态更新失败")
+		return
+	}
+
+	if err := updateDriverStatus(shift.DriverID); err != nil {
+		respondWithError(w, http.StatusInternalServerError, "司机下班状态更新失败")
+		return
+	}
+
+	if err := modifyWorkTable(shift.DriverID, shift.VehicleNo); err != nil {
+		respondWithError(w, http.StatusInternalServerError, "工作表下班状态更新失败")
 		return
 	}
 
 	// 删除驾驶员对象
-	// _, err = gps_api.DeleteDriver(shift.DriverID)
-	// if err != nil {
-	// 	respondWithError(w, http.StatusInternalServerError, "删除驾驶员失败")
-	// 	return
-	// }
+	err = gpsModule.DeleteDriver(shift.DriverID)
+	if err != nil {
+		respondWithError(w, http.StatusInternalServerError, "删除驾驶员失败")
+		return
+	}
 
 	respondWithSuccess(w, "下班信息处理成功")
 }
@@ -353,7 +407,7 @@ func GetComments(w http.ResponseWriter, r *http.Request) {
 	}
 	log.Printf("接收到的解码后数据: %+v", shift)
 
-	result, err := db.ExecuteSQL(config.RolePassenger, "SELECT * FROM comments_table WHERE passenger_id = ?", shift.id)
+	result, err := db.ExecuteSQL(config.RolePassenger, "SELECT * FROM passenger_comment WHERE passenger_id = ?", shift.id)
 	if err != nil {
 		respondWithError(w, http.StatusInternalServerError, "读取评论失败")
 		return
