@@ -14,7 +14,7 @@ import (
 
 type OrderInfo struct {
 	OrderID            int    `json:"order_id"`
-	StudentAccount     int    `json:"student_account"`
+	StudentAccount     string `json:"student_account"`
 	DriverID           int    `json:"driver_id"`
 	CarID              string `json:"car_id"`
 	PickupStationId    int    `json:"pickup_station_id"`
@@ -619,7 +619,7 @@ func HandleGetWorkShift(w http.ResponseWriter, r *http.Request) {
 
 	// 执行查询获取订单信息
 	result, err := db.ExecuteSQL(config.RoleDriver,
-		"SELECT work_stime,work_etime,driver_id,car_id FROM work_table WHERE work_stime<= ? and work_etime>= ?;", shift.CurrentTime, shift.CurrentTime)
+		"SELECT work_stime, driver_id, car_id FROM work_table WHERE work_stime <= ? AND (work_etime IS NULL );", shift.CurrentTime)
 	if err != nil {
 		respondWithError(w, http.StatusInternalServerError, "查询工作信息失败")
 		return
@@ -637,7 +637,7 @@ func HandleGetWorkShift(w http.ResponseWriter, r *http.Request) {
 	var workShifts []WorkShift
 	for rows.Next() {
 		var workShift WorkShift
-		err := rows.Scan(&workShift.ShiftStart, &workShift.ShiftEnd, &workShift.DriverID, &workShift.VehicleNo)
+		err := rows.Scan(&workShift.ShiftStart, &workShift.DriverID, &workShift.VehicleNo)
 		if err != nil {
 			respondWithError(w, http.StatusInternalServerError, "解析工作信息失败")
 			return
