@@ -2863,3 +2863,31 @@ WEBSOCKET: 2024/12/28 21:14:15 websocket.go:158: 新客户端已注册，类型�
 WEBSOCKET: 2024/12/28 21:14:43 websocket.go:70: 连接关闭，错误：websocket: close 1001 (going away)
 WEBSOCKET: 2024/12/28 21:14:43 websocket.go:163: 客户端已注销
 WEBSOCKET: 2024/12/28 21:14:43 websocket.go:59: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/28 23:01:12 main.go:152: WebSocket 服务已启动
+GPS: 2024/12/28 23:01:12 main.go:153: GPS 服务已启动
+WEBSOCKET: 2024/12/28 23:01:12 websocket.go:152: WebSocket 服务器已启动
+GPS: 2024/12/28 23:01:12 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/28 23:06:25 main.go:152: WebSocket 服务已启动
+GPS: 2024/12/28 23:06:25 main.go:153: GPS 服务已启动
+WEBSOCKET: 2024/12/28 23:06:25 websocket.go:152: WebSocket 服务器已启动
+GPS: 2024/12/28 23:06:25 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/28 23:38:21 websocket.go:158: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/28 23:38:21 websocket.go:55: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/28 23:38:26 websocket.go:68: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2024/12/28 23:38:26 websocket.go:163: 客户端已注销
+WEBSOCKET: 2024/12/28 23:38:26 websocket.go:59: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/28 23:38:29 websocket.go:55: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/28 23:38:29 websocket.go:158: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/28 23:40:15 websocket.go:70: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2024/12/28 23:40:15 websocket.go:163: 客户端已注销
+WEBSOCKET: 2024/12/28 23:40:15 websocket.go:59: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/30 18:48:06 websocket.go:55: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/30 18:48:06 websocket.go:158: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/30 18:48:11 websocket.go:68: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2024/12/30 18:48:11 websocket.go:163: 客户端已注销
+WEBSOCKET: 2024/12/30 18:48:11 websocket.go:59: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/30 18:48:14 websocket.go:55: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/30 18:48:14 websocket.go:158: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/30 18:49:12 websocket.go:70: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2024/12/30 18:49:12 websocket.go:163: 客户端已注销
+WEBSOCKET: 2024/12/30 18:49:12 websocket.go:59: 连接关闭，客户端类型：passenger
