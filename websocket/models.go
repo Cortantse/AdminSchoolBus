@@ -36,5 +36,6 @@ type Site struct {
 }
 
 type Route struct {
+	ID   int         `json:"id"`
 	Path [][]float64 `json:"path"` // 假设路径是一个二维数组，例如 [[lng, lat], [lng, lat]]
 }
