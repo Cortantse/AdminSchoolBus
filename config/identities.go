@@ -70,5 +70,6 @@ type Config struct {
 }
 
 type Other struct {
-	ExpirationRideCoupon int `yaml:"expiration_ride_coupon"`
+	ExpirationRideCoupon int    `yaml:"expiration_ride_coupon"`
+	ApiKey               string `yaml:"api_key"`
 }

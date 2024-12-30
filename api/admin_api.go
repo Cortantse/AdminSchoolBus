@@ -34,10 +34,11 @@ type changeDataRequest struct {
 
 // LoginResponse 用来返回给前端的 JSON 数据
 type ApiResponse struct {
-	Code    int    `json:"code"`
-	Message string `json:"message"`
-	Data    string `json:"data,omitempty"`
-	Role    int    `json:"role"`
+	Code           int    `json:"code"`
+	Message        string `json:"message"`
+	Data           string `json:"data,omitempty"`
+	Role           int    `json:"role"`
+	AdditionalInfo int    `json:"additional_info,omitempty"`
 }
 
 // @Summary 管理员修改信息
@@ -588,12 +589,23 @@ func LoginHandler(w http.ResponseWriter, r *http.Request) {
 			exception.PrintError(LoginHandler, err)
 			return
 		}
+		// 检测用户 status
+		if client.UserStatus != "active" {
+			response := ApiResponse{
+				Code:    http.StatusUnauthorized,
+				Message: "账户状态异常",
+				Data:    "",
+			}
+			w.WriteHeader(http.StatusUnauthorized)
+			json.NewEncoder(w).Encode(response)
+			return
+		}
 		// 获取客户端信息
 		clientInfo := GetClientInfo(r)
 		role := determineRole(client.Role)
 		// 这个地方要把int换成string
 		userID := fmt.Sprintf("%d", userID)
-		GenerateAndSendToken(w, role, userID, clientInfo)
+		GenerateAndSendToken(w, role, userID, clientInfo, loginReq.Username)
 	} else {
 		// 密码错误，发送401
 		response := ApiResponse{
@@ -609,7 +621,7 @@ func LoginHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 // GenerateAndSendToken  公有函数，用于生成令牌并将其发送给客户端
-func GenerateAndSendToken(w http.ResponseWriter, role config.Role, userId string, clientInfo string) {
+func GenerateAndSendToken(w http.ResponseWriter, role config.Role, userId string, clientInfo string, userName string) {
 	token, err := auth.GiveAToken(role, userId, clientInfo)
 	if err != nil {
 		exception.PrintError(GenerateAndSendToken, err)
@@ -621,14 +633,55 @@ func GenerateAndSendToken(w http.ResponseWriter, role config.Role, userId string
 		return
 	}
 
-	response := ApiResponse{
-		Code:    http.StatusOK,
-		Message: "Login success",
-		Data:    token,
-		Role:    role.Int(),
+	if role != config.RoleDriver {
+		// 如果不是司机
+		response := ApiResponse{
+			Code:    http.StatusOK,
+			Message: "Login success",
+			Data:    token,
+			Role:    role.Int(),
+		}
+		w.WriteHeader(http.StatusOK)
+		json.NewEncoder(w).Encode(response)
+	} else {
+		// 如果是司机
+
+		var driverID int
+		result, err := db.ExecuteSQL(config.RoleDriver, "SELECT driver_id FROM driver_table WHERE driver_nickname = ?", userName)
+		if err != nil {
+			exception.PrintError(GenerateAndSendToken, err)
+			exception.PrintError(GenerateAndSendToken, fmt.Errorf("无法找到该username对应的driverID"))
+		}
+		rows := result.(*sql.Rows)
+		if rows.Next() {
+			err := rows.Scan(&driverID)
+			if err != nil {
+				exception.PrintError(GenerateAndSendToken, err)
+				return
+			}
+
+		} else {
+			exception.PrintError(GenerateAndSendToken, fmt.Errorf("您尝试登陆了一个无法找到对应driverID的用户名"))
+			response := ApiResponse{
+				Code:    http.StatusBadRequest,
+				Message: "您尝试登陆了一个无法找到对应driverID的用户名",
+			}
+			w.WriteHeader(http.StatusBadRequest)
+			json.NewEncoder(w).Encode(response)
+			return
+		}
+
+		response := ApiResponse{
+			Code:           http.StatusOK,
+			Message:        "Login success",
+			Data:           token,
+			Role:           role.Int(),
+			AdditionalInfo: driverID,
+		}
+		w.WriteHeader(http.StatusOK)
+		json.NewEncoder(w).Encode(response)
 	}
-	w.WriteHeader(http.StatusOK)
-	json.NewEncoder(w).Encode(response)
+
 }
 
 // GetClientInfo 获取请求中的 User-Agent 信息
