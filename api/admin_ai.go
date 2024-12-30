@@ -110,7 +110,7 @@ func Test() {
 	}
 
 	// 您的 DeepSeek API 密钥
-	apiKey := "sk-06a86b52f77142dc92d2d1ddf6861c27"
+	apiKey := ""
 
 	// 调用函数获取结果
 	result, err := sendMessagesToDeepSeek(messages, apiKey)
