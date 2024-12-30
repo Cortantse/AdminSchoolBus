@@ -7,7 +7,6 @@ import (
 	"login/config"
 	"login/db"
 	"login/driverShift"
-	"login/exception"
 	"login/gps"
 	"login/log_service"
 
@@ -74,21 +73,6 @@ func initServer(cors http.Handler) error {
 	return nil
 }
 
-func testForToken(err error) {
-	// 获取一个令牌
-	token, err := auth.GiveAToken(config.RoleDriver, "2", "")
-	if err != nil {
-		print(err.Error())
-	}
-	// 验证令牌，并获得令牌所有者的信息
-	userID, role, err := auth.VerifyAToken(token)
-	if err != nil {
-		exception.PrintWarning(auth.VerifyAToken, err)
-	}
-
-	fmt.Printf("UserID is %s, role is %s\n", userID, role)
-}
-
 // RegisterAdmin 注册管理员服务
 func RegisterAdmin(mux *http.ServeMux) {
 	// 注册 HTTP API 路由
@@ -115,6 +99,13 @@ func RegisterAdmin(mux *http.ServeMux) {
 
 	// test_function
 	mux.HandleFunc("/test/divide", api.ReceiveDivisionRequest)
+
+	// ai
+	mux.HandleFunc("/admin/ai/command", api.ReceiveAIRequest)
+
+	// 外部暴露
+	mux.HandleFunc("/admin/complaint", api.GetComplaintCorrespondingToDriver)
+	api.ComplaintToDriver = make(map[string][]string)
 }
 
 func main() {
