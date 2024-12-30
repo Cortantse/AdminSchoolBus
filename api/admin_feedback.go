@@ -6,6 +6,7 @@ import (
 	"login/config"
 	"login/db"
 	"login/exception"
+	"login/utils"
 	"net/http"
 	"strings"
 )
@@ -22,6 +23,54 @@ type Feedback struct {
 	FeedbackContent string  `json:"feedback_content"` //
 	Rating          int     `json:"rating"`           //
 	Priority        bool    `json:"priority"`         //
+}
+
+// 对司机的投诉信息，是一个string(司机id) -》 []string的映射
+var ComplaintToDriver map[string][]string
+
+// GetComplaintCorrespondingToDriver 用来获取司机的投诉信息
+// 接收前端发送的driver_id
+// 返回一个response结构体
+func GetComplaintCorrespondingToDriver(w http.ResponseWriter, r *http.Request) {
+	// 需要司机端发送driver_id
+	var driverID string
+	err := json.NewDecoder(r.Body).Decode(&driverID)
+	if err != nil {
+		exception.PrintError(GetComplaintCorrespondingToDriver, err)
+		return
+	}
+
+	// 获取投诉信息
+	var complaintArray []string
+	complaintArray = ComplaintToDriver[driverID]
+
+	type Response struct {
+		ComplaintArray []string `json:"complaint_array"`
+		IsEmpty        bool     `json:"is_empty"`
+	}
+
+	var response Response
+	response.ComplaintArray = complaintArray
+	if len(complaintArray) == 0 {
+		response.IsEmpty = true
+	} else {
+		response.IsEmpty = false
+	}
+
+	// 返回
+	json.NewEncoder(w).Encode(response)
+
+}
+
+// 将给司机的投诉内容存在一个消息队列中
+func temporarySaveMessagesToDrivers(driverID string, complaintContent string) {
+	// 运行一个消息队列，实际是map
+
+	if ComplaintToDriver[driverID] == nil {
+		ComplaintToDriver[driverID] = []string{complaintContent}
+	} else {
+		ComplaintToDriver[driverID] = append(ComplaintToDriver[driverID], complaintContent)
+	}
 }
 
 // GetFeedBack 用来返回所有的反馈信息
@@ -134,8 +183,8 @@ func calPriority(feedbackPointer *Feedback) bool {
 type DealWithFeedbackRequest struct {
 	Type       string      `json:"type"`
 	FeedbackId interface{} `json:"feedback_id"`
-	Other      struct {
-	} `json:"other"`
+	Complaint  string      `json:"complaint"`
+	DriverID   string      `json:"driver_id"`
 }
 
 // DealWithFeedback 用来处理反馈信息
@@ -157,8 +206,39 @@ func DealWithFeedback(w http.ResponseWriter, r *http.Request) {
 			exception.PrintError(DealWithFeedback, err)
 			return
 		}
+		// 发放，获取studentID
+		sqlStatement = `SELECT feedback.student_number from feedback where feedback_id = ?`
+		result, err := db.ExecuteSQL(config.RolePassenger, sqlStatement, request.FeedbackId)
+		if err != nil {
+			exception.PrintError(DealWithFeedback, err)
+			return
+		}
+		rows := result.(*sql.Rows)
+		var studentNumber int
+		if rows.Next() {
+			err = rows.Scan(&studentNumber)
+			if err != nil {
+				exception.PrintError(DealWithFeedback, err)
+				return
+			}
+		}
+
+		// 根据天发放coupon
+		sqlStatement = db.ConstructInsertSQL("ride_coupon", []string{"student_number", "expiry_date", "use_status"})
+
+		// 计算天数
+		expirDate := utils.AddTime(0, 0, 0, config.AppConfig.Other.ExpirationRideCoupon)
+		// 只需要到天
+		expirDateStr := expirDate.Format("2006-01-02")
+
+		_, err = db.ExecuteSQL(config.RolePassenger, sqlStatement, studentNumber, expirDateStr, "0")
+		if err != nil {
+			exception.PrintError(DealWithFeedback, err)
+			return
+		}
 	} else if request.Type == "complaint" {
-		// TO DO 处理投诉
+		// 如果是投诉，则把投诉内容存在消息队列中
+		temporarySaveMessagesToDrivers(request.DriverID, request.Complaint)
 
 		// 处理完毕
 		sqlStatement := `UPDATE feedback SET feedback_content = CONCAT('<complaintHandled>', feedback_content) WHERE feedback_id = ?`

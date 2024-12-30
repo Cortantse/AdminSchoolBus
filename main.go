@@ -115,6 +115,10 @@ func RegisterAdmin(mux *http.ServeMux) {
 
 	// test_function
 	mux.HandleFunc("/test/divide", api.ReceiveDivisionRequest)
+
+	// 外部暴露
+	mux.HandleFunc("/admin/complaint", api.GetComplaintCorrespondingToDriver)
+	api.ComplaintToDriver = make(map[string][]string)
 }
 
 func main() {

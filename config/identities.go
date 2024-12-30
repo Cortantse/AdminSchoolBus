@@ -66,4 +66,9 @@ type Config struct {
 	Server   Server         `yaml:"server"`
 	DBNames  DatabaseNames  `yaml:"database_names"`
 	Jwt      Jwt            `yaml:"jwt"`
+	Other    Other          `yaml:"other"`
+}
+
+type Other struct {
+	ExpirationRideCoupon int `yaml:"expiration_ride_coupon"`
 }
