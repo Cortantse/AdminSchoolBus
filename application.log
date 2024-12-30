@@ -3255,3 +3255,107 @@ WEBSOCKET: 2024/12/30 17:05:13 main.go:156: WebSocket 服务已启动
 GPS: 2024/12/30 17:05:13 main.go:157: GPS 服务已启动
 GPS: 2024/12/30 17:05:13 gps.go:97: 开始广播驾驶员位置信息
 WEBSOCKET: 2024/12/30 17:05:13 websocket.go:152: WebSocket 服务器已启动
+WEBSOCKET: 2024/12/30 17:11:56 main.go:156: WebSocket 服务已启动
+GPS: 2024/12/30 17:11:56 main.go:157: GPS 服务已启动
+WEBSOCKET: 2024/12/30 17:11:56 websocket.go:152: WebSocket 服务器已启动
+GPS: 2024/12/30 17:11:56 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/30 17:30:08 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/30 17:30:08 main.go:141: GPS 服务已启动
+WEBSOCKET: 2024/12/30 17:30:08 websocket.go:152: WebSocket 服务器已启动
+GPS: 2024/12/30 17:30:08 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/30 18:33:19 main.go:141: WebSocket 服务已启动
+GPS: 2024/12/30 18:33:19 main.go:142: GPS 服务已启动
+GPS: 2024/12/30 18:33:19 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/30 18:33:19 websocket.go:152: WebSocket 服务器已启动
+WEBSOCKET: 2024/12/30 18:47:17 main.go:143: WebSocket 服务已启动
+GPS: 2024/12/30 18:47:17 main.go:144: GPS 服务已启动
+GPS: 2024/12/30 18:47:17 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/30 18:47:17 websocket.go:152: WebSocket 服务器已启动
+WEBSOCKET: 2024/12/30 18:49:59 main.go:143: WebSocket 服务已启动
+GPS: 2024/12/30 18:49:59 main.go:144: GPS 服务已启动
+WEBSOCKET: 2024/12/30 18:49:59 websocket.go:152: WebSocket 服务器已启动
+GPS: 2024/12/30 18:49:59 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/30 17:11:56 main.go:156: WebSocket 服务已启动
+GPS: 2024/12/30 17:11:56 main.go:157: GPS 服务已启动
+WEBSOCKET: 2024/12/30 17:11:56 websocket.go:152: WebSocket 服务器已启动
+GPS: 2024/12/30 17:11:56 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/30 17:30:08 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/30 17:30:08 main.go:141: GPS 服务已启动
+WEBSOCKET: 2024/12/30 17:30:08 websocket.go:152: WebSocket 服务器已启动
+GPS: 2024/12/30 17:30:08 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/30 18:33:19 main.go:141: WebSocket 服务已启动
+GPS: 2024/12/30 18:33:19 main.go:142: GPS 服务已启动
+GPS: 2024/12/30 18:33:19 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/30 18:33:19 websocket.go:152: WebSocket 服务器已启动
+WEBSOCKET: 2024/12/30 18:47:17 main.go:143: WebSocket 服务已启动
+GPS: 2024/12/30 18:47:17 main.go:144: GPS 服务已启动
+GPS: 2024/12/30 18:47:17 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/30 18:47:17 websocket.go:152: WebSocket 服务器已启动
+WEBSOCKET: 2024/12/30 18:49:59 main.go:143: WebSocket 服务已启动
+GPS: 2024/12/30 18:49:59 main.go:144: GPS 服务已启动
+WEBSOCKET: 2024/12/30 18:49:59 websocket.go:152: WebSocket 服务器已启动
+GPS: 2024/12/30 18:49:59 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/30 17:11:56 main.go:156: WebSocket 服务已启动
+GPS: 2024/12/30 17:11:56 main.go:157: GPS 服务已启动
+WEBSOCKET: 2024/12/30 17:11:56 websocket.go:152: WebSocket 服务器已启动
+GPS: 2024/12/30 17:11:56 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/30 17:30:08 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/30 17:30:08 main.go:141: GPS 服务已启动
+WEBSOCKET: 2024/12/30 17:30:08 websocket.go:152: WebSocket 服务器已启动
+GPS: 2024/12/30 17:30:08 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/30 18:33:19 main.go:141: WebSocket 服务已启动
+GPS: 2024/12/30 18:33:19 main.go:142: GPS 服务已启动
+GPS: 2024/12/30 18:33:19 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/30 18:33:19 websocket.go:152: WebSocket 服务器已启动
+WEBSOCKET: 2024/12/30 18:47:17 main.go:143: WebSocket 服务已启动
+GPS: 2024/12/30 18:47:17 main.go:144: GPS 服务已启动
+GPS: 2024/12/30 18:47:17 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/30 18:47:17 websocket.go:152: WebSocket 服务器已启动
+WEBSOCKET: 2024/12/30 18:49:59 main.go:143: WebSocket 服务已启动
+GPS: 2024/12/30 18:49:59 main.go:144: GPS 服务已启动
+WEBSOCKET: 2024/12/30 18:49:59 websocket.go:152: WebSocket 服务器已启动
+GPS: 2024/12/30 18:49:59 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/30 17:11:56 main.go:156: WebSocket 服务已启动
+GPS: 2024/12/30 17:11:56 main.go:157: GPS 服务已启动
+WEBSOCKET: 2024/12/30 17:11:56 websocket.go:152: WebSocket 服务器已启动
+GPS: 2024/12/30 17:11:56 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/30 17:30:08 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/30 17:30:08 main.go:141: GPS 服务已启动
+WEBSOCKET: 2024/12/30 17:30:08 websocket.go:152: WebSocket 服务器已启动
+GPS: 2024/12/30 17:30:08 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/30 18:33:19 main.go:141: WebSocket 服务已启动
+GPS: 2024/12/30 18:33:19 main.go:142: GPS 服务已启动
+GPS: 2024/12/30 18:33:19 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/30 18:33:19 websocket.go:152: WebSocket 服务器已启动
+WEBSOCKET: 2024/12/30 18:47:17 main.go:143: WebSocket 服务已启动
+GPS: 2024/12/30 18:47:17 main.go:144: GPS 服务已启动
+GPS: 2024/12/30 18:47:17 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/30 18:47:17 websocket.go:152: WebSocket 服务器已启动
+WEBSOCKET: 2024/12/30 18:49:59 main.go:143: WebSocket 服务已启动
+GPS: 2024/12/30 18:49:59 main.go:144: GPS 服务已启动
+WEBSOCKET: 2024/12/30 18:49:59 websocket.go:152: WebSocket 服务器已启动
+GPS: 2024/12/30 18:49:59 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/30 21:49:30 main.go:143: WebSocket 服务已启动
+GPS: 2024/12/30 21:49:30 main.go:144: GPS 服务已启动
+WEBSOCKET: 2024/12/30 21:49:30 websocket.go:152: WebSocket 服务器已启动
+GPS: 2024/12/30 21:49:30 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/30 21:52:03 main.go:143: WebSocket 服务已启动
+GPS: 2024/12/30 21:52:03 main.go:144: GPS 服务已启动
+WEBSOCKET: 2024/12/30 21:52:03 websocket.go:152: WebSocket 服务器已启动
+GPS: 2024/12/30 21:52:03 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/30 21:55:37 main.go:143: WebSocket 服务已启动
+GPS: 2024/12/30 21:55:37 main.go:144: GPS 服务已启动
+WEBSOCKET: 2024/12/30 21:55:37 websocket.go:152: WebSocket 服务器已启动
+GPS: 2024/12/30 21:55:37 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/30 21:56:33 main.go:143: WebSocket 服务已启动
+GPS: 2024/12/30 21:56:33 main.go:144: GPS 服务已启动
+WEBSOCKET: 2024/12/30 21:56:33 websocket.go:152: WebSocket 服务器已启动
+GPS: 2024/12/30 21:56:33 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/30 21:57:49 main.go:143: WebSocket 服务已启动
+GPS: 2024/12/30 21:57:49 main.go:144: GPS 服务已启动
+GPS: 2024/12/30 21:57:49 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/30 21:57:49 websocket.go:152: WebSocket 服务器已启动
+WEBSOCKET: 2024/12/30 21:58:46 main.go:143: WebSocket 服务已启动
+GPS: 2024/12/30 21:58:46 main.go:144: GPS 服务已启动
+WEBSOCKET: 2024/12/30 21:58:46 websocket.go:152: WebSocket 服务器已启动
+GPS: 2024/12/30 21:58:46 gps.go:97: 开始广播驾驶员位置信息
