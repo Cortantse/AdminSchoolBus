@@ -88,7 +88,7 @@ func (wm *WebSocketManager) HandleWebSocketConnection(conn *websocket.Conn, clie
 			// wm.car_conn[msg.CarID] = conn
 			wm.connections[msg.CarID] = conn
 		case "call_accept":
-			wm.SendMessageByID(msg.PassengerID, message)
+			wm.SendMessageToClients(message, "")
 		case "driver_gps":
 			// log_service.WebSocketLogger.Printf("收到驾驶员 GPS 信息：%v\n", msg)
 			if wm.Updater != nil {
