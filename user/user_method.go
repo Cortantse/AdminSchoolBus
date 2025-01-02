@@ -57,21 +57,21 @@ func setCORSHeaders(w http.ResponseWriter, methods string) {
 }
 
 func submitOrder(tempOrderInfo OrderInfo) error {
-	_, err := db.ExecuteSQL(config.RolePassenger, "INSERT into Order_Information(student_account,driver_id,car_id,pickup_station_id,dropoff_station_id,pickup_station_name,dropoff_station_name,pickup_time,status,payment_id) values (?,?,?,?,?,?,?,?,?,?)", tempOrderInfo.StudentAccount, tempOrderInfo.DriverID, tempOrderInfo.CarID, tempOrderInfo.PickupStationId, tempOrderInfo.DropoffStationId, tempOrderInfo.PickupStationName, tempOrderInfo.DropoffStationName, tempOrderInfo.PickupTime, tempOrderInfo.Status, tempOrderInfo.PaymentID)
+	_, err := db.ExecuteSQL(config.RolePassenger, "INSERT into order_information(student_account,driver_id,car_id,pickup_station_id,dropoff_station_id,pickup_station_name,dropoff_station_name,pickup_time,status,payment_id) values (?,?,?,?,?,?,?,?,?,?)", tempOrderInfo.StudentAccount, tempOrderInfo.DriverID, tempOrderInfo.CarID, tempOrderInfo.PickupStationId, tempOrderInfo.DropoffStationId, tempOrderInfo.PickupStationName, tempOrderInfo.DropoffStationName, tempOrderInfo.PickupTime, tempOrderInfo.Status, tempOrderInfo.PaymentID)
 	if err != nil {
 		return fmt.Errorf("添加订单信息失败: %w", err)
 	}
 	return nil
 }
 func submitPayment(tempPaymentInfo PaymentInfo) error {
-	_, err := db.ExecuteSQL(config.RolePassenger, "INSERT into Payment_Record(order_id,vehicle_id,payment_amount,payment_method,payment_time,payment_status) values (?,?,?,?,?,?)", tempPaymentInfo.OrderID, tempPaymentInfo.VehicleID, tempPaymentInfo.PaymentAmount, tempPaymentInfo.PaymentMethod, tempPaymentInfo.PaymentTime, tempPaymentInfo.PaymentStatus)
+	_, err := db.ExecuteSQL(config.RolePassenger, "INSERT into payment_record(order_id,vehicle_id,payment_amount,payment_method,payment_time,payment_status) values (?,?,?,?,?,?)", tempPaymentInfo.OrderID, tempPaymentInfo.VehicleID, tempPaymentInfo.PaymentAmount, tempPaymentInfo.PaymentMethod, tempPaymentInfo.PaymentTime, tempPaymentInfo.PaymentStatus)
 	if err != nil {
 		return fmt.Errorf("添加支付信息失败: %w", err)
 	}
 	return nil
 }
 func updateOrderStatus(order_id int, payment_id int, new_status string) error {
-	_, err := db.ExecuteSQL(config.RolePassenger, "UPDATE Order_Information SET status = ?,payment_id=? WHERE order_id = ?", new_status, payment_id, order_id)
+	_, err := db.ExecuteSQL(config.RolePassenger, "UPDATE order_information SET status = ?,payment_id=? WHERE order_id = ?", new_status, payment_id, order_id)
 	if err != nil {
 		return fmt.Errorf("更新订单信息失败: %w", err)
 	}
@@ -87,14 +87,14 @@ func submitComment(tempComentInfo Comment) error {
 }
 
 func updateLeaveTime(order_id int, leave_time string) error {
-	_, err := db.ExecuteSQL(config.RolePassenger, "UPDATE Order_Information SET dropoff_time = ? WHERE order_id = ?", leave_time, order_id)
+	_, err := db.ExecuteSQL(config.RolePassenger, "UPDATE order_information SET dropoff_time = ? WHERE order_id = ?", leave_time, order_id)
 	if err != nil {
 		return fmt.Errorf("更新订单信息失败: %w", err)
 	}
 	return nil
 }
 func updatePaymentStatus(payment_id int, new_status string) error {
-	_, err := db.ExecuteSQL(config.RolePassenger, "UPDATE Payment_Record SET payment_status = ? WHERE payment_id = ?", new_status, payment_id)
+	_, err := db.ExecuteSQL(config.RolePassenger, "UPDATE payment_record SET payment_status = ? WHERE payment_id = ?", new_status, payment_id)
 	if err != nil {
 		return fmt.Errorf("更新支付信息失败: %w", err)
 	}
@@ -379,7 +379,7 @@ func GetComment(w http.ResponseWriter, r *http.Request) {
 		Commenttime    string `json:"commenttime"`
 		Avatar         string `json:"avatar"`
 	}
-	rows, err := db.ExecuteSQL(config.RolePassenger, "SELECT * FROM Passenger_Comment WHERE comment_id > ?", 0)
+	rows, err := db.ExecuteSQL(config.RolePassenger, "SELECT * FROM passenger_comment WHERE comment_id > ?", 0)
 	if err != nil {
 		fmt.Print(err)
 	}
