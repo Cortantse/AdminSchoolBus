@@ -329,13 +329,14 @@ func GetjourneyRecord(w http.ResponseWriter, r *http.Request) {
 	//fmt.Print("getjourney被调用----------------------------")
 	// 从数据库中获取行程记录
 	type JourneyRecord struct {
+		StudentAccount  string `json:"studentaccount"`
 		Originsite      string `json:"originsite"`
 		Destinationsite string `json:"destinationsite"`
 		UpTime          string `json:"uptime"`
 		DownTime        string `json:"downtime"`
 		Status          string `json:"status"`
 	}
-	rows, err := db.ExecuteSQL(config.RolePassenger, "SELECT pickup_station_name,dropoff_station_name,pickup_time,dropoff_time,status FROM order_information WHERE order_id>? ", 0)
+	rows, err := db.ExecuteSQL(config.RolePassenger, "SELECT student_account,pickup_station_name,dropoff_station_name,pickup_time,dropoff_time,status FROM order_information WHERE order_id>? ", 0)
 	if err != nil {
 		fmt.Print(err)
 	}
@@ -344,7 +345,7 @@ func GetjourneyRecord(w http.ResponseWriter, r *http.Request) {
 	for res.Next() {
 		var journey JourneyRecord
 		var downTime sql.NullString // 使用 sql.NullString 处理可能为空的时间字段
-		err := res.Scan(&journey.Originsite, &journey.Destinationsite, &journey.UpTime, &downTime, &journey.Status)
+		err := res.Scan(&journey.StudentAccount, &journey.Originsite, &journey.Destinationsite, &journey.UpTime, &downTime, &journey.Status)
 		if err != nil {
 			http.Error(w, err.Error(), http.StatusInternalServerError)
 			return
