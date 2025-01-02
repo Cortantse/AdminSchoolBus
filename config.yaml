@@ -15,4 +15,4 @@ jwt:
     expiration_hours_driver: 128
 other:
     expiration_ride_coupon: 30
-    api_key: null
+    api_key: sk-4271dc972e1947d6817bc3e0279aa475
