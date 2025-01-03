@@ -64,8 +64,14 @@ func enableCORS(next http.Handler) http.Handler {
 func initServer(cors http.Handler) error {
 	port := config.AppConfig.Server.Port
 
+	// 提供证书和密钥路径
+	certPath := "./key/sysuschoolbus.top.pem"
+	keyPath := "./key/sysuschoolbus.top.key"
+
 	fmt.Println("Service is running on port", port)
-	err := http.ListenAndServe(port, cors)
+	// // 使用 HTTPS 启动服务器
+	err := http.ListenAndServeTLS(port, certPath, keyPath, cors)
+	// err := http.ListenAndServe(port, cors)
 	if err != nil {
 		fmt.Println("Service is not running properly, with error: ", err)
 		return fmt.Errorf("service is not running properly, with error: %v", err)
