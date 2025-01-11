@@ -1,0 +1,3073 @@
+WEBSOCKET: 2024/12/20 19:28:03 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/20 19:28:03 main.go:141: GPS 服务已启动
+WEBSOCKET: 2024/12/20 19:28:03 websocket.go:102: WebSocket 服务器已启动
+GPS: 2024/12/20 19:28:03 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/20 19:28:08 websocket.go:44: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/20 19:28:08 websocket.go:108: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/20 19:28:10 websocket.go:59: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2024/12/20 19:28:10 websocket.go:112: 客户端已注销
+WEBSOCKET: 2024/12/20 19:28:10 websocket.go:48: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/20 19:29:44 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/20 19:29:44 main.go:141: GPS 服务已启动
+WEBSOCKET: 2024/12/20 19:29:44 websocket.go:102: WebSocket 服务器已启动
+GPS: 2024/12/20 19:29:44 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/20 19:35:22 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/20 19:35:22 main.go:141: GPS 服务已启动
+WEBSOCKET: 2024/12/20 19:35:22 websocket.go:102: WebSocket 服务器已启动
+GPS: 2024/12/20 19:35:22 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/20 19:50:47 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/20 19:50:47 main.go:141: GPS 服务已启动
+WEBSOCKET: 2024/12/20 19:50:47 websocket.go:102: WebSocket 服务器已启动
+GPS: 2024/12/20 19:50:47 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/20 20:01:45 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/20 20:01:45 main.go:141: GPS 服务已启动
+WEBSOCKET: 2024/12/20 20:01:45 websocket.go:102: WebSocket 服务器已启动
+GPS: 2024/12/20 20:01:45 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/20 20:01:51 websocket.go:108: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/20 20:01:51 websocket.go:44: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/20 20:01:54 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:01:54 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:01:54 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:01:55 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:01:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:01:57 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:01:58 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:01:59 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:02:00 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:02:01 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:02:02 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:57 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:11:58 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/20 20:12:25 websocket.go:59: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2024/12/20 20:12:25 websocket.go:112: 客户端已注销
+WEBSOCKET: 2024/12/20 20:12:25 websocket.go:48: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/20 20:33:00 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/20 20:33:00 main.go:141: GPS 服务已启动
+WEBSOCKET: 2024/12/20 20:33:00 websocket.go:102: WebSocket 服务器已启动
+GPS: 2024/12/20 20:33:00 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/20 20:37:35 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/20 20:37:35 main.go:141: GPS 服务已启动
+WEBSOCKET: 2024/12/20 20:37:35 websocket.go:102: WebSocket 服务器已启动
+GPS: 2024/12/20 20:37:35 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/21 00:24:02 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/21 00:24:02 main.go:141: GPS 服务已启动
+WEBSOCKET: 2024/12/21 00:24:02 websocket.go:102: WebSocket 服务器已启动
+GPS: 2024/12/21 00:24:02 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/21 00:27:51 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/21 00:27:51 main.go:141: GPS 服务已启动
+WEBSOCKET: 2024/12/21 00:27:51 websocket.go:102: WebSocket 服务器已启动
+GPS: 2024/12/21 00:27:51 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/21 00:28:51 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/21 00:28:51 main.go:141: GPS 服务已启动
+WEBSOCKET: 2024/12/21 00:28:51 websocket.go:102: WebSocket 服务器已启动
+GPS: 2024/12/21 00:28:51 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/21 00:38:12 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/21 00:38:12 main.go:141: GPS 服务已启动
+GPS: 2024/12/21 00:38:12 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/21 00:38:12 websocket.go:102: WebSocket 服务器已启动
+WEBSOCKET: 2024/12/21 00:55:48 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/21 00:55:48 main.go:141: GPS 服务已启动
+WEBSOCKET: 2024/12/21 00:55:48 websocket.go:102: WebSocket 服务器已启动
+GPS: 2024/12/21 00:55:48 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/21 02:12:27 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/21 02:12:27 main.go:141: GPS 服务已启动
+WEBSOCKET: 2024/12/21 02:12:27 websocket.go:102: WebSocket 服务器已启动
+GPS: 2024/12/21 02:12:27 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/21 02:15:05 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/21 02:15:05 main.go:141: GPS 服务已启动
+WEBSOCKET: 2024/12/21 02:15:05 websocket.go:102: WebSocket 服务器已启动
+GPS: 2024/12/21 02:15:05 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/21 02:21:40 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/21 02:21:40 main.go:141: GPS 服务已启动
+WEBSOCKET: 2024/12/21 02:21:40 websocket.go:102: WebSocket 服务器已启动
+GPS: 2024/12/21 02:21:40 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/21 02:31:57 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/21 02:31:57 main.go:141: GPS 服务已启动
+WEBSOCKET: 2024/12/21 02:31:57 websocket.go:102: WebSocket 服务器已启动
+GPS: 2024/12/21 02:31:57 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/21 02:33:07 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/21 02:33:07 main.go:141: GPS 服务已启动
+WEBSOCKET: 2024/12/21 02:33:07 websocket.go:102: WebSocket 服务器已启动
+GPS: 2024/12/21 02:33:07 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/21 02:34:06 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/21 02:34:06 main.go:141: GPS 服务已启动
+WEBSOCKET: 2024/12/21 02:34:06 websocket.go:102: WebSocket 服务器已启动
+GPS: 2024/12/21 02:34:06 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/21 10:35:13 websocket.go:108: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/21 10:35:13 websocket.go:44: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/21 10:35:17 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:35:17 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:35:17 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:35:17 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:35:29 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:35:29 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:35:29 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:35:29 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:35:30 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:35:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:35:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:35:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:35:37 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:35:37 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:35:37 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:35:37 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:35:38 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:35:39 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:35:40 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:35:41 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:35:42 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:35:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:35:44 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:35:45 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:35:51 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:35:51 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:35:51 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:35:51 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:35:51 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:35:52 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:35:53 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:35:54 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:35:58 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:35:58 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:35:58 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:35:58 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:35:59 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:36:00 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:36:01 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:36:02 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:36:03 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:36:04 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:36:05 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:36:06 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:36:07 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:36:08 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:36:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:36:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:36:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:36:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:36:13 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:36:14 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:36:15 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:36:16 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:36:17 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:36:18 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:36:19 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:40:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:13 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:14 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:15 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:16 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:17 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:18 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:19 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:21 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:21 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:25 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:25 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:25 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:25 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:26 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:27 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:28 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:29 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:34 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:35 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:36 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:37 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:38 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:39 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:42:40 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:45:55 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:45:55 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:45:55 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:45:55 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:45:55 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:45:55 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:45:55 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:45:55 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:45:55 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:45:55 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:45:55 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:45:55 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:45:55 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:45:55 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:45:55 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:45:55 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:45:55 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:45:55 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:45:55 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:45:55 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:45:55 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:45:55 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:45:55 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:45:55 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:45:55 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:45:55 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:45:55 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:45:55 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:45:55 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:45:55 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:45:55 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:45:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:45:57 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:45:58 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:45:59 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:46:00 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:46:01 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:46:02 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:46:03 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/21 10:49:41 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/21 10:49:41 main.go:141: GPS 服务已启动
+WEBSOCKET: 2024/12/21 10:49:41 websocket.go:102: WebSocket 服务器已启动
+GPS: 2024/12/21 10:49:41 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/21 11:16:41 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/21 11:16:41 main.go:141: GPS 服务已启动
+WEBSOCKET: 2024/12/21 11:16:41 websocket.go:102: WebSocket 服务器已启动
+GPS: 2024/12/21 11:16:41 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/21 11:25:45 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/21 11:25:45 main.go:141: GPS 服务已启动
+WEBSOCKET: 2024/12/21 11:25:45 websocket.go:102: WebSocket 服务器已启动
+GPS: 2024/12/21 11:25:45 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/21 11:32:55 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/21 11:32:55 main.go:141: GPS 服务已启动
+WEBSOCKET: 2024/12/21 11:32:55 websocket.go:102: WebSocket 服务器已启动
+GPS: 2024/12/21 11:32:55 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/21 11:38:16 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/21 11:38:16 main.go:141: GPS 服务已启动
+WEBSOCKET: 2024/12/21 11:38:16 websocket.go:102: WebSocket 服务器已启动
+GPS: 2024/12/21 11:38:16 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/21 11:40:48 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/21 11:40:48 main.go:141: GPS 服务已启动
+WEBSOCKET: 2024/12/21 11:40:48 websocket.go:102: WebSocket 服务器已启动
+GPS: 2024/12/21 11:40:48 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/21 11:54:37 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/21 11:54:37 main.go:141: GPS 服务已启动
+WEBSOCKET: 2024/12/21 11:54:37 websocket.go:102: WebSocket 服务器已启动
+GPS: 2024/12/21 11:54:37 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/21 11:55:33 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/21 11:55:33 main.go:141: GPS 服务已启动
+WEBSOCKET: 2024/12/21 11:55:33 websocket.go:102: WebSocket 服务器已启动
+GPS: 2024/12/21 11:55:33 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/21 11:58:49 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/21 11:58:49 main.go:141: GPS 服务已启动
+GPS: 2024/12/21 11:58:49 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/21 11:58:49 websocket.go:102: WebSocket 服务器已启动
+WEBSOCKET: 2024/12/21 11:59:33 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/21 11:59:33 main.go:141: GPS 服务已启动
+WEBSOCKET: 2024/12/21 11:59:33 websocket.go:102: WebSocket 服务器已启动
+GPS: 2024/12/21 11:59:33 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/21 12:22:29 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/21 12:22:29 main.go:141: GPS 服务已启动
+WEBSOCKET: 2024/12/21 12:22:29 websocket.go:102: WebSocket 服务器已启动
+GPS: 2024/12/21 12:22:29 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/21 15:17:29 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/21 15:17:29 main.go:141: GPS 服务已启动
+WEBSOCKET: 2024/12/21 15:17:29 websocket.go:102: WebSocket 服务器已启动
+GPS: 2024/12/21 15:17:29 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/21 15:52:48 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/21 15:52:48 main.go:141: GPS 服务已启动
+WEBSOCKET: 2024/12/21 15:52:48 websocket.go:102: WebSocket 服务器已启动
+GPS: 2024/12/21 15:52:48 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/21 15:53:31 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/21 15:53:31 main.go:141: GPS 服务已启动
+WEBSOCKET: 2024/12/21 15:53:31 websocket.go:102: WebSocket 服务器已启动
+GPS: 2024/12/21 15:53:31 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/21 15:58:30 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/21 15:58:30 main.go:141: GPS 服务已启动
+WEBSOCKET: 2024/12/21 15:58:30 websocket.go:102: WebSocket 服务器已启动
+GPS: 2024/12/21 15:58:30 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/21 16:02:53 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/21 16:02:53 main.go:141: GPS 服务已启动
+WEBSOCKET: 2024/12/21 16:02:53 websocket.go:102: WebSocket 服务器已启动
+GPS: 2024/12/21 16:02:53 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/21 16:03:40 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/21 16:03:40 main.go:141: GPS 服务已启动
+WEBSOCKET: 2024/12/21 16:03:40 websocket.go:102: WebSocket 服务器已启动
+GPS: 2024/12/21 16:03:40 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/21 16:05:56 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/21 16:05:56 main.go:141: GPS 服务已启动
+WEBSOCKET: 2024/12/21 16:05:56 websocket.go:102: WebSocket 服务器已启动
+GPS: 2024/12/21 16:05:56 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/21 16:09:32 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/21 16:09:32 main.go:141: GPS 服务已启动
+WEBSOCKET: 2024/12/21 16:09:32 websocket.go:102: WebSocket 服务器已启动
+GPS: 2024/12/21 16:09:32 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/21 16:23:31 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/21 16:23:31 main.go:141: GPS 服务已启动
+WEBSOCKET: 2024/12/21 16:23:31 websocket.go:102: WebSocket 服务器已启动
+GPS: 2024/12/21 16:23:31 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/21 16:25:34 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/21 16:25:34 main.go:141: GPS 服务已启动
+WEBSOCKET: 2024/12/21 16:25:34 websocket.go:102: WebSocket 服务器已启动
+GPS: 2024/12/21 16:25:34 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/21 16:30:43 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/21 16:30:43 main.go:141: GPS 服务已启动
+WEBSOCKET: 2024/12/21 16:30:43 websocket.go:102: WebSocket 服务器已启动
+GPS: 2024/12/21 16:30:43 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/21 16:37:00 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/21 16:37:00 main.go:141: GPS 服务已启动
+GPS: 2024/12/21 16:37:00 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/21 16:37:00 websocket.go:102: WebSocket 服务器已启动
+WEBSOCKET: 2024/12/21 16:40:36 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/21 16:40:36 main.go:141: GPS 服务已启动
+WEBSOCKET: 2024/12/21 16:40:36 websocket.go:102: WebSocket 服务器已启动
+GPS: 2024/12/21 16:40:36 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/21 16:44:52 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/21 16:44:52 main.go:141: GPS 服务已启动
+WEBSOCKET: 2024/12/21 16:44:52 websocket.go:102: WebSocket 服务器已启动
+GPS: 2024/12/21 16:44:52 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/24 20:02:53 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/24 20:02:53 main.go:141: GPS 服务已启动
+WEBSOCKET: 2024/12/24 20:02:53 websocket.go:102: WebSocket 服务器已启动
+GPS: 2024/12/24 20:02:53 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/24 20:04:12 websocket.go:108: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/24 20:04:12 websocket.go:44: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/24 20:04:15 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:04:15 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:04:15 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:04:17 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:04:17 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:04:18 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:04:19 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:04:20 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:04:21 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:04:22 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:04:23 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:04:24 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:04:27 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:04:27 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:04:27 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:04:28 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:04:29 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:04:30 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:04:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:04:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:04:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:04:34 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:04:35 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:04:36 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:04:39 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:04:39 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:04:39 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:04:40 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:04:41 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:04:42 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:04:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:04:44 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:04:45 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:04:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:04:47 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:04:49 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:04:51 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:04:51 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:04:51 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:04:52 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:04:53 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:04:54 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:04:55 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:04:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:04:57 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:04:58 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:04:59 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:05:00 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:05:03 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:05:03 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:05:03 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:05:04 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:05:05 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:05:06 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:05:07 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:05:08 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:05:09 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:05:10 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:05:11 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:05:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:05:15 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:05:15 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:05:15 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:05:16 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:05:17 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:05:18 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:05:19 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:05:20 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:05:21 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:05:22 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:05:23 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:05:24 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:05:27 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:05:27 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:05:27 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:05:28 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:05:29 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:05:30 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:05:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:05:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:05:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:05:34 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:05:35 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:05:36 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:05:39 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:05:39 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:05:39 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:05:40 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:05:41 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:05:42 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:05:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:05:44 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:05:45 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:05:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:05:47 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:05:58 websocket.go:44: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/24 20:05:58 websocket.go:108: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/24 20:06:05 websocket.go:59: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2024/12/24 20:06:05 websocket.go:112: 客户端已注销
+WEBSOCKET: 2024/12/24 20:06:05 websocket.go:48: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/24 20:06:05 websocket.go:59: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2024/12/24 20:06:05 websocket.go:112: 客户端已注销
+WEBSOCKET: 2024/12/24 20:06:05 websocket.go:48: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/24 20:06:11 websocket.go:44: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/24 20:06:11 websocket.go:108: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/24 20:06:14 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:06:14 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:06:14 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:06:15 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:06:16 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:06:17 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:06:18 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:06:19 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:06:20 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:06:21 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:47 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:52 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:52 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:52 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:52 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:52 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:53 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:08:54 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:09:05 websocket.go:44: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/24 20:09:05 websocket.go:108: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/24 20:09:08 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:09:08 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:09:08 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:09:09 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:09:10 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:09:11 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:09:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:09:13 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:09:14 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:09:15 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:59: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:112: 客户端已注销
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:48: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:59: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:112: 客户端已注销
+WEBSOCKET: 2024/12/24 20:11:50 websocket.go:48: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/24 20:12:15 websocket.go:44: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/24 20:12:15 websocket.go:108: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/24 20:12:18 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:12:18 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:12:18 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:12:19 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:12:20 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:12:21 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:12:22 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:12:23 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:12:24 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:12:25 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:12:26 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:12:27 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:12:30 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:12:30 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:12:30 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:12:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:12:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:12:34 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:12:34 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:12:35 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:12:37 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:12:37 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:16:24 websocket.go:59: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2024/12/24 20:16:24 websocket.go:112: 客户端已注销
+WEBSOCKET: 2024/12/24 20:16:24 websocket.go:48: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/24 20:16:25 websocket.go:44: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/24 20:16:25 websocket.go:108: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/24 20:16:26 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:16:27 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:16:28 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:16:29 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:16:30 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:16:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:16:38 websocket.go:108: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/24 20:16:38 websocket.go:44: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/24 20:16:41 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:16:41 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:16:41 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:16:42 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:16:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:16:44 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:16:45 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:16:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:16:47 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:16:48 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:16:49 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:17:03 websocket.go:44: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/24 20:17:03 websocket.go:108: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/24 20:17:06 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:17:06 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:17:06 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:17:07 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:17:08 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:17:09 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:17:10 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:17:11 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:17:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:17:13 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:17:14 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:17:15 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:17:36 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:17:36 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:17:36 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:17:36 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:17:36 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:17:36 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:17:36 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:17:36 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:17:36 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:17:36 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:17:36 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:17:36 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:17:36 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:17:36 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:17:36 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:17:36 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:17:36 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:17:36 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:17:36 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:17:36 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:17:36 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:44 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:45 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:47 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:48 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:49 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:51 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:52 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:53 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:57 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:58 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:19:59 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:00 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:01 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:02 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:03 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:04 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:05 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:08 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:08 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:08 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:09 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:10 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:11 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:13 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:14 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:15 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:16 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:17 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:20 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:20 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:20 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:21 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:22 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:23 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:24 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:25 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:26 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:27 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:28 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:29 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:34 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:35 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:36 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:37 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:38 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:39 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:40 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:41 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:44 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:44 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:44 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:45 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:47 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:48 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:49 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:51 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:52 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:53 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:57 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:58 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:20:59 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:00 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:01 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:02 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:03 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:04 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:05 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:08 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:08 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:08 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:09 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:10 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:11 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:13 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:14 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:15 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:16 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:17 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:20 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:20 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:20 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:21 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:22 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:23 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:24 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:25 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:26 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:27 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:28 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:29 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:34 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:35 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:36 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:37 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:38 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:39 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:40 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:41 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:44 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:44 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:44 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:45 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:47 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:48 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:49 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:51 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:52 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:53 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:57 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:58 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:21:59 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:00 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:01 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:02 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:03 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:04 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:05 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:08 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:08 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:08 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:09 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:10 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:11 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:13 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:14 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:15 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:16 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:17 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:20 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:20 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:20 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:21 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:22 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:23 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:24 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:25 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:26 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:27 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:28 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:29 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:34 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:35 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:36 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:37 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:38 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:39 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:40 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:41 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:44 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:44 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:44 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:45 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:47 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:48 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:49 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:51 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:52 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:53 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:57 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:58 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:22:59 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:00 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:01 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:02 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:03 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:04 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:05 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:08 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:08 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:08 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:09 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:10 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:11 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:13 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:14 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:15 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:16 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:17 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:20 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:20 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:20 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:21 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:22 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:23 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:24 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:25 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:26 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:27 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:28 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:29 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:34 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:35 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:36 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:37 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:38 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:39 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:40 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:41 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:44 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:44 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:44 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:45 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:47 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:48 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:49 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:51 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:52 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:53 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:57 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:58 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:23:59 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:00 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:01 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:02 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:03 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:04 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:05 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:08 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:08 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:08 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:09 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:10 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:11 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:13 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:14 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:15 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:16 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:17 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:20 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:20 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:20 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:21 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:22 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:23 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:24 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:25 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:26 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:27 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:28 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:29 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:34 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:35 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:36 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:37 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:38 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:39 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:40 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:41 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:44 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:44 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:44 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:45 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:47 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:48 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:49 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:51 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:52 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:53 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:57 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:58 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:24:59 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:00 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:01 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:02 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:03 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:04 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:05 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:08 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:08 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:08 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:09 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:10 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:11 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:13 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:14 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:15 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:16 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:17 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:20 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:20 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:20 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:21 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:22 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:23 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:24 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:25 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:26 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:27 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:28 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:29 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:34 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:35 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:36 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:37 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:38 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:39 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:40 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:41 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:44 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:44 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:44 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:45 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:47 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:48 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:49 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:51 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:52 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:53 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:57 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:58 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:25:59 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:00 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:01 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:02 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:03 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:04 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:05 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:08 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:08 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:08 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:09 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:10 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:11 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:13 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:14 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:15 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:16 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:17 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:20 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:20 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:20 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:21 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:22 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:23 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:24 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:25 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:26 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:27 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:28 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:29 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:34 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:35 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:36 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:37 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:38 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:39 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:40 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:41 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:44 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:44 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:44 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:45 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:47 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:48 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:49 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:51 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:52 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:53 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:57 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:58 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:26:59 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:00 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:01 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:02 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:03 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:04 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:05 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:08 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:08 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:08 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:09 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:10 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:11 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:13 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:14 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:15 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:16 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:17 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:20 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:20 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:20 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:21 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:22 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:23 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:24 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:25 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:26 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:27 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:28 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:29 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:34 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:35 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:36 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:37 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:38 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:39 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:40 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:41 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:44 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:44 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:44 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:45 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:47 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:48 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:49 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:51 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:52 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:53 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:57 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:58 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:27:59 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:00 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:01 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:02 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:03 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:04 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:05 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:08 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:08 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:08 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:09 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:10 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:11 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:13 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:14 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:15 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:16 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:17 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:20 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:20 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:20 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:21 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:22 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:23 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:24 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:25 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:26 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:27 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:28 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:29 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:34 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:35 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:36 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:37 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:38 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:39 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:40 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:41 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:44 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:44 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:44 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:45 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:47 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:48 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:49 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:51 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:52 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:53 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:57 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:58 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:28:59 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:29:00 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:29:01 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:29:02 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:29:03 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:29:08 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:29:08 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:29:08 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:29:08 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:29:08 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:29:09 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:29:10 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:29:11 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:29:12 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:29:13 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:29:14 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:29:15 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:29:16 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:29:17 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:29:18 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:29:26 websocket.go:44: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/24 20:29:26 websocket.go:108: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/24 20:29:29 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:29:29 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:29:29 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:29:30 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:29:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:29:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:29:34 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:29:35 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:29:36 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:29:37 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:29:38 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:29:41 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:29:41 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:29:41 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:29:42 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:29:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:29:44 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:29:45 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:29:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:29:47 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:29:48 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:29:49 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:29:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:29:53 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:29:53 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:29:53 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:29:54 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:29:55 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:29:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:29:57 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:29:58 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:29:59 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:30:00 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:30:01 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:30:02 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:30:05 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:30:05 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:30:05 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:30:06 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:30:07 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:30:08 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:30:09 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:30:10 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 20:30:11 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/24 22:55:23 websocket.go:59: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2024/12/24 22:55:23 websocket.go:59: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2024/12/24 22:55:23 websocket.go:48: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/24 22:55:23 websocket.go:112: 客户端已注销
+WEBSOCKET: 2024/12/24 22:55:23 websocket.go:112: 客户端已注销
+WEBSOCKET: 2024/12/24 22:55:23 websocket.go:48: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/24 22:55:23 websocket.go:59: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2024/12/24 22:55:23 websocket.go:112: 客户端已注销
+WEBSOCKET: 2024/12/24 22:55:23 websocket.go:48: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/24 22:55:23 websocket.go:59: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2024/12/24 22:55:23 websocket.go:112: 客户端已注销
+WEBSOCKET: 2024/12/24 22:55:23 websocket.go:48: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/25 20:35:00 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/25 20:35:00 main.go:141: GPS 服务已启动
+WEBSOCKET: 2024/12/25 20:35:00 websocket.go:102: WebSocket 服务器已启动
+GPS: 2024/12/25 20:35:00 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/25 20:58:57 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/25 20:58:57 main.go:141: GPS 服务已启动
+WEBSOCKET: 2024/12/25 20:58:57 websocket.go:102: WebSocket 服务器已启动
+GPS: 2024/12/25 20:58:57 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/25 21:18:10 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/25 21:18:10 main.go:141: GPS 服务已启动
+WEBSOCKET: 2024/12/25 21:18:10 websocket.go:102: WebSocket 服务器已启动
+GPS: 2024/12/25 21:18:10 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/25 21:18:35 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/25 21:18:35 main.go:141: GPS 服务已启动
+WEBSOCKET: 2024/12/25 21:18:35 websocket.go:102: WebSocket 服务器已启动
+GPS: 2024/12/25 21:18:35 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/25 21:32:54 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/25 21:32:54 main.go:141: GPS 服务已启动
+WEBSOCKET: 2024/12/25 21:32:54 websocket.go:102: WebSocket 服务器已启动
+GPS: 2024/12/25 21:32:54 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/25 21:33:38 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/25 21:33:38 main.go:141: GPS 服务已启动
+WEBSOCKET: 2024/12/25 21:33:38 websocket.go:102: WebSocket 服务器已启动
+GPS: 2024/12/25 21:33:38 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/25 21:52:24 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/25 21:52:24 main.go:141: GPS 服务已启动
+WEBSOCKET: 2024/12/25 21:52:24 websocket.go:102: WebSocket 服务器已启动
+GPS: 2024/12/25 21:52:24 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/25 22:01:38 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/25 22:01:38 main.go:141: GPS 服务已启动
+WEBSOCKET: 2024/12/25 22:01:38 websocket.go:102: WebSocket 服务器已启动
+GPS: 2024/12/25 22:01:38 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/25 22:10:59 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/25 22:10:59 main.go:141: GPS 服务已启动
+WEBSOCKET: 2024/12/25 22:10:59 websocket.go:102: WebSocket 服务器已启动
+GPS: 2024/12/25 22:10:59 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/25 22:13:55 main.go:140: WebSocket 服务已启动
+GPS: 2024/12/25 22:13:55 main.go:141: GPS 服务已启动
+WEBSOCKET: 2024/12/25 22:13:55 websocket.go:102: WebSocket 服务器已启动
+GPS: 2024/12/25 22:13:55 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/25 22:20:22 websocket.go:44: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/25 22:20:22 websocket.go:108: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/25 22:20:25 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:20:25 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:20:25 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:20:26 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:20:27 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:20:28 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:20:29 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:20:30 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:20:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:20:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:20:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:20:34 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:20:37 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:20:37 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:20:37 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:20:38 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:20:39 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:20:40 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:20:41 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:20:42 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:20:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:20:44 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:20:45 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:20:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:20:49 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:20:49 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:20:49 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:20:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:20:53 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:20:53 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:20:53 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:20:54 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:20:55 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:20:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:20:57 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:20:58 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:01 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:01 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:01 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:02 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:03 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:04 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:05 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:06 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:07 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:08 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:09 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:10 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:13 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:13 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:13 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:14 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:15 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:16 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:17 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:18 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:19 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:20 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:21 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:22 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:25 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:25 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:25 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:26 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:27 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:28 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:29 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:30 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:34 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:37 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:37 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:37 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:38 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:39 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:41 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:41 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:42 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:44 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:45 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:49 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:49 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:49 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:51 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:52 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:53 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:54 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:55 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:57 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:21:58 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:01 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:01 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:01 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:02 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:03 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:04 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:05 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:06 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:07 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:08 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:09 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:10 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:13 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:13 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:13 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:14 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:15 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:16 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:17 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:18 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:19 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:20 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:21 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:22 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:25 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:25 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:25 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:26 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:27 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:28 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:29 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:30 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:34 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:37 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:37 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:37 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:38 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:39 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:40 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:41 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:42 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:44 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:45 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:49 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:49 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:49 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:51 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:52 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:53 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:54 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:55 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:57 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:22:58 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:01 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:01 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:01 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:02 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:03 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:04 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:05 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:06 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:07 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:08 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:09 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:10 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:13 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:13 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:13 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:14 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:15 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:16 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:17 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:18 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:19 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:20 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:21 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:22 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:25 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:25 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:25 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:26 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:27 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:28 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:29 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:30 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:34 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:37 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:37 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:37 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:38 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:39 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:40 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:41 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:42 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:44 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:45 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:49 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:49 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:49 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:51 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:52 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:53 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:54 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:55 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:57 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:23:58 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:01 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:01 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:01 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:02 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:03 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:04 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:05 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:06 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:07 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:08 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:09 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:10 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:13 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:13 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:13 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:14 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:15 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:16 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:17 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:18 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:19 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:20 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:21 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:22 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:25 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:25 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:25 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:26 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:27 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:28 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:29 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:30 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:34 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:37 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:37 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:37 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:38 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:39 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:40 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:41 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:42 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:44 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:45 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:47 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:51 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:52 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:53 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:54 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:55 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:57 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:58 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:24:59 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:02 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:02 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:02 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:03 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:04 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:05 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:06 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:07 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:08 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:09 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:10 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:11 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:14 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:14 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:14 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:15 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:16 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:17 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:18 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:19 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:20 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:21 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:22 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:23 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:26 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:26 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:26 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:27 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:28 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:29 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:30 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:34 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:35 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:38 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:38 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:38 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:39 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:40 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:41 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:42 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:44 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:45 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:47 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:51 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:52 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:53 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:54 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:55 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:56 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:57 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:58 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:25:59 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:26:02 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:26:02 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:26:02 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:26:03 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:26:04 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:26:05 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:26:06 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:26:07 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:26:08 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:26:09 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:26:10 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:26:11 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:26:14 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:26:14 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:26:14 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:26:15 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:26:16 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:26:17 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:26:18 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:26:19 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:26:20 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:26:21 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:26:22 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:26:23 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:26:26 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:26:26 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:26:26 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:26:27 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:26:28 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:26:29 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:26:30 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:26:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:26:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:26:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:26:34 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:26:35 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:26:38 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:26:38 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:26:38 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:26:39 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:26:40 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:26:41 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:26:42 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:26:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:33 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:34 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:35 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:36 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:37 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:38 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:39 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:40 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:41 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:42 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:45 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:45 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:45 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:46 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:47 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:48 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:49 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:50 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:51 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:52 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:53 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:54 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:57 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:57 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:27:57 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:31 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:32 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:35 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:35 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:35 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:36 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:37 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:38 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:39 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:40 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:43 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:44 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:29:45 websocket.go:80: 未知消息类型：
+WEBSOCKET: 2024/12/25 22:55:13 websocket.go:59: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2024/12/25 22:55:13 websocket.go:112: 客户端已注销
+WEBSOCKET: 2024/12/25 22:55:13 websocket.go:48: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/27 15:24:53 main.go:152: WebSocket 服务已启动
+GPS: 2024/12/27 15:24:53 main.go:153: GPS 服务已启动
+WEBSOCKET: 2024/12/27 15:24:53 websocket.go:152: WebSocket 服务器已启动
+GPS: 2024/12/27 15:24:53 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/27 15:33:16 main.go:152: WebSocket 服务已启动
+GPS: 2024/12/27 15:33:16 main.go:153: GPS 服务已启动
+WEBSOCKET: 2024/12/27 15:33:16 websocket.go:152: WebSocket 服务器已启动
+GPS: 2024/12/27 15:33:16 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/27 15:45:20 main.go:152: WebSocket 服务已启动
+GPS: 2024/12/27 15:45:20 main.go:153: GPS 服务已启动
+WEBSOCKET: 2024/12/27 15:45:20 websocket.go:152: WebSocket 服务器已启动
+GPS: 2024/12/27 15:45:20 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/27 15:46:42 websocket.go:158: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/27 15:46:42 websocket.go:55: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/27 15:46:45 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/27 15:46:45 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/27 15:46:45 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/27 15:46:46 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/27 15:46:47 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/27 15:46:48 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/27 15:46:49 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/27 16:44:53 websocket.go:70: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2024/12/27 16:44:53 websocket.go:163: 客户端已注销
+WEBSOCKET: 2024/12/27 16:44:53 websocket.go:59: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/27 16:47:33 websocket.go:158: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/27 16:47:33 websocket.go:55: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/27 16:50:23 websocket.go:70: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2024/12/27 16:50:23 websocket.go:163: 客户端已注销
+WEBSOCKET: 2024/12/27 16:50:23 websocket.go:59: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/28 13:06:44 main.go:152: WebSocket 服务已启动
+GPS: 2024/12/28 13:06:44 main.go:153: GPS 服务已启动
+WEBSOCKET: 2024/12/28 13:06:44 websocket.go:152: WebSocket 服务器已启动
+GPS: 2024/12/28 13:06:44 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/28 13:10:58 main.go:152: WebSocket 服务已启动
+GPS: 2024/12/28 13:10:58 main.go:153: GPS 服务已启动
+WEBSOCKET: 2024/12/28 13:10:58 websocket.go:152: WebSocket 服务器已启动
+GPS: 2024/12/28 13:10:58 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/28 13:41:18 websocket.go:158: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/28 13:41:18 websocket.go:55: 新连接建立，客户端类型：passenger
+GPS: 2024/12/28 13:41:26 gps.go:127: 更新驾驶员位置失败：ID 1 不存在
+WEBSOCKET: 2024/12/28 13:41:26 websocket.go:94: 更新驾驶员位置失败：driver not found
+GPS: 2024/12/28 13:41:26 gps.go:127: 更新驾驶员位置失败：ID 1 不存在
+WEBSOCKET: 2024/12/28 13:41:26 websocket.go:94: 更新驾驶员位置失败：driver not found
+GPS: 2024/12/28 13:41:29 gps.go:127: 更新驾驶员位置失败：ID 1 不存在
+WEBSOCKET: 2024/12/28 13:41:29 websocket.go:94: 更新驾驶员位置失败：driver not found
+GPS: 2024/12/28 13:41:32 gps.go:127: 更新驾驶员位置失败：ID 1 不存在
+WEBSOCKET: 2024/12/28 13:41:32 websocket.go:94: 更新驾驶员位置失败：driver not found
+GPS: 2024/12/28 13:41:35 gps.go:127: 更新驾驶员位置失败：ID 1 不存在
+WEBSOCKET: 2024/12/28 13:41:35 websocket.go:94: 更新驾驶员位置失败：driver not found
+GPS: 2024/12/28 13:41:41 gps.go:127: 更新驾驶员位置失败：ID 1 不存在
+WEBSOCKET: 2024/12/28 13:41:41 websocket.go:94: 更新驾驶员位置失败：driver not found
+GPS: 2024/12/28 13:41:41 gps.go:127: 更新驾驶员位置失败：ID 1 不存在
+WEBSOCKET: 2024/12/28 13:41:41 websocket.go:94: 更新驾驶员位置失败：driver not found
+GPS: 2024/12/28 13:41:44 gps.go:127: 更新驾驶员位置失败：ID 1 不存在
+WEBSOCKET: 2024/12/28 13:41:44 websocket.go:94: 更新驾驶员位置失败：driver not found
+GPS: 2024/12/28 13:41:47 gps.go:127: 更新驾驶员位置失败：ID 1 不存在
+WEBSOCKET: 2024/12/28 13:41:47 websocket.go:94: 更新驾驶员位置失败：driver not found
+GPS: 2024/12/28 13:41:50 gps.go:127: 更新驾驶员位置失败：ID 1 不存在
+WEBSOCKET: 2024/12/28 13:41:50 websocket.go:94: 更新驾驶员位置失败：driver not found
+GPS: 2024/12/28 13:41:56 gps.go:127: 更新驾驶员位置失败：ID 1 不存在
+WEBSOCKET: 2024/12/28 13:41:56 websocket.go:94: 更新驾驶员位置失败：driver not found
+GPS: 2024/12/28 13:41:56 gps.go:127: 更新驾驶员位置失败：ID 1 不存在
+WEBSOCKET: 2024/12/28 13:41:56 websocket.go:94: 更新驾驶员位置失败：driver not found
+GPS: 2024/12/28 13:41:59 gps.go:127: 更新驾驶员位置失败：ID 1 不存在
+WEBSOCKET: 2024/12/28 13:41:59 websocket.go:94: 更新驾驶员位置失败：driver not found
+GPS: 2024/12/28 13:42:04 gps.go:127: 更新驾驶员位置失败：ID 1 不存在
+WEBSOCKET: 2024/12/28 13:42:04 websocket.go:94: 更新驾驶员位置失败：driver not found
+GPS: 2024/12/28 13:42:05 gps.go:127: 更新驾驶员位置失败：ID 1 不存在
+WEBSOCKET: 2024/12/28 13:42:05 websocket.go:94: 更新驾驶员位置失败：driver not found
+GPS: 2024/12/28 13:42:08 gps.go:127: 更新驾驶员位置失败：ID 1 不存在
+WEBSOCKET: 2024/12/28 13:42:08 websocket.go:94: 更新驾驶员位置失败：driver not found
+WEBSOCKET: 2024/12/28 13:42:09 websocket.go:70: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2024/12/28 13:42:09 websocket.go:163: 客户端已注销
+WEBSOCKET: 2024/12/28 13:42:09 websocket.go:59: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/28 13:46:14 websocket.go:158: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/28 13:46:14 websocket.go:55: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/28 13:46:22 websocket.go:70: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2024/12/28 13:46:22 websocket.go:163: 客户端已注销
+WEBSOCKET: 2024/12/28 13:46:22 websocket.go:59: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/28 14:00:24 websocket.go:158: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/28 14:00:24 websocket.go:55: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/28 14:00:28 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 14:00:28 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 14:00:28 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 14:00:28 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 14:00:29 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 14:00:30 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 14:00:31 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 14:00:32 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 14:11:52 websocket.go:70: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2024/12/28 14:11:52 websocket.go:163: 客户端已注销
+WEBSOCKET: 2024/12/28 14:11:52 websocket.go:59: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/28 15:02:14 main.go:152: WebSocket 服务已启动
+GPS: 2024/12/28 15:02:14 main.go:153: GPS 服务已启动
+WEBSOCKET: 2024/12/28 15:02:14 websocket.go:152: WebSocket 服务器已启动
+GPS: 2024/12/28 15:02:14 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/28 15:08:11 main.go:152: WebSocket 服务已启动
+GPS: 2024/12/28 15:08:11 main.go:153: GPS 服务已启动
+WEBSOCKET: 2024/12/28 15:08:11 websocket.go:152: WebSocket 服务器已启动
+GPS: 2024/12/28 15:08:11 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/28 15:17:39 main.go:152: WebSocket 服务已启动
+GPS: 2024/12/28 15:17:39 main.go:153: GPS 服务已启动
+WEBSOCKET: 2024/12/28 15:17:39 websocket.go:152: WebSocket 服务器已启动
+GPS: 2024/12/28 15:17:39 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/28 15:52:14 websocket.go:158: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/28 15:52:14 websocket.go:55: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/28 15:52:18 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:52:18 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:52:18 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:52:18 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:52:19 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:52:20 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:52:21 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:52:22 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:52:23 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:52:24 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:52:25 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:52:26 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:52:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:52:28 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:52:32 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:52:32 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:52:32 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:52:32 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:52:33 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:52:34 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:52:35 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:52:36 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:52:37 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:52:38 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:52:39 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:52:40 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:52:41 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:52:42 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:52:46 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:52:46 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:52:46 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:52:46 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:52:47 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:52:48 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:52:49 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:52:50 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:52:51 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:52:52 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:52:53 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:52:54 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:52:55 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:52:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:05 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:05 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:05 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:05 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:06 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:07 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:08 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:09 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:13 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:13 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:13 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:13 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:14 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:15 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:17 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:18 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:19 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:20 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:21 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:22 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:23 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:28 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:29 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:30 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:31 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:32 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:33 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:34 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:35 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:36 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:37 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:41 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:41 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:41 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:41 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:42 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:43 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:44 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:45 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:46 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:47 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:48 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:49 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:50 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:51 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:55 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:55 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:55 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:55 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:57 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:58 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:53:59 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:54:00 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:54:01 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:28 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:31 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:31 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:56:31 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:15 websocket.go:55: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/28 15:58:15 websocket.go:158: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/28 15:58:20 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:20 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:20 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:20 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:20 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:21 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:22 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:23 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:24 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:25 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:26 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:28 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:58:29 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:59:17 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:59:17 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:59:17 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:59:17 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:59:17 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:59:17 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:59:17 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:59:17 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:59:17 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:59:17 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:59:17 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:59:17 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:59:17 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:59:17 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:59:17 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:59:17 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:59:17 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:59:17 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:59:17 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:59:17 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:59:17 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:59:17 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:59:17 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:59:17 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:59:17 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:59:17 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:59:17 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:59:17 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:59:17 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:59:17 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:59:17 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:59:17 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:59:17 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:59:17 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:59:17 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:59:17 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:59:17 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:59:17 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:59:17 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:59:17 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:59:17 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:59:17 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:59:17 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:59:17 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:59:17 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:59:17 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:59:17 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 15:59:18 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:56 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:57 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:02:58 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:03:03 websocket.go:55: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/28 16:03:03 websocket.go:158: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/28 16:03:04 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 16:05:14 websocket.go:70: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2024/12/28 16:05:14 websocket.go:163: 客户端已注销
+WEBSOCKET: 2024/12/28 16:05:14 websocket.go:59: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/28 16:05:14 websocket.go:70: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2024/12/28 16:05:14 websocket.go:163: 客户端已注销
+WEBSOCKET: 2024/12/28 16:05:14 websocket.go:59: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/28 16:05:14 websocket.go:70: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2024/12/28 16:05:14 websocket.go:163: 客户端已注销
+WEBSOCKET: 2024/12/28 16:05:14 websocket.go:59: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/28 16:18:16 websocket.go:55: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/28 16:18:16 websocket.go:158: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/28 16:18:30 websocket.go:68: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2024/12/28 16:18:30 websocket.go:163: 客户端已注销
+WEBSOCKET: 2024/12/28 16:18:30 websocket.go:59: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/28 16:18:33 websocket.go:55: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/28 16:18:33 websocket.go:158: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/28 16:21:16 websocket.go:55: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/28 16:21:16 websocket.go:158: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/28 16:21:58 websocket.go:70: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2024/12/28 16:21:58 websocket.go:163: 客户端已注销
+WEBSOCKET: 2024/12/28 16:21:58 websocket.go:59: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/28 16:22:47 websocket.go:70: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2024/12/28 16:22:47 websocket.go:163: 客户端已注销
+WEBSOCKET: 2024/12/28 16:22:47 websocket.go:59: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/28 16:27:22 websocket.go:55: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/28 16:27:22 websocket.go:158: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/28 16:27:24 websocket.go:68: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2024/12/28 16:27:24 websocket.go:163: 客户端已注销
+WEBSOCKET: 2024/12/28 16:27:24 websocket.go:59: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/28 16:27:27 websocket.go:55: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/28 16:27:27 websocket.go:158: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/28 16:52:15 websocket.go:70: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2024/12/28 16:52:15 websocket.go:163: 客户端已注销
+WEBSOCKET: 2024/12/28 16:52:15 websocket.go:59: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/28 17:10:53 websocket.go:55: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/28 17:10:53 websocket.go:158: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/28 17:10:57 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:10:57 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:10:57 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:10:57 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:10:58 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:10:59 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:11:00 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:11:01 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:11:02 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:11:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:11:04 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:11:05 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:11:06 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:11:07 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:11:11 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:11:11 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:11:11 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:11:11 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:11:12 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:11:13 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:11:14 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:11:15 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:11:16 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:11:17 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:11:18 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:11:19 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:11:20 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:11:21 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:11:25 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:11:25 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:11:25 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:11:25 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:11:30 websocket.go:70: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2024/12/28 17:11:30 websocket.go:163: 客户端已注销
+WEBSOCKET: 2024/12/28 17:11:30 websocket.go:59: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/28 17:11:40 websocket.go:55: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/28 17:11:40 websocket.go:158: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/28 17:11:43 websocket.go:70: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2024/12/28 17:11:43 websocket.go:59: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/28 17:11:43 websocket.go:163: 客户端已注销
+WEBSOCKET: 2024/12/28 17:11:46 websocket.go:158: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/28 17:11:46 websocket.go:55: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/28 17:11:47 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:11:48 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:11:49 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:11:50 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:11:51 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:11:56 websocket.go:55: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/28 17:11:56 websocket.go:158: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/28 17:11:57 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:12:00 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:12:00 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:12:00 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:12:01 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:12:02 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:12:03 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:12:04 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:12:05 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:12:06 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:12:07 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:12:08 websocket.go:70: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2024/12/28 17:12:08 websocket.go:163: 客户端已注销
+WEBSOCKET: 2024/12/28 17:12:08 websocket.go:59: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/28 17:12:08 websocket.go:70: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2024/12/28 17:12:08 websocket.go:59: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/28 17:12:08 websocket.go:163: 客户端已注销
+WEBSOCKET: 2024/12/28 17:12:10 websocket.go:55: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/28 17:12:10 websocket.go:158: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/28 17:12:14 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:12:14 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:12:14 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:12:14 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:12:15 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:12:16 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:12:17 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:12:18 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:12:19 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:12:20 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:12:21 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:12:22 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:12:23 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:12:24 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:12:28 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:12:28 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:12:28 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:12:45 websocket.go:70: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2024/12/28 17:12:45 websocket.go:163: 客户端已注销
+WEBSOCKET: 2024/12/28 17:12:45 websocket.go:59: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/28 17:13:18 websocket.go:55: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/28 17:13:18 websocket.go:158: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/28 17:13:31 websocket.go:70: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2024/12/28 17:13:31 websocket.go:163: 客户端已注销
+WEBSOCKET: 2024/12/28 17:13:31 websocket.go:59: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/28 17:16:15 websocket.go:55: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/28 17:16:15 websocket.go:158: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/28 17:16:19 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:16:19 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:16:19 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:16:19 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:16:20 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:16:21 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:16:22 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:16:23 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:16:23 websocket.go:70: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2024/12/28 17:16:23 websocket.go:163: 客户端已注销
+WEBSOCKET: 2024/12/28 17:16:23 websocket.go:59: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/28 17:16:25 websocket.go:158: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/28 17:16:25 websocket.go:55: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/28 17:16:26 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:16:27 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:16:28 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:16:32 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:16:32 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:16:32 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:16:32 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:16:33 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:16:34 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:16:35 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:16:36 websocket.go:55: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/28 17:16:36 websocket.go:158: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/28 17:16:41 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:16:41 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:16:42 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:18:14 websocket.go:70: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2024/12/28 17:18:14 websocket.go:163: 客户端已注销
+WEBSOCKET: 2024/12/28 17:18:14 websocket.go:59: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/28 17:18:14 websocket.go:70: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2024/12/28 17:18:14 websocket.go:163: 客户端已注销
+WEBSOCKET: 2024/12/28 17:18:14 websocket.go:59: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/28 17:18:24 websocket.go:55: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/28 17:18:24 websocket.go:158: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/28 17:18:28 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:18:28 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:18:28 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:18:28 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:18:29 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:18:32 websocket.go:70: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2024/12/28 17:18:32 websocket.go:163: 客户端已注销
+WEBSOCKET: 2024/12/28 17:18:32 websocket.go:59: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/28 17:58:42 websocket.go:55: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/28 17:58:42 websocket.go:158: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/28 17:58:47 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:58:47 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:58:47 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:58:47 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:58:47 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:58:48 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:58:49 websocket.go:106: 未知消息类型：
+WEBSOCKET: 2024/12/28 17:59:03 websocket.go:70: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2024/12/28 17:59:03 websocket.go:163: 客户端已注销
+WEBSOCKET: 2024/12/28 17:59:03 websocket.go:59: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/28 20:47:00 websocket.go:55: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/28 20:47:00 websocket.go:158: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/28 20:47:06 websocket.go:68: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2024/12/28 20:47:06 websocket.go:163: 客户端已注销
+WEBSOCKET: 2024/12/28 20:47:06 websocket.go:59: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/28 20:47:09 websocket.go:55: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/28 20:47:09 websocket.go:158: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/28 20:54:56 websocket.go:70: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2024/12/28 20:54:56 websocket.go:163: 客户端已注销
+WEBSOCKET: 2024/12/28 20:54:56 websocket.go:59: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/28 20:55:31 websocket.go:158: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/28 20:55:31 websocket.go:55: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/28 20:55:42 websocket.go:68: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2024/12/28 20:55:42 websocket.go:163: 客户端已注销
+WEBSOCKET: 2024/12/28 20:55:42 websocket.go:59: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/28 20:55:45 websocket.go:55: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/28 20:55:45 websocket.go:158: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/28 20:57:40 websocket.go:70: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2024/12/28 20:57:40 websocket.go:59: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/28 20:57:40 websocket.go:163: 客户端已注销
+WEBSOCKET: 2024/12/28 21:13:06 main.go:152: WebSocket 服务已启动
+GPS: 2024/12/28 21:13:06 main.go:153: GPS 服务已启动
+WEBSOCKET: 2024/12/28 21:13:06 websocket.go:152: WebSocket 服务器已启动
+GPS: 2024/12/28 21:13:06 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/28 21:13:19 websocket.go:158: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/28 21:13:19 websocket.go:55: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/28 21:13:24 websocket.go:68: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2024/12/28 21:13:24 websocket.go:163: 客户端已注销
+WEBSOCKET: 2024/12/28 21:13:24 websocket.go:59: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/28 21:13:27 websocket.go:55: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/28 21:13:27 websocket.go:158: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/28 21:14:12 websocket.go:68: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2024/12/28 21:14:12 websocket.go:163: 客户端已注销
+WEBSOCKET: 2024/12/28 21:14:12 websocket.go:59: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/28 21:14:15 websocket.go:55: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/28 21:14:15 websocket.go:158: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/28 21:14:43 websocket.go:70: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2024/12/28 21:14:43 websocket.go:163: 客户端已注销
+WEBSOCKET: 2024/12/28 21:14:43 websocket.go:59: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/30 20:33:31 main.go:152: WebSocket 服务已启动
+GPS: 2024/12/30 20:33:31 main.go:153: GPS 服务已启动
+WEBSOCKET: 2024/12/30 20:33:31 websocket.go:253: WebSocket 服务器已启动
+GPS: 2024/12/30 20:33:31 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2024/12/30 20:33:52 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/30 20:33:52 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/30 20:33:56 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2024/12/30 20:33:56 websocket.go:264: 客户端已注销
+WEBSOCKET: 2024/12/30 20:33:56 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/30 20:33:59 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/30 20:33:59 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/30 20:34:16 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2024/12/30 20:34:16 websocket.go:264: 客户端已注销
+WEBSOCKET: 2024/12/30 20:34:16 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/30 20:34:19 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/30 20:34:19 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/30 20:34:20 websocket.go:73: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2024/12/30 20:34:20 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/30 20:34:20 websocket.go:264: 客户端已注销
+WEBSOCKET: 2024/12/30 20:34:22 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/30 20:34:22 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/30 20:34:24 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2024/12/30 20:34:24 websocket.go:264: 客户端已注销
+WEBSOCKET: 2024/12/30 20:34:24 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/30 20:34:26 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/30 20:34:26 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/30 20:34:29 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2024/12/30 20:34:29 websocket.go:264: 客户端已注销
+WEBSOCKET: 2024/12/30 20:34:29 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/30 20:34:32 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/30 20:34:32 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/30 20:35:29 websocket.go:73: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2024/12/30 20:35:29 websocket.go:264: 客户端已注销
+WEBSOCKET: 2024/12/30 20:35:29 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/30 20:35:43 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/30 20:35:43 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/30 20:35:46 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2024/12/30 20:35:46 websocket.go:264: 客户端已注销
+WEBSOCKET: 2024/12/30 20:35:46 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/30 20:35:49 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/30 20:35:49 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/30 21:35:22 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/30 21:35:22 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/30 21:35:41 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2024/12/30 21:35:41 websocket.go:264: 客户端已注销
+WEBSOCKET: 2024/12/30 21:35:41 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/30 21:35:44 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/30 21:35:44 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/30 21:36:20 websocket.go:73: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2024/12/30 21:36:20 websocket.go:264: 客户端已注销
+WEBSOCKET: 2024/12/30 21:36:20 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/30 21:43:53 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/30 21:43:53 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/30 21:46:40 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2024/12/30 21:46:40 websocket.go:264: 客户端已注销
+WEBSOCKET: 2024/12/30 21:46:40 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/30 21:46:40 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/30 21:46:40 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/30 21:46:42 websocket.go:73: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2024/12/30 21:46:42 websocket.go:264: 客户端已注销
+WEBSOCKET: 2024/12/30 21:46:42 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/30 21:46:44 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/30 21:46:44 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/30 21:46:47 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2024/12/30 21:46:47 websocket.go:264: 客户端已注销
+WEBSOCKET: 2024/12/30 21:46:47 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/30 21:46:50 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/30 21:46:50 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/30 21:47:08 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2024/12/30 21:47:08 websocket.go:264: 客户端已注销
+WEBSOCKET: 2024/12/30 21:47:08 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/30 21:47:11 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/30 21:47:11 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/30 21:47:51 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2024/12/30 21:47:51 websocket.go:264: 客户端已注销
+WEBSOCKET: 2024/12/30 21:47:51 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/30 21:47:51 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/30 21:47:51 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/30 21:47:55 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2024/12/30 21:47:55 websocket.go:264: 客户端已注销
+WEBSOCKET: 2024/12/30 21:47:55 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/30 21:47:58 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/30 21:47:58 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/30 21:48:06 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2024/12/30 21:48:06 websocket.go:264: 客户端已注销
+WEBSOCKET: 2024/12/30 21:48:06 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/30 21:48:09 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/30 21:48:09 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/30 21:48:20 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2024/12/30 21:48:20 websocket.go:264: 客户端已注销
+WEBSOCKET: 2024/12/30 21:48:20 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/30 21:48:23 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/30 21:48:23 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/30 21:48:30 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2024/12/30 21:48:30 websocket.go:264: 客户端已注销
+WEBSOCKET: 2024/12/30 21:48:30 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/30 21:48:34 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/30 21:48:34 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/30 21:48:39 websocket.go:73: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2024/12/30 21:48:39 websocket.go:264: 客户端已注销
+WEBSOCKET: 2024/12/30 21:48:39 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/30 21:48:43 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/30 21:48:43 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/30 21:48:47 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2024/12/30 21:48:47 websocket.go:264: 客户端已注销
+WEBSOCKET: 2024/12/30 21:48:47 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/30 21:48:50 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/30 21:48:50 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/30 21:49:03 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2024/12/30 21:49:03 websocket.go:264: 客户端已注销
+WEBSOCKET: 2024/12/30 21:49:03 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/30 21:49:06 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/30 21:49:06 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/30 21:49:06 websocket.go:73: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2024/12/30 21:49:06 websocket.go:264: 客户端已注销
+WEBSOCKET: 2024/12/30 21:49:06 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/30 21:52:09 websocket.go:73: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2024/12/30 21:52:09 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/30 21:52:09 websocket.go:264: 客户端已注销
+WEBSOCKET: 2024/12/30 21:54:53 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/30 21:54:53 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/30 21:55:03 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2024/12/30 21:55:03 websocket.go:264: 客户端已注销
+WEBSOCKET: 2024/12/30 21:55:03 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/30 21:55:06 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/30 21:55:06 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/30 21:55:48 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2024/12/30 21:55:48 websocket.go:264: 客户端已注销
+WEBSOCKET: 2024/12/30 21:55:48 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/30 21:55:51 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/30 21:55:51 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/30 21:56:48 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2024/12/30 21:56:48 websocket.go:264: 客户端已注销
+WEBSOCKET: 2024/12/30 21:56:48 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/30 21:56:51 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/30 21:56:51 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/30 21:57:37 websocket.go:73: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2024/12/30 21:57:37 websocket.go:264: 客户端已注销
+WEBSOCKET: 2024/12/30 21:57:37 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/30 21:59:10 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/30 21:59:10 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/30 21:59:24 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2024/12/30 21:59:24 websocket.go:264: 客户端已注销
+WEBSOCKET: 2024/12/30 21:59:24 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/30 21:59:29 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/30 21:59:29 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/30 21:59:40 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2024/12/30 21:59:40 websocket.go:264: 客户端已注销
+WEBSOCKET: 2024/12/30 21:59:40 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/30 21:59:43 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/30 21:59:43 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/30 22:00:37 websocket.go:73: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2024/12/30 22:00:37 websocket.go:264: 客户端已注销
+WEBSOCKET: 2024/12/30 22:00:37 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/30 22:01:05 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/30 22:01:05 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/30 22:01:09 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2024/12/30 22:01:09 websocket.go:264: 客户端已注销
+WEBSOCKET: 2024/12/30 22:01:09 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2024/12/30 22:01:12 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2024/12/30 22:01:12 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2024/12/30 22:01:25 websocket.go:73: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2024/12/30 22:01:25 websocket.go:264: 客户端已注销
+WEBSOCKET: 2024/12/30 22:01:25 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/01 17:42:34 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/01 17:42:34 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/01 17:42:37 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2025/01/01 17:42:37 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/01 17:42:37 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/01 17:42:40 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/01 17:42:40 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/01 17:51:15 websocket.go:73: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2025/01/01 17:51:15 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/01 17:51:15 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/01 17:51:34 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/01 17:51:34 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/01 17:52:59 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2025/01/01 17:52:59 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/01 17:52:59 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/01 17:53:02 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/01 17:53:02 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/01 17:54:27 websocket.go:73: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2025/01/01 17:54:27 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/01 17:54:27 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/01 18:09:57 main.go:152: WebSocket 服务已启动
+GPS: 2025/01/01 18:09:57 main.go:153: GPS 服务已启动
+WEBSOCKET: 2025/01/01 18:09:57 websocket.go:253: WebSocket 服务器已启动
+GPS: 2025/01/01 18:09:57 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2025/01/01 18:10:43 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/01 18:10:43 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/01 18:10:56 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2025/01/01 18:10:56 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/01 18:10:56 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/01 18:10:59 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/01 18:10:59 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/01 18:16:11 websocket.go:73: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2025/01/01 18:16:11 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/01 18:16:11 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/01 18:16:12 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/01 18:16:12 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/01 18:16:16 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2025/01/01 18:16:16 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/01 18:16:16 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/01 18:16:19 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/01 18:16:19 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/02 14:51:16 websocket.go:71: 连接意外关闭，错误：websocket: close 1006 (abnormal closure): unexpected EOF
+WEBSOCKET: 2025/01/02 14:51:16 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/02 14:51:16 websocket.go:62: 连接关闭，客户端类型：passenger
