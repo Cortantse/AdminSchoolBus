@@ -7,6 +7,7 @@ toolchain go1.22.1
 require (
 	cloud.google.com/go/recaptchaenterprise/v2 v2.19.0
 	github.com/cristalhq/jwt v1.2.0
+	github.com/go-resty/resty/v2 v2.16.2
 	github.com/go-sql-driver/mysql v1.8.1
 	github.com/gorilla/websocket v1.5.3
 	github.com/jmoiron/sqlx v1.4.0

@@ -154,7 +154,7 @@ func VerifyAToken(token string) (string, config.Role, error) {
 	// 获取数据库中对应token的信息
 	var tokens []Token
 	err := db.SelectEasy(config.RoleAdmin, "tokens", &tokens, false,
-		[]string{"token_id"}, []string{"token_hash = ?"}, []interface{}{token}, "token_id", 2, 0, "", "")
+		[]string{"token_id", "token_revoked"}, []string{"token_hash = ?"}, []interface{}{token}, "token_id", 2, 0, "", "")
 	// 没有找到该token
 	if len(tokens) == 0 {
 		// 内部日志，不要报错 // 后端请尽快实现日志！！！！！！！！！！！！
