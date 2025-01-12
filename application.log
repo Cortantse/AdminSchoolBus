@@ -3071,3 +3071,654 @@ WEBSOCKET: 2025/01/01 18:16:19 websocket.go:58: 新连接建立，客户端类�
 WEBSOCKET: 2025/01/02 14:51:16 websocket.go:71: 连接意外关闭，错误：websocket: close 1006 (abnormal closure): unexpected EOF
 WEBSOCKET: 2025/01/02 14:51:16 websocket.go:264: 客户端已注销
 WEBSOCKET: 2025/01/02 14:51:16 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/11 23:35:33 main.go:149: WebSocket 服务已启动
+GPS: 2025/01/11 23:35:33 main.go:150: GPS 服务已启动
+WEBSOCKET: 2025/01/11 23:35:33 websocket.go:253: WebSocket 服务器已启动
+GPS: 2025/01/11 23:35:33 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2025/01/11 23:38:03 main.go:149: WebSocket 服务已启动
+GPS: 2025/01/11 23:38:03 main.go:150: GPS 服务已启动
+WEBSOCKET: 2025/01/11 23:38:03 websocket.go:253: WebSocket 服务器已启动
+GPS: 2025/01/11 23:38:03 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2025/01/11 23:41:01 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/11 23:41:01 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/11 23:41:22 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2025/01/11 23:41:22 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/11 23:41:22 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/11 23:41:25 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/11 23:41:25 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/11 23:41:37 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2025/01/11 23:41:37 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/11 23:41:37 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/11 23:41:40 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/11 23:41:40 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/11 23:41:54 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2025/01/11 23:41:54 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/11 23:41:54 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/11 23:41:57 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/11 23:41:57 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/11 23:42:06 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2025/01/11 23:42:06 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/11 23:42:06 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/11 23:42:08 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/11 23:42:08 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/11 23:42:29 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2025/01/11 23:42:29 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/11 23:42:29 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/11 23:42:32 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/11 23:42:32 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/11 23:42:49 websocket.go:73: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2025/01/11 23:42:49 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/11 23:42:49 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/11 23:42:49 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/11 23:42:49 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/11 23:42:53 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2025/01/11 23:42:53 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/11 23:42:53 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/11 23:42:55 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/11 23:42:55 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/11 23:43:42 websocket.go:234: ID 暂未有车辆接收呼叫 not found
+WEBSOCKET: 2025/01/11 23:43:54 websocket.go:234: ID 暂未有车辆接收呼叫 not found
+WEBSOCKET: 2025/01/11 23:43:56 websocket.go:234: ID 暂未有车辆接收呼叫 not found
+WEBSOCKET: 2025/01/11 23:46:07 websocket.go:73: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2025/01/11 23:46:07 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/11 23:46:07 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/11 23:46:08 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/11 23:46:08 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/11 23:46:17 websocket.go:234: ID 暂未有车辆接收呼叫 not found
+WEBSOCKET: 2025/01/11 23:54:33 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/11 23:54:33 websocket.go:259: 新客户端已注册，类型：passenger
+GPS: 2025/01/11 23:55:14 gps.go:63: 成功创建驾驶员：1
+WEBSOCKET: 2025/01/11 23:55:15 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2025/01/11 23:55:15 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/11 23:55:15 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/11 23:55:15 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/11 23:55:15 websocket.go:259: 新客户端已注册，类型：passenger
+GPS: 2025/01/11 23:55:18 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+WEBSOCKET: 2025/01/11 23:55:35 websocket.go:73: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2025/01/11 23:55:35 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/11 23:55:35 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/11 23:55:36 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/11 23:55:36 websocket.go:259: 新客户端已注册，类型：passenger
+GPS: 2025/01/11 23:55:58 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/11 23:55:58 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/11 23:55:58 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/11 23:55:58 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/11 23:55:58 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/11 23:55:58 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/11 23:56:00 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/11 23:56:03 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/11 23:56:06 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/11 23:56:09 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/11 23:56:12 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/11 23:56:15 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/11 23:56:18 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/11 23:56:21 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/11 23:56:24 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+WEBSOCKET: 2025/01/11 23:56:28 websocket.go:73: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2025/01/11 23:56:28 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/11 23:56:28 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/11 23:56:29 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/11 23:56:29 websocket.go:259: 新客户端已注册，类型：passenger
+GPS: 2025/01/11 23:56:51 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/11 23:56:51 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/11 23:56:51 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/11 23:56:51 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/11 23:56:51 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/11 23:56:51 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/11 23:56:54 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/11 23:56:57 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/11 23:57:00 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/11 23:57:03 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/11 23:57:06 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/11 23:57:09 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/11 23:57:12 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/11 23:57:15 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+WEBSOCKET: 2025/01/11 23:57:18 websocket.go:73: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2025/01/11 23:57:18 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/11 23:57:18 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/11 23:57:19 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/11 23:57:19 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/11 23:57:41 websocket.go:73: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2025/01/11 23:57:41 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/11 23:57:41 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/11 23:57:43 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/11 23:57:43 websocket.go:259: 新客户端已注册，类型：passenger
+GPS: 2025/01/11 23:58:32 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/11 23:58:32 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/11 23:58:32 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/11 23:58:32 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/11 23:58:32 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/11 23:58:32 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/11 23:58:33 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/11 23:58:41 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/11 23:58:41 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/11 23:58:41 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/11 23:58:42 gps.go:133: 更新驾驶员 1 的位置为：(22.353839, 113.582620)
+WEBSOCKET: 2025/01/12 00:02:24 websocket.go:73: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2025/01/12 00:02:24 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 00:02:24 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 00:02:25 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 00:02:25 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 00:02:45 websocket.go:73: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2025/01/12 00:02:45 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 00:02:45 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 00:02:57 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 00:02:57 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 00:03:11 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2025/01/12 00:03:11 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 00:03:11 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 00:03:14 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 00:03:14 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 00:04:43 websocket.go:73: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2025/01/12 00:04:43 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 00:04:43 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 00:04:43 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 00:04:43 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 00:05:08 websocket.go:73: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2025/01/12 00:05:08 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 00:05:08 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 00:05:08 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 00:05:08 websocket.go:259: 新客户端已注册，类型：passenger
+GPS: 2025/01/12 00:05:24 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/12 00:05:24 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/12 00:05:24 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/12 00:05:24 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/12 00:05:24 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/12 00:05:24 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/12 00:05:30 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/12 00:05:30 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/12 00:05:30 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/12 00:05:42 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/12 00:05:42 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/12 00:05:42 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/12 00:05:42 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/12 00:05:45 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/12 00:05:48 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/12 00:06:31 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/12 00:06:31 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/12 00:06:31 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/12 00:06:31 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/12 00:06:31 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/12 00:06:31 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/12 00:06:32 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/12 00:06:32 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/12 00:06:33 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/12 00:06:33 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/12 00:06:33 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/12 00:06:33 gps.go:133: 更新驾驶员 1 的位置为：(39.971705, 116.479967)
+GPS: 2025/01/12 00:09:11 gps.go:133: 更新驾驶员 1 的位置为：(22.354101, 113.582527)
+GPS: 2025/01/12 00:09:11 gps.go:133: 更新驾驶员 1 的位置为：(22.354101, 113.582527)
+GPS: 2025/01/12 00:09:11 gps.go:133: 更新驾驶员 1 的位置为：(22.354101, 113.582527)
+GPS: 2025/01/12 00:09:11 gps.go:133: 更新驾驶员 1 的位置为：(22.354101, 113.582527)
+GPS: 2025/01/12 00:09:11 gps.go:133: 更新驾驶员 1 的位置为：(22.354101, 113.582527)
+GPS: 2025/01/12 00:09:11 gps.go:133: 更新驾驶员 1 的位置为：(22.354101, 113.582527)
+GPS: 2025/01/12 00:09:12 gps.go:133: 更新驾驶员 1 的位置为：(22.354101, 113.582527)
+GPS: 2025/01/12 00:09:12 gps.go:133: 更新驾驶员 1 的位置为：(22.354101, 113.582527)
+GPS: 2025/01/12 00:09:12 gps.go:133: 更新驾驶员 1 的位置为：(22.354101, 113.582527)
+GPS: 2025/01/12 00:09:12 gps.go:133: 更新驾驶员 1 的位置为：(22.354101, 113.582527)
+GPS: 2025/01/12 00:09:12 gps.go:133: 更新驾驶员 1 的位置为：(22.354101, 113.582527)
+GPS: 2025/01/12 00:09:13 gps.go:133: 更新驾驶员 1 的位置为：(22.354101, 113.582527)
+GPS: 2025/01/12 00:11:16 gps.go:133: 更新驾驶员 1 的位置为：(22.354101, 113.582527)
+GPS: 2025/01/12 00:11:16 gps.go:133: 更新驾驶员 1 的位置为：(22.354101, 113.582527)
+GPS: 2025/01/12 00:11:16 gps.go:133: 更新驾驶员 1 的位置为：(22.354101, 113.582527)
+GPS: 2025/01/12 00:11:16 gps.go:133: 更新驾驶员 1 的位置为：(22.354101, 113.582527)
+GPS: 2025/01/12 00:11:16 gps.go:133: 更新驾驶员 1 的位置为：(22.354101, 113.582527)
+GPS: 2025/01/12 00:11:16 gps.go:133: 更新驾驶员 1 的位置为：(22.354101, 113.582527)
+WEBSOCKET: 2025/01/12 00:11:21 websocket.go:73: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2025/01/12 00:11:21 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 00:11:21 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 00:11:21 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 00:11:21 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 00:11:34 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2025/01/12 00:11:34 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 00:11:34 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 00:11:37 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 00:11:37 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 00:12:06 main.go:149: WebSocket 服务已启动
+GPS: 2025/01/12 00:12:06 main.go:150: GPS 服务已启动
+WEBSOCKET: 2025/01/12 00:12:06 websocket.go:253: WebSocket 服务器已启动
+GPS: 2025/01/12 00:12:06 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2025/01/12 00:12:10 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 00:12:10 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 00:13:00 websocket.go:73: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2025/01/12 00:13:00 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 00:13:00 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 00:13:00 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 00:13:00 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 00:14:37 websocket.go:73: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2025/01/12 00:14:37 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 00:14:37 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 00:14:38 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 00:14:38 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 00:16:40 websocket.go:73: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2025/01/12 00:16:40 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 00:16:40 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 00:16:41 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 00:16:41 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 00:19:27 main.go:149: WebSocket 服务已启动
+GPS: 2025/01/12 00:19:27 main.go:150: GPS 服务已启动
+WEBSOCKET: 2025/01/12 00:19:27 websocket.go:253: WebSocket 服务器已启动
+GPS: 2025/01/12 00:19:27 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2025/01/12 00:19:51 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 00:19:51 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 00:24:29 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 00:24:29 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 00:33:35 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2025/01/12 00:33:35 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 00:33:35 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 00:33:39 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 00:33:39 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 00:34:44 websocket.go:73: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2025/01/12 00:34:44 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 00:34:44 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 00:34:46 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 00:34:46 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 00:37:15 websocket.go:73: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2025/01/12 00:37:15 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 00:37:15 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 00:37:16 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 00:37:16 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 00:46:43 websocket.go:73: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2025/01/12 00:46:43 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 00:46:43 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 00:46:44 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 00:46:44 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 00:46:47 websocket.go:73: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2025/01/12 00:46:47 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 00:46:47 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 00:46:48 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 00:46:48 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 00:46:51 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2025/01/12 00:46:51 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 00:46:51 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 00:46:54 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 00:46:54 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 00:47:05 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2025/01/12 00:47:05 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 00:47:05 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 00:47:08 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 00:47:08 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 00:54:34 websocket.go:234: ID 暂未有车辆接收呼叫 not found
+WEBSOCKET: 2025/01/12 00:54:47 websocket.go:73: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2025/01/12 00:54:47 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 00:54:47 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 00:54:48 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 00:54:48 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 00:54:50 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2025/01/12 00:54:50 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 00:54:50 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 00:54:53 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 00:54:53 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 00:55:11 websocket.go:234: ID ABC12345 not found
+WEBSOCKET: 2025/01/12 00:55:18 websocket.go:234: ID ABC12345 not found
+WEBSOCKET: 2025/01/12 00:55:21 websocket.go:234: ID ABC12345 not found
+WEBSOCKET: 2025/01/12 00:56:24 websocket.go:234: ID ABC12345 not found
+WEBSOCKET: 2025/01/12 00:56:38 websocket.go:234: ID ABC12345 not found
+WEBSOCKET: 2025/01/12 00:56:41 websocket.go:234: ID ABC12345 not found
+WEBSOCKET: 2025/01/12 01:06:54 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2025/01/12 01:06:54 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 01:06:54 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 01:06:57 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 01:06:57 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 01:18:38 websocket.go:234: ID ABC12345 not found
+WEBSOCKET: 2025/01/12 01:26:53 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2025/01/12 01:26:53 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 01:26:53 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 01:26:56 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 01:26:56 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 11:01:58 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2025/01/12 11:01:58 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 11:01:58 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 11:02:01 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 11:02:01 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 11:04:14 websocket.go:73: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2025/01/12 11:04:14 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 11:04:14 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 11:04:32 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 11:04:32 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 11:04:41 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2025/01/12 11:04:41 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 11:04:41 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 11:04:49 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 11:04:49 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 11:04:53 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2025/01/12 11:04:53 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 11:04:53 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 11:04:56 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 11:04:56 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 11:05:09 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2025/01/12 11:05:09 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 11:05:09 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 11:05:12 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 11:05:12 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 11:05:29 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2025/01/12 11:05:29 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 11:05:29 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 11:05:32 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 11:05:32 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 11:05:51 websocket.go:73: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2025/01/12 11:05:51 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 11:05:51 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 11:40:01 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 11:40:01 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 11:47:10 websocket.go:73: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2025/01/12 11:47:10 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 11:47:10 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 11:47:12 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 11:47:12 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 11:47:23 websocket.go:234: ID ABC12345 not found
+WEBSOCKET: 2025/01/12 11:51:29 websocket.go:234: ID ABC12345 not found
+WEBSOCKET: 2025/01/12 11:51:31 websocket.go:234: ID ABC12345 not found
+WEBSOCKET: 2025/01/12 11:51:42 websocket.go:234: ID ABC12345 not found
+WEBSOCKET: 2025/01/12 11:57:25 websocket.go:73: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2025/01/12 11:57:25 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 11:57:25 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 11:57:26 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 11:57:26 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 11:58:01 websocket.go:234: ID ABC12345 not found
+WEBSOCKET: 2025/01/12 12:00:24 websocket.go:234: ID DEF11223 not found
+WEBSOCKET: 2025/01/12 12:02:32 websocket.go:73: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2025/01/12 12:02:32 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 12:02:32 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 12:02:34 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 12:02:34 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 12:02:47 websocket.go:234: ID ABC12345 not found
+WEBSOCKET: 2025/01/12 12:03:16 websocket.go:234: ID ABC12345 not found
+WEBSOCKET: 2025/01/12 12:03:19 websocket.go:234: ID ABC12345 not found
+WEBSOCKET: 2025/01/12 12:03:24 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2025/01/12 12:03:24 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 12:03:24 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 12:03:27 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 12:03:27 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 12:04:22 main.go:149: WebSocket 服务已启动
+GPS: 2025/01/12 12:04:22 main.go:150: GPS 服务已启动
+WEBSOCKET: 2025/01/12 12:04:22 websocket.go:253: WebSocket 服务器已启动
+GPS: 2025/01/12 12:04:22 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2025/01/12 12:10:47 main.go:149: WebSocket 服务已启动
+GPS: 2025/01/12 12:10:47 main.go:150: GPS 服务已启动
+WEBSOCKET: 2025/01/12 12:10:47 websocket.go:253: WebSocket 服务器已启动
+GPS: 2025/01/12 12:10:47 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2025/01/12 12:12:30 main.go:149: WebSocket 服务已启动
+GPS: 2025/01/12 12:12:30 main.go:150: GPS 服务已启动
+WEBSOCKET: 2025/01/12 12:12:30 websocket.go:253: WebSocket 服务器已启动
+GPS: 2025/01/12 12:12:30 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2025/01/12 12:21:29 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 12:21:29 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 12:21:40 websocket.go:234: ID ABC12345 not found
+WEBSOCKET: 2025/01/12 12:26:10 websocket.go:234: ID ABC12345 not found
+WEBSOCKET: 2025/01/12 12:26:14 websocket.go:234: ID ABC12345 not found
+WEBSOCKET: 2025/01/12 12:29:17 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2025/01/12 12:29:17 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 12:29:17 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 12:29:20 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 12:29:20 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 12:30:12 websocket.go:73: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2025/01/12 12:30:12 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 12:30:12 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 12:32:07 main.go:149: WebSocket 服务已启动
+GPS: 2025/01/12 12:32:07 main.go:150: GPS 服务已启动
+WEBSOCKET: 2025/01/12 12:32:07 websocket.go:253: WebSocket 服务器已启动
+GPS: 2025/01/12 12:32:07 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2025/01/12 12:32:30 main.go:149: WebSocket 服务已启动
+GPS: 2025/01/12 12:32:30 main.go:150: GPS 服务已启动
+WEBSOCKET: 2025/01/12 12:32:30 websocket.go:253: WebSocket 服务器已启动
+GPS: 2025/01/12 12:32:30 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2025/01/12 12:35:42 main.go:149: WebSocket 服务已启动
+GPS: 2025/01/12 12:35:42 main.go:150: GPS 服务已启动
+WEBSOCKET: 2025/01/12 12:35:42 websocket.go:253: WebSocket 服务器已启动
+GPS: 2025/01/12 12:35:42 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2025/01/12 12:36:01 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 12:36:01 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 12:36:23 websocket.go:234: ID ABC12345 not found
+WEBSOCKET: 2025/01/12 12:36:51 websocket.go:234: ID ABC12345 not found
+WEBSOCKET: 2025/01/12 12:36:53 websocket.go:234: ID ABC12345 not found
+WEBSOCKET: 2025/01/12 12:37:24 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2025/01/12 12:37:24 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 12:37:24 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 12:37:27 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 12:37:27 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 12:38:01 websocket.go:73: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2025/01/12 12:38:01 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 12:38:01 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 13:27:45 main.go:149: WebSocket 服务已启动
+GPS: 2025/01/12 13:27:45 main.go:150: GPS 服务已启动
+WEBSOCKET: 2025/01/12 13:27:45 websocket.go:253: WebSocket 服务器已启动
+GPS: 2025/01/12 13:27:45 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2025/01/12 13:28:04 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 13:28:04 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 13:28:16 websocket.go:234: ID ABC12345 not found
+WEBSOCKET: 2025/01/12 13:28:21 websocket.go:234: ID ABC12345 not found
+WEBSOCKET: 2025/01/12 13:28:23 websocket.go:234: ID ABC12345 not found
+WEBSOCKET: 2025/01/12 13:28:35 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2025/01/12 13:28:35 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 13:28:35 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 13:28:38 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 13:28:38 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 13:29:04 main.go:149: WebSocket 服务已启动
+GPS: 2025/01/12 13:29:04 main.go:150: GPS 服务已启动
+WEBSOCKET: 2025/01/12 13:29:04 websocket.go:253: WebSocket 服务器已启动
+GPS: 2025/01/12 13:29:04 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2025/01/12 13:29:30 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 13:29:30 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 13:29:42 websocket.go:234: ID ABC12345 not found
+WEBSOCKET: 2025/01/12 13:30:01 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2025/01/12 13:30:01 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 13:30:01 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 13:30:03 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 13:30:03 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 13:30:11 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2025/01/12 13:30:11 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 13:30:11 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 13:30:14 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 13:30:14 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 13:30:59 websocket.go:73: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2025/01/12 13:30:59 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 13:30:59 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 13:33:20 main.go:149: WebSocket 服务已启动
+GPS: 2025/01/12 13:33:20 main.go:150: GPS 服务已启动
+WEBSOCKET: 2025/01/12 13:33:20 websocket.go:253: WebSocket 服务器已启动
+GPS: 2025/01/12 13:33:20 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2025/01/12 13:33:57 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 13:33:57 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 13:34:08 websocket.go:234: ID DEF11223 not found
+WEBSOCKET: 2025/01/12 13:34:23 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2025/01/12 13:34:23 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 13:34:23 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 13:34:26 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 13:34:26 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 13:35:28 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2025/01/12 13:35:28 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 13:35:28 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 13:35:32 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 13:35:32 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 13:40:42 main.go:149: WebSocket 服务已启动
+GPS: 2025/01/12 13:40:42 main.go:150: GPS 服务已启动
+WEBSOCKET: 2025/01/12 13:40:42 websocket.go:253: WebSocket 服务器已启动
+GPS: 2025/01/12 13:40:42 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2025/01/12 13:40:51 main.go:149: WebSocket 服务已启动
+GPS: 2025/01/12 13:40:51 main.go:150: GPS 服务已启动
+WEBSOCKET: 2025/01/12 13:40:51 websocket.go:253: WebSocket 服务器已启动
+GPS: 2025/01/12 13:40:51 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2025/01/12 13:44:32 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 13:44:32 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 13:45:03 websocket.go:234: ID ABC12345 not found
+WEBSOCKET: 2025/01/12 13:45:07 websocket.go:234: ID ABC12345 not found
+WEBSOCKET: 2025/01/12 13:45:08 websocket.go:234: ID ABC12345 not found
+WEBSOCKET: 2025/01/12 13:45:18 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2025/01/12 13:45:18 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 13:45:18 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 13:45:21 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 13:45:21 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 13:47:07 websocket.go:234: ID ABC12345 not found
+WEBSOCKET: 2025/01/12 13:57:49 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2025/01/12 13:57:49 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 13:57:49 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 13:57:51 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 13:57:51 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 13:58:19 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2025/01/12 13:58:19 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 13:58:19 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 13:58:23 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 13:58:23 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 14:01:02 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2025/01/12 14:01:02 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 14:01:02 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 14:01:06 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 14:01:06 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 14:01:46 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2025/01/12 14:01:46 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 14:01:46 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 14:01:50 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 14:01:50 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 14:09:58 main.go:149: WebSocket 服务已启动
+GPS: 2025/01/12 14:09:58 main.go:150: GPS 服务已启动
+WEBSOCKET: 2025/01/12 14:09:58 websocket.go:253: WebSocket 服务器已启动
+GPS: 2025/01/12 14:09:58 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2025/01/12 14:10:55 main.go:149: WebSocket 服务已启动
+GPS: 2025/01/12 14:10:55 main.go:150: GPS 服务已启动
+WEBSOCKET: 2025/01/12 14:10:55 websocket.go:253: WebSocket 服务器已启动
+GPS: 2025/01/12 14:10:55 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2025/01/12 14:17:24 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 14:17:24 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 14:17:41 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2025/01/12 14:17:41 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 14:17:41 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 14:17:44 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 14:17:44 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 14:18:33 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2025/01/12 14:18:33 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 14:18:33 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 14:18:36 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 14:18:36 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 14:30:55 websocket.go:73: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2025/01/12 14:30:55 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 14:30:55 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 14:30:56 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 14:30:56 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 14:31:26 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2025/01/12 14:31:26 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 14:31:26 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 14:31:29 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 14:31:29 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 14:31:40 websocket.go:73: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2025/01/12 14:31:40 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 14:31:40 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 14:31:41 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 14:31:41 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 14:32:05 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2025/01/12 14:32:05 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 14:32:05 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 14:32:08 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 14:32:08 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 14:35:15 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2025/01/12 14:35:15 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 14:35:15 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 14:35:18 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 14:35:18 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 14:37:21 websocket.go:234: ID DEF11223 not found
+WEBSOCKET: 2025/01/12 14:37:55 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2025/01/12 14:37:55 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 14:37:55 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 14:37:58 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 14:37:58 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 14:38:06 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2025/01/12 14:38:06 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 14:38:06 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 14:38:09 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 14:38:09 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 14:38:36 websocket.go:234: ID DEF11223 not found
+WEBSOCKET: 2025/01/12 14:38:44 websocket.go:234: ID DEF11223 not found
+WEBSOCKET: 2025/01/12 14:38:53 websocket.go:234: ID DEF11223 not found
+WEBSOCKET: 2025/01/12 14:41:57 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
+WEBSOCKET: 2025/01/12 14:41:57 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 14:41:57 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 14:42:00 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 14:42:00 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 14:46:03 websocket.go:73: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2025/01/12 14:46:03 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 14:46:03 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 14:46:03 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 14:46:03 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 14:48:17 websocket.go:73: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2025/01/12 14:48:17 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 14:48:17 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 14:48:18 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 14:48:18 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 14:48:43 websocket.go:73: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2025/01/12 14:48:43 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 14:48:43 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 14:48:43 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 14:48:43 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 14:50:35 websocket.go:73: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2025/01/12 14:50:35 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 14:50:35 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 14:50:35 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 14:50:35 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 14:51:08 websocket.go:73: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2025/01/12 14:51:08 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 14:51:08 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 14:51:08 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 14:51:08 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 15:01:49 main.go:149: WebSocket 服务已启动
+GPS: 2025/01/12 15:01:49 main.go:150: GPS 服务已启动
+WEBSOCKET: 2025/01/12 15:01:49 websocket.go:253: WebSocket 服务器已启动
+GPS: 2025/01/12 15:01:49 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2025/01/12 15:01:54 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 15:01:54 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 15:02:38 main.go:149: WebSocket 服务已启动
+GPS: 2025/01/12 15:02:38 main.go:150: GPS 服务已启动
+WEBSOCKET: 2025/01/12 15:02:38 websocket.go:253: WebSocket 服务器已启动
+GPS: 2025/01/12 15:02:38 gps.go:97: 开始广播驾驶员位置信息
+WEBSOCKET: 2025/01/12 15:02:42 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 15:02:42 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 15:02:51 websocket.go:234: ID DEF11223 not found
+WEBSOCKET: 2025/01/12 15:02:55 websocket.go:234: ID DEF11223 not found
+WEBSOCKET: 2025/01/12 15:02:57 websocket.go:234: ID DEF11223 not found
+WEBSOCKET: 2025/01/12 15:03:38 websocket.go:234: ID 暂未有车辆接收呼叫 not found
+WEBSOCKET: 2025/01/12 15:05:02 websocket.go:234: ID DEF11223 not found
+WEBSOCKET: 2025/01/12 15:08:57 websocket.go:73: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2025/01/12 15:08:57 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 15:08:57 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 15:08:59 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 15:08:59 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 15:09:09 websocket.go:234: ID 暂未有车辆接收呼叫 not found
+WEBSOCKET: 2025/01/12 15:10:33 websocket.go:234: ID 暂未有车辆接收呼叫 not found
+WEBSOCKET: 2025/01/12 15:10:58 websocket.go:73: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2025/01/12 15:10:58 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 15:10:58 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 15:11:00 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 15:11:00 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 15:11:18 websocket.go:234: ID 1 not found
+WEBSOCKET: 2025/01/12 15:11:29 websocket.go:234: ID 1 not found
+WEBSOCKET: 2025/01/12 15:11:31 websocket.go:234: ID 1 not found
+WEBSOCKET: 2025/01/12 15:12:32 websocket.go:73: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2025/01/12 15:12:32 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 15:12:32 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 15:12:34 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 15:12:34 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 15:13:59 websocket.go:234: ID 未确认 not found
+WEBSOCKET: 2025/01/12 15:18:47 websocket.go:73: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2025/01/12 15:18:47 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 15:18:47 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 15:18:48 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 15:18:48 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 15:28:20 websocket.go:73: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2025/01/12 15:28:20 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 15:28:20 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 15:28:21 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 15:28:21 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 15:28:33 websocket.go:234: ID ABC12345 not found
+WEBSOCKET: 2025/01/12 15:29:32 websocket.go:73: 连接关闭，错误：websocket: close 1001 (going away)
+WEBSOCKET: 2025/01/12 15:29:32 websocket.go:264: 客户端已注销
+WEBSOCKET: 2025/01/12 15:29:32 websocket.go:62: 连接关闭，客户端类型：passenger
+WEBSOCKET: 2025/01/12 15:29:33 websocket.go:259: 新客户端已注册，类型：passenger
+WEBSOCKET: 2025/01/12 15:29:33 websocket.go:58: 新连接建立，客户端类型：passenger
+WEBSOCKET: 2025/01/12 15:29:42 websocket.go:234: ID 未确认 not found
+WEBSOCKET: 2025/01/12 15:29:49 websocket.go:234: ID 未确认 not found
+WEBSOCKET: 2025/01/12 15:29:51 websocket.go:234: ID 未确认 not found
+WEBSOCKET: 2025/01/12 15:30:02 websocket.go:234: ID ABC12345 not found
+WEBSOCKET: 2025/01/12 15:30:08 websocket.go:234: ID ABC12345 not found
+WEBSOCKET: 2025/01/12 15:30:10 websocket.go:234: ID ABC12345 not found
+WEBSOCKET: 2025/01/12 15:30:28 websocket.go:234: ID 未确认 not found
+WEBSOCKET: 2025/01/12 15:30:39 websocket.go:234: ID 未确认 not found
+WEBSOCKET: 2025/01/12 15:30:41 websocket.go:234: ID 未确认 not found

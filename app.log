@@ -715,3 +715,154 @@ SQL: SELECT user_name FROM usersaliases WHERE user_id = ?
 2025/01/06 11:00:00 =====准点报时======
 2025/01/06 11:00:00 2025-01-06 11:00:00.0176609 +0800 CST m=+406201.359302001:  服务器正在运行
 2025/01/06 11:00:00 2025-01-06 11:00:00.0176609 +0800 CST m=+406201.359302001:  [32m1h内发现0个致命错误[0m
+2025/01/11 23:35:33 2019-01-01 12:00:00 日志服务已启动==============
+2025/01/11 23:38:03 2019-01-01 12:00:00 日志服务已启动==============
+2025/01/11 23:43:42 [1m[31mError occurs in login/db.ExecuteSQL: Error 1406 (22001): Data too long for column 'vehicle_id' at row 1[0m
+
+2025/01/11 23:46:17 [1m[31mError occurs in login/db.ExecuteSQL: Error 1406 (22001): Data too long for column 'vehicle_id' at row 1[0m
+
+2025/01/11 23:51:10 [1m[31mError occurs in login/db.ExecuteSQL: Error 1054 (42S22): Unknown column 'driver_nickname' in 'where clause'[0m
+
+2025/01/11 23:51:10 [1m[31mError occurs in login/api.GenerateAndSendToken: [ExecuteSQL] 出现错误: Error 1054 (42S22): Unknown column 'driver_nickname' in 'where clause'
+SQL: SELECT driver_id FROM driver_table WHERE driver_nickname = ?
+参数: [rccc][0m
+
+2025/01/11 23:51:10 [1m[31mError occurs in login/api.GenerateAndSendToken: 无法找到该username对应的driverID[0m
+
+2025/01/12 00:00:00 =====准点报时======
+2025/01/12 00:00:00 2025-01-12 00:00:00.0086836 +0800 CST m=+1316.997749801:  服务器正在运行
+2025/01/12 00:00:00 2025-01-12 00:00:00.0086836 +0800 CST m=+1316.997749801:  [32m1h内发现5个致命错误[0m
+2025/01/12 00:12:06 2019-01-01 12:00:00 日志服务已启动==============
+2025/01/12 00:19:27 2019-01-01 12:00:00 日志服务已启动==============
+2025/01/12 00:54:34 [1m[31mError occurs in login/db.ExecuteSQL: Error 1406 (22001): Data too long for column 'vehicle_id' at row 1[0m
+
+2025/01/12 00:55:08 [1m[31mError occurs in login/db.ExecuteSQL: Error 1292 (22007): Incorrect datetime value: '2025/1/12 上午12:55:08' for column 'pickup_time' at row 1[0m
+
+2025/01/12 00:55:11 [1m[31mError occurs in login/db.ExecuteSQL: Error 1292 (22007): Incorrect datetime value: '2025/1/12 上午12:55:08' for column 'payment_time' at row 1[0m
+
+2025/01/12 00:56:19 [1m[31mError occurs in login/db.ExecuteSQL: Error 1292 (22007): Incorrect datetime value: '2025/1/12 上午12:56:19' for column 'pickup_time' at row 1[0m
+
+2025/01/12 00:56:24 [1m[31mError occurs in login/db.ExecuteSQL: Error 1292 (22007): Incorrect datetime value: '2025/1/12 上午12:56:19' for column 'payment_time' at row 1[0m
+
+2025/01/12 01:00:00 =====准点报时======
+2025/01/12 01:00:00 2025-01-12 01:00:00.0172719 +0800 CST m=+2432.857150501:  服务器正在运行
+2025/01/12 01:00:00 2025-01-12 01:00:00.0172719 +0800 CST m=+2432.857150501:  [32m1h内发现5个致命错误[0m
+2025/01/12 01:18:06 [1m[31mError occurs in login/db.ExecuteSQL: Error 1292 (22007): Incorrect datetime value: '2025/1/12 上午1:18:06' for column 'pickup_time' at row 1[0m
+
+2025/01/12 01:18:38 [1m[31mError occurs in login/db.ExecuteSQL: Error 1292 (22007): Incorrect datetime value: '2025/1/12 上午1:18:06' for column 'payment_time' at row 1[0m
+
+2025/01/12 02:00:00 =====准点报时======
+2025/01/12 02:00:00 2025-01-12 02:00:00.0109932 +0800 CST m=+6032.850871801:  服务器正在运行
+2025/01/12 02:00:00 2025-01-12 02:00:00.0109932 +0800 CST m=+6032.850871801:  [32m1h内发现2个致命错误[0m
+2025/01/12 03:00:00 =====准点报时======
+2025/01/12 03:00:00 2025-01-12 03:00:00.0004847 +0800 CST m=+9632.840363301:  服务器正在运行
+2025/01/12 03:00:00 2025-01-12 03:00:00.0004847 +0800 CST m=+9632.840363301:  [32m1h内发现0个致命错误[0m
+2025/01/12 04:00:00 =====准点报时======
+2025/01/12 04:00:00 2025-01-12 04:00:00.008932 +0800 CST m=+13232.848810601:  服务器正在运行
+2025/01/12 04:00:00 2025-01-12 04:00:00.008932 +0800 CST m=+13232.848810601:  [32m1h内发现0个致命错误[0m
+2025/01/12 05:00:00 =====准点报时======
+2025/01/12 05:00:00 2025-01-12 05:00:00.0062502 +0800 CST m=+16832.846128801:  服务器正在运行
+2025/01/12 05:00:00 2025-01-12 05:00:00.0062502 +0800 CST m=+16832.846128801:  [32m1h内发现0个致命错误[0m
+2025/01/12 06:00:00 =====准点报时======
+2025/01/12 06:00:00 2025-01-12 06:00:00.0149181 +0800 CST m=+20432.854796701:  服务器正在运行
+2025/01/12 06:00:00 2025-01-12 06:00:00.0149181 +0800 CST m=+20432.854796701:  [32m1h内发现0个致命错误[0m
+2025/01/12 07:00:00 =====准点报时======
+2025/01/12 07:00:00 2025-01-12 07:00:00.0145079 +0800 CST m=+24032.854386501:  服务器正在运行
+2025/01/12 07:00:00 2025-01-12 07:00:00.0145079 +0800 CST m=+24032.854386501:  [32m1h内发现0个致命错误[0m
+2025/01/12 08:00:00 =====准点报时======
+2025/01/12 08:00:00 2025-01-12 08:00:00.0150596 +0800 CST m=+27632.854938201:  服务器正在运行
+2025/01/12 08:00:00 2025-01-12 08:00:00.0150596 +0800 CST m=+27632.854938201:  [32m1h内发现0个致命错误[0m
+2025/01/12 09:00:00 =====准点报时======
+2025/01/12 09:00:00 2025-01-12 09:00:00.0077033 +0800 CST m=+31232.847581901:  服务器正在运行
+2025/01/12 09:00:00 2025-01-12 09:00:00.0077033 +0800 CST m=+31232.847581901:  [32m1h内发现0个致命错误[0m
+2025/01/12 10:00:00 =====准点报时======
+2025/01/12 10:00:00 2025-01-12 10:00:00.0108216 +0800 CST m=+34832.850700201:  服务器正在运行
+2025/01/12 10:00:00 2025-01-12 10:00:00.0108216 +0800 CST m=+34832.850700201:  [32m1h内发现0个致命错误[0m
+2025/01/12 11:00:01 =====准点报时======
+2025/01/12 11:00:01 2025-01-12 11:00:01.1470485 +0800 CST m=+38432.846038801:  服务器正在运行
+2025/01/12 11:00:01 2025-01-12 11:00:01.1470485 +0800 CST m=+38432.846038801:  [32m1h内发现0个致命错误[0m
+2025/01/12 11:02:03 [1m[31mError occurs in login/db.ExecuteSQL: Error 1292 (22007): Incorrect datetime value: '2025-1-12 上午11:02:03' for column 'comment_time' at row 1[0m
+
+2025/01/12 11:02:42 [1m[31mError occurs in login/db.ExecuteSQL: Error 1292 (22007): Incorrect datetime value: '2025-1-12 上午11:02:42' for column 'comment_time' at row 1[0m
+
+2025/01/12 11:03:38 [1m[31mError occurs in login/db.ExecuteSQL: Error 1292 (22007): Incorrect datetime value: '2025-1-12 上午11:03:38' for column 'comment_time' at row 1[0m
+
+2025/01/12 11:04:57 [1m[31mError occurs in login/db.ExecuteSQL: Error 1292 (22007): Incorrect datetime value: '2025-1-12 上午11:04:57' for column 'comment_time' at row 1[0m
+
+2025/01/12 11:06:03 [1m[31mError occurs in login/db.ExecuteSQL: Error 1292 (22007): Incorrect datetime value: '2025-1-12 上午11:06:03' for column 'comment_time' at row 1[0m
+
+2025/01/12 11:06:41 [1m[31mError occurs in login/db.ExecuteSQL: Error 1292 (22007): Incorrect datetime value: '2025-1-12 上午11:06:41' for column 'comment_time' at row 1[0m
+
+2025/01/12 11:06:57 [1m[31mError occurs in login/db.ExecuteSQL: Error 1292 (22007): Incorrect datetime value: '2025-1-12 上午11:06:57' for column 'comment_time' at row 1[0m
+
+2025/01/12 11:47:20 [1m[31mError occurs in login/db.ExecuteSQL: Error 1292 (22007): Incorrect datetime value: '2025/1/12 上午11:47:20' for column 'pickup_time' at row 1[0m
+
+2025/01/12 11:47:23 [1m[31mError occurs in login/db.ExecuteSQL: Error 1292 (22007): Incorrect datetime value: '2025/1/12 上午11:47:20' for column 'payment_time' at row 1[0m
+
+2025/01/12 11:51:39 [1m[31mError occurs in login/db.ExecuteSQL: Error 1292 (22007): Incorrect datetime value: '2025/1/12 上午11:51:39' for column 'pickup_time' at row 1[0m
+
+2025/01/12 11:51:42 [1m[31mError occurs in login/db.ExecuteSQL: Error 1292 (22007): Incorrect datetime value: '2025/1/12 上午11:51:39' for column 'payment_time' at row 1[0m
+
+2025/01/12 11:57:35 [1m[31mError occurs in login/db.ExecuteSQL: Error 1292 (22007): Incorrect datetime value: '2025/1/12 上午11:57:35' for column 'pickup_time' at row 1[0m
+
+2025/01/12 11:58:01 [1m[31mError occurs in login/db.ExecuteSQL: Error 1292 (22007): Incorrect datetime value: '2025/1/12 上午11:57:35' for column 'payment_time' at row 1[0m
+
+2025/01/12 12:00:00 =====准点报时======
+2025/01/12 12:00:00 2025-01-12 12:00:00.0005816 +0800 CST m=+42031.699571901:  服务器正在运行
+2025/01/12 12:00:00 2025-01-12 12:00:00.0005816 +0800 CST m=+42031.699571901:  [32m1h内发现13个致命错误[0m
+2025/01/12 12:00:20 [1m[31mError occurs in login/db.ExecuteSQL: Error 1292 (22007): Incorrect datetime value: '2025/1/12 下午12:00:20' for column 'pickup_time' at row 1[0m
+
+2025/01/12 12:00:24 [1m[31mError occurs in login/db.ExecuteSQL: Error 1292 (22007): Incorrect datetime value: '2025/1/12 下午12:00:20' for column 'payment_time' at row 1[0m
+
+2025/01/12 12:03:19 [1m[31mError occurs in login/db.ExecuteSQL: Error 1292 (22007): Incorrect datetime value: '2025/1/12 下午12:03:19' for column 'dropoff_time' at row 1[0m
+
+2025/01/12 12:03:25 [1m[31mError occurs in login/user.GetUserOrdersHandler: sql: Scan error on column index 3, name "car_id": converting driver.Value type []uint8 ("ABC12345") to a int: invalid syntax[0m
+
+2025/01/12 12:04:22 2019-01-01 12:00:00 日志服务已启动==============
+2025/01/12 12:04:28 [1m[31mError occurs in login/user.GetUserOrdersHandler: sql: Scan error on column index 7, name "status": converting driver.Value type []uint8 ("已结束") to a int: invalid syntax[0m
+
+2025/01/12 12:10:47 2019-01-01 12:00:00 日志服务已启动==============
+2025/01/12 12:12:30 2019-01-01 12:00:00 日志服务已启动==============
+2025/01/12 12:12:38 [1m[31mError occurs in login/user.GetUserOrdersHandler: sql: Scan error on column index 3, name "car_id": converting driver.Value type []uint8 ("ABC12345") to a int: invalid syntax[0m
+
+2025/01/12 12:26:14 [1m[31mError occurs in login/db.ExecuteSQL: Error 1292 (22007): Incorrect datetime value: '2025/1/12 下午12:26:14' for column 'dropoff_time' at row 1[0m
+
+2025/01/12 12:29:18 [1m[31mError occurs in login/user.GetUserOrdersHandler: sql: Scan error on column index 3, name "car_id": converting driver.Value type []uint8 ("ABC12345") to a int: invalid syntax[0m
+
+2025/01/12 12:30:13 [1m[31mError occurs in login/user.GetUserOrdersHandler: sql: Scan error on column index 3, name "car_id": converting driver.Value type []uint8 ("ABC12345") to a int: invalid syntax[0m
+
+2025/01/12 12:30:21 [1m[31mError occurs in login/user.GetUserOrdersHandler: sql: Scan error on column index 3, name "car_id": converting driver.Value type []uint8 ("ABC12345") to a int: invalid syntax[0m
+
+2025/01/12 12:30:45 [1m[31mError occurs in login/user.GetUserOrdersHandler: sql: Scan error on column index 3, name "car_id": converting driver.Value type []uint8 ("ABC12345") to a int: invalid syntax[0m
+
+2025/01/12 12:32:07 2019-01-01 12:00:00 日志服务已启动==============
+2025/01/12 12:32:30 2019-01-01 12:00:00 日志服务已启动==============
+2025/01/12 12:35:42 2019-01-01 12:00:00 日志服务已启动==============
+2025/01/12 13:00:00 =====准点报时======
+2025/01/12 13:00:00 2025-01-12 13:00:00.0156522 +0800 CST m=+1457.318812101:  服务器正在运行
+2025/01/12 13:00:00 2025-01-12 13:00:00.0156522 +0800 CST m=+1457.318812101:  [32m1h内发现0个致命错误[0m
+2025/01/12 13:27:45 2019-01-01 12:00:00 日志服务已启动==============
+2025/01/12 13:29:04 2019-01-01 12:00:00 日志服务已启动==============
+2025/01/12 13:33:20 2019-01-01 12:00:00 日志服务已启动==============
+2025/01/12 13:40:42 2019-01-01 12:00:00 日志服务已启动==============
+2025/01/12 13:40:51 2019-01-01 12:00:00 日志服务已启动==============
+2025/01/12 14:00:00 =====准点报时======
+2025/01/12 14:00:00 2025-01-12 14:00:00.0110598 +0800 CST m=+1148.990158101:  服务器正在运行
+2025/01/12 14:00:00 2025-01-12 14:00:00.0110598 +0800 CST m=+1148.990158101:  [32m1h内发现0个致命错误[0m
+2025/01/12 14:09:58 2019-01-01 12:00:00 日志服务已启动==============
+2025/01/12 14:10:55 2019-01-01 12:00:00 日志服务已启动==============
+2025/01/12 15:00:00 =====准点报时======
+2025/01/12 15:00:00 2025-01-12 15:00:00.0125787 +0800 CST m=+2944.853056601:  服务器正在运行
+2025/01/12 15:00:00 2025-01-12 15:00:00.0125787 +0800 CST m=+2944.853056601:  [32m1h内发现0个致命错误[0m
+2025/01/12 15:01:49 2019-01-01 12:00:00 日志服务已启动==============
+2025/01/12 15:02:38 2019-01-01 12:00:00 日志服务已启动==============
+2025/01/12 15:03:38 [1m[31mError occurs in login/db.ExecuteSQL: Error 1406 (22001): Data too long for column 'vehicle_id' at row 1[0m
+
+2025/01/12 15:09:09 [1m[31mError occurs in login/db.ExecuteSQL: Error 1406 (22001): Data too long for column 'vehicle_id' at row 1[0m
+
+2025/01/12 15:10:33 [1m[31mError occurs in login/db.ExecuteSQL: Error 1406 (22001): Data too long for column 'vehicle_id' at row 1[0m
+
+2025/01/12 15:11:18 [1m[31mError occurs in login/db.ExecuteSQL: Error 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`passenger_db`.`payment_record`, CONSTRAINT `fk_payment_order` FOREIGN KEY (`order_id`) REFERENCES `order_information` (`order_id`) ON DELETE RESTRICT ON UPDATE RESTRICT)[0m
+
+2025/01/12 15:13:59 [1m[31mError occurs in login/db.ExecuteSQL: Error 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`passenger_db`.`payment_record`, CONSTRAINT `fk_payment_order` FOREIGN KEY (`order_id`) REFERENCES `order_information` (`order_id`) ON DELETE RESTRICT ON UPDATE RESTRICT)[0m
+
