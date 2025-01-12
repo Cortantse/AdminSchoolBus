@@ -64,7 +64,7 @@ func submitOrder(tempOrderInfo OrderInfo) error {
 	return nil
 }
 func submitPayment(tempPaymentInfo PaymentInfo) error {
-	_, err := db.ExecuteSQL(config.RolePassenger, "INSERT into payment_record(order_id,vehicle_id,payment_amount,payment_method,payment_time,payment_status) values (?,?,?,?,?,?)", tempPaymentInfo.OrderID, tempPaymentInfo.VehicleID, tempPaymentInfo.PaymentAmount, tempPaymentInfo.PaymentMethod, tempPaymentInfo.PaymentTime, tempPaymentInfo.PaymentStatus)
+	_, err := db.ExecuteSQL(config.RolePassenger, "INSERT into payment_record(order_id,vehicle_id,payment_amount,payment_method,payment_time,payment_status) values (?,?,?,?,?,?)", tempPaymentInfo.OrderID, tempPaymentInfo.VehicleID, tempPaymentInfo.PaymentAmount, 0, tempPaymentInfo.PaymentTime, tempPaymentInfo.PaymentStatus)
 	if err != nil {
 		return fmt.Errorf("添加支付信息失败: %w", err)
 	}
@@ -267,6 +267,8 @@ func HandleSubmitOrder(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	log.Printf("接收到的原始数据: %s", string(bodyBytes))
+	if bodyBytes == nil {
+	}
 
 	// 重置 Body 并解码为结构体
 	r.Body = io.NopCloser(bytes.NewBuffer(bodyBytes))
@@ -621,6 +623,7 @@ func HandleGetWorkShift(w http.ResponseWriter, r *http.Request) {
 	// 执行查询获取订单信息
 	result, err := db.ExecuteSQL(config.RoleDriver,
 		"SELECT work_stime, driver_id, car_id FROM work_table WHERE work_stime <= ? AND (work_etime IS NULL );", shift.CurrentTime)
+	log.Printf(shift.CurrentTime)
 	if err != nil {
 		respondWithError(w, http.StatusInternalServerError, "查询工作信息失败")
 		return
