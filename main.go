@@ -166,7 +166,7 @@ func main() {
 	mux.HandleFunc("/modifyDriverInfo", driverShift.HandleShiftInfo)
 
 	mux.HandleFunc("/getDriverData", driverShift.GetDriverData)
-	mux.HandleFunc("/getComments", driverShift.GetComments)
+	mux.HandleFunc("/getDComments", driverShift.GetComments)
 
 	webSocketAPI.RegisterRoutes(mux)
 	// 注册 GPSAPI 提供的 HTTP 接口到路由器中。
