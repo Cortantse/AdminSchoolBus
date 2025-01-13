@@ -7,6 +7,7 @@ import (
 	"login/config"
 	"login/db"
 	"login/driverShift"
+	"login/exception"
 	"login/gps"
 	"login/log_service"
 
@@ -64,19 +65,28 @@ func enableCORS(next http.Handler) http.Handler {
 func initServer(cors http.Handler) error {
 	port := config.AppConfig.Server.Port
 
-	// 提供证书和密钥路径
-	certPath := "./key/sysuschoolbus.top.pem"
-	keyPath := "./key/sysuschoolbus.top.key"
-
 	fmt.Println("Service is running on port", port)
-	// // 使用 HTTPS 启动服务器
-	err := http.ListenAndServeTLS(port, certPath, keyPath, cors)
-	// err := http.ListenAndServe(port, cors)
+	err := http.ListenAndServe(port, cors)
 	if err != nil {
 		fmt.Println("Service is not running properly, with error: ", err)
 		return fmt.Errorf("service is not running properly, with error: %v", err)
 	}
 	return nil
+}
+
+func testForToken(err error) {
+	// 获取一个令牌
+	token, err := auth.GiveAToken(config.RoleDriver, "2", "")
+	if err != nil {
+		print(err.Error())
+	}
+	// 验证令牌，并获得令牌所有者的信息
+	userID, role, err := auth.VerifyAToken(token)
+	if err != nil {
+		exception.PrintWarning(auth.VerifyAToken, err)
+	}
+
+	fmt.Printf("UserID is %s, role is %s\n", userID, role)
 }
 
 // RegisterAdmin 注册管理员服务
@@ -105,13 +115,6 @@ func RegisterAdmin(mux *http.ServeMux) {
 
 	// test_function
 	mux.HandleFunc("/test/divide", api.ReceiveDivisionRequest)
-
-	// ai
-	mux.HandleFunc("/admin/ai/command", api.ReceiveAIRequest)
-
-	// 外部暴露
-	mux.HandleFunc("/admin/complaint", api.GetComplaintCorrespondingToDriver)
-	api.ComplaintToDriver = make(map[string][]string)
 }
 
 func main() {
@@ -166,7 +169,7 @@ func main() {
 	mux.HandleFunc("/modifyDriverInfo", driverShift.HandleShiftInfo)
 
 	mux.HandleFunc("/getDriverData", driverShift.GetDriverData)
-	mux.HandleFunc("/getComments", driverShift.GetComments)
+	mux.HandleFunc("/getDComments", driverShift.GetComments)
 
 	webSocketAPI.RegisterRoutes(mux)
 	// 注册 GPSAPI 提供的 HTTP 接口到路由器中。
