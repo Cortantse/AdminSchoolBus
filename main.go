@@ -161,7 +161,7 @@ func main() {
 		driverShift.HandleShiftStart(w, r, gps_api)
 	})
 	mux.HandleFunc("/end", func(w http.ResponseWriter, r *http.Request) {
-		driverShift.HandleShiftStart(w, r, gps_api)
+		driverShift.HandleShiftEnd(w, r, gps_api)
 	})
 	mux.HandleFunc("/modifyDriverInfo", driverShift.HandleShiftInfo)
 
