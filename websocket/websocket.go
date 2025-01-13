@@ -17,7 +17,7 @@ import (
 )
 
 type DriverLocationUpdater interface {
-	UpdateDriverLocation(driverID string, latitude, longitude float64) error
+	UpdateDriverLocation(driverID string, latitude, longitude float64, car_id string) error
 }
 
 // WebSocketManager 管理WebSocket连接，支持不同类型的客户端
@@ -92,7 +92,7 @@ func (wm *WebSocketManager) HandleWebSocketConnection(conn *websocket.Conn, clie
 		case "driver_gps":
 			// log_service.WebSocketLogger.Printf("收到驾驶员 GPS 信息：%v\n", msg)
 			if wm.Updater != nil {
-				err := wm.Updater.UpdateDriverLocation(msg.DriverID, msg.Location.Latitude, msg.Location.Longitude)
+				err := wm.Updater.UpdateDriverLocation(msg.DriverID, msg.Location.Latitude, msg.Location.Longitude, msg.CarID)
 				if err != nil {
 					log_service.WebSocketLogger.Printf("更新驾驶员位置失败：%v\n", err)
 				}

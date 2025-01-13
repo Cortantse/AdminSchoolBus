@@ -191,13 +191,13 @@ func (api *GPSAPI) DeletePassenger(ID string) error {
 }
 
 // updateDriverLocation 内部调用的更新駕駛員位置方法
-func (api *GPSAPI) UpdateDriverLocation(id string, latitude, longitude float64) error {
+func (api *GPSAPI) UpdateDriverLocation(id string, latitude, longitude float64, car_id string) error {
 	if id == "" {
 		return fmt.Errorf("")
 	}
 
 	// 调用 GPSModule 中的方法来删除乘客
-	err := api.module.UpdateDriverLocation(id, latitude, longitude)
+	err := api.module.UpdateDriverLocation(id, latitude, longitude, car_id)
 	if err != nil {
 		return fmt.Errorf("%v", err)
 	}
