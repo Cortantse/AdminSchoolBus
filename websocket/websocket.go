@@ -3,11 +3,14 @@ package websocket
 import (
 	"database/sql"
 	"encoding/json"
+	"fmt"
 	"io/ioutil"
 	"login/config"
 	"login/db"
 	"login/log_service"
+	"os"
 	"path/filepath"
+	"regexp"
 	"sync"
 
 	"github.com/gorilla/websocket"
@@ -85,7 +88,7 @@ func (wm *WebSocketManager) HandleWebSocketConnection(conn *websocket.Conn, clie
 			// wm.car_conn[msg.CarID] = conn
 			wm.connections[msg.CarID] = conn
 		case "call_accept":
-			wm.SendMessageByID(msg.PassengerID, message)
+			wm.SendMessageToClients(message, "")
 		case "driver_gps":
 			// log_service.WebSocketLogger.Printf("收到驾驶员 GPS 信息：%v\n", msg)
 			if wm.Updater != nil {
@@ -102,10 +105,108 @@ func (wm *WebSocketManager) HandleWebSocketConnection(conn *websocket.Conn, clie
 			wm.SendMessageByID(msg.CarID, message)
 		case "alightingMessage":
 			wm.SendMessageByID(msg.CarID, message)
+		case "update_sites":
+			updateSites(msg)
+		case "update_routes":
+			updateRoutes(msg)
+		case "delete_route":
+			deleteRoute(msg)
 		default:
 			log_service.WebSocketLogger.Printf("未知消息类型：%s\n", msg.Type)
 		}
 	}
+}
+
+func deleteRoute(message WebSocketMessage) error {
+	routeID := message.Routes[0].ID // 从消息中获取 route_id
+
+	// 1. 修改文件后缀名
+	// 构造文件路径 (假设路径为 ./assets/route{route_id}.json)
+	oldFilePath := filepath.Join("assets", fmt.Sprintf("route%d.json", routeID))
+	newFilePath := filepath.Join("assets", fmt.Sprintf("route%d.del", routeID))
+
+	// 检查文件是否存在
+	if _, err := os.Stat(oldFilePath); os.IsNotExist(err) {
+		log_service.WebSocketLogger.Printf("file not found: %s", oldFilePath)
+	}
+
+	// 重命名文件
+	if err := os.Rename(oldFilePath, newFilePath); err != nil {
+		log_service.WebSocketLogger.Printf("failed to rename file: %v", err)
+	}
+
+	log_service.WebSocketLogger.Printf("Route file renamed: %s -> %s\n", oldFilePath, newFilePath)
+
+	// 2. 更新数据库，将 route_isusing 设置为 0
+	_, err := db.ExecuteSQL(config.RoleDriver,
+		"UPDATE route_table SET route_isusing = 0 WHERE route_id = ?",
+		routeID,
+	)
+	if err != nil {
+		log_service.WebSocketLogger.Printf("failed to update route_isusing for route_id %d: %v", routeID, err)
+	}
+
+	log_service.WebSocketLogger.Printf("Route %d marked as not using in database\n", routeID)
+
+	return nil
+}
+
+func updateRoutes(message WebSocketMessage) error {
+	// 保存路径的目标目录
+	targetDir := "./assets"
+	// 确保目录存在
+	err := os.MkdirAll(targetDir, 0755)
+	if err != nil {
+		log_service.WebSocketLogger.Printf("failed to create target directory: %v", err)
+	}
+
+	for _, route := range message.Routes {
+		// 更新或插入到数据库
+		_, err := db.ExecuteSQL(config.RoleDriver,
+			"INSERT INTO route_table (route_id, route_isusing) VALUES (?, ?) ON DUPLICATE KEY UPDATE route_isusing = VALUES(route_isusing)",
+			route.ID, 1)
+		if err != nil {
+			log_service.WebSocketLogger.Printf("failed to upsert route %d: %v", route.ID, err)
+		}
+
+		// 构造文件路径
+		filePath := filepath.Join(targetDir, fmt.Sprintf("route%d.json", route.ID))
+
+		// 创建或清空文件
+		file, err := os.Create(filePath)
+		if err != nil {
+			log_service.WebSocketLogger.Printf("failed to create or open file %s: %v", filePath, err)
+		}
+		defer file.Close()
+
+		// 只保存 `path` 数据
+		pathData := map[string]interface{}{
+			"path": route.Path,
+		}
+
+		// 将数据写入文件
+		encoder := json.NewEncoder(file)
+		encoder.SetIndent("", "  ") // 格式化为易读 JSON
+		if err := encoder.Encode(pathData); err != nil {
+			log_service.WebSocketLogger.Printf("failed to write JSON to file %s: %v", filePath, err)
+		}
+
+		log_service.WebSocketLogger.Printf("Route %d has been updated in %s\n", route.ID, filePath)
+	}
+
+	return nil
+}
+
+func updateSites(message WebSocketMessage) error {
+	for _, site := range message.Sites {
+		// 更新或插入數據
+		_, err := db.ExecuteSQL(config.RoleDriver, "INSERT INTO site_table (site_id, site_name, site_position, site_passenger, is_used, site_note) VALUES (?, ?, POINT(?, ?), ?, ?, ?) ON DUPLICATE KEY UPDATE site_name = VALUES(site_name), site_position = VALUES(site_position), site_passenger = VALUES(site_passenger), is_used = VALUES(is_used), site_note = VALUES(site_note)", site.ID, site.Name, site.Location.Latitude, site.Location.Longitude, site.SitePassenger, site.IsUsed, site.Note)
+		if err != nil {
+			log_service.WebSocketLogger.Printf("failed to upsert site: %v", err)
+		}
+	}
+
+	return nil
 }
 
 // SendMessageToClients 向所有客户端或特定类型的客户端发送消息
@@ -170,7 +271,7 @@ func (wm *WebSocketManager) Start() {
 }
 
 func loadSites(conn *websocket.Conn) {
-	result, err := db.ExecuteSQL(config.RoleDriver, "SELECT site_id, site_name, ST_X(site_position) AS longitude, ST_Y(site_position) AS latitude, site_passenger, is_used, site_note  FROM site_table WHERE is_used = 1;")
+	result, err := db.ExecuteSQL(config.RoleDriver, "SELECT site_id, site_name, ST_X(site_position) AS longitude, ST_Y(site_position) AS latitude, site_passenger, is_used, site_note  FROM site_table;")
 	if err != nil {
 		log_service.WebSocketLogger.Printf("failed to send message: %v", err)
 		return
@@ -215,9 +316,20 @@ func loadRoutes(conn *websocket.Conn) {
 		log_service.WebSocketLogger.Printf("failed to send message: %v", err)
 		return
 	}
-
+	// 正则表达式匹配 "route" 后的数字
+	regex := regexp.MustCompile(`route(\d+)\.json`)
 	var allRoutes []Route
 	for _, file := range matches {
+		// 提取数字
+		submatches := regex.FindStringSubmatch(file)
+		var routeNumber int
+		if len(submatches) > 1 {
+			// 转换为整数
+			_, err := fmt.Sscanf(submatches[1], "%d", &routeNumber)
+			if err != nil {
+				log_service.WebSocketLogger.Printf("failed to send message: %v", err)
+			}
+		}
 		// 读取文件内容
 		data, err := ioutil.ReadFile(file)
 		if err != nil {
@@ -232,6 +344,7 @@ func loadRoutes(conn *websocket.Conn) {
 
 			continue
 		}
+		routes[0].ID = routeNumber
 
 		// 将解析的路由信息添加到 allRoutes
 		allRoutes = append(allRoutes, routes...)

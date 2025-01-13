@@ -84,24 +84,40 @@ func UpdateConfig(userId string, updates map[string]string) error {
 		case "expiration_hours_passenger":
 			valueInt, err := tryConvertToInt(value)
 			if err != nil {
+				exception.PrintError(UpdateConfig, err)
 				return err
 			}
 			oldValue = fmt.Sprint(config.AppConfig.Jwt.ExpirationHoursPass)
 			config.AppConfig.Jwt.ExpirationHoursPass = valueInt
+			break
 		case "expiration_hours_admin":
 			valueInt, err := tryConvertToInt(value)
 			if err != nil {
+				exception.PrintError(UpdateConfig, err)
 				return err
 			}
 			oldValue = fmt.Sprint(config.AppConfig.Jwt.ExpirationHoursAdmin)
 			config.AppConfig.Jwt.ExpirationHoursAdmin = valueInt
+			break
 		case "expiration_hours_driver":
 			valueInt, err := tryConvertToInt(value)
 			if err != nil {
+				exception.PrintError(UpdateConfig, err)
 				return err
 			}
 			oldValue = fmt.Sprint(config.AppConfig.Jwt.ExpirationHoursDriver)
 			config.AppConfig.Jwt.ExpirationHoursDriver = valueInt
+			break
+		// **继续添加
+		case "expiration_ride_coupon":
+			valueInt, err := tryConvertToInt(value)
+			if err != nil {
+				exception.PrintError(UpdateConfig, err)
+				return err
+			}
+			oldValue = fmt.Sprint(config.AppConfig.Other.ExpirationRideCoupon)
+			config.AppConfig.Other.ExpirationRideCoupon = valueInt
+			break
 		default:
 			exception.PrintError(UpdateConfig, fmt.Errorf("unknown config key: %s", key))
 			return fmt.Errorf("unknown config key: %s", key)
@@ -205,22 +221,27 @@ func GetVariable(w http.ResponseWriter, r *http.Request) {
 	}
 
 	allVariables := []Variable{}
-	// 需要获取的所有字段，使用map
-	variablesNames := map[string]bool{"expiration_hours_passenger": false, "expiration_hours_admin": false, "expiration_hours_driver": false}
+	// 需要获取的所有字段，使用map ***
+	variablesNames := map[string]bool{"expiration_hours_passenger": false,
+		"expiration_hours_admin": false, "expiration_hours_driver": false,
+		"expiration_ride_coupon": false}
 	Values := map[string]string{
 		"expiration_hours_passenger": fmt.Sprint(config.AppConfig.Jwt.ExpirationHoursPass),
 		"expiration_hours_admin":     fmt.Sprint(config.AppConfig.Jwt.ExpirationHoursAdmin),
 		"expiration_hours_driver":    fmt.Sprint(config.AppConfig.Jwt.ExpirationHoursDriver),
+		"expiration_ride_coupon":     fmt.Sprint(config.AppConfig.Other.ExpirationRideCoupon),
 	}
 	LasModifieds := map[string]string{
 		"expiration_hours_passenger": "null",
 		"expiration_hours_admin":     "null",
 		"expiration_hours_driver":    "null",
+		"expiration_ride_coupon":     "null",
 	}
 	LasModifiedBys := map[string]string{
 		"expiration_hours_passenger": "null",
 		"expiration_hours_admin":     "null",
 		"expiration_hours_driver":    "null",
+		"expiration_ride_coupon":     "null",
 	}
 
 	// 从数据库中找到最新的，从而获取其他信息

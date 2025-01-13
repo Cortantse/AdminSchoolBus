@@ -3580,6 +3580,7 @@ WEBSOCKET: 2025/01/12 14:10:55 main.go:149: WebSocket 服务已启动
 GPS: 2025/01/12 14:10:55 main.go:150: GPS 服务已启动
 WEBSOCKET: 2025/01/12 14:10:55 websocket.go:253: WebSocket 服务器已启动
 GPS: 2025/01/12 14:10:55 gps.go:97: 开始广播驾驶员位置信息
+
 GPS: 2025/01/12 14:14:21 gps.go:133: 更新驾驶员 223310 的位置为：(22.386844, 113.544118)
 GPS: 2025/01/12 14:14:23 gps.go:133: 更新驾驶员 223310 的位置为：(22.386844, 113.544118)
 GPS: 2025/01/12 14:14:29 gps.go:133: 更新驾驶员 223310 的位置为：(22.386844, 113.544118)
@@ -3616,6 +3617,8 @@ GPS: 2025/01/12 14:16:00 gps.go:133: 更新驾驶员 223310 的位置为：(22.3
 GPS: 2025/01/12 14:16:02 gps.go:133: 更新驾驶员 223310 的位置为：(22.386844, 113.544118)
 GPS: 2025/01/12 14:16:05 gps.go:133: 更新驾驶员 223310 的位置为：(22.386844, 113.544118)
 GPS: 2025/01/12 14:16:08 gps.go:133: 更新驾驶员 223310 的位置为：(22.386844, 113.544118)
+=======
+
 WEBSOCKET: 2025/01/12 14:17:24 websocket.go:259: 新客户端已注册，类型：passenger
 WEBSOCKET: 2025/01/12 14:17:24 websocket.go:58: 新连接建立，客户端类型：passenger
 WEBSOCKET: 2025/01/12 14:17:41 websocket.go:71: 连接意外关闭，错误：websocket: close 1005 (no status)
@@ -3760,6 +3763,7 @@ WEBSOCKET: 2025/01/12 15:30:10 websocket.go:234: ID ABC12345 not found
 WEBSOCKET: 2025/01/12 15:30:28 websocket.go:234: ID 未确认 not found
 WEBSOCKET: 2025/01/12 15:30:39 websocket.go:234: ID 未确认 not found
 WEBSOCKET: 2025/01/12 15:30:41 websocket.go:234: ID 未确认 not found
+
 WEBSOCKET: 2025/01/13 17:37:27 main.go:149: WebSocket 服务已启动
 GPS: 2025/01/13 17:37:27 main.go:150: GPS 服务已启动
 WEBSOCKET: 2025/01/13 17:37:27 websocket.go:253: WebSocket 服务器已启动
@@ -4137,3 +4141,4 @@ WEBSOCKET: 2025/01/13 17:47:07 websocket.go:259: 新客户端已注册，类型�
 WEBSOCKET: 2025/01/13 17:48:16 websocket.go:73: 连接关闭，错误：websocket: close 1001 (going away)
 WEBSOCKET: 2025/01/13 17:48:16 websocket.go:264: 客户端已注销
 WEBSOCKET: 2025/01/13 17:48:16 websocket.go:62: 连接关闭，客户端类型：passenger
+

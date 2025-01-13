@@ -138,3 +138,21 @@ func Round(satisfaction float64, i int) float64 {
 	// 将小数点后的位数乘以 pow，然后进行四舍五入，再除以 pow
 	return math.Floor(satisfaction*pow+0.5) / pow
 }
+
+// AddTime takes seconds, minutes, hours, and days as input and returns the new time after adding them to the current time.
+// return format: 2006-01-02 15:04:05.999999999 -0700 MST
+func AddTime(seconds, minutes, hours, days int) time.Time {
+	// Get the current time
+	currentTime := time.Now()
+
+	// Create a duration object using the inputs
+	duration := time.Duration(seconds)*time.Second +
+		time.Duration(minutes)*time.Minute +
+		time.Duration(hours)*time.Hour +
+		time.Duration(days)*24*time.Hour
+
+	// Add the duration to the current time
+	newTime := currentTime.Add(duration)
+
+	return newTime
+}

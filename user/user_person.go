@@ -8,7 +8,6 @@ import (
 	"login/config"
 	"login/db"
 	"login/exception"
-	"math/rand"
 	"net/http"
 	"os"
 	"path/filepath"
@@ -622,7 +621,7 @@ func AddFeedbackHandler(w http.ResponseWriter, r *http.Request) {
 		exception.PrintError(AddFeedbackHandler, err)
 		return
 	}
-	feedbackID := rand.Intn(900000) + 100000 // 生成六位随机数
+	//feedbackID := rand.Intn(900000) + 100000 // 生成六位随机数
 
 	// 根据 student_account 查 student_number
 	sqlGetStudentNumber := "SELECT student_number FROM student_information WHERE student_account = ?"
@@ -652,10 +651,10 @@ func AddFeedbackHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// 插入评价数据到数据库
-	insertQuery := "INSERT INTO feedback (feedback_id, student_number, order_id, rating, feedback_content, feedback_time) VALUES (?, ?, ?, ?, ?, ?)"
+	insertQuery := "INSERT INTO feedback (student_number, order_id, rating, feedback_content, feedback_time) VALUES (?, ?, ?, ?, ?)"
 
 	_, err = db.ExecuteSQL(config.RolePassenger, insertQuery,
-		feedbackID, studentNumber, feedback.OrderID,
+		studentNumber, feedback.OrderID,
 		feedback.Rating, feedback.FeedbackContent, feedback.FeedbackTime)
 
 	if err != nil {
@@ -682,7 +681,7 @@ type Order struct {
 	OrderID            int    `json:"order_id"`
 	StudentAccount     string `json:"student_account"`
 	DriverID           int    `json:"driver_id"`
-	CarID              int    `json:"car_id"`
+	CarID              string `json:"car_id"`
 	PickupStationName  string `json:"pickup_station_name"`
 	DropoffStationName string `json:"dropoff_station_name"`
 	PickupTime         string `json:"pickup_time"`
@@ -695,7 +694,7 @@ type Order struct {
 type Payment struct {
 	PaymentID     int     `json:"payment_id"`
 	OrderID       int     `json:"order_id"`
-	VehicleID     int     `json:"vehicle_id"`
+	VehicleID     string  `json:"vehicle_id"`
 	PaymentAmount float64 `json:"payment_amount"`
 	PaymentMethod string  `json:"payment_method"`
 	PaymentTime   string  `json:"payment_time"`
@@ -803,6 +802,8 @@ func GetUserOrdersHandler(w http.ResponseWriter, r *http.Request) {
 			order.Status = "进行中"
 		} else if StatusInt == 1 {
 			order.Status = "已完成"
+		} else if StatusInt == 2 {
+			order.Status = "已取消"
 		} else {
 			order.Status = "未知状态"
 		}
@@ -839,6 +840,8 @@ func GetUserOrdersHandler(w http.ResponseWriter, r *http.Request) {
 			payment.PaymentStatus = "失败"
 		} else if payStatusInt == 1 {
 			payment.PaymentStatus = "成功"
+		} else if payStatusInt == 2 {
+			payment.PaymentStatus = "已退款"
 		} else {
 			payment.PaymentStatus = "未知"
 		}

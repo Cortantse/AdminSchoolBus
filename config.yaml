@@ -13,5 +13,6 @@ jwt:
     expiration_hours_passenger: 24
     expiration_hours_admin: 99999
     expiration_hours_driver: 128
-
-
+other:
+    expiration_ride_coupon: 30
+    api_key:
