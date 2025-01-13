@@ -103,6 +103,9 @@ func RegisterAdmin(mux *http.ServeMux) {
 	mux.HandleFunc("/admin/car_table", api.GetCarsTableData)
 	mux.HandleFunc("/admin/work_table", api.GetWorkTableData)
 
+	// 驾驶员支持
+	mux.HandleFunc("/admin/driver/get", api.GiveDriverInfo)
+
 	// test_function
 	mux.HandleFunc("/test/divide", api.ReceiveDivisionRequest)
 
@@ -161,12 +164,12 @@ func main() {
 		driverShift.HandleShiftStart(w, r, gps_api)
 	})
 	mux.HandleFunc("/end", func(w http.ResponseWriter, r *http.Request) {
-		driverShift.HandleShiftStart(w, r, gps_api)
+		driverShift.HandleShiftEnd(w, r, gps_api)
 	})
 	mux.HandleFunc("/modifyDriverInfo", driverShift.HandleShiftInfo)
 
 	mux.HandleFunc("/getDriverData", driverShift.GetDriverData)
-	mux.HandleFunc("/getComments", driverShift.GetComments)
+	mux.HandleFunc("/getDComments", driverShift.GetComments)
 
 	webSocketAPI.RegisterRoutes(mux)
 	// 注册 GPSAPI 提供的 HTTP 接口到路由器中。
