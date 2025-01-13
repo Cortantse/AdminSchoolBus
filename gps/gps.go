@@ -13,6 +13,7 @@ type Driver struct {
 	Type     string   `json:"type"`     // 消息类型
 	ID       string   `json:"id"`       // 驾驶员唯一标识
 	Location Location `json:"location"` // 地理位置（例如GPS定位）
+	Car_ID   string   `json:"car_id"`
 }
 
 // 地理位置结构体
@@ -115,10 +116,11 @@ func (g *GPSModule) broadcastDriverLocations() {
 	// 广播消息到所有客户端
 
 	g.webSocketAPI.SendMessage(driverData, "")
+
 }
 
 // UpdateDriverLocation 更新驾驶员的位置信息
-func (g *GPSModule) UpdateDriverLocation(id string, latitude, longitude float64) error {
+func (g *GPSModule) UpdateDriverLocation(id string, latitude, longitude float64, car_id string) error {
 	g.driversMutex.Lock()
 	defer g.driversMutex.Unlock()
 
@@ -130,7 +132,8 @@ func (g *GPSModule) UpdateDriverLocation(id string, latitude, longitude float64)
 
 	driver.Location.Latitude = latitude
 	driver.Location.Longitude = longitude
-	log_service.GPSLogger.Printf("更新驾驶员 %s 的位置为：(%f, %f)\n", id, latitude, longitude)
+	driver.Car_ID = car_id
+	log_service.GPSLogger.Printf("更新驾驶员 %s 和車牌 %s的位置为：(%f, %f)\n", id, car_id, latitude, longitude)
 	return nil
 }
 
