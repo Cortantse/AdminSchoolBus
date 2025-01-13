@@ -9,7 +9,9 @@ import (
 	"log"
 	"login/config"
 	"login/db"
+	"login/exception"
 	"net/http"
+	"strconv"
 )
 
 type OrderInfo struct {
@@ -375,30 +377,96 @@ func GetjourneyRecord(w http.ResponseWriter, r *http.Request) {
 
 func GetComment(w http.ResponseWriter, r *http.Request) {
 	type Comment struct {
-		Commentid      string `json:"commentid"`
-		Studentname    string `json:"studentname"`
-		Commentcontent string `json:"commentcontent"`
-		Commenttime    string `json:"commenttime"`
+		Commentid      string `json:"comment_id"`
+		Studentname    string `json:"student_name"`
+		Commentcontent string `json:"comment_content"`
+		Commenttime    string `json:"comment_time"`
 		Avatar         string `json:"avatar"`
 	}
-	rows, err := db.ExecuteSQL(config.RolePassenger, "SELECT * FROM passenger_comment WHERE comment_id > ?", 0)
-	if err != nil {
-		fmt.Print(err)
+	//1111111111111111111111111111111111111111111111111111111111111111111111111111
+	w.Header().Set("Access-Control-Allow-Origin", "*")
+	w.Header().Set("Access-Control-Allow-Methods", "POST, OPTIONS")
+	w.Header().Set("Access-Control-Allow-Headers", "Content-Type, Authorization")
+
+	if r.Method == http.MethodOptions {
+		w.WriteHeader(http.StatusOK)
+		return
 	}
-	res, _ := rows.(*sql.Rows)
-	var results []Comment
-	for res.Next() {
-		var result Comment
-		err := res.Scan(&result.Commentid, &result.Studentname, &result.Commentcontent, &result.Commenttime, &result.Avatar)
-		if err != nil {
-			http.Error(w, err.Error(), http.StatusInternalServerError)
+
+	if r.Method != http.MethodPost {
+		http.Error(w, "Method not allowed. Use POST", http.StatusMethodNotAllowed)
+		return
+	}
+
+	if err := r.ParseForm(); err != nil {
+		http.Error(w, "Invalid request parameters", http.StatusBadRequest)
+		exception.PrintError(GetFeedbackHandler, err)
+		return
+	}
+
+	userID := r.FormValue("userID")
+	if userID == "" {
+		http.Error(w, "Missing userID parameter", http.StatusBadRequest)
+		return
+	}
+
+	// 校验 userID
+	if _, err := strconv.Atoi(userID); err != nil {
+		http.Error(w, "Invalid userID format. Must be a number.", http.StatusBadRequest)
+		exception.PrintError(GetFeedbackHandler, err)
+		return
+	}
+	// 根据 student_account 查 student_number
+	sqlGetStudentNumber := "SELECT student_number FROM student_information WHERE user_id = ?"
+	result, err := db.ExecuteSQL(config.RolePassenger, sqlGetStudentNumber, userID)
+	if err != nil {
+		http.Error(w, "Internal server error", http.StatusInternalServerError)
+		exception.PrintError(GetFeedbackHandler, err)
+		return
+	}
+
+	rows, ok := result.(*sql.Rows)
+	if !ok {
+		http.Error(w, "Unexpected result type", http.StatusInternalServerError)
+		return
+	}
+	defer rows.Close()
+
+	// 查询 feedback
+	sqlFeedback := "SELECT comment_id, student_name, comment_content,comment_time, avatar FROM passenger_comment WHERE comment_id > ?"
+	feedbackResult, err := db.ExecuteSQL(config.RolePassenger, sqlFeedback, 0)
+	if err != nil {
+		http.Error(w, "Failed to fetch feedback data", http.StatusInternalServerError)
+		exception.PrintError(GetFeedbackHandler, err)
+		return
+	}
+
+	feedbackRows, ok := feedbackResult.(*sql.Rows)
+	if !ok {
+		http.Error(w, "Unexpected result type", http.StatusInternalServerError)
+		return
+	}
+	defer feedbackRows.Close()
+
+	var feedbacks []Comment
+	for feedbackRows.Next() {
+		var comments Comment
+		if err := feedbackRows.Scan(&comments.Commentid, &comments.Studentname, &comments.Commentcontent, &comments.Commenttime, &comments.Avatar); err != nil {
+			http.Error(w, "Failed to scan feedback data", http.StatusInternalServerError)
+			exception.PrintError(GetFeedbackHandler, err)
 			return
 		}
-		results = append(results, result)
+		feedbacks = append(feedbacks, comments)
 	}
+
+	// 返回 JSON 数据
 	w.Header().Set("Content-Type", "application/json")
-	w.WriteHeader(http.StatusOK)
-	json.NewEncoder(w).Encode(results)
+	if err := json.NewEncoder(w).Encode(feedbacks); err != nil {
+		http.Error(w, "Failed to send response", http.StatusInternalServerError)
+		exception.PrintError(GetFeedbackHandler, err)
+	}
+	//222222222222222222222222222222222222222222222222222222222222222222222222222
+
 }
 
 func WriteComment(w http.ResponseWriter, r *http.Request) {
