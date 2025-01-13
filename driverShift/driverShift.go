@@ -76,7 +76,7 @@ func updateVehicleStatus(carID string, newStatus string) error {
 	return nil
 }
 
-func updateDriverStatus(driverID string, status bool) error {
+func updateDriverStatus(driverID string, status int) error {
 
 	_, err := db.ExecuteSQL(config.RoleDriver, "UPDATE driver_table SET driver_isworking = ? WHERE driver_id = ?", status, driverID)
 	if err != nil {
@@ -97,7 +97,7 @@ func createWorkTable(driverID string, carID string, routeID int) error {
 
 func modifyWorkTable(driverID string, carID string) error {
 	timeNow := time.Now().Format("2006-01-02 15:04:05")
-	sql := "UPDATE work_table SET work_etime = ? WHERE driver_id = ? AND car_id = ? AND (work_etime IS NULL ) "
+	sql := "UPDATE work_table SET work_etime = ? WHERE work_etime IS NULL AND driver_id = ? AND car_id = ?  "
 	_, err := db.ExecuteSQL(config.RoleDriver, sql, timeNow, driverID, carID)
 	if err != nil {
 		return fmt.Errorf("更新工作表失败: %w", err)
@@ -194,7 +194,7 @@ func HandleShiftStart(w http.ResponseWriter, r *http.Request, gps_api *gps.GPSAP
 		respondWithError(w, http.StatusInternalServerError, "车辆状态更新失败")
 		return
 	}
-	if err := updateDriverStatus(shift.DriverID, true); err != nil {
+	if err := updateDriverStatus(shift.DriverID, 1); err != nil {
 		respondWithError(w, http.StatusInternalServerError, "司机上班状态更新失败")
 		return
 	}
@@ -235,7 +235,6 @@ func HandleShiftEnd(w http.ResponseWriter, r *http.Request, gps_api *gps.GPSAPI)
 		respondWithError(w, http.StatusBadRequest, "请求数据解析失败")
 		return
 	}
-
 	if shift.DriverID == "" || shift.VehicleNo == "" {
 		respondWithError(w, http.StatusBadRequest, "缺少必要字段")
 		return
@@ -246,12 +245,10 @@ func HandleShiftEnd(w http.ResponseWriter, r *http.Request, gps_api *gps.GPSAPI)
 		respondWithError(w, http.StatusInternalServerError, "车辆下班状态更新失败")
 		return
 	}
-
-	if err := updateDriverStatus(shift.DriverID, false); err != nil {
+	if err := updateDriverStatus(shift.DriverID, 2); err != nil {
 		respondWithError(w, http.StatusInternalServerError, "司机下班状态更新失败")
 		return
 	}
-
 	if err := modifyWorkTable(shift.DriverID, shift.VehicleNo); err != nil {
 		respondWithError(w, http.StatusInternalServerError, "工作表下班状态更新失败")
 		return
