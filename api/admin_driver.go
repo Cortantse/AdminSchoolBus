@@ -372,3 +372,88 @@ func GetWorkTableData(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 }
+
+func GiveDriverInfo(w http.ResponseWriter, r *http.Request) {
+	// 提供html
+	// 关于司机的名字，性别，电话，评星，注意动态生成评星
+	// 获取driverID
+
+	var htmls []string
+
+	var driverID string
+	err := json.NewDecoder(r.Body).Decode(&driverID)
+	if err != nil {
+		exception.PrintError(ReceiveAIRequest, err)
+		return
+	}
+
+	// 查询数据库获取所有司机数据
+	sqlS := "SELECT driver_name, driver_sex, driver_tel FROM driver_table WHERE driver_id = ?"
+	result, err := db.ExecuteSQL(config.RoleDriver, sqlS, driverID)
+	if err != nil {
+		exception.PrintError(GiveDriverInfo, err)
+		return
+	}
+	row := result.(*sql.Rows)
+
+	var driverName string
+	var driverSex int
+	var driverTel string
+	for row.Next() {
+		if err := row.Scan(&driverName, &driverSex, &driverTel); err != nil {
+			exception.PrintError(GiveDriverInfo, err)
+			return
+		}
+	}
+
+	driverRealSex := "男"
+	if driverSex == 0 {
+		driverRealSex = "女"
+	}
+
+	htmls = append(htmls, "<p>司机姓名："+driverName+"</p>")
+	htmls = append(htmls, "<p>司机性别："+driverRealSex+"</p>")
+	htmls = append(htmls, "<p>司机电话："+driverTel+"</p>")
+
+	// 获取评星并动态生成
+	sqlS = "SELECT AVG(f.rating) FROM passenger_db.feedback f, passenger_db.order_information o WHERE o.driver_id = ? AND f.order_id = o.order_id;"
+	result, err = db.ExecuteSQL(config.RoleDriver, sqlS, driverID)
+	if err != nil {
+		exception.PrintError(GiveDriverInfo, err)
+		return
+	}
+	row = result.(*sql.Rows)
+	var rating float64
+	for row.Next() {
+		if err := row.Scan(&rating); err != nil {
+			exception.PrintError(GiveDriverInfo, err)
+			return
+		}
+	}
+
+	defer row.Close()
+
+	// 添加评星
+	tem := "<p>司机评星："
+	for i := 0; i < 5; i++ {
+		if rating >= float64(i+1) {
+			tem += "<img src=\"@/assets/star.jpg\" width=\"20\" height=\"20\">"
+		} else {
+			tem += "<img src=\"@/assets/star_gray.jpg\" width=\"20\" height=\"20\">"
+		}
+	}
+	tem += "</p>"
+
+	htmls = append(htmls, tem)
+
+	type response struct {
+		Htmls []string `json:"htmls"`
+	}
+
+	// 返回html
+	w.Header().Set("Content-Type", "application/json")
+	if err := json.NewEncoder(w).Encode(response{Htmls: htmls}); err != nil {
+		exception.PrintError(GiveDriverInfo, err)
+		return
+	}
+}

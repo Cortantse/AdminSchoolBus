@@ -1,3 +1,221 @@
+2024/12/30 23:00:00 =====准点报时======
+2024/12/30 23:00:00 2024-12-30 23:00:00.008047 +0800 CST m=+3673.395745301:  服务器正在运行
+2024/12/30 23:00:00 2024-12-30 23:00:00.008561 +0800 CST m=+3673.396259301:  [32m1h内发现0个致命错误[0m
+2024/12/30 23:14:27 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/30 23:17:45 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/30 23:18:00 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/30 23:19:03 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/30 23:20:50 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/30 23:22:28 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/30 23:26:02 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/31 00:00:00 =====准点报时======
+2024/12/31 00:00:00 2024-12-31 00:00:00.0072657 +0800 CST m=+2037.062402601:  服务器正在运行
+2024/12/31 00:00:00 2024-12-31 00:00:00.0083725 +0800 CST m=+2037.063509401:  [32m1h内发现0个致命错误[0m
+2024/12/31 00:04:07 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/31 10:17:06 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/31 11:00:00 =====准点报时======
+2024/12/31 11:00:00 2024-12-31 11:00:00.0063955 +0800 CST m=+2573.377447801:  服务器正在运行
+2024/12/31 11:00:00 2024-12-31 11:00:00.0076003 +0800 CST m=+2573.378652601:  [32m1h内发现0个致命错误[0m
+2024/12/31 11:03:12 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/31 11:04:42 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/31 11:04:42 [1m[31mError occurs in login/api.tryParseOutput: Error 1049 (42000): Unknown database 'test_db'[0m
+
+2024/12/31 11:05:29 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/31 11:05:29 [1m[31mError occurs in login/api.tryParseOutput: Error 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '；另外还需要一些其他测试结果<sql2>。
+
+数据库指令：
+<sql1>
+S' at line 1[0m
+
+2024/12/31 11:06:07 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/31 11:06:07 [1m[31mError occurs in login/api.tryParseOutput: Error 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '；另外还需要一些其他测试结果<sql2>。
+
+数据库指令：
+<sql1>
+S' at line 1[0m
+
+2024/12/31 11:06:16 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/31 11:06:34 [1m[31mError occurs in login/api.tryParseOutput: Error 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '；另外还需要一些其他测试结果<sql2>。
+
+数据库指令：
+<sql1>
+S' at line 1[0m
+
+2024/12/31 11:10:01 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/31 11:10:31 [1m[31mError occurs in login/api.tryParseOutput: Error 1049 (42000): Unknown database 'test_db'[0m
+
+2024/12/31 11:19:40 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/31 11:21:14 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/31 11:21:44 [1m[31mError occurs in login/api.tryParseOutput: Error 1049 (42000): Unknown database 'test_db'[0m
+
+2024/12/31 11:22:17 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/31 11:26:29 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/31 11:26:56 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/31 11:28:18 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/31 11:29:16 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/31 11:30:42 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/31 11:32:07 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/31 11:32:43 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/31 11:33:20 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/31 11:34:00 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/31 11:54:52 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/31 11:55:26 [1m[31mError occurs in login/api.tryParseOutput: dial tcp: lookup tcp/%!s(int=3306): unknown port[0m
+
+2024/12/31 11:55:26 [1m[31mError occurs in login/api.tryParseOutput: dial tcp: lookup tcp/%!s(int=3306): unknown port[0m
+
+2024/12/31 11:55:30 [1m[31mError occurs in login/api.tryParseOutput: dial tcp: lookup tcp/%!s(int=3306): unknown port[0m
+
+2024/12/31 11:55:30 [1m[31mError occurs in login/api.tryParseOutput: dial tcp: lookup tcp/%!s(int=3306): unknown port[0m
+
+2024/12/31 11:55:30 [1m[31mError occurs in login/api.getResponse: 重试后仍然失败[0m
+
+2024/12/31 11:55:30 [1m[31mError occurs in login/api.ReceiveAIRequest: dial tcp: lookup tcp/%!s(int=3306): unknown port[0m
+
+2024/12/31 11:56:25 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/31 11:58:31 [1m[31mError occurs in login/api.tryParseOutput: Error 1054 (42S22): Unknown column 'token_created_at' in 'order clause'[0m
+
+2024/12/31 11:59:02 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/31 12:00:12 =====准点报时======
+2024/12/31 12:00:12 2024-12-31 12:00:12.7583174 +0800 CST m=+70.132127801:  服务器正在运行
+2024/12/31 12:00:12 2024-12-31 12:00:12.7583174 +0800 CST m=+70.132127801:  [32m1h内发现0个致命错误[0m
+2024/12/31 12:01:54 2019-01-01 12:00:00 日志服务已启动==============
+2024/12/31 12:02:47 2019-01-01 12:00:00 日志服务已启动==============
+2025/01/01 19:41:19 2019-01-01 12:00:00 日志服务已启动==============
+2025/01/01 20:00:02 2019-01-01 12:00:00 日志服务已启动==============
+2025/01/01 20:02:54 2019-01-01 12:00:00 日志服务已启动==============
+2025/01/01 20:03:20 2019-01-01 12:00:00 日志服务已启动==============
+2025/01/01 20:14:43 [1m[31mError occurs in login/api.tryParseOutput: format error: missing '回应：' 或 '数据库指令：' 字样[0m
+
+2025/01/01 20:14:43 [1m[31mError occurs in login/api.tryParseOutput: format error: missing '回应：' 或 '数据库指令：' 字样[0m
+
+2025/01/01 20:15:49 [1m[31mError occurs in login/api.tryParseOutput: Error 1054 (42S22): Unknown column 't.token_created_at' in 'order clause'[0m
+
+2025/01/01 20:16:20 [1m[31mError occurs in login/api.tryParseOutput: Error 1054 (42S22): Unknown column 't.token_created_at' in 'order clause'[0m
+
+2025/01/01 20:20:00 2019-01-01 12:00:00 日志服务已启动==============
+2025/01/01 20:23:42 [1m[31mError occurs in login/api.tryParseOutput: Error 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '<password_hash>' at line 2[0m
+
+2025/01/01 20:27:41 [1m[31mError occurs in login/api.tryParseOutput: format error: missing '回应：' 或 '数据库指令：' 字样[0m
+
+2025/01/01 20:27:41 [1m[31mError occurs in login/api.tryParseOutput: format error: missing '回应：' 或 '数据库指令：' 字样[0m
+
+2025/01/01 20:28:13 [1m[31mError occurs in login/api.tryParseOutput: format error: missing '回应：' 或 '数据库指令：' 字样[0m
+
+2025/01/01 20:28:13 [1m[31mError occurs in login/api.tryParseOutput: format error: missing '回应：' 或 '数据库指令：' 字样[0m
+
+2025/01/01 20:44:21 [1m[31mError occurs in login/api.tryParseOutput: Error 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '<userID>
+    AND login_time >= DATE_SUB(CURDATE(), INTERVAL 1 DAY)
+ORDER BY 
+   ' at line 9[0m
+
+2025/01/01 21:00:00 =====准点报时======
+2025/01/01 21:00:00 2025-01-01 21:00:00.0101944 +0800 CST m=+2399.357019201:  服务器正在运行
+2025/01/01 21:00:00 2025-01-01 21:00:00.0101944 +0800 CST m=+2399.357019201:  [32m1h内发现6个致命错误[0m
+2025/01/01 22:00:00 =====准点报时======
+2025/01/01 22:00:00 2025-01-01 22:00:00.0105538 +0800 CST m=+5999.357378601:  服务器正在运行
+2025/01/01 22:00:00 2025-01-01 22:00:00.0105538 +0800 CST m=+5999.357378601:  [32m1h内发现0个致命错误[0m
+2025/01/01 23:11:58 =====准点报时======
+2025/01/01 23:11:58 2025-01-01 23:11:58.4518747 +0800 CST m=+10317.798699501:  服务器正在运行
+2025/01/01 23:11:58 2025-01-01 23:11:58.4518747 +0800 CST m=+10317.798699501:  [32m1h内发现0个致命错误[0m
+2025/01/02 00:00:00 =====准点报时======
+2025/01/02 00:00:00 2025-01-02 00:00:00.0011315 +0800 CST m=+13199.347956301:  服务器正在运行
+2025/01/02 00:00:00 2025-01-02 00:00:00.0011315 +0800 CST m=+13199.347956301:  [32m1h内发现0个致命错误[0m
+2025/01/02 00:06:40 [1m[31mError occurs in login/api.tryParseOutput: format error: missing '回应：' 或 '数据库指令：' 字样[0m
+
+2025/01/02 00:06:40 [1m[31mError occurs in login/api.tryParseOutput: format error: missing '回应：' 或 '数据库指令：' 字样[0m
+
+2025/01/02 00:06:43 [1m[31mError occurs in login/api.tryParseOutput: format error: no <sqlX>...</sqlX> found[0m
+
+2025/01/02 00:06:43 [1m[31mError occurs in login/api.tryParseOutput: format error: no <sqlX>...</sqlX> found[0m
+
+2025/01/02 00:06:43 [1m[31mError occurs in login/api.getResponse: 重试后仍然失败[0m
+
+2025/01/02 00:06:43 [1m[31mError occurs in login/api.ReceiveAIRequest: format error: no <sqlX>...</sqlX> found[0m
+
+2025/01/02 03:01:31 =====准点报时======
+2025/01/02 03:01:31 2025-01-02 03:01:31.2554263 +0800 CST m=+24090.602251101:  服务器正在运行
+2025/01/02 03:01:31 2025-01-02 03:01:31.2554263 +0800 CST m=+24090.602251101:  [32m1h内发现6个致命错误[0m
+2025/01/02 09:01:36 =====准点报时======
+2025/01/02 09:01:36 2025-01-02 09:01:36.5850451 +0800 CST m=+45695.931869901:  服务器正在运行
+2025/01/02 09:01:36 2025-01-02 09:01:36.5850451 +0800 CST m=+45695.931869901:  [32m1h内发现0个致命错误[0m
+2025/01/02 11:23:09 =====准点报时======
+2025/01/02 11:23:09 2025-01-02 11:23:09.613868 +0800 CST m=+54188.960732001:  服务器正在运行
+2025/01/02 11:23:09 2025-01-02 11:23:09.613868 +0800 CST m=+54188.960732001:  [32m1h内发现0个致命错误[0m
+2025/01/02 16:37:10 =====准点报时======
+2025/01/02 16:37:10 2025-01-02 16:37:10.1528205 +0800 CST m=+73029.499684501:  服务器正在运行
+2025/01/02 16:37:10 2025-01-02 16:37:10.1528205 +0800 CST m=+73029.499684501:  [32m1h内发现0个致命错误[0m
+2025/01/02 16:48:11 [1m[31mError occurs in login/api.tryParseOutput: format error: missing '回应：' 或 '数据库指令：' 字样[0m
+
+2025/01/02 16:48:11 [1m[31mError occurs in login/api.tryParseOutput: format error: missing '回应：' 或 '数据库指令：' 字样[0m
+
+2025/01/02 16:48:15 [1m[31mError occurs in login/api.tryParseOutput: Error 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '<user_id1>),
+    ('<token_hash2>', 0, DATE_ADD(NOW(), INTERVAL 1 HOUR), <user_id' at line 3[0m
+
+2025/01/02 16:48:34 [1m[31mError occurs in login/api.tryParseOutput: Error 1054 (42S22): Unknown column 'token_created_at' in 'order clause'[0m
+
+2025/01/02 16:48:45 [1m[31mError occurs in login/api.tryParseOutput: Error 1054 (42S22): Unknown column 'token_created_at' in 'order clause'[0m
+
+2025/01/02 17:00:00 =====准点报时======
+2025/01/02 17:00:00 2025-01-02 17:00:00.0084918 +0800 CST m=+74399.355355801:  服务器正在运行
+2025/01/02 17:00:00 2025-01-02 17:00:00.0084918 +0800 CST m=+74399.355355801:  [32m1h内发现5个致命错误[0m
+2025/01/02 19:58:06 =====准点报时======
+2025/01/02 19:58:06 2025-01-02 19:58:06.2777652 +0800 CST m=+85085.624629201:  服务器正在运行
+2025/01/02 19:58:06 2025-01-02 19:58:06.2777652 +0800 CST m=+85085.624629201:  [32m1h内发现0个致命错误[0m
+2025/01/02 19:58:51 [1m[31mError occurs in login/api.tryParseOutput: Error 1054 (42S22): Unknown column 'fb.driver_id' in 'on clause'[0m
+
+2025/01/02 19:59:08 [1m[31mError occurs in login/api.tryParseOutput: Error 1054 (42S22): Unknown column 'fb.driver_id' in 'on clause'[0m
+
+2025/01/02 20:00:31 2019-01-01 12:00:00 日志服务已启动==============
+2025/01/02 20:00:43 [1m[31mError occurs in login/api.tryParseOutput: Error 1054 (42S22): Unknown column 'fb.driver_id' in 'on clause'[0m
+
+2025/01/02 20:03:44 2019-01-01 12:00:00 日志服务已启动==============
+2025/01/02 20:03:55 [1m[31mError occurs in login/api.tryParseOutput: Error 1054 (42S22): Unknown column 'fb.driver_id' in 'on clause'[0m
+
+2025/01/02 20:08:59 2019-01-01 12:00:00 日志服务已启动==============
+2025/01/02 20:10:05 [1m[31mError occurs in login/api.ReceiveAIRequest: EOF[0m
+
+2025/01/02 20:11:22 2019-01-01 12:00:00 日志服务已启动==============
+2025/01/02 20:11:57 [1m[31mError occurs in login/api.ReceiveAIRequest: EOF[0m
+
+2025/01/02 20:13:13 2019-01-01 12:00:00 日志服务已启动==============
+2025/01/02 20:13:45 [1m[31mError occurs in login/api.ReceiveAIRequest: EOF[0m
+
+2025/01/02 20:13:55 2019-01-01 12:00:00 日志服务已启动==============
+2025/01/02 20:14:14 [1m[31mError occurs in login/api.tryParseOutput: Error 1054 (42S22): Unknown column 'fb.driver_id' in 'on clause'[0m
+
+2025/01/02 20:14:20 [1m[31mError occurs in login/api.tryParseOutput: Error 1054 (42S22): Unknown column 'fb.driver_id' in 'on clause'[0m
+
+2025/01/02 20:14:25 [1m[31mError occurs in login/api.tryParseOutput: Error 1054 (42S22): Unknown column 'fb.driver_id' in 'on clause'[0m
+
+2025/01/02 20:17:36 2019-01-01 12:00:00 日志服务已启动==============
+2025/01/02 20:22:39 2019-01-01 12:00:00 日志服务已启动==============
+2025/01/02 20:29:42 2019-01-01 12:00:00 日志服务已启动==============
+2025/01/02 20:32:00 2019-01-01 12:00:00 日志服务已启动==============
+2025/01/02 20:32:02 [1m[31mError occurs in login/api.sendMessagesToDeepSeek: 请求失败，状态码: 401，响应: Authentication Fails (auth header format should be Bearer sk-...)[0m
+
+2025/01/02 20:32:02 [1m[31mError occurs in login/api.ReceiveAIRequest: 请求失败，状态码: 401，响应: Authentication Fails (auth header format should be Bearer sk-...)[0m
+
+2025/01/02 20:32:12 [1m[31mError occurs in login/api.sendMessagesToDeepSeek: 请求失败，状态码: 401，响应: Authentication Fails (auth header format should be Bearer sk-...)[0m
+
+2025/01/02 20:32:12 [1m[31mError occurs in login/api.ReceiveAIRequest: 请求失败，状态码: 401，响应: Authentication Fails (auth header format should be Bearer sk-...)[0m
+
+2025/01/02 20:32:22 2019-01-01 12:00:00 日志服务已启动==============
+2025/01/02 20:39:42 2019-01-01 12:00:00 日志服务已启动==============
+2025/01/02 20:41:52 2019-01-01 12:00:00 日志服务已启动==============
+2025/01/02 20:44:01 2019-01-01 12:00:00 日志服务已启动==============
+2025/01/02 21:15:02 2019-01-01 12:00:00 日志服务已启动==============
+2025/01/02 21:15:58 [1m[31mError occurs in login/api.sendMessagesToDeepSeek: 请求失败，状态码: 401，响应: Authentication Fails (auth header format should be Bearer sk-...)[0m
+
+2025/01/02 21:15:58 [1m[31mError occurs in login/api.ReceiveAIRequest: 请求失败，状态码: 401，响应: Authentication Fails (auth header format should be Bearer sk-...)[0m
+
+2025/01/02 21:16:10 [1m[31mError occurs in login/api.sendMessagesToDeepSeek: 请求失败，状态码: 401，响应: Authentication Fails (auth header format should be Bearer sk-...)[0m
+
+2025/01/02 21:16:10 [1m[31mError occurs in login/api.ReceiveAIRequest: 请求失败，状态码: 401，响应: Authentication Fails (auth header format should be Bearer sk-...)[0m
+
+2025/01/02 21:16:11 [1m[31mError occurs in login/api.sendMessagesToDeepSeek: 请求失败，状态码: 401，响应: Authentication Fails (auth header format should be Bearer sk-...)[0m
+
+2025/01/02 21:16:11 [1m[31mError occurs in login/api.ReceiveAIRequest: 请求失败，状态码: 401，响应: Authentication Fails (auth header format should be Bearer sk-...)[0m
+
 2024/12/20 19:28:03 2019-01-01 12:00:00 日志服务已启动==============
 2024/12/20 19:28:09 [1m[31mError occurs in login/db.ExecuteSQL: Error 1046 (3D000): No database selected[0m
 
@@ -1221,3 +1439,270 @@ SQL: SELECT user_id FROM usersaliases WHERE user_name = ?
 参数: [wzy][0m
 
 
+2025/01/13 18:50:26 2019-01-01 12:00:00 日志服务已启动==============
+2025/01/13 18:53:19 2019-01-01 12:00:00 日志服务已启动==============
+2025/01/13 19:00:00 =====准点报时======
+2025/01/13 19:00:00 2025-01-13 19:00:00.0059063 +0800 CST m=+400.652398601:  服务器正在运行
+2025/01/13 19:00:00 2025-01-13 19:00:00.0059063 +0800 CST m=+400.652398601:  [32m1h内发现0个致命错误[0m
+2025/01/13 19:03:29 2019-01-01 12:00:00 日志服务已启动==============
+2025/01/13 19:03:38 2019-01-01 12:00:00 日志服务已启动==============
+2025/01/13 20:00:00 =====准点报时======
+2025/01/13 20:00:00 2025-01-13 20:00:00.0002202 +0800 CST m=+3381.196251701:  服务器正在运行
+2025/01/13 20:00:00 2025-01-13 20:00:00.0002202 +0800 CST m=+3381.196251701:  [32m1h内发现0个致命错误[0m
+2025/01/13 21:00:00 =====准点报时======
+2025/01/13 21:00:00 2025-01-13 21:00:00.0046811 +0800 CST m=+6981.200712601:  服务器正在运行
+2025/01/13 21:00:00 2025-01-13 21:00:00.0046811 +0800 CST m=+6981.200712601:  [32m1h内发现0个致命错误[0m
+2025/01/13 21:42:29 2019-01-01 12:00:00 日志服务已启动==============
+2025/01/13 22:00:00 =====准点报时======
+2025/01/13 22:00:00 2025-01-13 22:00:00.0060811 +0800 CST m=+1050.377501801:  服务器正在运行
+2025/01/13 22:00:00 2025-01-13 22:00:00.0060811 +0800 CST m=+1050.377501801:  [32m1h内发现0个致命错误[0m
+2025/01/13 22:15:26 2019-01-01 12:00:00 日志服务已启动==============
+2025/01/13 22:38:30 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:38:32 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:38:35 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:38:38 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:38:41 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:38:44 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:38:47 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:38:50 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:38:53 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:38:56 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:38:59 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:39:02 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:39:06 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:39:09 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:39:12 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:39:15 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:39:18 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:39:21 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:39:23 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:39:27 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:39:30 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:39:33 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:39:36 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:39:39 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:39:42 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:39:45 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:39:48 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:39:51 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:39:54 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:39:57 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:40:00 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:40:03 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:40:06 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:40:08 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:40:11 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:40:14 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:40:18 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:40:21 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:40:24 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:41:39 2019-01-01 12:00:00 日志服务已启动==============
+2025/01/13 22:41:39 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:41:39 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:41:42 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:42:01 2019-01-01 12:00:00 日志服务已启动==============
+2025/01/13 22:42:02 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:42:02 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:42:03 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:42:06 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:42:22 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:42:24 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:42:24 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:42:24 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:42:24 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:45:24 2019-01-01 12:00:00 日志服务已启动==============
+2025/01/13 22:45:24 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:45:24 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:45:27 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:45:30 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:46:42 2019-01-01 12:00:00 日志服务已启动==============
+2025/01/13 22:47:11 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:47:14 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:47:17 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:47:20 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:47:23 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:47:26 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:47:29 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:47:32 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:47:35 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:47:38 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:47:42 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:47:44 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:47:47 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:47:51 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:47:53 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:47:57 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:48:00 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:48:03 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:48:06 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:48:09 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:48:12 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:48:15 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:48:18 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:48:21 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:48:24 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:48:27 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:48:30 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:48:33 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:48:36 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:48:39 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:48:42 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:48:45 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:48:48 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:48:50 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:48:53 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:48:56 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:49:14 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:49:17 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:49:20 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:49:23 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:49:26 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:49:29 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:49:33 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:49:36 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:49:39 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:49:42 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:49:44 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:49:48 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:49:51 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:49:54 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:49:57 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:50:00 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:50:03 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:50:06 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:50:09 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:50:12 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:50:15 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:50:18 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:50:21 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:50:24 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:50:27 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:50:30 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:50:33 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:50:35 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:50:39 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:50:42 [1m[31mError occurs in login/api.ReceiveAIRequest: json: cannot unmarshal object into Go value of type string[0m
+
+2025/01/13 22:51:49 2019-01-01 12:00:00 日志服务已启动==============
+2025/01/13 22:55:52 2019-01-01 12:00:00 日志服务已启动==============
+2025/01/13 23:00:38 2019-01-01 12:00:00 日志服务已启动==============

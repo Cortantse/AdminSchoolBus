@@ -103,6 +103,9 @@ func RegisterAdmin(mux *http.ServeMux) {
 	mux.HandleFunc("/admin/car_table", api.GetCarsTableData)
 	mux.HandleFunc("/admin/work_table", api.GetWorkTableData)
 
+	// 驾驶员支持
+	mux.HandleFunc("/admin/driver/get", api.GiveDriverInfo)
+
 	// test_function
 	mux.HandleFunc("/test/divide", api.ReceiveDivisionRequest)
 
