@@ -306,18 +306,25 @@ func GetWorkTableData(w http.ResponseWriter, r *http.Request) {
 	var works []Work
 	for rows.Next() {
 		var wdata Work
+
+		// remark可能为空
+		remarkNull := sql.NullString{}
+
 		if err := rows.Scan(
 			&wdata.WorkStime,
 			&wdata.WorkEtime,
 			&wdata.DriverID,
 			&wdata.RouteID,
 			&wdata.CarID,
-			&wdata.Remark,
+			&remarkNull,
 			&wdata.RecordRoute,
 		); err != nil {
 			exception.PrintError(GetWorkTableData, err)
 			http.Error(w, err.Error(), http.StatusInternalServerError)
 			return
+		}
+		if remarkNull.Valid {
+			wdata.Remark = remarkNull.String
 		}
 		works = append(works, wdata)
 	}
