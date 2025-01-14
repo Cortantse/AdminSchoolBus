@@ -9,6 +9,7 @@ import (
 	"login/utils"
 	"net/http"
 	"strings"
+	"time"
 )
 
 type Feedback struct {
@@ -243,6 +244,15 @@ func DealWithFeedback(w http.ResponseWriter, r *http.Request) {
 		// 处理完毕
 		sqlStatement := `UPDATE feedback SET feedback_content = CONCAT('<complaintHandled>', feedback_content) WHERE feedback_id = ?`
 		_, err = db.ExecuteSQL(config.RolePassenger, sqlStatement, request.FeedbackId)
+		if err != nil {
+			exception.PrintError(DealWithFeedback, err)
+			return
+		}
+
+		nowTime, _ := utils.RegularizeTimeForMySQL(time.Now().String())
+
+		_, err := db.ExecuteSQL(config.RolePassenger, "INSERT INTO passenger_comment (student_name, comment_content, comment_time, avatar) VALUES (?,?,?,?)",
+			"admin", request.Complaint, nowTime, "/uploads/avatars/avatar_9_1736861444.gif")
 		if err != nil {
 			exception.PrintError(DealWithFeedback, err)
 			return
