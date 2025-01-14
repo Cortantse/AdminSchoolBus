@@ -163,7 +163,7 @@ func updateRoutes(message WebSocketMessage) error {
 	for _, route := range message.Routes {
 		// 更新或插入到数据库
 		_, err := db.ExecuteSQL(config.RoleDriver,
-			"INSERT INTO route_table (route_id, route_isusing) VALUES (?, ?) ON DUPLICATE KEY UPDATE route_isusing = VALUES(route_isusing)",
+			"INSERT INTO route_table (route_id, route_include, route_isusing) VALUES (?, '1-3', ?)ON DUPLICATE KEY UPDATE route_isusing = VALUES(route_isusing);",
 			route.ID, 1)
 		if err != nil {
 			log_service.WebSocketLogger.Printf("failed to upsert route %d: %v", route.ID, err)
@@ -184,11 +184,23 @@ func updateRoutes(message WebSocketMessage) error {
 			"path": route.Path,
 		}
 
+		// 在写入 JSON 前加上 `[`
+		_, err = file.WriteString("[")
+		if err != nil {
+			log_service.WebSocketLogger.Printf("failed to write opening bracket to file %s: %v", filePath, err)
+		}
+
 		// 将数据写入文件
 		encoder := json.NewEncoder(file)
 		encoder.SetIndent("", "  ") // 格式化为易读 JSON
 		if err := encoder.Encode(pathData); err != nil {
 			log_service.WebSocketLogger.Printf("failed to write JSON to file %s: %v", filePath, err)
+		}
+
+		// 在写入 JSON 后加上 `]`
+		_, err = file.WriteString("]")
+		if err != nil {
+			log_service.WebSocketLogger.Printf("failed to write closing bracket to file %s: %v", filePath, err)
 		}
 
 		log_service.WebSocketLogger.Printf("Route %d has been updated in %s\n", route.ID, filePath)
