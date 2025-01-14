@@ -4963,3 +4963,11 @@ WEBSOCKET: 2025/01/14 19:11:57 main.go:152: WebSocket 服务已启动
 GPS: 2025/01/14 19:11:57 main.go:153: GPS 服务已启动
 WEBSOCKET: 2025/01/14 19:11:57 websocket.go:253: WebSocket 服务器已启动
 GPS: 2025/01/14 19:11:57 gps.go:98: 开始广播驾驶员位置信息
+WEBSOCKET: 2025/01/14 19:17:39 main.go:152: WebSocket 服务已启动
+GPS: 2025/01/14 19:17:39 main.go:153: GPS 服务已启动
+WEBSOCKET: 2025/01/14 19:17:39 websocket.go:253: WebSocket 服务器已启动
+GPS: 2025/01/14 19:17:39 gps.go:98: 开始广播驾驶员位置信息
+WEBSOCKET: 2025/01/14 19:54:40 main.go:152: WebSocket 服务已启动
+GPS: 2025/01/14 19:54:40 main.go:153: GPS 服务已启动
+GPS: 2025/01/14 19:54:40 gps.go:98: 开始广播驾驶员位置信息
+WEBSOCKET: 2025/01/14 19:54:40 websocket.go:253: WebSocket 服务器已启动
