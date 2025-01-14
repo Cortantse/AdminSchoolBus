@@ -416,7 +416,7 @@ func GiveDriverInfo(w http.ResponseWriter, r *http.Request) {
 	htmls = append(htmls, "<p>司机电话："+driverTel+"</p>")
 
 	// 获取评星并动态生成
-	sqlS = "SELECT AVG(f.rating) FROM passenger_db.feedback f, passenger_db.order_information o WHERE o.driver_id = ? AND f.order_id = o.order_id;"
+	sqlS = "SELECT IFNULL(AVG(f.rating), 0) FROM passenger_db.feedback f, passenger_db.order_information o WHERE o.driver_id = ? AND f.order_id = o.order_id;"
 	result, err = db.ExecuteSQL(config.RoleDriver, sqlS, driverID)
 	if err != nil {
 		exception.PrintError(GiveDriverInfo, err)
@@ -437,9 +437,9 @@ func GiveDriverInfo(w http.ResponseWriter, r *http.Request) {
 	tem := "<p>司机评星："
 	for i := 0; i < 5; i++ {
 		if rating >= float64(i+1) {
-			tem += "<img src=\"@/assets/star.jpg\" width=\"20\" height=\"20\">"
+			tem += "<img src=\"/assets/star.jpg\" width=\"20\" height=\"20\">"
 		} else {
-			tem += "<img src=\"@/assets/star_gray.jpg\" width=\"20\" height=\"20\">"
+			tem += "<img src=\"/assets/star_gray.jpg\" width=\"20\" height=\"20\">"
 		}
 	}
 	tem += "</p>"
