@@ -309,15 +309,17 @@ func GetWorkTableData(w http.ResponseWriter, r *http.Request) {
 
 		// remark可能为空
 		remarkNull := sql.NullString{}
+		RecordRoute := sql.NullString{}
+		WorkEtime := sql.NullString{}
 
 		if err := rows.Scan(
 			&wdata.WorkStime,
-			&wdata.WorkEtime,
+			&WorkEtime,
 			&wdata.DriverID,
 			&wdata.RouteID,
 			&wdata.CarID,
 			&remarkNull,
-			&wdata.RecordRoute,
+			&RecordRoute,
 		); err != nil {
 			exception.PrintError(GetWorkTableData, err)
 			http.Error(w, err.Error(), http.StatusInternalServerError)
@@ -325,6 +327,12 @@ func GetWorkTableData(w http.ResponseWriter, r *http.Request) {
 		}
 		if remarkNull.Valid {
 			wdata.Remark = remarkNull.String
+		}
+		if RecordRoute.Valid {
+			wdata.RecordRoute = RecordRoute.String
+		}
+		if WorkEtime.Valid {
+			wdata.WorkEtime = WorkEtime.String
 		}
 		works = append(works, wdata)
 	}
