@@ -4487,6 +4487,80 @@ WEBSOCKET: 2025/01/13 23:01:09 websocket.go:264: 客户端已注销
 WEBSOCKET: 2025/01/13 23:01:09 websocket.go:62: 连接关闭，客户端类型：passenger
 WEBSOCKET: 2025/01/13 23:01:13 websocket.go:58: 新连接建立，客户端类型：passenger
 WEBSOCKET: 2025/01/13 23:01:13 websocket.go:259: 新客户端已注册，类型：passenger
+
+WEBSOCKET: 2025/01/13 23:52:05 main.go:152: WebSocket 服务已启动
+GPS: 2025/01/13 23:52:05 main.go:153: GPS 服务已启动
+WEBSOCKET: 2025/01/13 23:52:05 websocket.go:253: WebSocket 服务器已启动
+GPS: 2025/01/13 23:52:05 gps.go:98: 开始广播驾驶员位置信息
+WEBSOCKET: 2025/01/14 09:44:27 main.go:152: WebSocket 服务已启动
+GPS: 2025/01/14 09:44:27 main.go:153: GPS 服务已启动
+GPS: 2025/01/14 09:44:27 gps.go:98: 开始广播驾驶员位置信息
+WEBSOCKET: 2025/01/14 09:44:27 websocket.go:253: WebSocket 服务器已启动
+WEBSOCKET: 2025/01/14 09:45:31 main.go:152: WebSocket 服务已启动
+GPS: 2025/01/14 09:45:31 main.go:153: GPS 服务已启动
+WEBSOCKET: 2025/01/14 09:45:31 websocket.go:253: WebSocket 服务器已启动
+GPS: 2025/01/14 09:45:31 gps.go:98: 开始广播驾驶员位置信息
+WEBSOCKET: 2025/01/14 10:23:46 main.go:152: WebSocket 服务已启动
+GPS: 2025/01/14 10:23:46 main.go:153: GPS 服务已启动
+WEBSOCKET: 2025/01/14 10:23:46 websocket.go:253: WebSocket 服务器已启动
+GPS: 2025/01/14 10:23:46 gps.go:98: 开始广播驾驶员位置信息
+WEBSOCKET: 2025/01/14 10:26:01 main.go:152: WebSocket 服务已启动
+GPS: 2025/01/14 10:26:01 main.go:153: GPS 服务已启动
+WEBSOCKET: 2025/01/14 10:26:01 websocket.go:253: WebSocket 服务器已启动
+GPS: 2025/01/14 10:26:01 gps.go:98: 开始广播驾驶员位置信息
+WEBSOCKET: 2025/01/14 10:34:04 main.go:152: WebSocket 服务已启动
+GPS: 2025/01/14 10:34:04 main.go:153: GPS 服务已启动
+GPS: 2025/01/14 10:34:04 gps.go:98: 开始广播驾驶员位置信息
+WEBSOCKET: 2025/01/14 10:34:04 websocket.go:253: WebSocket 服务器已启动
+WEBSOCKET: 2025/01/14 10:35:43 main.go:152: WebSocket 服务已启动
+GPS: 2025/01/14 10:35:43 main.go:153: GPS 服务已启动
+GPS: 2025/01/14 10:35:43 gps.go:98: 开始广播驾驶员位置信息
+WEBSOCKET: 2025/01/14 10:35:43 websocket.go:253: WebSocket 服务器已启动
+WEBSOCKET: 2025/01/14 10:37:15 main.go:152: WebSocket 服务已启动
+GPS: 2025/01/14 10:37:15 main.go:153: GPS 服务已启动
+WEBSOCKET: 2025/01/14 10:37:15 websocket.go:253: WebSocket 服务器已启动
+GPS: 2025/01/14 10:37:15 gps.go:98: 开始广播驾驶员位置信息
+WEBSOCKET: 2025/01/14 10:38:55 main.go:152: WebSocket 服务已启动
+GPS: 2025/01/14 10:38:55 main.go:153: GPS 服务已启动
+WEBSOCKET: 2025/01/14 10:38:55 websocket.go:253: WebSocket 服务器已启动
+GPS: 2025/01/14 10:38:55 gps.go:98: 开始广播驾驶员位置信息
+WEBSOCKET: 2025/01/14 10:40:41 main.go:152: WebSocket 服务已启动
+GPS: 2025/01/14 10:40:41 main.go:153: GPS 服务已启动
+WEBSOCKET: 2025/01/14 10:40:41 websocket.go:253: WebSocket 服务器已启动
+GPS: 2025/01/14 10:40:41 gps.go:98: 开始广播驾驶员位置信息
+WEBSOCKET: 2025/01/14 10:42:21 main.go:152: WebSocket 服务已启动
+GPS: 2025/01/14 10:42:21 main.go:153: GPS 服务已启动
+WEBSOCKET: 2025/01/14 10:42:21 websocket.go:253: WebSocket 服务器已启动
+GPS: 2025/01/14 10:42:21 gps.go:98: 开始广播驾驶员位置信息
+WEBSOCKET: 2025/01/14 10:45:10 main.go:152: WebSocket 服务已启动
+GPS: 2025/01/14 10:45:10 main.go:153: GPS 服务已启动
+WEBSOCKET: 2025/01/14 10:45:10 websocket.go:253: WebSocket 服务器已启动
+GPS: 2025/01/14 10:45:10 gps.go:98: 开始广播驾驶员位置信息
+WEBSOCKET: 2025/01/14 11:29:04 main.go:152: WebSocket 服务已启动
+GPS: 2025/01/14 11:29:04 main.go:153: GPS 服务已启动
+WEBSOCKET: 2025/01/14 11:29:04 websocket.go:253: WebSocket 服务器已启动
+GPS: 2025/01/14 11:29:04 gps.go:98: 开始广播驾驶员位置信息
+WEBSOCKET: 2025/01/14 12:36:31 main.go:152: WebSocket 服务已启动
+GPS: 2025/01/14 12:36:31 main.go:153: GPS 服务已启动
+WEBSOCKET: 2025/01/14 12:36:31 websocket.go:253: WebSocket 服务器已启动
+GPS: 2025/01/14 12:36:31 gps.go:98: 开始广播驾驶员位置信息
+WEBSOCKET: 2025/01/14 12:38:19 main.go:152: WebSocket 服务已启动
+GPS: 2025/01/14 12:38:19 main.go:153: GPS 服务已启动
+WEBSOCKET: 2025/01/14 12:38:19 websocket.go:253: WebSocket 服务器已启动
+GPS: 2025/01/14 12:38:19 gps.go:98: 开始广播驾驶员位置信息
+WEBSOCKET: 2025/01/14 12:55:14 main.go:152: WebSocket 服务已启动
+GPS: 2025/01/14 12:55:14 main.go:153: GPS 服务已启动
+WEBSOCKET: 2025/01/14 12:55:14 websocket.go:253: WebSocket 服务器已启动
+GPS: 2025/01/14 12:55:14 gps.go:98: 开始广播驾驶员位置信息
+WEBSOCKET: 2025/01/14 12:58:37 main.go:152: WebSocket 服务已启动
+GPS: 2025/01/14 12:58:37 main.go:153: GPS 服务已启动
+WEBSOCKET: 2025/01/14 12:58:37 websocket.go:253: WebSocket 服务器已启动
+GPS: 2025/01/14 12:58:37 gps.go:98: 开始广播驾驶员位置信息
+WEBSOCKET: 2025/01/14 13:02:33 main.go:152: WebSocket 服务已启动
+GPS: 2025/01/14 13:02:33 main.go:153: GPS 服务已启动
+WEBSOCKET: 2025/01/14 13:02:33 websocket.go:253: WebSocket 服务器已启动
+GPS: 2025/01/14 13:02:33 gps.go:98: 开始广播驾驶员位置信息
+=======
 WEBSOCKET: 2025/01/14 02:16:38 main.go:152: WebSocket 服务已启动
 GPS: 2025/01/14 02:16:38 main.go:153: GPS 服务已启动
 WEBSOCKET: 2025/01/14 02:16:38 websocket.go:253: WebSocket 服务器已启动
@@ -4954,3 +5028,4 @@ WEBSOCKET: 2025/01/14 03:37:40 main.go:152: WebSocket 服务已启动
 GPS: 2025/01/14 03:37:40 main.go:153: GPS 服务已启动
 WEBSOCKET: 2025/01/14 03:37:40 websocket.go:253: WebSocket 服务器已启动
 GPS: 2025/01/14 03:37:40 gps.go:98: 开始广播驾驶员位置信息
+

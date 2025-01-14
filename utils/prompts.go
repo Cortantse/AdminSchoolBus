@@ -222,3 +222,85 @@ WHERE
 </sql1>
 
 `
+
+var Echart = `
+	"chartOption": {
+                "title": {
+                  "text": "年度销售与利润对比",
+                  "left": "center",
+                  "textStyle": {
+                    "color": "#fff",
+                    "fontSize": 20
+                  }
+                },
+                "tooltip": {
+                  "trigger": "axis",
+                  "axisPointer": {
+                    "type": "cross",
+                    "label": {
+                      "backgroundColor": "#6a7985"
+                    }
+                  }
+                },
+                "legend": {
+                  "data": ["销售额", "利润"],
+                  "left": "center",
+                  "top": "10%",
+                  "textStyle": {
+                    "color": "#fff"
+                  }
+                },
+                "xAxis": {
+                  "type": "category",
+                  "data": ["2023-01", "2023-02", "2023-03", "2023-04", "2023-05", "2023-06"],
+                  "axisLine": { "lineStyle": { "color": "#fff" } },
+                  "axisLabel": { "color": "#fff" }
+                },
+                "yAxis": [
+                  {
+                    "type": "value",
+                    "name": "销售额",
+                    "axisLine": { "lineStyle": { "color": "#fff" } },
+                    "axisLabel": { "color": "#fff" }
+                  },
+                  {
+                    "type": "value",
+                    "name": "利润",
+                    "axisLine": { "lineStyle": { "color": "#fff" } },
+                    "axisLabel": { "color": "#fff" },
+                    "position": "right"
+                  }
+                ],
+                "series": [
+                  {
+                    "name": "销售额",
+                    "type": "bar",
+                    "data": [150, 200, 250, 300, 350, 400],
+                    "itemStyle": { "color": "#FFDD33" }
+                  },
+                  {
+                    "name": "利润",
+                    "type": "line",
+                    "yAxisIndex": 1,
+                    "data": [30, 40, 50, 60, 70, 80],
+                    "itemStyle": { "color": "#FF6A6A" },
+                    "markPoint": {
+                      "data": [
+                        { "type": "max", "name": "最大值" },
+                        { "type": "min", "name": "最小值" }
+                      ]
+                    }
+                  }
+                ],
+                "toolbox": {
+                  "show": true,
+                  "orient": "vertical",
+                  "left": "right",
+                  "top": "center",
+                  "feature": {
+                    "dataZoom": { "show": true },
+                    "restore": { "show": true }
+                  }
+                }
+              }
+`
