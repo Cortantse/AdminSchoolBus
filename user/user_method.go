@@ -377,6 +377,34 @@ func GetjourneyRecord(w http.ResponseWriter, r *http.Request) {
 
 func GetComment(w http.ResponseWriter, r *http.Request) {
 	type Comment struct {
+		Commentid      string `json:"commentid"`
+		Studentname    string `json:"studentname"`
+		Commentcontent string `json:"commentcontent"`
+		Commenttime    string `json:"commenttime"`
+		Avatar         string `json:"avatar"`
+	}
+	rows, err := db.ExecuteSQL(config.RolePassenger, "SELECT * FROM passenger_comment WHERE comment_id > ?", 0)
+	if err != nil {
+		fmt.Print(err)
+	}
+	res, _ := rows.(*sql.Rows)
+	var results []Comment
+	for res.Next() {
+		var result Comment
+		err := res.Scan(&result.Commentid, &result.Studentname, &result.Commentcontent, &result.Commenttime, &result.Avatar)
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
+		}
+		results = append(results, result)
+	}
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(http.StatusOK)
+	json.NewEncoder(w).Encode(results)
+}
+
+func GetCommentForPlat(w http.ResponseWriter, r *http.Request) {
+	type Comment struct {
 		Commentid      string `json:"comment_id"`
 		Studentname    string `json:"student_name"`
 		Commentcontent string `json:"comment_content"`

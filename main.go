@@ -186,10 +186,11 @@ func main() {
 	mux.HandleFunc("/getCurrentOrder", user.HandleGetCurrentOrder)
 	mux.HandleFunc("/getCurrentPayment", user.HandleGetCurrentPayment)
 	mux.HandleFunc("/getWorkShift", user.HandleGetWorkShift)
-	mux.HandleFunc("/getjourneyrecord", user.GetjourneyRecord) // 用于用户端行程记录拉取
-	mux.HandleFunc("/getcomments", user.GetComment)            // 用于用户端评论内容拉取
-	mux.HandleFunc("/submitUserComment", user.WriteComment)    //用户评论提交
-	mux.HandleFunc("/getnotices", user.GetNotice)              //获取公告内容
+	mux.HandleFunc("/getjourneyrecord", user.GetjourneyRecord)     // 用于用户端行程记录拉取
+	mux.HandleFunc("/getcomments", user.GetComment)                // 用于用户端评论内容拉取
+	mux.HandleFunc("/getcommentsForPlats", user.GetCommentForPlat) // 用于用户端评论内容拉取
+	mux.HandleFunc("/submitUserComment", user.WriteComment)        //用户评论提交
+	mux.HandleFunc("/getnotices", user.GetNotice)                  //获取公告内容
 	// 验证url
 	mux.HandleFunc("/api/login", api.LoginHandler)
 	mux.HandleFunc("/api/logout", api.LogoutHandler)               // 设置登出处理路由
